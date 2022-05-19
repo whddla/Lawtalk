@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel ="stylesheet" href ="privacyPage.css">
+<link rel ="stylesheet" href ="asset\css\privacyPage.css">
 <title>Insert title here</title>
 </head>
 <body>
