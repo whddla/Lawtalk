@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <img src="asset\img\연필.jpg" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+                    <img src="연필.jpg" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
                     </div>
                     <div class = "menu-items-bottom">
                         <a class ="bottom-inner">
@@ -101,7 +101,7 @@
 				<div class="title-layout">
 					<a href="privacy.jsp" class="privacy-img">
 					개인정보 수정
-					<img src="asset\img\톱니바퀴.png"class="privacy-img-size">
+					<img src="톱니바퀴.png"class="privacy-img-size">
 					</a>
 					<a href="">로그아웃</a>
 					</div>	

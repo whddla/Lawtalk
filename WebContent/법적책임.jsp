@@ -14,7 +14,7 @@
 			<div class ="title-layout">
 				<img src="asset\img\법적책임사람.png">
 				<h1>
-					<a class = "title-font" href="http://www.naver.com">LawKnow</a>
+					<a class = "title-font" href="LawKnowMainPage.jsp">LawKnow</a>
 					<span style ="display : block; color: #fefefe; font-size: 22px">Good Lawyers</span>
 				</h1>
 				<h2>책임의 한계와 법적고지</h2>
@@ -33,7 +33,7 @@
 			<div class="footer">
 			<div class ="row">
 						<!-- 경로지정 -->
-						<a href="" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
+						<a href="LawKnowMainPage.jsp" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
 					</div>
 				</div>
 		</div>
