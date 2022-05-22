@@ -333,7 +333,7 @@ hr{
 }
 
 .box1{
-    background-image : url('img/금메달.png');
+    background-image : url('assets/img/금메달.png');
     background-position:8px 6px;
     background-repeat:no-repeat;
     background-size: 33px;
@@ -342,7 +342,7 @@ hr{
    
 }
 .box2{
-    background-image : url('img/은메달.png');
+    background-image : url('assets/img/은메달.png');
     background-position:8px 6px;
     background-repeat:no-repeat;
     background-size: 33px;
@@ -350,7 +350,7 @@ hr{
     
 }
 .box3{
-    background-image : url('img/동메달.png');
+    background-image : url('assets/img/동메달.png');
     background-position:8px 6px;
     background-repeat:no-repeat;
     background-size: 33px;
