@@ -15,8 +15,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline;
 }
 
+*{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
 body{
-	font-family: "NotoKR-Regular";
+	font-family: 'Noto Sans KR', sans-serif;
 	background-color: #f1f4f6;
 }
 
@@ -49,6 +53,7 @@ h1{
     margin: 0;
     padding : 0 16px;
     font-weight: bolder;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 
@@ -57,6 +62,7 @@ h1 a{
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 21px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 h2{
@@ -65,6 +71,7 @@ h2{
     line-height: 15px;
     padding : 0 16px;
     margin-top: 21px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .allform-layout{
