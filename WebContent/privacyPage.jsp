@@ -12,8 +12,8 @@
 		<div class="all-layout">
 			<div class ="title-layout">
 				<h1>
-					<a class = "title-font" href="http://www.naver.com">Law지식IN</a>
-					<span style ="display : block; color: #fefefe; font-size: 24px">Good Lawyers</span>
+					<a class = "title-font" href="http://www.naver.com">LawKnow</a>
+					<span style ="display : block; color: #fefefe; font-size: 22px">Good Lawyers</span>
 				</h1>
 				<h2>개인정보 수정</h2>
 			</div>
@@ -23,7 +23,7 @@
 					<div class ="input-layout">
 						<div class = "input-tag-layout">
 							<input id="accout-email" class="accout-border allInput-border" type="email" placeholder="ex) name@example.com" style="padding:10px 0;">
-							<label for ="accout-email" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
+							<label class= "accout-email-error" for ="accout-email" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
 						</div>
 						
 						<div class ="input-tag-layout">
@@ -82,8 +82,8 @@
 					<h3 class = "form-title-text">전화번호</h3>
 					<div class ="input-hp-layout" >
 						<div class="hp-layout">
-							<input type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678">
-							<label for="accout-hp" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
+							<input type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13">
+							<label class="tel-error" for="accout-hp" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
 						</div>
 					</div>
 					<div class ="button-layout" >
@@ -104,4 +104,41 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	let emailCheck = $(".accout-email-error");
+	let $email = $("#accout-email");
+	
+	
+	$email.on("keyup", function(){
+		
+		if($email.val() == ""){
+			emailCheck.css("color","red");
+			emailCheck.text("이메일은 반드시 입력해야합니다.");
+		}
+		
+		if($email.val() !== ""){
+			emailCheck.css("color","#757575");
+			emailCheck.text("이메일");
+		}
+	});
+	
+	/* 핸드폰 유효성 검사  */
+	let $hp = $("#accout-hp");
+	let hpCheck = $(".tel-error");
+	let hp = RegExp(/^[0-9]{8,13}$/);
+	
+	$hp.on("keyup",function(){
+		
+		if(!hp.test($hp.val())){
+			hpCheck.css("color","red");
+			hpCheck.text("숫자만 입력해주세요");
+		}else{
+			hpCheck.css("color","#757575");
+			hpCheck.text("전화번호");
+		}
+		
+	});
+	
+</script>
 </html>
