@@ -1,0 +1,366 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: #f1f4f6;
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.background-wrap {
+    width: 100%;
+}
+
+.signup-container {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+
+.signup-container .header {
+    margin: auto;
+    width: 424px;
+    background-color: #333;
+    padding: 24px 20px 20px;
+    height: 86px;
+}
+
+.signup-container .lawtalk {
+    display: block;
+    color: #FF4E00;
+    font-size: 18px;
+    letter-spacing: -2px;
+    margin-top: -7px;
+}
+
+.signup-container .lawtalk h2 {
+    margin: 0;
+}
+
+.signup-container .goodlawyers {
+    margin-top: -9px;
+}
+
+.signup-container .goodlawyers b {
+    color: #fff;
+    font-size: 24px;
+}
+
+.clien-sign-up {
+    margin-top: 15px;
+}
+
+.clien-sign-up-span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.sign-main-container {
+    padding: 0 8px;
+}
+
+.kakao-signup-button {
+    background-color: #ffeb00;
+    border: 1px solid #f7e317;
+    border-radius: 0;
+    color: #3c1e1e;
+    font-size: 12px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 44px;
+    margin: 12px 0 ;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+.facebook-signup-button {
+    background-color: #657ac7;
+    border: 1px solid #2b8aff;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 44px;
+    margin: 4px 0 12px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.vertical-line {
+    border-left: 1px solid #f7e317;
+    height: 100%;
+    float: left;
+}
+.vertical-line2 {
+    border-left: 1px solid #1e0ed4;
+    height: 100%;
+    float: left;
+}
+
+.text {
+    margin: auto 12px;
+    float: left;
+}
+
+.kakao-icon {
+    background-image: url("https://d2ai3ajp99ywjy.cloudfront.net/app/images/f68fbcaa58e2893c0642.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    float: left;
+    height: 100%;
+    margin: 0 7px;
+    width: 30px;
+}
+
+input:before, input:after, label:before, label:after {
+  content: "";
+  position: absolute;
+}
+
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+label.toggle-item {
+  width: 35px;
+  background: #2e394d;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: 20% center;
+  top: 5px;
+  cursor: pointer;
+}
+
+label.toggle-item:before {
+  display: block;
+  transition: all 0.2s ease;
+  width: 35px;
+  height: 20px;
+  top: 5px;
+  left: 5px;
+  border-radius: 2em;
+  border: 2px solid #88cf8f;
+  transition: 0.3s ease;
+}
+
+.normal1 label{
+  background: #c0b3b6;
+}
+.normal1 label:before {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+}
+
+#normal1:checked + label {
+  background: #37b0c9;
+}
+#normal1:checked + label:before {
+  left: 20px;
+}
+
+
+.normal2 label{
+  background: #c0b3b6;
+}
+.normal2 label:before {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+}
+
+#normal2:checked + label {
+  background: #37b0c9;
+}
+#normal2:checked + label:before {
+  left: 20px;
+}
+
+
+.facebook-icon {
+    background-image: url("https://www.earlyadopter.co.kr/wp-content/uploads/2021/04/Facebook-logo-1024x717.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 65px;
+    float: left;
+    height: 100%;
+    margin: 0 7px;
+    width: 30px;
+}
+
+.info {
+    background-color: #f9f6f4;
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 8px;
+    padding: 0 16px;
+    margin-bottom: 0;
+}
+
+.input-info {
+    padding: 10px 16px 46px;
+    background-color: #fff;
+}
+
+.sign-main-container .form-control {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none!important;
+    color: #757575;
+    font-size: 14px;
+    height: 23px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.form-control-button{
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    line-height: 3;
+    color: #757575;
+}
+
+.form-group {
+    margin-top: 40px;
+    position: relative;
+}
+
+label {
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.code-button {
+    background-color: #fff;
+    border: 0;
+    position: absolute;
+    right: 0;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+.cons-info {
+    background-color: #fff;
+    font-size: 13px;
+    padding: 0 16px;
+    line-height: 60px;
+    vertical-align: middle;
+    border-top: 1px solid #f9f6f4;
+}
+
+.cons-button {
+    margin-left: 270px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.constract-container {
+    padding: 10px 16px 46px;
+    background-color: #fff;
+}
+
+.constract-all {
+    color: #555;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 34px;
+    margin-top: 26px;
+}
+
+
+.constract-all-text {
+    color: #757575;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 34px;
+    margin-top: 8px;
+}
+.line {
+    background: #e0e0e0;
+    height: 1px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.constract-text {
+    color: #555;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 34px;
+    margin-top: 26px;
+}
+
+.description {
+    color: #555;
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: -3px;
+    padding-top: 9px;
+    letter-spacing: -1px;
+}
+
+.check-age {
+    letter-spacing: -1px;
+    margin-top: 22px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.constract-container input {
+    position: absolute;
+    left: 0;
+    margin-left: -26px;
+    margin-top: 1px;
+}
+
+.footer-button {
+    background-color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+
+.footer-button-click {
+    background-color: #cfcfcf;
+    border: none;
+    color: #fff;
+    font-family: Notokr-Bold;
+    font-size: 15px;
+    height: 48px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.row-footer {
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.row {
+    padding: 10px 0;
+    margin-top: -10px;
+}
