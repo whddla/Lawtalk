@@ -13,7 +13,7 @@
 		<div class="all-layout">
 			<div class ="title-layout">
 				<h1>
-					<a class = "title-font" href="http://www.naver.com">LawKnow</a>
+					<a class = "title-font" href="LawKnowMainPage.jsp">LawKnow</a>
 					<span style ="display : block; color: #fefefe; font-size: 22px">Good Lawyers</span>
 				</h1>
 				<h2>비밀번호 수정</h2>
@@ -48,11 +48,11 @@
 				</form>
 				<div class="footer">
 					<div class= "row" style ="display:flex; justify-content: space-around;">
-						<a href="http://www.naver.com" style="color: #545352; font-size: 12px; text-decoration: none; ;">의뢰인 회원탈퇴</a>
-						<a href="http://www.naver.com" style="color: #545352; font-size: 12px; text-decoration: none; ">로노 메인</a>
+						<a href="Clientwithdrawal.jsp" style="color: #545352; font-size: 12px; text-decoration: none; ;">의뢰인 회원탈퇴</a>
+						<a href="LawKnowMainPage.jsp" style="color: #545352; font-size: 12px; text-decoration: none; ">로노 메인</a>
 					</div>
 					<div class ="row">
-						<a href="http://www.naver.com" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
+						<a href="LawKnowMainPage.jsp" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
 					</div>
 				</div>
 			</div>	

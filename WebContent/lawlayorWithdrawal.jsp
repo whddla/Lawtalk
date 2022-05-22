@@ -14,7 +14,7 @@
 		<div class="all-layout">
 				<div class ="title-layout">
 					<h1 style="font-weight: bold;">
-						<a class = "title-font" href="http://www.naver.com" style="font-size:21px">LawKnow</a>
+						<a class = "title-font" href="LawKnowMainPage.jsp" style="font-size:21px">LawKnow</a>
 						<span style ="display : block; color: #fefefe; font-size: 22px;">Good Lawyers</span>
 					</h1>
 					<h2>변호사 회원 탈퇴</h2>
@@ -52,7 +52,7 @@
 					</div>
 					<div class="footer-text-layout">
 						<div class="row">
-							<a href="http://www.naver.com" style="color: #a9a7a6; font-size: 11px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
+							<a href="LawKnowMainPage.jsp" style="color: #a9a7a6; font-size: 11px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
 						</div>
 					</div>
 			</div>
