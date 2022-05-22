@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 body{
-    font-family: 'Cute Font', cursive;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+   
 }
 
 .top{
@@ -21,6 +26,8 @@ body{
     display: flex;
     width: 100%;
     height: 38px;
+    position: relative;
+     right: -39px;
 }
 #three-button{
     display: block;
@@ -33,18 +40,12 @@ body{
     /* display: none; */
     
 }
-.offcanvas-body{
-    margin: auto;
-}
-.rowtalklogo{
-    color: #ff6d37;
-    font-size: 40px;
-    text-transform: uppercase;
-}
 #thbutton{
     font-size: 42px;
     position: relative;
     left: -16px;
+    margin: auto;
+    cursor: pointer;
 }
 .rowtalklogo{
     width : 175px;
@@ -56,6 +57,26 @@ body{
     left: 74px;
     top: -3px;
 }
+.rowtalklogo{
+    width : 175px;
+    height : 38px;
+    margin:  0 auto;
+    text-align: center;
+    line-height: 46px;
+    position: relative;
+    left: 47px;
+    top: -3px;
+}
+
+.rowtalklogo a{
+    color: #ff6d37;
+    text-decoration: none;
+    cursor: pointer;
+}
+.rowtalklogo a:hover{
+    color: #ff6d37;
+}
+
 #small-menu{
     
     width :252px;
@@ -67,14 +88,43 @@ body{
  font-size: 12px
  
 }
+
 .twoandthree{
     margin-left: 19px;
     color: #999;
     font-size: 12px;
     margin-left: 10px;
     text-decoration: none;
+    cursor: pointer;
+}
+.twoandthree:HOVER{
+    color: #999;
+}
+.one a{
+    cursor: pointer;
+    color: #999;
+    text-decoration: none;
+}
+.one a:hover{
+    color: #999;
+}
+a{
+    cursor: pointer;
+}
+.secondpart a{
+    color: #000;
 }
 
+.secondpart a:hover{
+    color: #000;
+}
+.one a:hover{
+    cursor: pointer;
+}
+
+.offcanvas-body{
+    margin: auto;
+}
 .three{
     display: inline-block;
     padding-left: 5px;
@@ -129,7 +179,6 @@ top: 105px;
 
 .lowerinput{
     font-size: 28px;
-    font-weight: bold;
     height: 40px;
     line-height: 40px;
     outline: none;
@@ -192,12 +241,9 @@ width: 35px;
 height: 100%;
 text-align: center;
 cursor: pointer;
-line-height: 24vh; /* 텍스트의 높낮이를 바꾸게하려고! */
+line-height: 52vh;  /* 텍스트의 높낮이를 바꾸게하려고! */
 color: #00000070;
 background-color: white;
-}
-.prev{
-left: 0px;
 }
 
 div.next {  /* 오른쪽에올 arrow next는 오른쪽에 붙어야 하니까 */
@@ -803,11 +849,438 @@ border: white;
 outline: white;
 }
 
-#slidebutton { color: black; background-color: #fff; cursor: default; }
+#slidebutton { color: black; background-color: #fff; cursor: default;position: relative;
+    top: -7px; }
 #slidebutton:active, #slidebutton:focus { border: none; box-shadow: none; }
 
 
+.my-index-controller{
+margin: -25px auto 0;
+width: 692px;
+height: 695px;
+box-sizing: border-box;
+}
+.my-index-card{
+padding-bottom: 42px;
+background-color: #fff;
+padding: 26px 20px 32px;
+text-align: center;
+box-sizing: border-box;
+height: 231px;
+}
 
+
+.my-index-title{
+font-size: 28px;
+margin-bottom: 68px;
+font-weight: 900;
+color: #333;
+width: 100%;
+height: 28px;
+}
+
+
+.my-index-buttons-wrap{
+display: flex;
+justify-content: center;
+width: 100%;
+font-weight: 900;
+height: 53px;
+}
+
+.my-index-button{
+font-size: 14px;
+width: 184px;
+color: #757575;
+
+font-size: 12px;
+text-align: left;
+text-decoration: none;
+}
+.my-index-button-count {
+color: #cfcfcf;    font-size: 32px;margin-top: 7px;
+}
+.my-index-advice-list-container{
+margin-top: 35px;
+padding: 17px 60px 36px;
+background-color: #f6f6f6;
+box-sizing: border-box;
+width: 100%;
+height: 433px;
+/* height: 409px; */
+}
+.my-index-advice-list{
+width: 100%;
+box-sizing: border-box;
+height: 250px;
+}
+
+.my-index-list-title{
+margin-bottom: 34px;
+box-sizing: border-box;
+border-bottom: 3px solid #333;
+color: #333;
+font-size: 18px;
+padding-bottom: 13px;
+height: 18px;
+line-height: 4px;
+text-align: left;
+}
+.my-index-list-row{
+margin-bottom: 17px;
+display: flex;
+justify-content: space-between;
+text-decoration: none;
+cursor: pointer;
+width: 100%;
+height: 26px;
+}
+.my-index-list-label{
+font-size: 18px;
+color: #555;
+width: 147px;
+height: 26px;
+text-align: left;
+
+}
+.my-index-list-count{
+color: #cfcfcf;
+font-size: 32px;
+margin-top: -6px;
+width: 40px;
+height: 32px;
+}
+.my-index-advice-list{
+margin-top: 47px;
+box-sizing: border-box;
+width: 100%;
+height: 205px;
+
+
+
+}
+.my-index-list-title{
+margin-bottom: 34px;
+border-bottom: 3px solid #333;
+color: #333;
+font-size: 18px;
+margin-bottom: 29px;
+padding-bottom: 13px;
+width: 100%;
+height: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lt-footer{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 100px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 156px;
+    display: flex;
+    max-width: 1080px;
+    min-width: 600px;
+}
+
+.inner-footer{
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    height: 300px;
+    display: flex;
+}
+
+.firstbox{
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    font-size: .75rem;
+    width: 30%;
+    height: 300px;
+
+}
+
+.secondbox{
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    font-size: .75rem;
+    width: 70%;
+    height: 300px;
+    margin-left: 109px
+    
+}
+
+.firstbox div strong{
+    font-size: 30px;
+}
+
+
+.footer__menu{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: .875rem;
+    max-width: 520px;
+    margin-top: 0;
+    height: 25px;
+    POSITION: relative;
+    TOP: 15PX;
+}
+
+.lists{
+    margin-right: 0.75rem;
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    display: list-item;
+    color: #757575;
+}
+
+.informationfooter{
+    display: flex;
+    position: relative;
+    left: 38px;
+}
+
+
+.smallones{
+    font-size: 1px;
+}
+.footera{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.secondfootertitle{
+    padding-left: 35px;
+   
+    max-width: 520px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.mypagebox{
+    width: 260px;
+    height: 96px;
+    
+}
+
+.mypageboxtwo{
+    position: relative;
+    left: -111px;
+}
+.mypageboxtitle{
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    margin-top: 19px;
+    font-size: 13px;
+    height: 20px;
+    line-height: 15px;
+    font-weight: 900;
+
+}
+
+.mypageboxex{
+    width: 100%;
+    height: 24px;
+}
+
+.smallcharacter{
+    color: #757575;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.lastfooter{
+    border: 0;
+}
+
+.lastfooter div{
+    width: 100%;
+}
+
+.footera:hover {
+    color: #000;
+}
+
+
+
+
+
+
+
+.lt-footer{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 100px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    max-width: 1080px;
+    min-width: 600px;
+}
+.lt-footer a{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+.lt-footer a:hover{
+    color: #000;
+}
+
+.inner-footer{
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    height: 300px;
+    display: flex;
+}
+
+.firstbox{
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    font-size: .75rem;
+    width: 30%;
+    height: 300px;
+
+}
+
+.secondbox{
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    font-size: .75rem;
+    width: 70%;
+    height: 300px;
+    margin-left: 109px
+    
+}
+
+.firstbox div strong{
+    font-size: 30px;
+}
+
+
+.footer__menu{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: .875rem;
+    max-width: 520px;
+    margin-top: 0;
+    height: 25px;
+    POSITION: relative;
+    TOP: 15PX;
+}
+
+.lists{
+    margin-right: 0.75rem;
+    box-sizing: border-box;
+    border: 0 solid #e3e3e3;
+    display: list-item;
+    color: #757575;
+}
+
+.informationfooter{
+    display: flex;
+    position: relative;
+    left: 38px;
+}
+
+
+.smallones{
+    font-size: 1px;
+}
+.footera{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.secondfootertitle{
+    padding-left: 35px;
+   
+    max-width: 520px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.mypagebox{
+    width: 260px;
+    height: 96px;
+    
+}
+
+.mypageboxtwo{
+    position: relative;
+    left: -111px;
+}
+.mypageboxtitle{
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    margin-top: 19px;
+    font-size: 13px;
+    height: 20px;
+    line-height: 15px;
+    font-weight: 900;
+
+}
+
+.mypageboxex{
+    width: 100%;
+    height: 24px;
+}
+
+.smallcharacter{
+    color: #757575;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.lastfooter{
+    border: 0;
+}
+
+.lastfooter div{
+    width: 100%;
+}
+
+.footera:hover {
+    color: #000;
+}
+
+
+
+.rowtalklogo{
+    color: #ff6d37;
+    font-size: 40px;
+    text-transform: uppercase;
+}
 
 .lt-footer{
     border-top: 1px solid #e0e0e0;
@@ -947,12 +1420,74 @@ outline: white;
     color: #000;
 }
 
-.btn{
-    outline: none;
+.menu-items-bottom{
+    margin-left: 2px;
+    margin-bottom: 0;
+    text-align: left;
+    width:99%;
+    height: 225px;
+    line-height: 41px;
 }
 
+.bottom-inner{
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+}
+.bottom-inner:hover{
+    color: #000;
+}
 
+.new-up{
+    color: #ff6d37;
+    font-family: Amplitude Medium;
+    font-size: 12px;
+    position: relative;
+    text-decoration: none;
+    transition: color .2s ease-out;
+    top: -8px;
+    left: -9px;
+    font-weight: bolder;
+}
+.realbottomSlide{
+    width: 100%;
+    display: flex;
+    height: 113px
 
+}
+.slideLogin{
+    flex: 1;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+.slideicon{
+    
+    font-size: 41px;
 
+}
+.realbottomSlide a{
+    text-decoration: none;
+    color: #000;
+}
+
+.realbottomSlide a:hover{
+    color: #000;
+}
+
+.one{
+    cursor: pointer;
+}
+.one{
+    color: #757575;
+}
+.one:hover{
+    color: #757575;
+}
+
+.my-index-button:hover{
+    color: #757575;
+}
 
