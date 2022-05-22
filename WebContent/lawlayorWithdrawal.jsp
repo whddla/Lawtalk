@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel ="stylesheet" href ="asset\css\lawlayorWithdrawal.css">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="//db.onlinewebfonts.com/c/3a8ef215f4437b176fe0901f44ffbab0?family=NotoKR-Regular" rel="stylesheet" type="text/css"/>
 <title>탈퇴</title>
 </head>
