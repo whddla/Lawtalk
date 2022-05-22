@@ -1,0 +1,375 @@
+div.all-layout{
+    width: 100%;
+    position: absolute;
+    right: 320px;
+    top: 0px;
+ }
+
+.main{
+    position: absolute;
+    color: #f50;
+    left: 1190px;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.main1{
+    position: absolute;
+    color: #333;
+    left: 1220px;
+    top: 189px;
+    width: 200px;
+    height: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.line1{
+    position: absolute;
+    left: 800px;
+    top: 270px;
+    width: 1000px;
+    height: 0.1px;
+    background-color: #757575;
+}
+.box{
+    position: absolute;
+    width: 1000px;
+    height: 630px;
+    left: 800px;
+    top: 350px;
+    border: 1px solid #e0e0e0;
+}
+.box_word{
+    position: absolute;
+    left: 1150px;
+    top: 370px;
+    width: 300px;
+    font-size: 35px;
+    letter-spacing: 3px;
+    color: #c1b3ac;
+    font-weight: bolder;
+}
+
+
+
+#check1{
+    position: absolute;
+    left: 885px;
+    top: 610px;
+}
+#check2{
+    position: absolute;
+    left: 1090px;
+    top: 610px;
+}
+#check3{
+    position: absolute;
+    left: 1290px;
+    top: 610px;
+}
+#check4{
+    position: absolute;
+    left: 1490px;
+    top: 610px;
+}
+#check5{
+    position: absolute;
+    left: 1690px;
+    top: 610px;
+}
+#input1{
+    position: absolute;
+    left: 845px;
+    top: 720px;
+    width: 900px;
+    height: 100px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: gray;
+    vertical-align: top;
+    line-height: 0px;
+}
+
+.img1{
+    position: absolute;
+    left: 516px;
+    top: 492px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.img2{
+    position: absolute;
+    left: 722px;
+    top: 492px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.img3{
+    position: absolute;
+    left: 918px;
+    top: 492px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.img4{
+    position: absolute;
+    left: 1120px;
+    top: 492px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.img5{
+    position: absolute;
+    left: 1320px;
+    top: 492px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.coment{
+    position: absolute;
+    left: 760px;
+    top: 880px;
+    width: 400px;
+    height: 70px;
+    border-color: #f50;
+    border-radius: 3px;
+    background-color: #f50;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+#final{
+    position: absolute;
+    width: 2000px;
+    height: 300px;
+    top: 70px;
+    left: -321px;
+}
+
+.last1{
+    position: absolute;
+    left: 732px;
+    top: 1095px;
+    font-size: 14px;
+    font-weight: bolder;
+
+}
+.last2{
+    position: absolute;
+    left: 1419px;
+    top: 1095px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+.last3{
+    position: absolute;
+    left: 1552px;
+    top: 1095px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+.last4{
+    position: absolute;
+    left: 1685px;
+    top: 1095px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+.last5{
+    position: absolute;
+    left: 732px;
+    top: 1122px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last6{
+    position: absolute;
+    left: 732px;
+    top: 1146px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last7{
+    position: absolute;
+    left: 732px;
+    top: 1170px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last8{
+    position: absolute;
+    left: 1258px;
+    top: 1122px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last9{
+    position: absolute;
+    left: 1258px;
+    top: 1146px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last10{
+    position: absolute;
+    left: 1258px;
+    top: 1170px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+
+.last11{
+    position: absolute;
+    left: 732px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+
+.last12{
+    position: absolute;
+    left: 790px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last13{
+    position: absolute;
+    left: 850px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #f50;
+}
+.last14{
+    position: absolute;
+    left: 955px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last15{
+    position: absolute;
+    left: 1015px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last16{
+    position: absolute;
+    left: 1077px;
+    top: 1218px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: black;
+}
+.last17{
+    position: absolute;
+    left: 732px;
+    top: 1240px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last18{
+    position: absolute;
+    left: 732px;
+    top: 1262px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last19{
+    position: absolute;
+    left: 732px;
+    top: 1325px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last20{
+    position: absolute;
+    left: 732px;
+    top: 1345px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last21{
+    position: absolute;
+    left: 732px;
+    top: 1365px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last22{
+    position: absolute;
+    left: 732px;
+    top: 1385px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+.last23{
+    position: absolute;
+    left: 732px;
+    top: 1405px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+}
+
+.last24{
+    position: absolute;
+    left: 732px;
+    top: 1453px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+}
+
+.last25{
+    position: absolute;
+    left: 880px;
+    top: 1475px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: black;
+}
+
+.bottom{
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    height: 75px;
+    top: 1500px;
+    left: -2px;
+}
+
+#bottom{
+    position: absolute;
+    top: 1000px;
+    height: 100px;
+    width: 1800px;
+}
