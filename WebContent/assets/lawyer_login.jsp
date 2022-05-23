@@ -17,11 +17,13 @@
         <div class="main_login">
             <div class="login_banner">
                 <h1>
+                <!-- 로그인 페이지 -->
                     <a style="color:#ff4e00; "href="http://localhost:9000/kovengerss/assets/client_login.jsp">
                         LOGIN.
                     </a>
                 </h1>
             </div>
+            <!-- 메인 페이지 -->
             <a class="back_click" href="https://www.lawtalk.co.kr/?utm_source=Google_SA&utm_medium=lawtalk_ad&utm_campaign=PC_%ED%99%95%EC%9E%A5%EA%B2%80%EC%83%89_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EB%A1%9C%ED%86%A1&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&gclid=CjwKCAjwj42UBhAAEiwACIhADk9mpgdzTx0S5saCFBhe1lhYgyVvwTqVan2n7aqzVlhyXyACe0r21RoC-J0QAvD_BwE">
                 < 돌아가기
             </a>
@@ -29,6 +31,7 @@
                 <div class="login_container">
                     <div class="login_tabs">
                         <div class="active-tab">
+                        <!-- 의뢰인 로그인 페이지 -->
                         <a href="http://localhost:9000/kovengerss/assets/client_login.jsp"></a>
                             <h3 class="login-lawyer-tab">로그인</h3>
                         </div>
@@ -50,6 +53,7 @@
                                     <input type="checkbox" name="login-checkbox" >
                                     <h2>로그인 상태유지</h2>
                                 </div>
+                                <!--idpw찾기 페이지  -->
                                 <a class="find-id-password" href="http://localhost:9000/kovengerss/assets/find_idpw.jsp">
                                     <h2>아이디/비밀번호 찾기</h2>
                                 </a>
@@ -61,6 +65,7 @@
                         <div class="lawyer-signup-info">
                             <button type="button" class="lawyer-info-button">
                                 <span class="text">
+                                <!-- 변호사 가입안내 페이지 -->
 								<a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                                 </span>
                             </button>
@@ -68,6 +73,7 @@
                     </div>
                     <div class="footer">
                         <div class="row copyright-row">
+                        <!--회사 소개  -->
                             <a href="http://lawcompany.co.kr/">
                                 (C) Law&Company Co., Ltd.
                             </a>

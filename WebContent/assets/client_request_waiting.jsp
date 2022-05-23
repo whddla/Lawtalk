@@ -82,14 +82,14 @@
                             <label>
                             <i class="material-icons slideicon" >person_add</i>
                             <br>
-                           <a href="">회원가입</a>
+                           <a href="http://localhost:9000/kovengerss/assets/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
                             <i class="material-icons slideicon" style="left: 11px;">contacts</i>
                             <br>
-                            <a href="">로그인</a>
+                            <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
                         </label>
                         </div>
                     </div>
@@ -123,11 +123,13 @@
 				<aside class="side-bar">
 					<div class="sidebar-desktop">
 						<ul class="side-category">
+						<!-- 메인페이지  a태그 -->
 							<a style="text-decoration: none; color: #333; font-weight: 1000" href="https://www.lawtalk.co.kr/?utm_source=Google_SA&utm_medium=lawtalk_ad&utm_campaign=PC_%ED%99%95%EC%9E%A5%EA%B2%80%EC%83%89_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EB%A1%9C%ED%86%A1&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_KdQgwt4L3n9CX1YKpkYJDqreLer1dW2_feYvTXM-whJpRAgEYjZG8aAn89EALw_wcB">
 								<span>홈</span>
 							</a>
 							<hr>
 							<li>
+								<!-- 상담목록 사이드리스트 -->
 								<a class="choice" href="">이혼</a>
 							</li>
 							<li>
@@ -187,6 +189,7 @@
 								</aside>
 								<div class="a-card-main">
 									<header class="a-card-header">
+									<!-- 질문내용 보러가는 a태그-->
 										<a href="http://localhost:9000/kovengerss/assets/answer_page.jsp">
 											<h1 class="a-card-header-title">
 												전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 

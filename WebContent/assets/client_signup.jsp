@@ -42,23 +42,27 @@
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <label for="sign-up-email">이메일</label>
-                        <input class="form-control" id="sign-up-email" type="email" placeholder="예) name@example.com">
+                        <input class="form-control" id="account-email" type="email" placeholder="예) name@example.com" >
+                        <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="sign-up-id" type="text" placeholder="아이디">
+                        <input class="form-control" id="account-id" type="text" placeholder="아이디">
+                        <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="sign-up-password" type="password" placeholder="비밀번호">
+                        <input class="form-control" id="account-password" type="password" placeholder="비밀번호">
+                        <label class="account-password-error" for="account-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="sign-up-password-confirm" type="password" placeholder="비밀번호 재확인">
+                        <input class="form-control" id="account-password-confirm" type="password" placeholder="비밀번호 재확인">
+                        <label class="account-password-confirm-error" for="account-confirm-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                 </div>
                 <h3 class="info">인증정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <input class="form-control" id="sign-up-phone" type="tel" placeholder="전화번호">
+						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
+                        <input class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
                         <button type="button" class="code-button">[ 인증번호 발송 ]</button>
                     </div>
                     <div class="form-group">
@@ -78,16 +82,30 @@
                 <h3 class="info">기타정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <button type="button" class="form-control-button">방문경로</button>
+                        <select class="form-control-button" name="방문경로 선택">
+						  <option value="" selected>방문경로 선택</option>
+						  <option value="blog">블로그</option>
+						  <option value="naver-in">네이버 지식인</option>
+						  <option value="naver-search">네이버 검색</option>
+						  <option value="google">구글 검색</option>
+						  <option value="facebook">페이스북</option>
+						  <option value="기타">기타</option>
+						</select>
                     </div>
                 </div>
                 <h3 class="info">선택정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <button type="button" class="form-control-button">성별 선택</button>
+                        <select class="form-control-button" name="gender-choice">
+						  <option value="" selected>성별 선택</option>
+						  <option value="man">남자</option>
+						  <option value="women">여자</option>
+						</select>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="form-control-button">출생년도</button>
+                        <select class="form-control-button" name="yy" id="year">
+		                      <option value="" selected>출생년도 선택</option>
+	                      </select>
                     </div>
                 </div>
                 <h3 class="info">약관동의</h3>
@@ -159,6 +177,7 @@
                     <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                 </div>
                 <div class="row">
+                <!-- 회사소개 -->
                     <a style="font-size: 5px;" href="http://lawcompany.co.kr/">
                         (C) Law&Company Co., Ltd.
                     </a>
@@ -183,6 +202,104 @@
 		else $("#cbx_chkAll").prop("checked", true); 
 	});
 });
+    
+    let emailCheck = $(".account-email-error");
+	let $email = $("#account-email");
+	
+	
+	$email.on("keyup", function(){
+		if($email.val() == ""){
+			emailCheck.css("color","red");
+			emailCheck.text("이메일은 반드시 입력해야합니다.");
+		}
+		
+		if($email.val() !== ""){
+			emailCheck.css("color","rgb(99 193 76)");
+			emailCheck.text("이메일 입력완료.");
+		}
+	});
+	
+	
+    let idCheck = $(".account-id-error");
+	let $id = $("#account-id");
+	
+	
+	$id.on("keyup", function(){
+		
+		if($id.val() == ""){
+			idCheck.css("color","red");
+			idCheck.text("아이디는 반드시 입력해야합니다.");
+		}
+		
+		if($id.val() !== ""){
+			idCheck.css("color","rgb(99 193 76)");
+			idCheck.text("아이디 입력완료.");
+		}
+	});
+	
+	
+    let pwCheck = $(".account-password-error");
+	let $pw = $("#account-password");
+	
+	
+	$pw.on("keyup", function(){
+		
+		if($pw.val() == ""){
+			pwCheck.css("color","red");
+			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
+		}
+		
+		if($pw.val() !== ""){
+			pwCheck.css("color","rgb(99 193 76)");
+			pwCheck.text("비밀번호 입력완료.");
+		}
+	});
 
+	let pwConfirm= $(".account-password-confirm-error");
+	let $pwc= $("#account-password-confirm");
+	
+	
+	$pwc.on("keyup", function(){
+		
+		if($pwc.val() !== $pw.val()){
+			pwConfirm.css("color","red");
+			pwConfirm.text("비밀번호가 일치하지 않습니다.");
+			if($pwc.val() == ""){
+				pwConfirm.css("color","red");
+				pwConfirm.text("비밀번호를 입력해주세요.");
+			}
+		}
+		
+		if($pwc.val() == $pw.val()){
+			pwConfirm.css("color","rgb(99 193 76)");
+			pwConfirm.text("비밀번호 일치");
+		}
+	});
+	
+	/* 핸드폰 유효성 검사  */
+	let $hp = $("#account-hp");
+	let hpCheck = $(".tel-error");
+	let hp = RegExp(/^[0-9]{8,13}$/);
+		
+	$hp.on("keyup",function(){
+		if(!hp.test($hp.val()) || $hp.val().length != 11){
+			hpCheck.css("color","red");
+			hpCheck.text("숫자 형식이 맞지 않습니다.");
+		}else{
+			hpCheck.css("color","rgb(99 193 76)");
+			hpCheck.text("전화번호 입력완료.");
+		}
+	});
+	
+	
+	$(document).ready(function(){            
+	    var now = new Date();
+	    var year = now.getFullYear();
+	    //년도 selectbox만들기               
+	    for(var i = 1900 ; i <= year ; i++) {
+	        $('#year').append('<option value="' + i + '">' + i + '년</option>');    
+	    }
+	   
+	})
 </script>
 </html>
