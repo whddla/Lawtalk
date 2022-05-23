@@ -49,6 +49,13 @@
     position: relative;
     left: -16px;
 }
+.one a{
+	color:black;
+	text-decoration : none;
+}
+.ona a:hover{
+	color:black;
+}
 .rowtalklogo{
     width : 175px;
     height : 38px;
@@ -110,7 +117,7 @@ top: 105px;
     width: 530px;
     position: relative;
     top: -63px;
-    left: -276px;
+    left: -6px;
 }
 .inputrow{
     -webkit-text-size-adjust: 100%;
@@ -171,7 +178,7 @@ input::placeholder {
 .dotbogibox{
 display: flex;
 position: relative;
-left: 166px;
+left: -100px;
 }
 
 section.container {
