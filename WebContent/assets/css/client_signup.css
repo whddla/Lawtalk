@@ -239,6 +239,7 @@ label.toggle-item:before {
     display: flex;
     line-height: 3;
     color: #757575;
+	padding: 10px 0;
 }
 
 .form-group {

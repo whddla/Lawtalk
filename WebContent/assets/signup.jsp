@@ -34,6 +34,7 @@
                         나에게 꼭 맞는 변호사를 찾아보세요.
                     </div>
                     <button class="signup-button">
+                    <!-- 의뢰인 가입 페이지 -->
                         <a href="http://localhost:9000/kovengerss/assets/client_signup.jsp">
                             의뢰인으로 가입하기 >
                         </a>
@@ -51,6 +52,7 @@
                         자신있는 분야의 의뢰인들을 만나보세요.
                     </div>
                     <button class="signup-button">
+                    <!-- 변호사 가입 페이지  -->
                         <a href="http://localhost:9000/kovengerss/assets/lawyer_signup.jsp">
                             변호사로 가입하기 >
                         </a>
@@ -59,10 +61,13 @@
             </div>
             <div class="row-footer">
                 <div class="row" style="font-size: 12px;">
+                <!-- 로그인 사이트 -->
                     <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
+                    <!-- 변호사 가입안내 페이지 -->
                     <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                 </div>
                 <div class="row">
+                <!-- 회사 소개 -->
                     <a style="font-size: 5px;" href="http://lawcompany.co.kr/">
                         (C) Law&Company Co., Ltd.
                     </a>
