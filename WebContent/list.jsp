@@ -14,13 +14,13 @@
 <body>
     <div class="all-layout">
         <section>
-            <div id="Law">Law지식in</div>       
+            <a href="LawKnowMainPage.jsp"><div id="Law">LAWKNOW</div></a>     
       
         <div class="ttt">
-            <div class="word15">마이페이지</div>
-            <div class="word16">로그아웃</div>
-            <div class="word17">QNA</div>
-            <div class="word18">변호사 선택하기</div>
+            <a href="mypage.jsp"><div class="word15">마이페이지</div></a>
+            <a href="LawKnowMainPage.jsp"><div class="word16">로그아웃</div></a>
+            <a href="questionuser.jsp"><div class="word17">QNA</div></a>
+            <a href="list.jsp"><div class="word18">변호사 선택하기</div></a>
         </div>    
         <form action="">
         <input id="input1" type="text" placeholder="더 정확하게 검색하기">
@@ -171,19 +171,19 @@
 
         <div id="final"> 
         <div class="last1">공지사항</div>
-        <div class="last2">마이페이지</div>
+        <a href="mypage.jsp"><div class="last2">마이페이지</div></a>
         <div class="last3">로톡상담</div>
-        <div class="last4">고객센터</div>
+        <a href="questionUser.jsp"><div class="last4">고객센터</div></a>
         <div class="last5">[안내]로톡 서비스 운영정책 변경 안내</div>
         <div class="last6">[안내]로톡 이용약관 및 개인정보처리방침 개정 안내</div>
         <div class="last7">[안내]로톡 서비스 운영정책 변경 안내</div>
         <div class="last8">2022-04-20</div>
         <div class="last9">2022-01-12</div>
         <div class="last10">2021-011-30</div>
-        <div class="last11">회사소개</div>
-        <div class="last12">이용약관</div>
+        <a href="compani.jsp"><div class="last11">회사소개</div></a>
+        <a href="이용약관.jsp"><div class="last12">이용약관</div></a>
         <div class="last13">개인정보처리방침</div>
-        <div class="last14">법적책임</div>
+        <a href="법적책임.jsp"><div class="last14">법적책임</div></a>
         <div class="last15">운영정책</div>
         <div class="last16">사진촬영안내 </div>
         <div class="last17">(주)로앤컴퍼니 서울시 서초구 서초중앙로 22길 17, 4층 사업자번호 : 264-81-01728 통신판매번호 : 2016-서울서초-0227</div>
@@ -253,7 +253,7 @@
         </div>
     </div>
     <div class="writeglesigi">
-    <img src="assets/img/따봉.png" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+    <img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
     </div>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">

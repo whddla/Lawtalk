@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <div class="all-layout">
-        <div id="Law">LT</div>
+       <a href="LawKnowMainPage.jsp"><div id="Law">LT</div></a>
     
        
         <hr class="hr1"> 
@@ -153,7 +153,7 @@
         </div>
     </div>
     <div class="writeglesigi">
-    <img src="assets/img/따봉.png" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+   <img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
     </div>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">

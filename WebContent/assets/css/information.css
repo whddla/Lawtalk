@@ -71,7 +71,7 @@ div.all-layout{
     left: 1580px;
     top: 71px;
     font-size: 27px;
-    width: 200px;
+    width: 400px;
     font-weight: bolder;
     color: #fff;
 }
@@ -301,22 +301,22 @@ div.all-layout{
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 663px;
-    top: 512px;
+    left: 672px;
+    top: 527px;
 }
 .smallimg2 > img{
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 780px;
-    top: 515px;
+    left: 787px;
+    top: 527px;
 }
 .smallimg3 > img{
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 880px;
-    top: 515px;
+    left: 887px;
+    top: 527px;
 }
 
 
@@ -552,6 +552,16 @@ line-height: 25px;
     color: #555;
     font-weight: bolder;
 }
+
+.cell img{
+	position: absolute;
+    left: 639px;
+    top: 1703px;
+    width:20px;
+    height: 20px;
+    
+}
+
 .map4{
     position: absolute;
     left: 670px;
@@ -565,6 +575,7 @@ line-height: 25px;
     left: 1232px;
     top: 1635px;
     font-size: 14px;
+    width:400px;
     color: #333;
     font-weight: bolder;
 }

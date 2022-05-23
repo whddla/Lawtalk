@@ -11,32 +11,32 @@
     <link rel="stylesheet" href="assets/css/service.css">
     <title>Document</title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <div class="all-layout">
         <section>
-            <div id="Law">Law지식in</div>
+            <a href="LawKnowMainPage.jsp"><div id="Law">LAWKNOW</div></a>
             <div id="icon">          
-            <div class="img1">
+            <a href="list.jsp"><div class="img1">
                 <img src="assets/img/이혼.jpg">
-            </div>
-            <div class="img2">
+            </div></a>
+            <a href="list.jsp"><div class="img2">
                 <img src="assets/img/상속.jpg">
-            </div>
-            <div class="img3">
+            </div></a>
+            <a href="list.jsp"><div class="img3">
                 <img src="assets/img/성범죄.jpg">
-            </div>
-            <div class="img4">
+            </div></a>
+            <a href="list.jsp"><div class="img4">
                 <img src="assets/img/건설부동산.jpg">
-            </div>
-            <div class="img5">
+            </div></a>
+            <a href="list.jsp"><div class="img5">
                 <img src="assets/img/재산범죄.jpg">
-            </div>
-            <div class="img6">
+            </div></a>
+            <a href="list.jsp"><div class="img6">
                 <img src="assets/img/기업일반.jpg">
-            </div>
-            <div class="img7">
+            </div></a>
+            <a href="list.jsp"><div class="img7">
                 <img src="assets/img/형사기타.jpg">
-            </div>
+            </div></a>
         </div>
         
       
@@ -63,10 +63,10 @@
                 <div class="word14">변호사 243명</div>
             </div>  
         <div class="ttt">
-            <div class="word15">마이페이지</div>
-            <div class="word16">로그아웃</div>
-            <div class="word17">QNA</div>
-            <div class="word18">변호사 선택하기</div>
+            <a href="mypage.jsp"><div class="word15">마이페이지</div></a>
+            <a href="LawKnowMainPage.jsp"><div class="word16">로그아웃</div></a>
+            <a href="questionUser.jsp"><div class="word17">QNA</div></a>
+            <a href="list.jsp"><div class="word18">변호사 선택하기</div></a>
         </div>    
         
         <div class="word19">최근 인기 있는 질문과 답변</div>
@@ -159,7 +159,9 @@
 
         <div id="final"> 
         <div class="last1">공지사항</div>
-        <div class="last2">마이페이지</div>
+        
+        <a href="mypage.jsp"><div class="last2">마이페이지</div></a>
+        
         <div class="last3">로톡상담</div>
         <div class="last4">고객센터</div>
         <div class="last5">[안내]로톡 서비스 운영정책 변경 안내</div>
@@ -267,23 +269,23 @@
         </div>
     </div>
     <div class="writeglesigi">
-    <img src="assets/img/따봉.png" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
-    </div>
+    <a href="write.jsp"><img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+    </div></a>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">
            <strong>공지사항</strong>
         </a>
         <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
         <br>
-        <a class ="bottom-inner">
+        <a href="compani.jsp" class ="bottom-inner">
             회사소개
         </a>
         <br>
-        <a class ="bottom-inner">
+        <a href="questionLawer.jsp"class ="bottom-inner">
             자주 묻는 질문
         </a>
         <br>
-        <a class ="bottom-inner">
+        <a href="이용약관.jsp" class ="bottom-inner">
             이용약관
         </a>
         <br>
@@ -294,14 +296,14 @@
             <label>
             <i class="material-icons slideicon" >person_add</i>
             <br>
-           <a href="">회원가입</a>
+           <a href="signup.jsp">회원가입</a>
         </label>
         </div>
         <div class="slideLogin">
             <label>
             <i class="material-icons slideicon" style="left: 62px; top: 686px;">contacts</i>
             <br>
-            <a href="">로그인</a>
+            <a href="client_login.jsp">로그인</a>
         </label>
         </div>
     </div>

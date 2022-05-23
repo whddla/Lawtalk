@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/hg.css">
     <title>Document</title>
 </head>
-    <body>
+    <body style="overflow-x: hidden;">
         <div class="all-layout">
         
             <div class="main">LAWTALK</div>
@@ -72,24 +72,24 @@
     </div>
 
 
-    <button class="coment">후기 작성하기</button>
+    <a href="mycounsel.jsp"><button class="coment">후기 작성하기</button></a>
 
 
     <div id="final"> 
         <div class="last1">공지사항</div>
-        <div class="last2">마이페이지</div>
+        <a href="mypage.jsp"><div class="last2">마이페이지</div></a>
         <div class="last3">로톡상담</div>
-        <div class="last4">고객센터</div>
+        <a href="questionUser.jsp"><div class="last4">고객센터</div></a>
         <div class="last5">[안내]로톡 서비스 운영정책 변경 안내</div>
         <div class="last6">[안내]로톡 이용약관 및 개인정보처리방침 개정 안내</div>
         <div class="last7">[안내]로톡 서비스 운영정책 변경 안내</div>
         <div class="last8">2022-04-20</div>
         <div class="last9">2022-01-12</div>
         <div class="last10">2021-011-30</div>
-        <div class="last11">회사소개</div>
-        <div class="last12">이용약관</div>
+        <a href="compani.jsp"><div class="last11">회사소개</div></a>        
+        <a href="이용약관.jsp"><div class="last12">이용약관</div></a>
         <div class="last13">개인정보처리방침</div>
-        <div class="last14">법적책임</div>
+        <a href="법적책임.jsp"><div class="last14">법적책임</div></a>
         <div class="last15">운영정책</div>
         <div class="last16">사진촬영안내 </div>
         <div class="last17">(주)로앤컴퍼니 서울시 서초구 서초중앙로 22길 17, 4층 사업자번호 : 264-81-01728 통신판매번호 : 2016-서울서초-0227</div>
