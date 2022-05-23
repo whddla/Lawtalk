@@ -14,6 +14,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+.one a{
+	color:black;
+	text-decoration: none;
+}
+.joinform{
+    margin: 19px auto 0;
+    width: 530px;
+    position: relative;
+    top: -63px;
+    left: -6px;
+}
+.dotbogibox{
+display: flex;
+position: relative;
+left: -100px;
+}
+</style>
 </head>
 <body>
     <div class="top">
@@ -36,29 +54,29 @@
                       <div>
                         <div class="menu-item quick-menu">
                             <div class="one">
-                                <span>LAW<br>지식인</span>
+                                <a href="service.jsp"><span>LAW<br>지식인</span></a>
                             </div>
                             <div class="one">
-                                <span>1:1<br>바로상담</span>
+                                <a href="information.jsp"><span>1:1<br>바로상담</span></a>
                             </div>
                             <div class="one">
-                                <span>오늘의<br>질문들</span>
+                                <a href="service.jsp"><span>오늘의<br>질문들</span></a>
                             </div>
                         </div>
                       </div>
             
                       <div class="secondpart">
                         <div class="fourbox">
-                            <a class="findlower">LAW 지식 IN</a>
+                            <a class="findlower" href="service.jsp">LAW 지식 IN</a>
                         </div>
                         <div class="fourbox">
-                            <a class="findlower">변호사찾기</a>
+                            <a class="findlower" href="list.jsp">변호사찾기</a>
                         </div>
                         <div class="fourbox">
-                            <a class="findlower">해결사례</a>
+                            <a class="findlower"href="assets/answer_page.jsp">해결사례</a>
                         </div>
                         <div class="fourbox">
-                            <a class="findlower">상담사례</a>
+                            <a class="findlower" href="assets/answer_page.jsp">상담사례</a>
                         </div>
                     </div>
                     <div class="writeglesigi">
@@ -70,20 +88,20 @@
 
 
                     <div class = "menu-items-bottom">
-                        <a class ="bottom-inner">
+                        <a class ="bottom-inner" href=".jsp">
                             공지사항
                         </a>
                         <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
                         <br>
-                        <a class ="bottom-inner">
+                        <a class ="bottom-inner" href="compani.jsp">
                             회사소개
                         </a>
                         <br>
-                        <a class ="bottom-inner">
+                        <a class ="bottom-inner" href="questionUser.jsp">
                             자주 묻는 질문
                         </a>
                         <br>
-                        <a class ="bottom-inner">
+                        <a class ="bottom-inner" href="이용약관.jsp">
                             이용약관
                         </a>
                         <br>
@@ -94,14 +112,14 @@
                             <label>
                             <i class="material-icons slideicon" >person_add</i>
                             <br>
-                           <a href="">회원가입</a>
+                           <a href="assets/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
                             <i class="material-icons slideicon" style="left: 11px;">contacts</i>
                             <br>
-                            <a href="">로그인</a>
+                            <a href="assets/client_login.jsp">로그인</a>
                         </label>
                         </div>
                     </div>
@@ -112,11 +130,11 @@
                 <strong>lawknow</strong>
             </div>
             <div id="small-menu">
-                <a class="twoandthree">
+                <a class="twoandthree" href="assets/client_login.jsp">
                     로그인/가입
                 </a>
             
-                <a class="twoandthree three" style ="color: #333; cursor: pointer;">
+                <a class="twoandthree three"  href="list.jsp"style ="color: #333; cursor: pointer;">
                     변호사찾기
                 </a>
                 <a>
@@ -126,9 +144,9 @@
             </div>
         </div>
         <div class = "aaa">
-            <a class = "ott">LAW<br>지식IN</a>
-            <a class = "ott">1:1<br>바로상담</a>
-            <a class = "ott">오늘의<br>질문</a>
+            <a class = "ott" href="service.jsp">LAW<br>지식IN</a>
+            <a class = "ott" href="service.jsp">1:1<br>바로상담</a>
+            <a class = "ott" href="service.jsp">오늘의<br>질문</a>
         </div>
         </div>
         <form class = "joinform">
@@ -162,22 +180,22 @@
                                 <a>분야 전체 보기</a>
                             </div>
                         </div>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             이혼
                         </a>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             상속
                         </a>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             성범죄
                         </a>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             건설/부동산
                         </a>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             재산범죄
                         </a>
-                        <a class="catagoryPopular">
+                        <a class="catagoryPopular" href="service.jsp">
                             기업일반
                         </a>
                     </div>
@@ -189,7 +207,9 @@
                 </div>
                 </div>
                 <button class = "dotbogi" >
+               
                     <img src ="assets/css/img/돋보기.PNG">
+                
                 </button>
                 </div>
         </form>
@@ -218,7 +238,7 @@
             분야로 변호사를 찾으세요.
         </div>
         <div class="popular-categories-box">
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="divercebox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -229,7 +249,7 @@
                     변호사 243명<br>사례 8,884건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="sangsokbox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -240,7 +260,7 @@
                     변호사 153명<br>사례 3,898건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="genderbox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -251,7 +271,7 @@
                     변호사 312명<br>사례 19,224건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="gunsulbox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -262,7 +282,7 @@
                     변호사 216명<br>사례 5,032건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="moneybox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -273,7 +293,7 @@
                     변호사 289명<br>사례 18,284건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="generalbox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -284,7 +304,7 @@
                     변호사 126명<br>사례 2,608건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="policebox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
@@ -295,15 +315,16 @@
                     변호사 243명<br>사례 17,692건
                 </div>
             </a>
-            <a class = "diverce">
+            <a class = "diverce" href="service.jsp">
                 <div class="searchbox">
                    <!--  <img  class = "diverceimg" src = "img/이혼.jpg"/> -->
                 </div>
                 <div class="divercetitle">
                     분야찾기
                 </div>
+                
                 <div class="diverceexplain">
-                    분야 70개<br>전체보기
+                    	분야 70개<br>전체보기
                 </div>
             </a>
         </div>
@@ -311,7 +332,7 @@
 
        <section class = "geesikin">
         <div class="best-expert">
-            <a class = "best-link" href="">
+            <a class = "best-link"  href="service.jsp">>
                 <div class="best-background">
                     <div class="background-image-best">
                         <img class="real-img" src="https://ssl.pstatic.net/static/kin/section/expert/pc/home_panel_expert2.png" alt="">
@@ -328,7 +349,7 @@
             </a>
         </div>
         <div class="best-expert">
-            <a class = "best-link" href="">
+            <a class = "best-link" href="assets/answer_page.jsp">
                 <div class="best-title hothot">
                         <h2 class = "subtitle twosubtitle">
                             <span class ="blind">지식 IN 성지</span>
@@ -338,7 +359,7 @@
             </a>
         </div>
         <div class="best-expert">
-            <a class = "best-link" href="">
+            <a class = "best-link" href="assets/answer_page.jsp">
                 <div class="best-title todayafter">
                         <h2 class = "subtitle todaysgle">
                             <span class ="blind">오늘의 질문</span>
@@ -348,7 +369,7 @@
             </a>
         </div>
         <div class="best-expert">
-            <a class = "best-link" href="">
+            <a class = "best-link" href="assets/answer_page.jsp">
                 <div class="best-title ahaaafter">
                         <h2 class = "subtitle ahaaha">
                             <span class ="blind">NEW</span>
@@ -371,7 +392,7 @@
                             </a>
                             <p class="counsel__title">LAWKNOW 지식인</p>
                             <p class="counsel__text">당신의 고민과 상담을 자유롭게 올려주세요 다양한 전문가들이 지식을 공유해드립니다. 해결책을 문의하세요.</p>
-                            <a class="counsel__reservation-link">
+                            <a class="counsel__reservation-link" href="write.jsp">
                                 LAW KNOW 지식IN 시작 &gt;
                             </a>
                         </div>
@@ -382,7 +403,7 @@
                             </a>
                             <p class="counsel__title">1:1 바로상담</p>
                             <p class="counsel__text">예약한 시간에 변호사로부터 1:1채팅이 옵니다. 변호사를 직접 선택하고 빠르게 해결책을 문의하세요.</p>
-                            <a class="counsel__reservation-link">
+                            <a class="counsel__reservation-link" href="list.jsp">
                                 1:1상담 바로가기 &gt;
                             </a>
                         </div>
@@ -393,7 +414,7 @@
                             </a>
                             <p class="counsel__title">분야별 글 목록</p>
                             <p class="counsel__text">당신의 관심 분야를 선택해주세요.도움이 될만한  많은 사례와 글을 볼 수 있습니다. 전문가와 상담이 필요할 땐 LAW KNOW </p>
-                            <a class="counsel__reservation-link">
+                            <a class="counsel__reservation-link" href="assets/answer_page.jsp">
                                 분야찾고 예약하기 &gt;
                             </a>
                         </div>
@@ -411,7 +432,7 @@
                     <div class="counsel-online-write--content-wrap">
                         <p class="counsel__title" style="color: #333; font-weight: bold;">온라인상담</p>
                         <p class="explainToanswer" style="color: #555;">여러 변호사의 초기의견이 궁금하신가요? 상담글 쓰고 답변받으세요. 단, 내용은 익명으로 LAWKNOW에 등록됩니다.</p>
-                        <a  href="" class="writecounselone">상담글쓰기 &gt;</a>
+                        <a  href="" class="writecounselone" href="write.jsp">상담글쓰기 &gt;</a>
                     </div>
                 </div>
             </div>
@@ -424,7 +445,7 @@
         <div class="iflower"><span class="ififif">혹시 변호사님이신가요?</span>
             <br><span class="ansim">변호사님 안심하고 사용하세요. LAWKNOW은 합법입니다.</span>
             <div class = "orangelast">
-                <a href ="" class="withlawer">변호사 가입페이지 &gt;</a>
+                <a href ="" class="withlawer" href="aseets/lawyer_login.jsp">변호사 가입페이지 &gt;</a>
             </div>
         </div> 
        </section>
@@ -444,22 +465,22 @@
                     </h4>
                     <ul class="footer__menu">
                         <li class="lists">
-                            <a href="" class="footera">
+                            <a  class="footera" href="service.jsp">
                             <i class="material-icons smallones" style="font-size: 1px">fiber_manual_record</i> LAWKNOW 지식인
                             </a>
                         </li>
                         <li class="lists">
-                            <a href="" class="footera">
+                            <a  class="footera" href="list.jsp">
                             <i class="material-icons smallones" style="font-size: 1px">fiber_manual_record</i> LAWKNOW 1:1 상담
                             </a>
                         </li>
                         <li class="lists">
-                            <a href="" class="footera">
+                            <a  class="footera" href="assets/client_request.jsp">
                             <i class="material-icons smallones" style="font-size: 1px">fiber_manual_record</i> 상담사례
                             </a>
                         </li>
                         <li class="lists">
-                            <a href="" class="footera">
+                            <a href="" class="footera" href="assets/client_request.jsp">
                             <i class="material-icons smallones" style="font-size: 1px">fiber_manual_record</i> 해결사례
                             </a>
                         </li>
@@ -470,10 +491,10 @@
                                 마이페이지
                             </div>
                             <div class="mypageboxex">
-                                <a href="">내 상담 내역</a>
+                                <a href="mycounsel.jsp">내 상담 내역</a>
                             </div>
                             <div class="mypageboxex">
-                                <a href="">회원 정보 수정</a>
+                                <a href="privacyPage.jsp">회원 정보 수정</a>
                             </div>
                         </div>
                         <div class="mypagebox mypageboxtwo">
@@ -481,16 +502,16 @@
                                 고객센터
                             </div>
                             <div class="mypageboxex">
-                                <a href="">자주 묻는 질문</a>
+                                <a href="questionUser.jsp">자주 묻는 질문</a>
                             </div>
                             <div class="mypageboxex">
-                                <a href="">회사소개</a>
+                                <a href="compani.jsp">회사소개</a>
                                 </div>
                             <div class="mypageboxex">
-                                <a href="">이용약관</a> <!--이용약관 링크 -->
+                                <a href="이용약관.jsp">이용약관</a> <!--이용약관 링크 -->
                            </div>
                            <div class="mypageboxex">
-                            <a href="">법적책임</a> <!--이용약관 링크 -->
+                            <a href="법적책임.jsp">법적책임</a> <!--이용약관 링크 -->
                             </div>
                         </div>
                     </div>
