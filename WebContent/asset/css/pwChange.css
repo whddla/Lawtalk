@@ -14,8 +14,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline;
 }
 
+*{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
 body{
-	font-family: "NotoKR-Regular";
+	font-family: 'Noto Sans KR', sans-serif;
 	background-color: #f1f4f6;
 }
 
