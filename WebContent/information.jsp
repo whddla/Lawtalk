@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="assets/css/information.css">
     <title>Document</title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <div class="all-layout">
         <div id="total">  
            
-            <a href="https://www.naver.com/"><div class="title1">변호사홈</div></a>
-            <div class="title2">변호사정보</div>
+            <a href="lawlayorMypage.jsp"><div class="title1">변호사홈</div></a>
+            <a href="list.jsp"><div class="title2">변호사정보</div></a>
             <div class="title3">법률사례</div>
             <div class="title4">의뢰인후기</div>
             <div class="title5">상담예약</div>
             <div class="box"></div>
-            <div class="box_word1">이재원 변호사</div>
+            <div class="box_word1">한동석 변호사</div>
             <div class="box_word2">법률사무소 니케</div>
             <div class="box_word3">상담시작하기</div>
             <div class="box_img">
-                <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/626796730721020030a7420b-original-1652102543412.jpg">
+                <img src="assets/img/한동석.jpg">
             </div>
         
             <div class="box_img2">
@@ -41,7 +41,7 @@
             
             
             <div id="information"> 
-                        <div class="info1">이현권 변호사</div>
+                        <div class="info1">한동석(님) 변호사</div>
                         <div class="info2">법률사무소니케</div>
                         <div class="info3">서울특별시 서초구 서초중앙로 153(서초동)</div>
                         <div class="info4">서울빌딩 4층</div>
@@ -115,18 +115,21 @@
                         <div class="map1">사무실정보</div>
                         <div class="map2">법률사무소 니케</div>
                         <div class="map3">서울특별시 서초구 서초중앙로 153(서초동) 서울빌딩 4층</div>
+                          <div class="cell">
+                            <img src="assets/img/전화기.png">
+                        </div>  
                         <div class="map4">02-6953-6933</div>
-                        <div class="map5">네이버 지도로 보기</div>
+                        <a href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EC%A4%91%EC%95%99%EB%A1%9C%20153/address/14139015.181567427,4508375.159683814,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EC%A4%91%EC%95%99%EB%A1%9C%20153,new?c=14138965.1991161,4508373.7987122,19,0,0,0,dh&isCorrectAnswer=true"><div class="map5">네이버 지도로 보기</div></a>
                     <div class="map">
-                        <img src="https://www.lawtalk.co.kr/api/static-map?center=127.0130572,37.4953524&level=15&w=722&h=300&markers=127.0130572,37.4953524">
+                        <img src="assets/img/지도.jpg">
                     </div>
                     <hr class="line5">
         
         
-                    <div class="last11">회사소개</div>
-                    <div class="last22">이용약관</div>
+                    <a href="compani.jsp"><div class="last11">회사소개</div></a>
+                    <a href="이용약관.jsp"><div class="last22">이용약관</div></a>
                     <div class="last33">개인정보처리방침</div>
-                    <div class="last44">법적책임</div>
+                    <a href="법적책임.jsp"><div class="last44">법적책임</div></a>
                     <div class="last55">후기정책</div>
                     <div class="last66">사진촬영안내 </div>
                     <div class="last77">(주)로앤컴퍼니 서울시 서초구 서초중앙로 22길 17, 4층 사업자번호 : 264-81-01728 통신판매번호 : 2016-서울서초-0227</div>
@@ -184,7 +187,7 @@
         </div>
     </div>
     <div class="writeglesigi">
-    <img src="assets/img/따봉.png" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+    <img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
     </div>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">
