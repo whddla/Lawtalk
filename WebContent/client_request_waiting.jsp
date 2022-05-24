@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/client_request_waiting.css">
+<link rel="stylesheet" href="assets/css/client_request_waiting.css">
 <title>로노 | 상담 목록</title>
 </head>
 <body>
@@ -55,7 +55,7 @@
 	                    </div>
 	                 </div>
 	                 <div class="writeglesigi">
-	                    <img src="../assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+	                    <img src="assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
 	                 </div>
 	                    <div class = "menu-items-bottom">
                         <a class ="bottom-inner">
@@ -104,7 +104,7 @@
 				<div class="banner">
 					<div class="container">
 						<div class="image-wrap">
-							<img class="category-image" src="../assets/css/img/이혼사진.png">
+							<img class="category-image" src="assets/css/img/이혼사진.png">
 						</div>
 						<div class="title-wrap">
 							<div class="title">
@@ -156,18 +156,15 @@
 				<main class="main-wrap">
 					<div class="question-wrap">
 						<div class="question-header">
-							<div class="tabs">
-								<button class="">
-									<a style="text-decoration: none; color: #333" href="http://localhost:9000/kovengerss/assets/client_request.jsp">
+							<div class="tab_box">
+								<button class="tabs active" onclick ="tabOpen(event, 'answer-complete');" id="basic_content">
 										<span class="bullet">답변완료</span>
 									</a>
 								</button>
-								<button class="-active">
-									<a style="text-decoration: none; color: #333" href="http://localhost:9000/kovengerss/assets/client_request_waiting.jsp">
+								<button class="tabs" onclick="tabOpen(event, 'answer-waiting');" >
 										<span class="bullet">답변대기</span>
 									</a>
 								</button>
-								<hr style="height: 2px; opacity: unset;"class="tabs_activeIndicator finalized">
 							</div>
 							<div class="sorting">
 								<div class="sort-tabs">
@@ -177,7 +174,7 @@
 								</div>
 							</div>
 						</div>
-						<div>
+							<div class="content" id="answer-complete" style =" display: block;">
 							<div class="a-card-question-list">
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
@@ -189,7 +186,6 @@
 								</aside>
 								<div class="a-card-main">
 									<header class="a-card-header">
-									<!-- 질문내용 보러가는 a태그-->
 										<a href="http://localhost:9000/kovengerss/assets/answer_page.jsp">
 											<h1 class="a-card-header-title">
 												전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 
@@ -203,6 +199,7 @@
 										조회수
 											<i class="number">231</i>
 										</span>
+										<span class="answer">2시간전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -230,6 +227,7 @@
 										조회수
 											<i class="number">180</i>
 										</span>
+										<span class="answer">1달전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -257,6 +255,7 @@
 										조회수
 											<i class="number">102</i>
 										</span>
+										<span class="answer">5분 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -284,6 +283,7 @@
 										조회수
 											<i class="number">221</i>
 										</span>
+										<span class="answer">1시간 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -311,6 +311,7 @@
 										조회수
 											<i class="number">9</i>
 										</span>
+										<span class="answer">1분 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -338,6 +339,7 @@
 										조회수
 											<i class="number">33</i>
 										</span>
+										<span class="answer">2달 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -365,6 +367,7 @@
 										조회수
 											<i class="number">251</i>
 										</span>
+										<span class="answer">1달 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -392,6 +395,7 @@
 										조회수
 											<i class="number">40</i>
 										</span>
+										<span class="answer">2달 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
@@ -419,9 +423,40 @@
 										조회수
 											<i class="number">274</i>
 										</span>
+										<span class="answer">1시간 전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
+							<div class="a-card-question-list">
+								<aside class="a-card-aside-card">
+									<div class="a-wrapper">
+										<div class="badge">
+											<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
+											<p class="number">56</p>
+										</div>
+									</div>
+								</aside>
+								<div class="a-card-main">
+									<header class="a-card-header">
+										<a href="">
+											<h1 class="a-card-header-title">
+												아내가 바람핌. 상간남 회사게시판에 글 게시가 법에 위반될까요?
+											</h1>
+											<span class="a-card-headerInfo">2022. 05. 08. 11:05</span>
+										</a>
+										
+									</header>
+									<div class="a-card-cotent">
+										<span class="viewCount">
+										조회수
+											<i class="number">560</i>
+										</span>
+										<span class="answer">2주일 전 작성됨</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content" id ="answer-waiting" style ="display: none;">
 							<div class="a-card-question-list">
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
@@ -450,11 +485,32 @@
 								</div>
 							</div>
 						</div>
-					</div>
 				</main>
 		</section>
 		</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
+<script >
+	function tabOpen(evt, contentName){
+			var i, tabcontent, tab_btn;
+			
+			tabcontent = document.getElementsByClassName("content");
+			for(i = 0; i<tabcontent.length; i++){ //내용을 나열
+				tabcontent[i].style.display = "none";
+			}
+			
+			tab_btn = document.getElementsByClassName("tabs");
+			for(i = 0; i<tab_btn.length; i++){ // 탭 버튼 나열
+				
+				//탭 버튼을 눌렀을 때 기존 탭 class 삭제
+				tab_btn[i].className = tab_btn[i].className.replace(" active",""); 
+				
+				
+			}
+				//탭을 눌렀을 때 해당 id의 내용을 출력
+				document.getElementById(contentName).style.display = "block";
+				//class 생성 이벤트 발생
+				evt.currentTarget.className += " active"; 
+		}
+</script>
 </html>
