@@ -183,37 +183,37 @@ left: -100px;
 
 section.container {
 margin: 0 auto;
-width: 70vw; /* 보여지는 컨테이너는 90%로 주자 */
-overflow: hidden;  /* 넘치게 넣어줄것인데 넘치면 보이지 않게 해줄것이다. */
-height: fit-content; /* 안에있는 내용만큼 높이를 할당하겠다라른 뜻 */
+width: 70vw; /* 蹂댁뿬吏��뒗 而⑦뀒�씠�꼫�뒗 90%濡� 二쇱옄 */
+overflow: hidden;  /* �꽆移섍쾶 �꽔�뼱以꾧쾬�씤�뜲 �꽆移섎㈃ 蹂댁씠吏� �븡寃� �빐以꾧쾬�씠�떎. */
+height: fit-content; /* �븞�뿉�엳�뒗 �궡�슜留뚰겮 �넂�씠瑜� �븷�떦�븯寃좊떎�씪瑜� �쑜 */
 position: relative; 
 }
 
-div.banner {  /* 이 자체를 transfrom을 해주어야한다. */
-width: 280vw;  /* 6개의 사진이 들어갈꺼니까 6을 곱해준값 */
-/* transform: translate(-90vw); 왼쪽으로 90 이면 하나씩 이동하겠디*/  
-transition: transform 1s; /* all을 써줘도 된다 */
+div.banner {  /* �씠 �옄泥대�� transfrom�쓣 �빐二쇱뼱�빞�븳�떎. */
+width: 280vw;  /* 6媛쒖쓽 �궗吏꾩씠 �뱾�뼱媛덇볼�땲源� 6�쓣 怨깊빐以�媛� */
+/* transform: translate(-90vw); �쇊履쎌쑝濡� 90 �씠硫� �븯�굹�뵫 �씠�룞�븯寃좊뵒*/  
+transition: transform 1s; /* all�쓣 �뜥以섎룄 �맂�떎 */
 }
 
 div.img {
 width: 70vw;
-float: left;  /* 왼쪽을 기준으로 순서대로 붙게해주려고! */
+float: left;  /* �쇊履쎌쓣 湲곗��쑝濡� �닚�꽌��濡� 遺숆쾶�빐二쇰젮怨�! */
 }
 
 div.img img { 
-width: 100%;   /* inline요소에 가로 넓이를 못주니까 block으로 해주었다. */
+width: 100%;   /* inline�슂�냼�뿉 媛�濡� �꼻�씠瑜� 紐살＜�땲源� block�쑝濡� �빐二쇱뿀�떎. */
 display: block;
 }
 
 div.arrow {
 position: absolute;
 font-size: 2rem;
-z-index: 1;  /* 2개다 동일하게 보이게 해주려고 */
+z-index: 1;  /* 2媛쒕떎 �룞�씪�븯寃� 蹂댁씠寃� �빐二쇰젮怨� */
 width: 35px;
 height: 100%;
 text-align: center;
 cursor: pointer;
-line-height: 24vh; /* 텍스트의 높낮이를 바꾸게하려고! */
+line-height: 24vh; /* �뀓�뒪�듃�쓽 �넂�궙�씠瑜� 諛붽씀寃뚰븯�젮怨�! */
 color: #00000070;
 background-color: white;
 }
@@ -221,7 +221,7 @@ background-color: white;
 left: 0px;
 }
 
-div.next {  /* 오른쪽에올 arrow next는 오른쪽에 붙어야 하니까 */
+div.next {  /* �삤瑜몄そ�뿉�삱 arrow next�뒗 �삤瑜몄そ�뿉 遺숈뼱�빞 �븯�땲源� */
 right: 0;
 }
 
@@ -276,7 +276,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/이혼.jpg");
+background-image: url("../img/�씠�샎.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -303,7 +303,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/상속.jpg");
+background-image: url("../img/�긽�냽.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -315,7 +315,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/성범죄.jpg");
+background-image: url("../img/�꽦踰붿즲.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -327,7 +327,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/건설부동산.jpg");
+background-image: url("../img/嫄댁꽕遺��룞�궛.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -339,7 +339,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/재산범죄.jpg");
+background-image: url("../img/�옱�궛踰붿즲.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -351,7 +351,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/기업일발.jpg");
+background-image: url("../img/湲곗뾽�씪諛�.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -363,7 +363,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/형사기타.jpg");
+background-image: url("../img/�삎�궗湲고�.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -375,7 +375,7 @@ height: 98px;
 width: 98px;
 border-radius: 50%;
 margin: 0 auto;
-background-image: url("../img/분야찾기.jpg");
+background-image: url("../img/遺꾩빞李얘린.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -1058,7 +1058,7 @@ outline: white;
 .arrow-down{
 	width: 0;
 	height: 0;
-	border-top: 11px solid #ff6d37;/* 화살표 */
+	border-top: 11px solid #ff6d37;/* �솕�궡�몴 */
 	border-left: 11px solid transparent;
 	border-right: 11px solid transparent;
     position: relative;

@@ -21,6 +21,7 @@ a{
 
 .offcanvas-body{
 	margin: 0 auto;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 
@@ -229,7 +230,7 @@ outline: white;
     border-radius: 0;
     position: relative;
     display: block;
-    width: 95%;
+    width: 1404px;
     margin-top: 66px;
 }
 
@@ -254,6 +255,7 @@ outline: white;
     margin: 0 auto;
     color: #ff6d37;
     font-size: 25px;
+    vertical-align: middle;
 }
 
 .container {
@@ -306,8 +308,8 @@ outline: white;
 	margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 	background-color: #f8f8f8;
 }
 
@@ -394,44 +396,25 @@ button {
 	overflow: visible;
 }
 
-.tabs {
+.tab_box {
 	display: inline-block;
+	font-size: 25px;
 }
 
-.question-header .tabs>button{
-	width: 100px;
-	--text-opacity: 1;
-    color: #989898;
-    color: rgba(152,152,152,var(--text-opacity));
+.tab_box .active {
+    color: #e54c1fbd;
+    border-bottom: 2px solid #ff4e00;
+}
+
+tabs {
+	color: #e3e3e3;
+	font-size: 1.125rem;
+    margin-right: 0;
+    width: 100px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 1rem;
-    margin-right: 1.5rem;
+	display: none;
 }
-
-.question-header .tabs>button.-active {
-	 --text-opacity: 1;
-    color: #333;
-    color: rgba(51,51,51,var(--text-opacity));
-    font-weight: 700;
-}
-
-.tabs hr {
-	margin:0;
-	width: 50%;
-	text-align: left;
-  	margin-left: 129px;
-    height: 0.25rem;
-    --bg-opacity: 1;
-    background-color: #ff6d37;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .2s;
-    width: calc(50% - 1.5rem);
-    box-sizing: content-box;
-    overflow: visible;
-}
-
-
 
 .sorting {
 	padding-bottom: 0.5rem
