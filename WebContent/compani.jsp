@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href= "asset\css\compani.css">
+<link rel="stylesheet" href= "assets\css\compani.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
       </p>
       <a class="button-border button-layout" href="write.jsp">상담 글 등록</a><!-- 글작성하는곳 링크  -->
       <br>
-      <img src="asset\img\질문 이미지.png" class="question-img">
+      <img src="assets\img\질문 이미지.png" class="question-img">
     	</section>
     	<section class="section-second-layout">
     		<h1 class="section-second-title">로노는 어떻게 사용하나요?</h1>
@@ -55,7 +55,7 @@
 	    				<div class="second-how-menu-layout">
 	    					<div class="second-how-menu-card">
 		    					<h2 class="second-how-title">1:1채팅방</h2>
-		    					<img src="asset/img/채팅아이콘.png" style="width: 54%;">
+		    					<img src="assets/img/채팅아이콘.png" style="width: 54%;">
 		    					<p>1:1채팅 신청시 카톡으로<br>보다 자세한 상담이 가능합니다.</p>
 	    					</div>
 	    				</div>
