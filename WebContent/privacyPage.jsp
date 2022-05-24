@@ -34,7 +34,7 @@
 						<p class="login-alert">소셜 로그인한 경우, 임의의 아이디가 부여됩니다.</p>
 					</div>
 						<div class ="button-layout" >
-							<button type="submit">[ 저장 ]</button>
+							<button type="submit">[저장 ]</button>
 						</div>
 				</form>
 				<form class ="second-form">

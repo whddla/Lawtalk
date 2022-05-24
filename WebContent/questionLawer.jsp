@@ -10,6 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" /> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    	h4{
+    		cursor:pointer;
+    	}
+    	label { display: inline-block; } label img { pointer-events: none; }
+
+
+    </style>
 </head>
 
 <body>
@@ -43,9 +51,10 @@
 
 
         <form action="" class ="joinform">
+         	
             <section class="join1_box on">
-                <input type="checkbox" id="agre0">
-                <h4 class ="maintopic"><span class="view"><i class="material-icons">expand_more</i></span>변호사 회원 가입 자격이 있나요?<label for="agre0"></label></h4>
+                <input type="checkbox" class="agre0" id = "agree1">
+                <h4 class ="maintopic"><span class="view"><i class="material-icons">expand_more</i><label for ="agree1"></span>변호사 회원 가입 자격이 있나요?</h4></label>
                 <div class="con" style="display:none">대한민국 변호사 자격증을 보유한 변호사님이라면 누구나 무료로 가입을 할 수 있습니다. 단, 등록 전이거나 휴업상태인 변호사님이시라면 운영팀으로 문의주세요. </div>
             </section>
             <section class="join1_box">
@@ -122,10 +131,10 @@
 
 
 
-    <button class="btn-action-question btn-action ">
+<button class="btn-action-question btn-action">
         <div class="buttoninbox">
-            <a>
-            <span class="fixspan">
+            <a class = "" href="write.jsp" style ="color:white;">
+            <span class="fixspan" style="color:black;">
                 LAWKNOW 지식인
             </span>
             <!-- <div class = "arrow-down"></div> -->
