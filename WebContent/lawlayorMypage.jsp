@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="asset\css\lawlayorMypage.css">
+<link rel="stylesheet" href="assets\css\lawlayorMypage.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <title>Insert title here</title>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <img src="연필.jpg" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+                    <img src="assets/img/연필1.jpg" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
                     </div>
                     <div class = "menu-items-bottom">
                         <a class ="bottom-inner">
@@ -101,7 +101,7 @@
 				<div class="title-layout">
 					<a href="privacy.jsp" class="privacy-img">
 					개인정보 수정
-					<img src="톱니바퀴.png"class="privacy-img-size">
+					<img src="assets/img/톱니바퀴.png"class="privacy-img-size">
 					</a>
 					<a href="">로그아웃</a>
 					</div>	
