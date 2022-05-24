@@ -31,6 +31,35 @@ display: flex;
 position: relative;
 left: -100px;
 }
+div.btns{
+	bottom: 4px;
+}
+}
+.btn{
+    outline: none;
+}
+.btn{
+    outline: none;
+    width: 14px;
+    border-radius: 55%;
+    background: #00000078;
+    height: 12px;
+    padding :0;
+        margin: 0 10px;
+    }
+.btn i{
+	   font-size: 13px;
+	   color :#00000061
+}
+.counsel-banner-section{
+	width :1878px
+}
+.menu-active {
+    background: orange;
+}
+.menu-ractive{
+	background: #00000078;
+}
 </style>
 </head>
 <body>
@@ -88,21 +117,21 @@ left: -100px;
 
 
                     <div class = "menu-items-bottom">
-                        <a class ="bottom-inner" href=".jsp">
-                            공지사항
-                        </a>
-                        <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
-                        <br>
                         <a class ="bottom-inner" href="compani.jsp">
-                            회사소개
+                          		 회사소개
                         </a>
+                        <i ng-if="noticeNew > 0" class="new-up" style="top: -2px;left: -4px;">&nbsp;LAWKNOW</i>
                         <br>
                         <a class ="bottom-inner" href="questionUser.jsp">
-                            자주 묻는 질문
+                            	 자주 묻는 질문
+                        </a>
+                        <br>
+                         <a class ="bottom-inner" href="compani.jsp">
+                   				 법적책임            
                         </a>
                         <br>
                         <a class ="bottom-inner" href="이용약관.jsp">
-                            이용약관
+                          		  이용약관
                         </a>
                         <br>
                     </div>
@@ -153,7 +182,8 @@ left: -100px;
             <div class = "dotbogibox">
                 <div class = "lowerInputBox" >
                 <input  class = "lowerinput"type="text" placeholder="분야/사례/변호사를 검색하세요.">
-                <button class="btn btn-primary transparentbutton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+                <button style="width:100%; height:100%" 
+                class="btn btn-primary transparentbutton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
                 <div class="offcanvas offcanvas-top oftenshowbox" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height:454px">
                 <div class="offcanvas-header">
                     <h5 id="offcanvasTopLabel">
@@ -226,10 +256,10 @@ left: -100px;
         </div>
         <div class="arrow next">&gt;</div>
         <div class="btns">
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">4</button>
+           <button class="btn" style ="outline: none;"></button>
+           <button class="btn" style ="outline: none;"></button>
+           <button class="btn" style ="outline: none;"></button>
+           <button class="btn" style ="outline: none;"></button>
         </div>
     </section>
 
@@ -432,7 +462,7 @@ left: -100px;
                     <div class="counsel-online-write--content-wrap">
                         <p class="counsel__title" style="color: #333; font-weight: bold;">온라인상담</p>
                         <p class="explainToanswer" style="color: #555;">여러 변호사의 초기의견이 궁금하신가요? 상담글 쓰고 답변받으세요. 단, 내용은 익명으로 LAWKNOW에 등록됩니다.</p>
-                        <a  href="" class="writecounselone" href="write.jsp">상담글쓰기 &gt;</a>
+                        <a class="writecounselone" href="write.jsp">상담글쓰기 &gt;</a>
                     </div>
                 </div>
             </div>
@@ -445,7 +475,7 @@ left: -100px;
         <div class="iflower"><span class="ififif">혹시 변호사님이신가요?</span>
             <br><span class="ansim">변호사님 안심하고 사용하세요. LAWKNOW은 합법입니다.</span>
             <div class = "orangelast">
-                <a href ="" class="withlawer" href="aseets/lawyer_login.jsp">변호사 가입페이지 &gt;</a>
+                <a  class="withlawer" href="assets/lawyer_login.jsp">변호사 가입페이지 &gt;</a>
             </div>
         </div> 
        </section>
@@ -533,18 +563,18 @@ left: -100px;
 
 
 
-        <button class="btn-action-question btn-action">
-            <div class="buttoninbox">
-                <a>
-                <span>
-                    LAWKNOW 지식인
-                </span>
-                <!-- <div class = "arrow-down"></div> -->
-            </div>
-           
-            <i class="material-icons" id="thbutton" style="left: 2px;top: 4px;font-size: 39px;">mode_edit</i>
-        </a>
-         </button>
+      <button class="btn-action-question btn-action">
+        <div class="buttoninbox">
+            <a class = "" href="write.jsp" style ="color:white;">
+            <span class="fixspan" style="color:black;">
+                LAWKNOW 지식인
+            </span>
+            <!-- <div class = "arrow-down"></div> -->
+        </div>
+       
+        <i class="material-icons" id="thbutton" style="left: 2px;top: 4px;font-size: 39px;">mode_edit</i>
+    </a>
+     </button>
     
     
 
@@ -573,7 +603,7 @@ btns.forEach(function(btn, i, ar){
         // 각 버튼에 클릭이벤트 적용
         ar[i].addEventListener("click", function(){
             // 해당 버튼 번호(i)로 count변경
-            count = i-1;
+            count = i-2;
             banner.style.transform = "translate(-" + count * 70 + "vw)";
         });
     });
@@ -602,16 +632,47 @@ arrows.forEach((arrow)=>{
 })
 
 
-
-
-
-
-
 setInterval(function(){
      count++; // 매 3초마다 count가 움직인다.
      count = count == 4 ? 0 : count; /* count가 6이면 다돈거니까 다시 첫번째를 나오게 해주려고 */
      banner.style.transform = "translate(-" + count * 70 + "vw)";
  }, 5000);
+ 
+ /* 클릭시 색상변경 */
+function clickMenuHandler() {   /* onclickMenu와 같은 on____ , _____listener, _____handler들은 이벤트 리스너들이라고 할 수 있고, 보통 이런 이름들을 가짐 */
+    for (var i = 0; i < btns.length; i++){
+       btns[i].classList.remove('menu-active');
+    }
+    this.classList.add('menu-active');
+   
+}
+
+for (var i = 0; i < btns.length; i++){
+   btns[i].addEventListener('click', clickMenuHandler);
+ /*   btns[i].addEventListener('mouseout', clickMenuHandler); */
+}
+
+
+function dbclickMenuHandler() {   /* onclickMenu와 같은 on____ , _____listener, _____handler들은 이벤트 리스너들이라고 할 수 있고, 보통 이런 이름들을 가짐 */
+    for (var i = 0; i < btns.length; i++){
+       btns[i].classList.remove('menu-ractive');
+    }
+    this.classList.add('menu-ractive');
+   
+}
+
+for (var i = 0; i < btns.length; i++){
+   btns[i].addEventListener('mouseout', dbclickMenuHandler);
+ /*   btns[i].addEventListener('mouseout', clickMenuHandler); */
+}
+
+
+
+	
+
+ 
+ 
+ 
 
 </script>
 </html>

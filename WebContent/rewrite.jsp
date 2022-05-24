@@ -32,12 +32,16 @@
                 <div class="title">
                     <dl>
                         <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목 입력"></dd>
+                        <dd><input type="text" placeholder="제목을 입력해주세요" maxlength="30" class="DOC_TEXT"></dd>
+                        <div><span style="color:#aaa;" id="counter">(0 / 최대 200자)</span></div>
                     </dl>
                 </div>
              
                 <div class="cont">
-                    <textarea placeholder="내용 입력"></textarea>
+                    <textarea placeholder="내용을  입력해주세요" id="test" name="test"></textarea>
+                   <div id="test_cnt" style="height: 50px;font-size: 17px;">
+                   (0 / 300)
+                   </div>
                 </div>
             </div>
             <div class="bt_wrap">
@@ -133,4 +137,30 @@
 
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$('.DOC_TEXT').keyup(function (e){
+    var content = $(this).val();
+    $('#counter').html("("+content.length+" / 최대 200자)");    //글자수 실시간 카운팅
+    if (content.length > 20){
+        alert("제목은  최대 30자까지 입력 가능합니다.");
+        $(this).val(content.substring(0, 20));
+        $('#counter').html("(200 / 최대 200자)");
+    }
+});
+ 
+ 
+$(document).ready(function() {
+    $('#test').on('keyup', function() {
+        $('#test_cnt').html("("+$(this).val().length+" / 300)");
+
+        if($(this).val().length > 100) {
+            $(this).val($(this).val().substring(0, 100));
+            $('#test_cnt').html("(300 / 300)");
+        }
+    });
+});
+ 
+ 
+ </script>
 </html>
