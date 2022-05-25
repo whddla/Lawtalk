@@ -1,6 +1,6 @@
 package com.userwrite.domain.vo;
 
-public class UserwriteVO {
+public class UserWriteVO {
 
 		private int requestNum;
 		private int userNum;
@@ -9,7 +9,7 @@ public class UserwriteVO {
 		private String userContent;
 		private String userWriteDate;
 	
-		public UserwriteVO() {;}
+		public UserWriteVO() {;}
 
 		public int getRequestNum() {
 			return requestNum;
