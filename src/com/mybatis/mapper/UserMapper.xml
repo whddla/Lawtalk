@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Lawyer_register"> 
+	<insert id ="lawerJoin" parameterType="LawyerVO"> <!--id는 메소드이름 parameterTYPE은 변수의 타입! 
+	회원가입은 여러개가 넘어오니까 클래스로 넘어오게해주었다. 원래는 parameterType에 com.member.domain.vo.MemberVO
+	다 써주어야하는데 config.xml에서
+	<typeAliases>
+		<typeAlias type="com.member.domain.vo.MemberVO" alias ="memberVO"/>
+	</typeAliases> 이처리를 해주어서 MemberVO만 써도 된다
+										 -->
+	insert into tbl_lawyer_register
+	(lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_phone_num,lawyer_gender,lawyer_birth,lawyer_kakao_email)
+	values(#{lawyerNum}, #{lawyerId},#{lawyerName}, #{lawyerEmail}, #{lawyerPw}, #{lawyerPw},#{userPhoneNum},#{userGender},#{userBirth},#{userKakaoEmail})
+	<!--#{} 게터메소드가 호출되서 들어가는것이다 마이바티스의 문법! -->
+	</insert>
+	
+	<!-- <delete id="userWithdraw" parameterType="UserVO">
+		delete from tbl_user_register
+		WHERE user_num=;
+	</delete> -->
+	
+</mapper>

@@ -3,9 +3,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-   <!-- <typeAliases>
+  <typeAliases>
       <typeAlias type="com.member.domain.vo.MemberVO" alias="memberVO"/>
-   </typeAliases> -->
+   </typeAliases> 
 
    <environments default="mysql">
       <environment id="mysql">
@@ -20,6 +20,6 @@
    </environments>
    
    <mappers>
-      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/LawyerMapper.xml"/>
    </mappers>
 </configuration>
