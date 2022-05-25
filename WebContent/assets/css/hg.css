@@ -239,7 +239,7 @@ a:hover {
 .main1{
     position: absolute;
     color: #333;
-    left: 915px;
+    left: 1222px;
     top: 189px;
     width: 200px;
     height: 20px;
@@ -248,7 +248,7 @@ a:hover {
 }
 .line1{
     position: absolute;
-    left: 460px;
+    left: 795px;
     top: 270px;
     width: 1000px;
     height: 0.1px;
@@ -258,13 +258,13 @@ a:hover {
     position: absolute;
     width: 1000px;
     height: 630px;
-    left: 478px;
+    left: 799px;
     top: 350px;
     border: 1px solid #e0e0e0;
 }
 .box_word{
     position: absolute;
-    left: 838px;
+    left: 1143px;
     top: 370px;
     width: 300px;
     font-size: 35px;
@@ -277,27 +277,27 @@ a:hover {
 
 #check1{
     position: absolute;
-    left: 570px;
+    left: 809px;
     top: 610px;
 }
 #check2{
     position: absolute;
-    left: 774px;
+    left: 1094px;
     top: 610px;
 }
 #check3{
     position: absolute;
-    left: 973px;
+    left: 1290px;
     top: 610px;
 }
 #check4{
     position: absolute;
-    left: 1174px;
+    left: 1493px;
     top: 610px;
 }
 #check5{
     position: absolute;
-    left: 1376px;
+    left: 1695px;
     top: 610px;
 }
 #text1{
