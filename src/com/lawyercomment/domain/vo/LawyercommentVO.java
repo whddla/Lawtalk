@@ -1,6 +1,6 @@
 package com.lawyercomment.domain.vo;
 
-public class LawyercommentVO {
+public class LawyerCommentVO {
 		private int lawyerWriteNum;
 		private int lawyerNum;
 		private int requestNum;
@@ -8,7 +8,7 @@ public class LawyercommentVO {
 		private String lawyerContent;
 		private String lawyerWriteDate;
 
-		public LawyercommentVO() {;}
+		public LawyerCommentVO() {;}
 
 		public int getLawyerWriteNum() {
 			return lawyerWriteNum;

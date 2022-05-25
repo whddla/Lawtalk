@@ -1,6 +1,6 @@
 package com.userreview.domain.vo;
 
-public class UserreviewVO {
+public class UserReviewVO {
 
 		private int reviewNum;
 		private int requestNum;
@@ -8,7 +8,7 @@ public class UserreviewVO {
 		private String userContent;
 		private String reviewWriteDate;
 	
-		public UserreviewVO() {;}
+		public UserReviewVO() {;}
 
 		public int getReviewNum() {
 			return reviewNum;
