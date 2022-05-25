@@ -23,4 +23,30 @@ public class UserDAO {
 	public boolean checkId(String userId) {
 		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
 	}
+	//계정 탈퇴	
+	public void deleteAccount(String userId) {
+		
+	}
+		
+	//회원정보 수정
+	public void updateAccount(UserDAO user) {
+		
+	}
+	
+	//회원정보 가져오기
+	public void getUserInfo(UserDAO user) {
+		
+	}
+	
+	//답글시간 가져오기
+	public Date stringToDate(UserDAO user) {
+		
+	}
+	
+		
+	//로그인, 비밀번호 체크
+	public int loginCheck(String userId, String userPw) {
+		int x = 0;
+		return x;
+	}
 }
