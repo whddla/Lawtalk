@@ -5,8 +5,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.lawyer.domain.vo.LawyerVO;
 import com.mybatis.config.MyBatisConfig;
-import com.user.domain.dao.Date;
-import com.user.domain.dao.UserDAO;
 
 public class LawyerDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
@@ -32,17 +30,17 @@ public class LawyerDAO {
 	}
 	
 	//회원정보 수정
-	public void updateAccount(LawyerDAO Lawyer) {
+	public void updateAccount(LawyerDAO lawyer) {
 		
 	}
 	
 	//회원정보 가져오기
-	public void getUserInfo(UserDAO user) {
+	public void getUserInfo(LawyerDAO lawyer) {
 			
 	}
 		
 	//답글시간 가져오기
-	public Date stringToDate(UserDAO user) {
+	public void stringToDate(LawyerDAO lawyer) {
 			
 	}
 	
