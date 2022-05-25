@@ -14,7 +14,7 @@ public class UserJoinOk implements Action{
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-	
+	//나는 자고싶다 제발..
 		req.setCharacterEncoding("UTF-8");
 
 		ActionInfo actionInfo = new ActionInfo();
