@@ -58,24 +58,24 @@
 	                    </div>
 	                 </div>
 	                 <div class="writeglesigi">
-	                    <img src="../assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+	                    <img src="assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
 	                 </div>
 	                 <div class = "menu-items-bottom">
-                        <a class ="bottom-inner">
-                            공지사항
+                        <a href="http://localhost:9000/kovengerss/compani.jsp" class ="bottom-inner">
+                        	회사소개
                         </a>
                         <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
-                        <br>
-                        <a class ="bottom-inner">
-                            회사소개
-                        </a>
                         <br>
                         <a class ="bottom-inner">
                             자주 묻는 질문
                         </a>
                         <br>
-                        <a class ="bottom-inner">
+                        <a href="http://localhost:9000/kovengerss/이용약관.jsp" class ="bottom-inner">
                             이용약관
+                        </a>
+                        <br>
+                        <a href="http://localhost:9000/kovengerss/법적책임.jsp" class ="bottom-inner">
+                            법적책임
                         </a>
                         <br>
                     </div>
@@ -85,14 +85,14 @@
                             <label>
                             <i class="material-icons slideicon" >person_add</i>
                             <br>
-                           <a href="">회원가입</a>
+                           <a href="http://localhost:9000/kovengerss/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
                             <i class="material-icons slideicon" style="left: 11px;">contacts</i>
                             <br>
-                            <a href="">로그인</a>
+                            <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                         </label>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
 				<div class="banner">
 					<div class="container">
 						<div class="image-wrap">
-							<img class="category-image" src="../assets/css/img/이혼사진.png">
+							<img class="category-image" src="assets/css/img/이혼사진.png">
 						</div>
 						<div class="title-wrap">
 							<div class="title">
@@ -127,31 +127,31 @@
 					<div class="sidebar-desktop">
 						<ul class="side-category">
 						<!-- 로노 메인페이지 a태그 -->
-							<a style="text-decoration: none; color: #333; font-weight: 1000" href="https://www.lawtalk.co.kr/?utm_source=Google_SA&utm_medium=lawtalk_ad&utm_campaign=PC_%ED%99%95%EC%9E%A5%EA%B2%80%EC%83%89_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EB%A1%9C%ED%86%A1&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_KdQgwt4L3n9CX1YKpkYJDqreLer1dW2_feYvTXM-whJpRAgEYjZG8aAn89EALw_wcB">
+							<a style="text-decoration: none; color: #333; font-weight: 1000" href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">
 								<span>홈</span>
 							</a>
 							<hr>
 							<li>
 																<!-- 사이드 리스트 a 태그 -->
-								<a class="choice" href="">이혼</a>
+								<a class="choice" href="http://localhost:9000/kovengerss/client_request_waiting.jsp">이혼</a>
 							</li>
 							<li>
-								<a href="">상속</a>
+								<a href="http://localhost:9000/kovengerss/category2.jsp">상속</a>
 							</li>
 							<li>
-								<a href="">성범죄</a>
+								<a href="http://localhost:9000/kovengerss/category3.jsp">성범죄</a>
 							</li>
 							<li>
-								<a href="">건설/부동산</a>
+								<a href="http://localhost:9000/kovengerss/category4.jsp">건설/부동산</a>
 							</li>
 							<li>
-								<a href="">재산범죄</a>
+								<a href="http://localhost:9000/kovengerss/category5.jsp">재산범죄</a>
 							</li>
 							<li>
-								<a href="">기업일반</a>
+								<a href="http://localhost:9000/kovengerss/category6.jsp">기업일반</a>
 							</li>
 							<li>
-								<a href="">형사</a>
+								<a href="http://localhost:9000/kovengerss/category7.jsp">형사기타</a>
 							</li>
 						</ul>
 					</div>
@@ -163,7 +163,7 @@
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
 										<div class="badge">
-											<img style="width: 21px;" src="../assets/css/img/물음표.png">
+											<img style="width: 21px;" src="assets/css/img/물음표.png">
 											<p class="number">231</p>
 										</div>
 									</div>
@@ -171,7 +171,7 @@
 								<div class="a-card-main">
 									<header class="a-card-header">
 										<h1 class="a-card-header-title">
-											<img class="question-img" src="../assets/css/img/questionpng.png">
+											<img class="question-img" src="assets/css/img/questionpng.png">
 											전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 
 										</h1>
 										<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
@@ -188,7 +188,16 @@
 								</div>
 							</div>
 							<div class="question-detail">
-							<button class="answer-button">답변하기</button>
+								<div class="board">
+									<div class="board-header" >
+										<h4>당신의 지식을 공유해주세요!</h4>
+										<hr>
+									</div>
+									<div class="textarea">
+										<textarea class="comment" placeholder="의뢰인에게 답변을 작성해주세요."></textarea>
+									</div>
+								</div>
+								<button class="answer-button">답변등록</button>
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
 								<div class="a-card-question-list">
 									<aside class="a-card-aside-card">
@@ -241,4 +250,6 @@
 		</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+<script >
+</script>
 </html>

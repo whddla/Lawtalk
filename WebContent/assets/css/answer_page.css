@@ -228,7 +228,7 @@ outline: white;
     border-radius: 0;
     position: relative;
     display: block;
-    width: 95%;
+    width: 1404px;
     margin-top: 66px;
 }
 
@@ -373,6 +373,10 @@ outline: white;
 	padding-right: 1rem;
 }
 
+.question-detail {
+	margin-top: 30px;
+}
+
 
 button {
 	cursor:pointer;
@@ -392,8 +396,7 @@ button {
     --bg-opacity: 1;
     background-color: #fff;
     background-color: rgba(255,255,255,var(--bg-opacity));
-    border-top-width: 1px;
-    border-bottom-width: 0;
+    border-width: 1px;
 }
 
 .a-card-aside-card {
@@ -523,6 +526,42 @@ li {
     margin-left: 0;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+}
+
+.board {
+	position: relative;
+	 border-radius: 5px;
+    border-width: 1px;
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding: 1.25rem;
+    flex-wrap: wrap;
+    --bg-opacity: 1;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+    border-top-width: 1px;
+}
+}
+
+.board-header {
+	padding: 10px 20px;
+	padding-top: 0;
+    padding-bottom: 1.25rem;
+    padding-left: 0;
+}
+
+.textarea {
+	position: relative;
+    margin: 0 auto;
+	min-height: 260px;
+	padding-left: 0;
+    padding-right: 0;
+   	padding: 1rem;
+}
+.comment {
+	width: 100%;
+	min-height: 260px;
+
 }
 
 h3 {

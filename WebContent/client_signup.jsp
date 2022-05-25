@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,10 @@
                         <input class="form-control" id="account-email" type="email" placeholder="예) name@example.com" >
                         <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
                     </div>
+                	<div class="form-group">
+                        <input class="form-control" id="account-name" type="text" placeholder="이름">
+                        <label class="account-name-error" for="account-name" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
+                    </div>
                     <div class="form-group">
                         <input class="form-control" id="account-id" type="text" placeholder="아이디">
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
@@ -61,7 +65,7 @@
                 <h3 class="info">인증정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
+						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
                         <input class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
                         <button type="button" class="code-button">[ 인증번호 발송 ]</button>
                     </div>
@@ -173,7 +177,7 @@
             </form>
             <div class="row-footer">
                 <div class="row" style="font-size: 12px;">
-                    <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
+                    <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                     <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                 </div>
                 <div class="row">
@@ -188,118 +192,142 @@
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
+    var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
+    var nameCheck = RegExp(/^[가-힣]{2,6}$/);
+    var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+    var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
     $(document).ready(function() {
-	$("#cbx_chkAll").click(function() {
-		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
-		else $("input[name=chk]").prop("checked", false);
-	});
+    	$("#cbx_chkAll").click(function() {
+    		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
+    		else $("input[name=chk]").prop("checked", false);
+    	});
 
-	$("input[name=chk]").click(function() {
-		var total = $("input[name=chk]").length;
-		var checked = $("input[name=chk]:checked").length;
+    	$("input[name=chk]").click(function() {
+    		var total = $("input[name=chk]").length;
+    		var checked = $("input[name=chk]:checked").length;
 
-		if(total != checked) $("#cbx_chkAll").prop("checked", false);
-		else $("#cbx_chkAll").prop("checked", true); 
-	});
-});
+    		if(total != checked) $("#cbx_chkAll").prop("checked", false);
+    		else $("#cbx_chkAll").prop("checked", true); 
+    	});
+    });
     
-    let emailCheck = $(".account-email-error");
-	let $email = $("#account-email");
-	
-	
-	$email.on("keyup", function(){
-		if($email.val() == ""){
-			emailCheck.css("color","red");
-			emailCheck.text("이메일은 반드시 입력해야합니다.");
-		}
-		
-		if($email.val() !== ""){
-			emailCheck.css("color","rgb(99 193 76)");
-			emailCheck.text("이메일 입력완료.");
-		}
-	});
-	
-	
-    let idCheck = $(".account-id-error");
-	let $id = $("#account-id");
-	
-	
-	$id.on("keyup", function(){
-		
-		if($id.val() == ""){
-			idCheck.css("color","red");
-			idCheck.text("아이디는 반드시 입력해야합니다.");
-		}
-		
-		if($id.val() !== ""){
-			idCheck.css("color","rgb(99 193 76)");
-			idCheck.text("아이디 입력완료.");
-		}
-	});
-	
-	
-    let pwCheck = $(".account-password-error");
-	let $pw = $("#account-password");
-	
-	
-	$pw.on("keyup", function(){
-		
-		if($pw.val() == ""){
-			pwCheck.css("color","red");
-			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
-		}
-		
-		if($pw.val() !== ""){
-			pwCheck.css("color","rgb(99 193 76)");
-			pwCheck.text("비밀번호 입력완료.");
-		}
-	});
+    	let nameChecked = $(".account-name-error");
+    	let $name =$("#account-name");
+    	$name.on("keyup", function(){
+	    	if(nameCheck.test($name.val())){
+	    		nameChecked.css("color", "rgb(99 193 76)");
+	    		nameChecked.text("이름 입력 완료");
+	    	else {
+	    		nameChecked.css("color", "red");
+	    		nameChecked.text("잘못된 이름입니다.");
+	    	}
+		});
+    	
+    
+		/* 이메일 유효성 검사 */    	
+        let emailCheck = $(".account-email-error");
+    	let $email = $("#account-email");
+    	$email.on("keyup", function(){
+    		if(emailCheck2.test($email.val())){
+    			emailCheck.css("color","rgb(99 193 76)");
+    			emailCheck.text("이메일 입력완료.");
+    		} else if(nameCheck.test($email.val())){
+    			emailCheck.css("color","red");
+    			emailCheck.text("한글은 입력 할 수 없습니다.");
+    		} else if($email.val() ==""){
+    			emailCheck.css("color","red");
+    			emailCheck.text("이메일을 입력해주세요");
+    		}
+    		else{
+    			emailCheck.css("color","red");
+    			emailCheck.text("이메일 형식에 맞지 않습니다.");
+    		}
+    	});
+    	
+    	
+    	
+		/* 아이디 유효성 검사  */    	
+        let idCheck = $(".account-id-error");
+    	let $id = $("#account-id");
+    	$id.on("keyup", function(){
+    		if(userIdCheck.test($id.val())){
+    			idCheck.css("color","rgb(99 193 76)");
+    			idCheck.text("아이디 입력완료.");
+    		}else if($id.val() == ""){
+	        	idCheck.css("color","red");
+	        	idCheck.text("아이디는 반드시 입력해야합니다.");
+    		}
+    		else{
+    			idCheck.css("color","red");
+    			idCheck.text("아이디 형식에 맞지 않습니다.");
+    		}
+    	});
+    	
+    	
+    	
+    	
+        let pwCheck = $(".account-password-error");
+    	let $pw = $("#account-password");
+    	$pw.on("keyup", function(){
+    		if(passwdCheck.test($pw.val())){
+    			pwCheck.css("color","rgb(99 193 76)");
+    			pwCheck.text("비밀번호 입력완료.");
+    		}
+    		else if($pw.val() == ""){
+    			pwCheck.css("color","red");
+    			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
+    		}
+    		else {
+    			pwCheck.css("color","red");
+    			pwCheck.text("8~16자로 영문 대 소문자, 숫자, 특수기호를 조합해서 사용하세요.");
+    		}
+    	});
 
-	let pwConfirm= $(".account-password-confirm-error");
-	let $pwc= $("#account-password-confirm");
-	
-	
-	$pwc.on("keyup", function(){
-		
-		if($pwc.val() !== $pw.val()){
-			pwConfirm.css("color","red");
-			pwConfirm.text("비밀번호가 일치하지 않습니다.");
-			if($pwc.val() == ""){
-				pwConfirm.css("color","red");
-				pwConfirm.text("비밀번호를 입력해주세요.");
-			}
-		}
-		
-		if($pwc.val() == $pw.val()){
-			pwConfirm.css("color","rgb(99 193 76)");
-			pwConfirm.text("비밀번호 일치");
-		}
-	});
-	
-	/* 핸드폰 유효성 검사  */
-	let $hp = $("#account-hp");
-	let hpCheck = $(".tel-error");
-	let hp = RegExp(/^[0-9]{8,13}$/);
-		
-	$hp.on("keyup",function(){
-		if(!hp.test($hp.val()) || $hp.val().length != 11){
-			hpCheck.css("color","red");
-			hpCheck.text("숫자 형식이 맞지 않습니다.");
-		}else{
-			hpCheck.css("color","rgb(99 193 76)");
-			hpCheck.text("전화번호 입력완료.");
-		}
-	});
-	
-	
-	$(document).ready(function(){            
-	    var now = new Date();
-	    var year = now.getFullYear();
-	    //년도 selectbox만들기               
-	    for(var i = 1900 ; i <= year ; i++) {
-	        $('#year').append('<option value="' + i + '">' + i + '년</option>');    
-	    }
-	   
-	})
+    	let pwConfirm= $(".account-password-confirm-error");
+    	let $pwc= $("#account-password-confirm");
+    	
+    	
+    	$pwc.on("keyup", function(){
+    		
+    		if($pwc.val() !== passwdCheck.test($pw.val())){
+    			pwConfirm.css("color","red");
+    			pwConfirm.text("비밀번호가 일치하지 않습니다.");
+    			if($pwc.val() == ""){
+    				pwConfirm.css("color","red");
+    				pwConfirm.text("비밀번호를 입력해주세요.");
+    			}
+    		}
+    		
+    		if($pwc.val() == $pw.val()){
+    			pwConfirm.css("color","rgb(99 193 76)");
+    			pwConfirm.text("비밀번호 일치");
+    		}
+    	});
+    	
+    	/* 핸드폰 유효성 검사  */
+    	let $hp = $("#account-hp");
+    	let hpCheck = $(".tel-error");
+    	$hp.on("keyup",function(){
+    		if(phoneNumCheck.test($hp.val())){
+    			hpCheck.css("color","rgb(99 193 76)");
+    			hpCheck.text("핸드폰 번호 입력완료.");
+    		}else{
+    			hpCheck.css("color","red");
+    			hpCheck.text("핸드폰 번호를 입력해주세요.");
+    		}
+    	});
+    	
+    	
+    	$(document).ready(function(){            
+    	    var now = new Date();
+    	    var year = now.getFullYear();
+    	    //년도 selectbox만들기               
+    	    for(var i = 1900 ; i <= year ; i++) {
+    	        $('#year').append('<option value="' + i + '">' + i + '년</option>');    
+    	    }
+    	   
+    	});
 </script>
 </html>
+ 

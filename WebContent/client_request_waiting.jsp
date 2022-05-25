@@ -82,21 +82,23 @@
                             <label>
                             <i class="material-icons slideicon" >person_add</i>
                             <br>
-                           <a href="http://localhost:9000/kovengerss/assets/signup.jsp">회원가입</a>
+                           <a href="http://localhost:9000/kovengerss/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
                             <i class="material-icons slideicon" style="left: 11px;">contacts</i>
                             <br>
-                            <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
+                            <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                         </label>
                         </div>
                     </div>
 	           	</div>
 		</div>			
 			<div class = "logo-law">
-				<strong>LAWKNOW</strong>
+				<a style="color:#FF6431"href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">
+					<strong>LAWKNOW</strong>
+				</a>
             </div> 
 		</div>
 		<div class="page-container">
@@ -104,7 +106,7 @@
 				<div class="banner">
 					<div class="container">
 						<div class="image-wrap">
-							<img class="category-image" src="assets/css/img/이혼사진.png">
+							<img class="category-image" src="assets/css/img/이혼.jpg">
 						</div>
 						<div class="title-wrap">
 							<div class="title">
@@ -124,31 +126,31 @@
 					<div class="sidebar-desktop">
 						<ul class="side-category">
 						<!-- 메인페이지  a태그 -->
-							<a style="text-decoration: none; color: #333; font-weight: 1000" href="https://www.lawtalk.co.kr/?utm_source=Google_SA&utm_medium=lawtalk_ad&utm_campaign=PC_%ED%99%95%EC%9E%A5%EA%B2%80%EC%83%89_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EB%A1%9C%ED%86%A1&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_KdQgwt4L3n9CX1YKpkYJDqreLer1dW2_feYvTXM-whJpRAgEYjZG8aAn89EALw_wcB">
+							<a style="text-decoration: none; color: #333; font-weight: 1000" href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">
 								<span>홈</span>
 							</a>
 							<hr>
 							<li>
 								<!-- 상담목록 사이드리스트 -->
-								<a class="choice" href="">이혼</a>
+								<a class="choice" href=""http://localhost:9000/kovengerss/client_request_waiting.jsp>이혼</a>
 							</li>
 							<li>
-								<a href="">상속</a>
+								<a href="http://localhost:9000/kovengerss/category2.jsp">상속</a>
 							</li>
 							<li>
-								<a href="">성범죄</a>
+								<a href="http://localhost:9000/kovengerss/category3.jsp">성범죄</a>
 							</li>
 							<li>
-								<a href="">건설/부동산</a>
+								<a href="http://localhost:9000/kovengerss/category4.jsp">건설/부동산</a>
 							</li>
 							<li>
-								<a href="">재산범죄</a>
+								<a href="http://localhost:9000/kovengerss/category5.jsp">재산범죄</a>
 							</li>
 							<li>
-								<a href="">기업일반</a>
+								<a href="http://localhost:9000/kovengerss/category6.jsp">기업일반</a>
 							</li>
 							<li>
-								<a href="">형사</a>
+								<a href="http://localhost:9000/kovengerss/category7.jsp">형사기타</a>
 							</li>
 						</ul>
 					</div>
@@ -159,11 +161,9 @@
 							<div class="tab_box">
 								<button class="tabs active" onclick ="tabOpen(event, 'answer-complete');" id="basic_content">
 										<span class="bullet">답변완료</span>
-									</a>
 								</button>
 								<button class="tabs" onclick="tabOpen(event, 'answer-waiting');" >
 										<span class="bullet">답변대기</span>
-									</a>
 								</button>
 							</div>
 							<div class="sorting">
@@ -186,7 +186,7 @@
 								</aside>
 								<div class="a-card-main">
 									<header class="a-card-header">
-										<a href="http://localhost:9000/kovengerss/assets/answer_page.jsp">
+										<a href="http://localhost:9000/kovengerss/answer_page.jsp">
 											<h1 class="a-card-header-title">
 												전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 
 											</h1>
@@ -462,25 +462,26 @@
 									<div class="a-wrapper">
 										<div class="badge">
 											<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
-											<p class="number">56</p>
+											<p class="number">12</p>
 										</div>
 									</div>
 								</aside>
 								<div class="a-card-main">
 									<header class="a-card-header">
-										<a href="">
+										<a href="http://localhost:9000/kovengerss/answer_page.jsp">
 											<h1 class="a-card-header-title">
-												아내가 바람핌. 상간남 회사게시판에 글 게시가 법에 위반될까요?
+												전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 
 											</h1>
-											<span class="a-card-headerInfo">2022. 05. 08. 11:05</span>
+											<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
 										</a>
 										
 									</header>
 									<div class="a-card-cotent">
 										<span class="viewCount">
 										조회수
-											<i class="number">560</i>
+											<i class="number">231</i>
 										</span>
+										<span class="answer">2시간전 답변 작성됨</span>
 									</div>
 								</div>
 							</div>
