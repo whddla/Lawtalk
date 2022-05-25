@@ -190,7 +190,7 @@
             <div class="row-footer">
                 <div class="row" style="font-size: 12px;">
                 <!-- 로그인 페이지 -->
-                    <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
+                    <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                     <!-- 변호사 가입안내 페이지 -->
                     <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                 </div>
@@ -206,7 +206,14 @@
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function() {
+var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
+var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
+var nameCheck = RegExp(/^[가-힣]{2,6}$/);
+var officeCheck = RegExp(/^[가-힣]{1,12}$/);
+var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
+var officeHP= RegExp(/^0[1-7][0-9][0-9]{6,8}$/);
+$(document).ready(function() {
 	$("#cbx_chkAll").click(function() {
 		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
 		else $("input[name=chk]").prop("checked", false);
@@ -220,76 +227,75 @@
 		else $("#cbx_chkAll").prop("checked", true); 
 	});
 });
-  
-
     
+	
+	/* 이메일 유효성 검사 */    	
     let emailCheck = $(".account-email-error");
 	let $email = $("#account-email");
-	
-	
 	$email.on("keyup", function(){
-		if($email.val() == ""){
-			emailCheck.css("color","red");
-			emailCheck.text("이메일은 반드시 입력해야합니다.");
-		}
-		
-		if($email.val() !== ""){
+		if(emailCheck2.test($email.val())){
 			emailCheck.css("color","rgb(99 193 76)");
 			emailCheck.text("이메일 입력완료.");
+		} else if(nameCheck.test($email.val())){
+			emailCheck.css("color","red");
+			emailCheck.text("한글은 입력 할 수 없습니다.");
+		} else if($email.val() ==""){
+			emailCheck.css("color","red");
+			emailCheck.text("이메일을 입력해주세요");
+		}
+		else{
+			emailCheck.css("color","red");
+			emailCheck.text("이메일 형식에 맞지 않습니다.");
 		}
 	});
 	
+	let nameChecked = $(".account-name-error");
+	let $name =$("#account-name");
+	$name.on("keyup", function(){
+    	if(nameCheck.test($name.val())){
+    		nameChecked.css("color", "rgb(99 193 76)");
+    		nameChecked.text("이름 입력 완료");
+    	}
+    	else {
+    		nameChecked.css("color", "red");
+    		nameChecked.text("잘못된 이름입니다.");
+    	}
+	});
 	
+	/* 아이디 유효성 검사  */    	
     let idCheck = $(".account-id-error");
 	let $id = $("#account-id");
-	
-	
 	$id.on("keyup", function(){
-		
-		if($id.val() == ""){
-			idCheck.css("color","red");
-			idCheck.text("아이디는 반드시 입력해야합니다.");
-		}
-		
-		if($id.val() !== ""){
+		if(userIdCheck.test($id.val())){
 			idCheck.css("color","rgb(99 193 76)");
 			idCheck.text("아이디 입력완료.");
+		}else if($id.val() == ""){
+        	idCheck.css("color","red");
+        	idCheck.text("아이디는 반드시 입력해야합니다.");
+		}
+		else{
+			idCheck.css("color","red");
+			idCheck.text("아이디 형식에 맞지 않습니다.");
 		}
 	});
 	
-
-	let nameCheck = $(".account-name-error");
-	let $name = $("#account-name");
 	
-	
-	$name.on("keyup", function(){
-		
-		if($name.val() == ""){
-			nameCheck.css("color","red");
-			nameCheck.text("이름은 반드시 입력해야합니다.");
-		}
-		
-		if($id.val() !== ""){
-			nameCheck.css("color","rgb(99 193 76)");
-			nameCheck.text("이름 입력완료.");
-		}
-	});
 	
 	
     let pwCheck = $(".account-password-error");
 	let $pw = $("#account-password");
-	
-	
 	$pw.on("keyup", function(){
-		
-		if($pw.val() == ""){
+		if(passwdCheck.test($pw.val())){
+			pwCheck.css("color","rgb(99 193 76)");
+			pwCheck.text("비밀번호 입력완료.");
+		}
+		else if($pw.val() == ""){
 			pwCheck.css("color","red");
 			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
 		}
-		
-		if($pw.val() !== ""){
-			pwCheck.css("color","rgb(99 193 76)");
-			pwCheck.text("비밀번호 입력완료.");
+		else {
+			pwCheck.css("color","red");
+			pwCheck.text("8~16자로 영문 대 소문자, 숫자, 특수기호를 조합해서 사용하세요.");
 		}
 	});
 
@@ -299,7 +305,7 @@
 	
 	$pwc.on("keyup", function(){
 		
-		if($pwc.val() !== $pw.val()){
+		if($pwc.val() !== passwdCheck.test($pw.val())){
 			pwConfirm.css("color","red");
 			pwConfirm.text("비밀번호가 일치하지 않습니다.");
 			if($pwc.val() == ""){
@@ -317,53 +323,37 @@
 	/* 핸드폰 유효성 검사  */
 	let $hp = $("#account-hp");
 	let hpCheck = $(".tel-error");
-	let hp = RegExp(/^[0-9]{8,13}$/);
-		
 	$hp.on("keyup",function(){
-		if(!hp.test($hp.val()) || $hp.val().length != 11){
-			hpCheck.css("color","red");
-			hpCheck.text("숫자 형식이 맞지 않습니다.");
-		}else{
+		if(phoneNumCheck.test($hp.val())){
 			hpCheck.css("color","rgb(99 193 76)");
-			hpCheck.text("전화번호 입력완료.");
+			hpCheck.text("핸드폰 번호 입력완료.");
+		}else{
+			hpCheck.css("color","red");
+			hpCheck.text("핸드폰 번호를 입력해주세요.");
 		}
-		
-		
-	});
+	});	
 	
-	const $officeHP = $("#account-office-hp");
+	let $officeHP = $("#account-office-hp");
 	let officeHpError = $(".account-office-hp-error");
-	
 	$officeHP.on("keyup", function(){
-
-		/*내용이 잇는지 없는지*/
-		if($officeHP.val() == ""){
-			officeHpError.css("color","red");/*색상변경*/
-			officeHpError.text("사무실 전화번호를 입력해주세요");/*오류메시지*/
+		if(officeHP.test($officeHP.val())){
+			officeHpError.css("color","rgb(99 193 76)");/*색상변경*/
+			officeHpError.text("사무실 번호가 입력되었습니다.");/*오류메시지*/
 		}else{
-			officeHpError.text("");/*오류메시지*/
-		}
-
-		/*숫자만 적엇는지 확인*/
-		if(!hp.test($officeHP.val())){
 			officeHpError.css("color","red");/*색상변경*/
-			officeHpError.text("숫자만 입력해주세요.");/*오류메시지*/
-		}else{
-			officeHpError.text("");/*오류메시지*/
+			officeHpError.text("잘못된 번호입니다.");/*오류메시지*/
 		}
 	});
 	
-	const $office = $("#account-office");
+	let $office = $("#account-office");
 	let officeError = $(".account-office-error");
-	
 		$office.on("keyup",function(){
-		
-		/*내용이 잇는지 없는지*/
-		if($office.val() == ""){
-			officeError.css("color", "red");/*색상변경*/
-			officeError.text("사무소,회사명을 반드시 입력해주세요.");/*오류메시지*/
+		if(officeCheck.test($office.val())){
+			officeError.css("color", "rgb(99 193 76)");/*색상변경*/
+			officeError.text("사무소,회사명 입력 완료.");/*오류메시지*/
 		}else{
-			officeeError.text("");/*오류메시지*/
+			officeError.css("color", "red");/*색상변경*/
+			officeError.text("한글로만 작성해주세요.");/*오류메시지*/
 		}		
 	});
 		
