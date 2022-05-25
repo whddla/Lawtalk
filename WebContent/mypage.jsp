@@ -37,7 +37,7 @@
                     <div class="offcanvas-header">
                       <h5 class="offcanvas-title" id="offcanvasExampleLabel"><div class = "rowtalklogo">
                         <strong style="position: relative;
-                        left: 38px;">lawknow</strong>
+                        left: 38px;"><a href="LawKnowMainPage.jsp">lawknow</a></strong>
                     </div></h5>
                       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -99,14 +99,14 @@
                     <div class="realbottomSlide">
                         <div class="slideLogin">
                             <label>
-                            <i class="material-icons slideicon" >person_add</i>
+                            <i class="material-icons slideicon" style="font-size: 34px;">person_add</i>
                             <br>
                            <a href="assets/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
-                            <i class="material-icons slideicon" style="left: 11px;">contacts</i>
+                            <i class="material-icons slideicon" style="left: 11px;font-size: 34px;">contacts</i>
                             <br>
                             <a href="assets/client_login.jsp">로그인</a>
                         </label>

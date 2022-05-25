@@ -66,7 +66,7 @@ div.btns{
     <div class="top">
         <div class = "mainmenu">
             <div class = "threeflex">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton" style="position: relative;left: -11px;">
                     <i class="material-icons" id="thbutton">menu</i>
                   </button>
                   
@@ -139,14 +139,14 @@ div.btns{
                     <div class="realbottomSlide">
                         <div class="slideLogin">
                             <label>
-                            <i class="material-icons slideicon" >person_add</i>
+                            <i class="material-icons slideicon" style="font-size: 34px;" >person_add</i>
                             <br>
                            <a href="assets/signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
-                            <i class="material-icons slideicon" style="left: 11px;">contacts</i>
+                            <i class="material-icons slideicon" style="left: 11px; font-size: 34px;" >contacts</i>
                             <br>
                             <a href="assets/client_login.jsp">로그인</a>
                         </label>
