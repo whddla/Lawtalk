@@ -88,6 +88,7 @@ body{
     left: calc(50% - 538px);
 position: absolute;
 top: 105px;
+left: 13px;
 }
 .ott{
     color: #999;
@@ -481,7 +482,7 @@ background-image: url("https://ssl.pstatic.net/static/kin/section/sprite/sp_home
 background-size: 236px 123px;
 position: absolute;
 left: 20px;
-bottom: -99px;
+bottom: -101px;
 content:'';
 }
 .todaysgle{
@@ -499,7 +500,7 @@ background-image: url("https://ssl.pstatic.net/static/kin/section/sprite/sp_home
 background-size: 236px 123px;
 position: absolute;
 left: 20px;
-bottom: -77px;
+bottom: -101px;
 content: '';
 }
 .ahaaha{
@@ -932,7 +933,7 @@ outline: white;
     color: #757575;
     font-size: 12px;
     line-height: 18px;
-}
+} 
 
 .lastfooter{
     border: 0;
@@ -950,7 +951,9 @@ outline: white;
 .btn{
     outline: none;
 }
-
+.btn{
+	    font-size: 13px;
+}
 
 
 

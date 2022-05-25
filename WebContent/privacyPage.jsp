@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel ="stylesheet" href ="asset\css\privacyPage.css">
+<link rel ="stylesheet" href ="assets\css\privacyPage.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <title>Insert title here</title>
 </head>
@@ -34,7 +34,7 @@
 						<p class="login-alert">소셜 로그인한 경우, 임의의 아이디가 부여됩니다.</p>
 					</div>
 						<div class ="button-layout" >
-							<button type="submit">[ 저장 ]</button>
+							<button type="submit">[저장 ]</button>
 						</div>
 				</form>
 				<form class ="second-form">

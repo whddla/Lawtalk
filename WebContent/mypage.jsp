@@ -77,21 +77,21 @@
                     </div>
 
                     <div class = "menu-items-bottom">
-                        <a class ="bottom-inner" href="questionUser.jsp">
-                            공지사항
-                        </a>
-                        <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
-                        <br>
                         <a class ="bottom-inner" href="compani.jsp">
-                            회사소개
+                          		 회사소개
                         </a>
+                        <i ng-if="noticeNew > 0" class="new-up" style="top: -2px;left: -4px;">&nbsp;LAWKNOW</i>
                         <br>
                         <a class ="bottom-inner" href="questionUser.jsp">
-                            자주 묻는 질문
+                            	 자주 묻는 질문
+                        </a>
+                        <br>
+                         <a class ="bottom-inner" href="compani.jsp">
+                   				 법적책임            
                         </a>
                         <br>
                         <a class ="bottom-inner" href="이용약관.jsp">
-                            이용약관
+                          		  이용약관
                         </a>
                         <br>
                     </div>
