@@ -2,15 +2,15 @@ package com.lawyer.domain.vo;
 
 public class LawyerVO {
 
-	int lawyerNum;
-	String lawyerId;
-	String lawyerName;
-	String lawyerEmail;
-	String lawyerPw;
-	String lawyerOffice;
-	String lawyerOfficeNum;
-	String lawyerPhoneNum;
-	String lawyerGraduateTest;
+	private int lawyerNum;
+	private String lawyerId;
+	private String lawyerName;
+	private String lawyerEmail;
+	private String lawyerPw;
+	private String lawyerOffice;
+	private String lawyerOfficeNum;
+	private String lawyerPhoneNum;
+	private String lawyerGraduateTest;
 	
 	public LawyerVO(){;}
 
