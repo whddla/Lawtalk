@@ -73,11 +73,11 @@
                 <div class="profile_word2">윤병남 변호사</div>
                 <div class="profile_word3">법무법인 수생</div>        
                 <div class="profile_word4">소청심사위원회 출신 변호사</div>
-                <button class="profile_start">상담시작하기</button>
+                <a href="https://open.kakao.com/o/s4zwKQhe"><button class="profile_start">상담시작하기</button></a>
                 <div class="profile_img">
                     <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/6278b01f51f04900413a0932-original-1652688139993.jpg?s=256x256">
                 </div>        
-                <div class="profile_img_word1">더 알아보기</div>
+                <a href="information.jsp"><div class="profile_img_word1">더 알아보기</div></a>
                 <div class="profile_img_word1_img">
                     <img src="assets/img/가로화살.png">
                 </div>
@@ -92,11 +92,11 @@
                 <div class="profile_word2_2">이주윤 변호사</div>
                 <div class="profile_word3_2">법률사무소 위너스</div>        
                 <div class="profile_word4_2">편안한 분위기, 솔직한 답변, 시원한 해결. 바로여기</div>
-                <button class="profile_start_2">상담시작하기</button>
+                <a href="https://open.kakao.com/o/s4zwKQhe"><button class="profile_start_2">상담시작하기</button></a>
                 <div class="profile_img_2">
                     <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/5b51a3223092941660ca5502-original.jpg?s=256x256">
                 </div>        
-                <div class="profile_img_word1_2">더 알아보기</div>
+                <a href="information2.jsp"><div class="profile_img_word1_2">더 알아보기</div></a>
                 <div class="profile_img_word1_img_2">
                     <img src="assets/img/가로화살.png">
                 </div>
@@ -111,11 +111,11 @@
                 <div class="profile_word2_3">김기윤 변호사</div>
                 <div class="profile_word3_3">김기윤 법률사무소</div>        
                 <div class="profile_word4_3">사시출신/성공사례/수사 및 공판 단계별 대응</div>
-                <button class="profile_start_3">상담시작하기</button>
+                <a href="https://open.kakao.com/o/s4zwKQhe"><button class="profile_start_3">상담시작하기</button></a>
                 <div class="profile_img_3">
                     <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/56cfec56fd4a881e0ddeff0d-original.jpg?s=256x256">
                 </div>        
-                <div class="profile_img_word1_3">더 알아보기</div>
+                <a href="information3.jsp"><div class="profile_img_word1_3">더 알아보기</div></a>
                 <div class="profile_img_word1_img_3">
                     <img src="assets/img/가로화살.png">
                 </div>
@@ -130,11 +130,11 @@
                 <div class="profile_word2_4">조혜인 변호사</div>
                 <div class="profile_word3_4">법무법인 청녕</div>        
                 <div class="profile_word4_4">[합리적인 수임료] 형사/폭행/협박/고소-형사전문변호사</div>
-                <button class="profile_start_4">상담시작하기</button>
+                <a href="https://open.kakao.com/o/s4zwKQhe"><button class="profile_start_4">상담시작하기</button></a>
                 <div class="profile_img_4">
                     <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/6093509aacca08004653289c-original.jpg?s=256x256">
                 </div>        
-                <div class="profile_img_word1_4">더 알아보기</div>
+                <a href="information4.jsp"><div class="profile_img_word1_4">더 알아보기</div></a>
                 <div class="profile_img_word1_img_4">
                     <img src="assets/img/가로화살.png">
                 </div>
@@ -149,11 +149,11 @@
                 <div class="profile_word2_5">장지원 변호사</div>
                 <div class="profile_word3_5">법무법인 우면</div>        
                 <div class="profile_word4_5">피의자, 피고인이든 고소인이든 모두 존중 받아야 합니다.</div>
-                <button class="profile_start_5">상담시작하기</button>
+                <a href="https://open.kakao.com/o/s4zwKQhe"><button class="profile_start_5">상담시작하기</button></a>
                 <div class="profile_img_5">
                     <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/5ea98040144e71023b00cba0-original.jpg?s=256x256">
                 </div>        
-                <div class="profile_img_word1_5">더 알아보기</div>
+                <a href="information5.jsp"><div class="profile_img_word1_5">더 알아보기</div></a>
                 <div class="profile_img_word1_img_5">
                     <img src="assets/img/가로화살.png">
                 </div>
@@ -253,8 +253,8 @@
         </div>
     </div>
     <div class="writeglesigi">
-    <img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
-    </div>
+    <a href="write.jsp"><img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+    </div></a>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">
            <strong>공지사항</strong>

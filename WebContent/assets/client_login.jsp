@@ -24,7 +24,7 @@
                 </h1>
             </div>
             <!-- 메인화면 a태그 -->
-            <a class="back_click" href="https://www.lawtalk.co.kr/?utm_source=Google_SA&utm_medium=lawtalk_ad&utm_campaign=PC_%ED%99%95%EC%9E%A5%EA%B2%80%EC%83%89_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EB%A1%9C%ED%86%A1&utm_content=%EB%B8%8C%EB%9E%9C%EB%93%9C&gclid=CjwKCAjwj42UBhAAEiwACIhADk9mpgdzTx0S5saCFBhe1lhYgyVvwTqVan2n7aqzVlhyXyACe0r21RoC-J0QAvD_BwE">
+            <a class="back_click" href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">
                 < 돌아가기
             </a>
             <form name="form">

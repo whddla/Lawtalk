@@ -4,13 +4,13 @@ div.all-layout{
     right: 320px;
     top: 0px;
  }
+
 a { text-decoration:none;
 	color: black;
 }
 a:hover {
   color : black;
 }
-
 .title1{
     position:absolute;
     width: 100px;
@@ -158,8 +158,8 @@ a:hover {
     position:absolute;
     width: 9px;
     height: 9px;
-    left:1195px;
-    top:212px;
+    left:1091px;
+    top:270px;
     border-radius: 50%;
     background-color: #f50;
 }
@@ -331,7 +331,7 @@ a:hover {
 
 .info13{
     width: 400px;
-    left:648px;
+    left:651px;
     top:570px;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -340,7 +340,7 @@ a:hover {
 }
 .info14{
     width: 400px;
-    left:661px;
+    left:659px;
     top:590px;
     font-size: 11px;
     letter-spacing: -1.5px;
@@ -349,7 +349,7 @@ a:hover {
 }
 .info15{
     width: 400px;
-    left:754px;
+    left:766px;
     top:570px;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -358,7 +358,7 @@ a:hover {
 }
 .info16{
     width: 400px;
-    left:876px;
+    left:868px;
     top:570px;
     font-size: 14px;
     letter-spacing: -0.5px;

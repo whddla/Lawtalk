@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/information.css">
+    <link rel="stylesheet" href="assets/css/information4.css">
     <title>Document</title>
 </head>
 <body style="overflow-x: hidden;">
@@ -21,11 +21,11 @@
             <div class="title4">의뢰인후기</div>
             <div class="title5">상담예약</div>
             <div class="box"></div>
-            <div class="box_word1">윤병남 변호사</div>
-            <div class="box_word2">법률사무소 수성</div>
+            <div class="box_word1">조혜인 변호사</div>
+            <div class="box_word2">법무법인 청녕</div>
             <div class="box_word3">상담시작하기</div>
             <div class="box_img">
-                <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/6278b01f51f04900413a0932-original-1652688139993.jpg">
+                <img src="https://d2ai3ajp99ywjy.cloudfront.net/uploads/original/609e31b07610e200ee763217-original.jpg">
             </div>
         
             <div class="box_img2">
@@ -33,28 +33,28 @@
             </div>
             <div class="line1"></div>
             <hr class="line">
-            <div class="intru1">소청심사위원회 출신 변호사</div>
-            <div class="intru2"></div>
+            <div class="intru1">지금 처한 상황을 똑 부러지게 해결해</div>
+            <div class="intru2">드리겠습니다</div>
             <div class="dott"></div>
         
         
             
             
             <div id="information"> 
-                        <div class="info1">윤병남 변호사</div>
-                        <div class="info2">법무법인 수 성</div>
-                        <div class="info3">서울특별시 강남구 논현로 416(역삼동) 5층</div>
-                        <div class="info4">법무법인 수성</div>
-                        <div class="info5">사무실 전화 02-508-2217</div>
+                        <div class="info1">조혜인 변호사</div>
+                        <div class="info2">법무법인 청 녕</div>
+                        <div class="info3">서울특별시 강남구 논현로 526(역삼동) 3층</div>
+                        <div class="info4"></div>
+                        <div class="info5">사무실 전화 050-7725-5105</div>
                         <div class="info6">분야</div>
-                        <div class="info7">노동/인사, 행정, 형사기타</div>
+                        <div class="info7">기업일반,금융,성범죄,이혼,형사기타,민사기타</div>
                         <div class="info8"></div>
                        
         
                     <div class="info9">경력</div>
-                    <div class="info10">인사혁신처 소청심사위원회 사무관</div>
+                    <div class="info10">2014년 변호사자격 취득</div>
                     <div class="info11">학력</div>
-                    <div class="info12">중앙대학교 법학과 학사 졸업</div>
+                    <div class="info12">이화여자대학교 법학과 학사 졸업</div>
                     <hr class="line2">
                     <div class="smallimg1">
                         <img src="assets/img/변호사.png">
@@ -66,13 +66,13 @@
                         <img src="assets/img/서류.png">
                     </div>  
         
-                    <div class="info13">공직 근무 경험</div>
+                    <div class="info13">기업 근무 경험</div>
                     <div class="info14">-부동산전문-</div>
                     <div class="info15">국선변호인 경험</div>
                     <div class="info16">영어 가능</div>
-                    <div class="info17">윤병남 변호사님은<span class="spw1">공직(정부/지자체) 근무,국선변호인</span>경험</div>
-                    <div class="info18">을 하였고 <span class="spw1">영어가</span>가능합니다.</div>
-                    <div class="info19"> <span class="spw1">사업</span> 경험을 보유했고 <span class="spw1">영어</span>가 가능합니다.</div>
+                    <div class="info17">조혜인 변호사님은<span class="spw1">기업 근무,국선변호인</span>경험을 보유했고<span class="spw1">영</span></div>
+                    <div class="info18"><span class="spw1">어</span>가능합니다.</div>
+                    <div class="info19"> <span class="spw1"></span><span class="spw1"></span></div>
                  </div>
         
                  <div class="info20">이력사항</div>
@@ -80,20 +80,20 @@
                  <div class="info22">학력</div>
         
                 <div class="last">
-                    <div>2014 ~ 2017&emsp;인사혁신처 소청심사위원회 사무관</div>
-                    <div>2020 ~ &emsp;국세청 고충심사위원회 위원</div>
-                    <div>2017 ~ &emsp;법무법인 수성</div>
-                    <div>2014 ~ 2017&emsp;안전행정부 소청심사위원회 사무관</div>
+                    <div>2019 ~ 2021&emsp;솔라커넥트 (주)</div>
+                    <div>2016 ~ 2019&emsp;(주) JB 금융지주</div>
+                    <div>2012 ~ 2014&emsp;법무법인 청 녕</div>
+                    <div>2014 ~ &emsp;사법연수원 43기</div>
                     <div>2017 ~ 2017&emsp;환경부 고충심사위원회 위원</div>
                     <div>2017 ~ 2017&emsp;해수부 해양생물자원관 인사위원회 위원</div>
                     <div>2016 ~ 2016&emsp;국가공무원 9급 공개채용시험 면접위원</div>
                     <div>2011 ~ 2013&emsp;법무부 대한법률구조공단 법무관</div>
                     <hr>
-                    <div>2011 ~ 2013&emsp;성균관대학교 법학전문대학원 법학과 박사 수료</div>
-                    <div>2012 ~ 2012&emsp;서부지방법원 국선변호인</div>
-                    <div>2008 ~ 2011&emsp;사법연수원 50기</div>
-                    <div>2011 ~ 2011&emsp;창원지방법원 거창지청 국선변호인</div>
-                    <div>2010 ~ 2010&emsp;수원지방검찰청 검사직무 대리</div>
+                    <div>2016 ~ 2019&emsp;이화여자대학교 법학과 학사 졸업</div>
+                    <div>2021 ~ 2022&emsp;동국대학교 행정대학원 부동산자산관리최고과정 기타 수료</div>
+                    <div>2020 ~ 2020&emsp;서울대학교 자연과학대학 과학기술산업융합최고전략과정(SPARC) 기타 수료</div>
+                    <div>2018 ~ 2018&emsp;아주대학교 공공정책대학원 부동산최고위과정 기타 수료</div>
+                    <div>2007 ~ 2011&emsp;성균관대학교 유학동양학부 학사 졸업</div>
                 </div>
                     <div id="test1"></div>
                     <div id="test2"></div>
@@ -113,12 +113,12 @@
         
                     <hr class="line4">
                         <div class="map1">사무실정보</div>
-                        <div class="map2">법률사무소 수성</div>
-                        <div class="map3">서울특별시 강남구 논현로 416(역삼동)5층 법무법인 수성</div>
+                        <div class="map2">법무법인 청 녕</div>
+                        <div class="map3">서울특별시 강남구 논현로 526(역삼동) 3층</div>
                           <div class="cell">
                             <img src="assets/img/전화기.png">
                         </div>  
-                        <div class="map4">02-508-2217</div>
+                        <div class="map4">050-7725-5105</div>
                         <a href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EC%A4%91%EC%95%99%EB%A1%9C%20153/address/14139015.181567427,4508375.159683814,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EC%A4%91%EC%95%99%EB%A1%9C%20153,new?c=14138965.1991161,4508373.7987122,19,0,0,0,dh&isCorrectAnswer=true"><div class="map5">네이버 지도로 보기</div></a>
                     <div class="map">
                         <img src="assets/img/지도.jpg">
