@@ -4,14 +4,14 @@ public class UserVO {
 
 	private int userNum;
 	private String userId;
-	private String lawyerName;
-	private String lawyerEmail;
-	private String lawyerPw;
-	private String lawyerPhoneNum;
-	private String lawyerGender;
-	private int lawyerBirth;
-	private String lawyerKakaoEmail;
-	private String lawyerFacebookEmail;
+	private String userName;
+	private String userEmail;
+	private String userPw;
+	private String userPhoneNum;
+	private String userGender;
+	private int userBirth;
+	private String userKakaoEmail;
+	private String userFacebookEmail;
 	
 	
 	public UserVO() {;}
@@ -37,84 +37,85 @@ public class UserVO {
 	}
 
 
-	public String getLawyerName() {
-		return lawyerName;
+	public String getUserName() {
+		return userName;
 	}
 
 
-	public void setLawyerName(String lawyerName) {
-		this.lawyerName = lawyerName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 
-	public String getLawyerEmail() {
-		return lawyerEmail;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
 
-	public void setLawyerEmail(String lawyerEmail) {
-		this.lawyerEmail = lawyerEmail;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
 
-	public String getLawyerPw() {
-		return lawyerPw;
+	public String getUserPw() {
+		return userPw;
 	}
 
 
-	public void setLawyerPw(String lawyerPw) {
-		this.lawyerPw = lawyerPw;
+	public void setUserPw(String userPw) {
+		this.userPw = userPw;
 	}
 
 
-	public String getLawyerPhoneNum() {
-		return lawyerPhoneNum;
+	public String getUserPhoneNum() {
+		return userPhoneNum;
 	}
 
 
-	public void setLawyerPhoneNum(String lawyerPhoneNum) {
-		this.lawyerPhoneNum = lawyerPhoneNum;
+	public void setUserPhoneNum(String userPhoneNum) {
+		this.userPhoneNum = userPhoneNum;
 	}
 
 
-	public String getLawyerGender() {
-		return lawyerGender;
+	public String getUserGender() {
+		return userGender;
 	}
 
 
-	public void setLawyerGender(String lawyerGender) {
-		this.lawyerGender = lawyerGender;
+	public void setUserGender(String userGender) {
+		this.userGender = userGender;
 	}
 
 
-	public int getLawyerBirth() {
-		return lawyerBirth;
+	public int getUserBirth() {
+		return userBirth;
 	}
 
 
-	public void setLawyerBirth(int lawyerBirth) {
-		this.lawyerBirth = lawyerBirth;
+	public void setUserBirth(int userBirth) {
+		this.userBirth = userBirth;
 	}
 
 
-	public String getLawyerKakaoEmail() {
-		return lawyerKakaoEmail;
+	public String getUserKakaoEmail() {
+		return userKakaoEmail;
 	}
 
 
-	public void setLawyerKakaoEmail(String lawyerKakaoEmail) {
-		this.lawyerKakaoEmail = lawyerKakaoEmail;
+	public void setUserKakaoEmail(String userKakaoEmail) {
+		this.userKakaoEmail = userKakaoEmail;
 	}
 
 
-	public String getLawyerFacebookEmail() {
-		return lawyerFacebookEmail;
+	public String getUserFacebookEmail() {
+		return userFacebookEmail;
 	}
 
 
-	public void setLawyerFacebookEmail(String lawyerFacebookEmail) {
-		this.lawyerFacebookEmail = lawyerFacebookEmail;
+	public void setUserFacebookEmail(String userFacebookEmail) {
+		this.userFacebookEmail = userFacebookEmail;
 	}
+
 
 
 	
