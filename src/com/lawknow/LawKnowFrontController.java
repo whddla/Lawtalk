@@ -39,6 +39,20 @@ public class LawKnowFrontController extends HttpServlet{
 	    	  
 	      }else if(command.equals("LawyerJoin.me")) {
 	    	  
+	      }else if(command.equals("UsercheckId")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
+	      }else if(command.equals("UserDeleteAccount")) {
+	    	  
 	      }
 	      
 	      
