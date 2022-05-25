@@ -9,7 +9,12 @@ div.all-layout{
     margin: 0;
     overflow-x: hidden
 }
-
+a { text-decoration:none;
+	color: black;
+}
+a:hover {
+  color : black;
+}
 #Law{
     position: absolute;
     left: 1162px;

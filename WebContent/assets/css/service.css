@@ -10,7 +10,12 @@ body {
 	background:#fff;
 }
 
-
+a { text-decoration:none;
+	color: black;
+}
+a:hover {
+  color : black;
+}
 .iflower{
 text-align: center;
 position: relative;
@@ -729,6 +734,11 @@ p{
     left: 747px;
     cursor: pointer;
     top : 1500px;
+}
+.box17{
+    left: 747px;
+    cursor: pointer;
+    top : 1600px;
 }
 
 .q{

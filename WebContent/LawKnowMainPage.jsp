@@ -411,7 +411,7 @@ div.btns{
        </section>
  
        <section class="counsel-banner-section">
-        <div class="counsel-banner-section-container">
+        <div class="counsel-banner-section-container" style="width: 113%;"> <!-- 임시방편 해결 -->
             <div class="counsel-banner-section--wrap">
                 <p class="counsel-banner-title">상황에 맞게 변호사와 다양한 법률상담.</p>
                 <div class="counsel-banners-img-box">
