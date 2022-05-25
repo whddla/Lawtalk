@@ -235,18 +235,17 @@
 
 
 <button class="btn-action-question btn-action">
-    <div class="buttoninbox">
-        <a>
-        <span>
-            LAWKNOW 지식인
-        </span>
-        </a>
-        <!-- <div class = "arrow-down"></div> -->
-    </div>
-<a class="pencilatag">   
-    <i class="material-icons" id="thbutton" style="left: 2px;top: 4px;font-size: 39px;">mode_edit</i>
-</a>
- </button>
+        <div class="buttoninbox">
+            <a class = "" href="write.jsp" style ="color:white;">
+            <span class="fixspan" style="color:black;">
+                LAWKNOW 지식인
+            </span>
+            <!-- <div class = "arrow-down"></div> -->
+        </div>
+       
+        <i class="material-icons" id="thbutton" style="left: 2px;top: 4px;font-size: 39px;">mode_edit</i>
+    </a>
+     </button>
 
 
 

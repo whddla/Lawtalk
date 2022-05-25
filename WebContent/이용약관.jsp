@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="asset\css\이용약관.css">
+<link rel="stylesheet" href="assets\css\이용약관.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <title>Insert title here</title>
 </head>
@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="all-layout">
 			<div class ="title-layout">
-				<img src="asset\img\사람아이콘.png">
+				<img src="assets\img\사람아이콘.png">
 				<h1>
 					<a class = "title-font" href="LawKnowMainPage.jsp">LawKnow</a>
 					<span style ="display : block; color: #fefefe; font-size: 22px">Good Lawyers</span>

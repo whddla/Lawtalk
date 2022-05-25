@@ -9,7 +9,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <link href="../assets/css/find_idpw.css" rel="stylesheet">
+    <link href="assets/css/find_idpw.css" rel="stylesheet">
     <title>아이디/비밀번호 찾기 | 로노</title>
 </head>
 <body>
