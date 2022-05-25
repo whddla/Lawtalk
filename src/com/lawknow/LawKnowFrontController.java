@@ -1,4 +1,4 @@
-package com.lawyer;
+package com.lawknow;
 
 import java.io.IOException;
 
@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.member.MemberJoinOk;
-import com.member.action.ActionInfo;
+/*import com.lawyer.MemberJoinOk;*/
+import com.lawyer.action.ActionInfo;
 
-public class LawyerFrontController extends HttpServlet{
+public class LawKnowFrontController extends HttpServlet{
 
 	@Override
 	   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,7 +26,7 @@ public class LawyerFrontController extends HttpServlet{
 	   protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	      String requestURL = req.getRequestURI();
 	      String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
-	      /*ActionInfo actionInfo = null;*/
+	      ActionInfo actionInfo = null;
 	      
 	      if(command.equals("UserJoinOk.me")) {
 	        /* actionInfo = new MemberJoinOk().execute(req, resp);*/
