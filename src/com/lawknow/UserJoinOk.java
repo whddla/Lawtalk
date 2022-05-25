@@ -22,9 +22,19 @@ public class UserJoinOk implements Action{
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
 		
+		userVO.setUserId(req.getParameter("userId"));
+		userVO.setUserName(req.getParameter("userName"));
+		userVO.setUserEmail(req.getParameter("userEmail"));
+		userVO.setUserPw(req.getParameter("userPw"));
+		userVO.setUserPhoneNum(req.getParameter("userPhoneNum"));
+		userVO.setUserGender(req.getParameter("userGender"));
+		userVO.setUserKakaoEmail(req.getParameter("userKakaoEmail"));
+		userVO.setUserFacebookEmail(req.getParameter("userFacebookEmail"));
 		
+		userDAO.join(userVO);
 		
-		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/LawKnowMainPage.jsp");
 		
 		
 		return actionInfo;
