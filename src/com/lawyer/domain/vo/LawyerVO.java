@@ -1,7 +1,7 @@
 package com.lawyer.domain.vo;
 
 public class LawyerVO {
-
+//	커밋 오류 테스트 주석
 	private int lawyerNum;
 	private String lawyerId;
 	private String lawyerName;
