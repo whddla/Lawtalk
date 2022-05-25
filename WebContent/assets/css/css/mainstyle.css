@@ -550,17 +550,20 @@ bottom: -100px;
 content: '';
 }
 .counsel-banner-section{
-width: 1690px;
+ width: 1690px;
 height: 1118px;
 margin-top: 87px;
 display: block;
+margin: 0 auto;
 }
 .counsel-banner-section-container{
-width: 100%;
+width: 113%; /* 원래 100% 임시방편 */
 height: 684px;
 padding-bottom: 106px;
 padding-top: 61px;
 background-color: #222;
+/* position: absolute; 임시방편
+left: -6px;	임시방편 */
 }
 .counsel-banner-section--wrap{
 margin: 44px auto 0;

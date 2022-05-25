@@ -3,7 +3,12 @@ html,
 body {
     width: 100%;
 }
-
+a { text-decoration:none;
+	color: black;
+}
+a:hover {
+  color : black;
+}
 body {
     margin: 0;
     padding: 0;
@@ -211,7 +216,7 @@ outline: white;
 .slideLogin i{
     position: absolute;
     left: 235px;
-    top: 692px;
+    top: 698px;
 }
 
 
@@ -365,7 +370,7 @@ div.all-layout{
      border-width: 1px;
      border-color: gray;
      vertical-align: top;
-     line-height: 0px;
+     line-height: 22px;
  }
  
  

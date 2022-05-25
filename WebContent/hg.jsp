@@ -3,16 +3,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/hg.css">
     <title>Document</title>
 </head>
     <body style="overflow-x: hidden;">
         <div class="all-layout">
         
-            <div class="main">LAWTALK</div>
+            <a href="LawKnowMainPage.jsp"><div class="main">LAWKNOW</div></a>
             <div class="main1">후기 작성</div>
             <hr class="line1">
             <div class="box"></div>
@@ -38,10 +41,10 @@
                 <input type="checkbox" id="check55">
             </form>
             <form action="">
-                <input id="input1" type="text" placeholder="&nbsp;&nbsp;&nbsp;후기를 간단하게 작성해주세요">
+                <textarea style="resize: none;" id="text1" type="text" placeholder="&nbsp;&nbsp;&nbsp;후기를 간단하게 작성해주세요"></textarea>
             </form>
 
-            <div id="bottom">bottom</div>
+            <div id="bottom"></div>
        </div>
     
 
@@ -107,6 +110,89 @@
 
 
 
+
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton" style="margin-right: 155px;">
+            <i class="material-icons" id="thbutton" style="font-size: 46px;">menu</i>
+          </button>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                    <strong>lawknow</strong>
+                </h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body sidebodyGW">
+              <div>
+                <div class="menu-item quick-menu">
+                    <div class="one">
+                        <span>LAW<br>지식인</span>
+                    </div>
+                    <div class="one">
+                        <span>1:1<br>바로상담</span>
+                    </div>
+                    <div class="one">
+                        <span>오늘의<br>질문들</span>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="secondpart">
+                <div class="fourbox">
+                    <a class="findlower">LAW 지식 IN</a>
+                </div>
+                <div class="fourbox">
+                    <a class="findlower">변호사찾기</a>
+                </div>
+                <div class="fourbox">
+                    <a class="findlower">해결사례</a>
+                </div>
+                <div class="fourbox">
+                    <a class="findlower">상담사례</a>
+                </div>
+            </div>
+            <div class="writeglesigi">
+            <a href="write.jsp"><img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+            </div></a>
+            <div class = "menu-items-bottom">
+                <a class ="bottom-inner">
+                   <strong>공지사항</strong>
+                </a>
+                <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
+                <br>
+                <a href="compani.jsp" class ="bottom-inner">
+                    회사소개
+                </a>
+                <br>
+                <a href="questionLawer.jsp"class ="bottom-inner">
+                    자주 묻는 질문
+                </a>
+                <br>
+                <a href="이용약관.jsp" class ="bottom-inner">
+                    이용약관
+                </a>
+                <br>
+            </div>
+            
+            <div class="realbottomSlide">
+                <div class="slideLogin">
+                    <label>
+                    <i class="material-icons slideicon" >person_add</i>
+                    <br>
+                   <a href="signup.jsp">회원가입</a>
+                </label>
+                </div>
+                <div class="slideLogin">
+                    <label>
+                    <i class="material-icons slideicon" style="left: 62px; top: 686px;">contacts</i>
+                    <br>
+                    <a href="client_login.jsp">로그인</a>
+                </label>
+                </div>
+            </div>
+          </div>        
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 

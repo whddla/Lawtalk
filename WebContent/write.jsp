@@ -13,7 +13,7 @@
 </head>
 <body style="overflow-x: hidden;">
     <div class="all-layout">
-       <a href="LawKnowMainPage.jsp"><div id="Law">LT</div></a>
+       <a href="LawKnowMainPage.jsp"><div id="Law">LN</div></a>
     
        
         <hr class="hr1"> 
@@ -33,8 +33,8 @@
           <div class="text_6">*</div>    
         </div>   
         <form action="">
-            <input id="input1" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요">
-            <input id="input2" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요">
+            <textarea id="input1" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
+            <textarea id="input2" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요"></textarea>
           
             <input type="checkbox" id="checkbox1">
             <label for="" id="label1">안내사항을 모두 확인했으며, 동의합니다.</label>
@@ -68,7 +68,7 @@
        <hr class="hr3">
       <div id="total2">
        <div class="last1">공지사항</div>
-       <div class="last2">마이페이지</div>
+       <a href="mypage.jsp"><div class="last2">마이페이지</div></a>
        <div class="last3">로톡상담</div>
        <div class="last4">고객센터</div>
        <div class="last5">[안내]로톡 서비스 운영정책 변경 안내</div>
@@ -80,13 +80,13 @@
 
         <div class="last26">내 상담내역</div>
         <div class="last27">회원정보수정</div>
-        <div class="last28">자주묻는질문</div>
+        <a href="questionUser.jsp"><div class="last28">자주묻는질문</div></a>
 
 
-       <div class="last11">회사소개</div>
-       <div class="last12">이용약관</div>
+       <a href="compani.jsp"><div class="last11">회사소개</div></a>
+       <a href="이용약관.jsp"><div class="last12">이용약관</div></a>
        <div class="last13">개인정보처리방침</div>
-       <div class="last14">법적책임</div>
+       <a href="법적책임.jsp"><div class="last14">법적책임</div></a>
        <div class="last15">운영정책</div>
        <div class="last16">사진촬영안내 </div>
        <div class="last17">(주)로앤컴퍼니 서울시 서초구 서초중앙로 22길 17, 4층 사업자번호 : 264-81-01728 통신판매번호 : 2016-서울서초-0227</div>
@@ -151,9 +151,9 @@
         <div class="fourbox">
             <a class="findlower">상담사례</a>
         </div>
-    </div>
+    </div>																	
     <div class="writeglesigi">
-   <img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+   <a href="write.jsp"><img src="assets/img/연필.jpg" style="width: 22px; position: absolute; left: -5px; top: -2px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;</a>       
     </div>
     <div class = "menu-items-bottom">
         <a class ="bottom-inner">
@@ -161,15 +161,15 @@
         </a>
         <i ng-if="noticeNew > 0" class="new-up">&nbsp;N</i>
         <br>
-        <a class ="bottom-inner">
+        <a href="compani.jsp" class ="bottom-inner">
             회사소개
         </a>
         <br>
-        <a class ="bottom-inner">
+        <a href="questionUser.jsp" class ="bottom-inner">
             자주 묻는 질문
         </a>
         <br>
-        <a class ="bottom-inner">
+        <a href="이용약관.jsp" class ="bottom-inner">
             이용약관
         </a>
         <br>
@@ -177,17 +177,17 @@
     
     <div class="realbottomSlide">
         <div class="slideLogin">
-            <label>
-            <i class="material-icons slideicon" style="font-size: 41px;" >person_add</i>
+            <label >
+            <i class="material-icons slideicon" style="font-size: 36px;" >person_add</i>
             <br>
-           <a href="">회원가입</a>
+           <a  href="assets/client_signup.jsp">회원가입</a>
         </label>
         </div>
         <div class="slideLogin">
             <label>
-            <i class="material-icons slideicon" style="left: 62px; top: 686px; font-size: 41px;">contacts</i>
+            <i class="material-icons slideicon" style="left: 63px; top: 695px; font-size: 36px;">contacts</i>
             <br>
-            <a href="">로그인</a>
+            <a href="assets/client_login.jsp">로그인</a>
         </label>
         </div>
     </div>

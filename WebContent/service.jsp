@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="assets/css/service.css">
     <title>Document</title>
 </head>
-<body style="overflow-x: hidden;">
+<body style="overflow-x: 
+hidden;">
     <div class="all-layout">
         <section>
             <a href="LawKnowMainPage.jsp"><div id="Law">LAWKNOW</div></a>
@@ -143,18 +144,24 @@
         </div>
 
         <div class="boxs4">
-        <div class="box14">
-            <span>&emsp;&emsp;이혼조정 시 쌍방의 재산 공개 가능한가요?</span>
-            <div class="q"></div>
-        </div>    
-        <div class="box15">
-            <span>&emsp;&emsp;결혼준비 중 파혼하려 하는데, 합리적으로 파혼하는 방법이 있을까요?</span>
-            <div class="q"></div>
-        </div>    
-        <div class="box16">
-            <span>&emsp;&emsp;이혼 후 아이를 제가 키우고있는데 전처가 친권양육권 변경을 해주지 않습니다.</span>
-            <div class="q"></div>
-        </div>    
+	        <div class="box14">
+	            <span>&emsp;&emsp;전 남편이 돈을 주지 않고 있습니다. 빨리 받는 방법이 있나요?</span>
+	            <div class="q"></div>
+	        </div>    
+	        <div class="box15">
+	            <span>&emsp;&emsp;[재산 분할] 3년/자녀없음/경제수준9:1/아파트시세차익</span>
+	            <div class="q"></div>
+	        </div>    
+	        <div class="box16">
+	            <span>&emsp;&emsp;유책 배우자 이혼소송 기각 후 아이들 약취해가 보여주지 않고 있습니다.</span>
+	            <div class="q"></div>
+	        </div>    
+	        <div class="box17">
+	            <span>&emsp;&emsp;합의 이혼 후 재산 분할 청구가 들어왔습니다.</span>
+	            <div class="q"></div>
+	        </div>    
+       
+       
         </div>
 
         <div id="final"> 
