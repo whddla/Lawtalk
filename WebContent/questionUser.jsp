@@ -6,7 +6,7 @@
  
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="assets/css/css/clientQuestion.css">
+    <link rel="stylesheet" href="assets/css/clientQuestion.css">
     <title>자주 묻는 질문 의뢰인</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />   

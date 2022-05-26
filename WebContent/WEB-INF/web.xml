@@ -9,14 +9,54 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
+  <!-- lawyercomment -->
   <servlet>
-  	<servlet-name>LawAllController</servlet-name>
-  	<servlet-class>com.lawknow.LawAllController</servlet-class>
+  	<servlet-name>LawyerCommentFrontController</servlet-name>
+  	<servlet-class>com.lawknow.lawyerComment</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>LawAllController</servlet-name>
-  		<url-pattern>*.me</url-pattern>
+  		<servlet-name>LawyerCommentFrontController</servlet-name>
+  		<url-pattern>*.lcc</url-pattern>
+  </servlet-mapping>
+<!-- lawyerregister -->
+  <servlet>
+  	<servlet-name>LawyerRegisterFrontController</servlet-name>
+  	<servlet-class>com.lawknow.lawyerRegister</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>LawyerRegisterFrontController</servlet-name>
+  		<url-pattern>*.lrfc</url-pattern>
+  </servlet-mapping>
+<!-- userregister -->
+  <servlet>
+  	<servlet-name>UserRegisterController</servlet-name>
+  	<servlet-class>com.lawknow.userRegister</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>UserRegisterController</servlet-name>
+  		<url-pattern>*.urc</url-pattern>
+  </servlet-mapping>
+<!-- userreview -->
+  <servlet>
+  	<servlet-name>UserReviewFrontController</servlet-name>
+  	<servlet-class>com.lawknow.userReview</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>UserReviewFrontController</servlet-name>
+  		<url-pattern>*.urfc</url-pattern>
+  </servlet-mapping>
+<!-- userwrite -->
+  <servlet>
+  	<servlet-name>UserWriteFrontController</servlet-name>
+  	<servlet-class>com.lawknow.userWrite</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>UserWriteFrontController</servlet-name>
+  		<url-pattern>*.uwfc</url-pattern>
   </servlet-mapping>
 </web-app>

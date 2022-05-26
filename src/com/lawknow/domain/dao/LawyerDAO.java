@@ -1,4 +1,4 @@
-package com.lawyer.domain.dao;
+package com.lawknow.domain.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

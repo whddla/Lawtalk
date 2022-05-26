@@ -1,9 +1,12 @@
-package com.userwrite.domain.dao;
+package com.lawknow.domain.dao;
+
+import java.sql.Date;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.mybatis.config.MyBatisConfig;
+import com.userwrite.domain.vo.UserWriteVO;
 
 public class UserWriteDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
