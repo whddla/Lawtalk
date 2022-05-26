@@ -29,15 +29,19 @@ public class LawyerCommentFrontController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("LawyerCommentOK.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       } else if(command.equals("LawyerJoin.me")) {
+       if(command.equals("LawyerCommentOK.lcc")) {
+    	   actionInfo = new LawyerCommentOk().execute(req, resp);
+       } else if(command.equals("LawyerComment.lcc")) { //변호사 글  작성
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
-          actionInfo.setPath(req.getContextPath() + "/join.jsp");
+          actionInfo.setPath(req.getContextPath() + "/LawKnowMain.jsp");
+       }else if(command.equals("LawyerCommentCount.lcc")) { // 변호사 답변한 글 갯수
+    	   actionInfo = new LawyerCommentCount().execute(req, resp);
+       } else if(command.equals("LawyerCommentUpdate.lcc")) { // 변호사 글 수정
+    	   actionInfo = new LawyerCommentUpdate().execute(req, resp);
+       }else if(command.equals("LawyerCommentDelete.lcc")) { // 변호사 글 삭제
+    	   actionInfo = new LawyerCommentDelete().execute(req, resp);
        }
-       
-       
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성
        }
