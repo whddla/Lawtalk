@@ -21,7 +21,7 @@ public class LawyerDAO {
 		sqlSession.insert("Lawyer.join", lawyer);
 	}
 	
-	//아이디 중복검사
+	//아이디 중복검사tk
 	public boolean checkId(String lawyerId) {
 		return (Integer)sqlSession.selectOne("Lawyer.checkId", lawyerId) == 1;
 	}
