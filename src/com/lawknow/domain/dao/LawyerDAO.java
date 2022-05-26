@@ -3,7 +3,7 @@ package com.lawknow.domain.dao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.lawyer.domain.vo.LawyerVO;
+import com.lawknow.domain.vo.LawyerVO;
 import com.mybatis.config.MyBatisConfig;
 
 public class LawyerDAO {

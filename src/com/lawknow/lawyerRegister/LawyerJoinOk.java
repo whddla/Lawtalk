@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.lawknow.domain.dao.LawyerDAO;
+import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-import com.lawyer.domain.vo.LawyerVO;
 
 public class LawyerJoinOk implements Action {
 	@Override
