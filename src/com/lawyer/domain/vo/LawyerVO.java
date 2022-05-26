@@ -1,16 +1,16 @@
 package com.lawyer.domain.vo;
 
 public class LawyerVO {
-
-	int lawyerNum;
-	String lawyerId;
-	String lawyerName;
-	String lawyerEmail;
-	String lawyerPw;
-	String lawyerOffice;
-	String lawyerOfficeNum;
-	String lawyerPhoneNum;
-	String lawyerGraduateTest;
+//	커밋 오류 테스트 주석
+	private int lawyerNum;
+	private String lawyerId;
+	private String lawyerName;
+	private String lawyerEmail;
+	private String lawyerPw;
+	private String lawyerOffice;
+	private String lawyerOfficeNum;
+	private String lawyerPhoneNum;
+	private String lawyerGraduateTest;
 	
 	public LawyerVO(){;}
 
