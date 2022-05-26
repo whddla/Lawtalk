@@ -30,21 +30,17 @@ public class UserRegisterController extends HttpServlet {
        
        if(command.equals("UserJoinOk.me")) {
     	   actionInfo = new UserJoinOk().execute(req, resp);
-       } else if(command.equals("UserJoin.me")) {
+       }else if(command.equals("UserJoin.me")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
-          actionInfo.setPath(req.getContextPath() + "/join.jsp");
-       }else if(command.equals("UsercheckId.me")) {
-    	   actionInfo = new ActionInfo();
-           actionInfo.setRedirect(true); // 리다이렉트 방법으로 전송했을때는 req객체가 사라 질 수 있으니  eq.getContextPath()를 경로앞에쏴준다
-           actionInfo.setPath(req.getContextPath() + "/join.jsp");
-       }else if(command.equals("UserDeleteAccount.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       }else if(command.equals("UserUpdateAccount.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       }else if(command.equals("UserLoginCheck.me")) {
-          
-       }  
+          actionInfo.setPath(req.getContextPath() + "/client_login.jsp");
+       }else if(command.equals("UserDeleteAccountOk.me")) {
+    	   actionInfo = new UserDeleteAccount().execute(req, resp);
+       }else if(command.equals("UserCheckId.me")) {
+    	   actionInfo = new UserCheckId().execute(req, resp);
+       }else if(command.equals("GetUserInfoOk.me")) {//회원 정보 조회
+    	   actionInfo = new GetUserInfoOk().execute(req, resp);
+       }
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성
        }
