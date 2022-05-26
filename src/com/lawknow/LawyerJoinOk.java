@@ -5,9 +5,9 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lawknow.domain.dao.LawyerDAO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-import com.lawyer.domain.dao.LawyerDAO;
 import com.lawyer.domain.vo.LawyerVO;
 
 public class LawyerJoinOk implements Action {

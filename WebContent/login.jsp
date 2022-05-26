@@ -18,7 +18,7 @@
 				<h1>
 					<a href="#" style="color: #ff4e00;">LOGIN</a>.
 				</h1>
-				<a class="back-click" href="">< 돌아가기</a>
+				<a class="back-click" href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">< 돌아가기</a>
 			</div>
 			<div sign-in-box>
 				<div class="tab_menu">
@@ -39,7 +39,7 @@
                                     		<input type="checkbox" name="login-checkbox" >
                                     		로그인 상태유지
                                 			</div>
-                                			<a class="find-id-password" href="http://localhost:9000/lawtalk/assets/find_idpw.html">
+                                			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
                                 			</a>
                             		</div>
@@ -62,10 +62,10 @@
                     			</div>
                         		<div class="footer">
                        	 			<div class="row sign-up-row">
-                            			<a href="http://localhost:9000/lawtalk/assets/signup.html">회원가입</a>
+                            			<a href="http://localhost:9000/kovengerss/signup.jsp">회원가입</a>
                         			</div>
                         			<div class="row copyright-row">
-                            			<a href="http://lawcompany.co.kr/">
+                            			<a href="http://localhost:9000/kovengerss/compani.jsp">
                                 			(C) Law&Company Co., Ltd.
                             			</a>
                         			</div>
@@ -87,7 +87,7 @@
                                     		<input type="checkbox" name="login-checkbox" >
                                     		로그인 상태유지
                                 			</div>
-                                			<a class="find-id-password" href="http://localhost:9000/lawtalk/assets/find_idpw.html">
+                                			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
                                 			</a>
                             		</div>
@@ -98,7 +98,7 @@
                         			<div class="lawyer-signup-info">
 			                            <button type="button" class="lawyer-info-button">
 			                                <span class="text">
-											<a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
+											<a href="http://localhost:9000/kovengerss/compani.jsp">변호사 가입안내</a>
 			                                </span>
 			                            </button>
                         			</div>
