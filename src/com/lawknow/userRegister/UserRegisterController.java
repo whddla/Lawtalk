@@ -28,18 +28,20 @@ public class UserRegisterController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("UserJoinOk.me")) {
+       if(command.equals("UserJoinOk.urc")) {
     	   actionInfo = new UserJoinOk().execute(req, resp);
-       }else if(command.equals("UserJoin.me")) {
+       }else if(command.equals("UserJoin.urc")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/client_login.jsp");
-       }else if(command.equals("UserDeleteAccountOk.me")) {
+       }else if(command.equals("UserDeleteAccountOk.urc")) {
     	   actionInfo = new UserDeleteAccount().execute(req, resp);
-       }else if(command.equals("UserCheckId.me")) {
+       }else if(command.equals("UserCheckId.urc")) {
     	   actionInfo = new UserCheckId().execute(req, resp);
-       }else if(command.equals("GetUserInfoOk.me")) {//회원 정보 조회
-    	   actionInfo = new GetUserInfoOk().execute(req, resp);
+       }else if(command.equals("UserUpdateAccount.urc")) {//회원 정보 조회
+    	   actionInfo = new ActionInfo();
+           actionInfo.setRedirect(true);
+           actionInfo.setPath(req.getContextPath() + "/privacyPage.jsp");
        }
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성

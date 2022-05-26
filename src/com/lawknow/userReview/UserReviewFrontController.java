@@ -29,9 +29,9 @@ public class UserReviewFrontController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("UserReviewOk.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       } else if(command.equals("UserJoin.me")) {
+       if(command.equals("UserReviewOk.urfc")) {
+    	   actionInfo = new UserReviewOk().execute(req, resp);
+       } else if(command.equals("UserJoin.urfc")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/join.jsp");
