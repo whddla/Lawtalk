@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lawknow.LawyerJoinOk;
-import com.lawknow.UserJoinOk;
 import com.lawyer.action.ActionInfo;
 
 public class LawyerRegisterFrontController extends HttpServlet {
