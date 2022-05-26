@@ -6,6 +6,7 @@ import java.sql.Date;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.lawknow.domain.vo.LawyerCommentVO;
 import com.lawknow.domain.vo.UserReviewVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -20,6 +21,11 @@ public class UserReviewDAO {
 	//리뷰 글작성
 	public void reviewWrite(UserReviewVO user) {
 		sqlSession.insert("User.reviewWrite", user) ;
+	}
+	
+	//리뷰 글 수정
+	public int reviewUpdate(UserReviewVO user) {
+		return sqlSession.update("user.reviewUpdate", user);
 	}
 	
 	// 리뷰 글삭제
