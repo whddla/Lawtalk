@@ -1,4 +1,4 @@
-package com.lawknow;
+package com.lawknow.userRegister;
 
 import java.io.IOException;
 
