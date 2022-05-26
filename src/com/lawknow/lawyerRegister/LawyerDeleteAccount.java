@@ -1,38 +1,35 @@
-package com.lawknow.userRegister;
+package com.lawknow.lawyerRegister;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
-
-import com.lawknow.domain.dao.UserDAO;
-import com.lawknow.domain.vo.UserVO;
+import com.lawknow.domain.dao.LawyerDAO;
+import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class UserDeleteAccount implements Action{
-
+public class LawyerDeleteAccount implements Action{
+	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		req.setCharacterEncoding("UTF-8"); 
-		
+		req.setCharacterEncoding("UTF-8");
+	
 		ActionInfo actionInfo = new ActionInfo();
+		LawyerVO lawyerVO = new LawyerVO();
+		LawyerDAO lawyerDAO = new LawyerDAO();
 		
-		UserVO userVO = new UserVO();
-		UserDAO userDAO = new UserDAO();
 		
-		userVO.getUserNum();
+		lawyerVO.getLawyerNum();
 		
-		userDAO.deleteAccount(userVO);
+		lawyerDAO.deleteAccount(lawyerVO);
 		
 		actionInfo.setRedirect(false);
+		/*회원탈퇴*/
 		actionInfo.setPath("/LawKnowMainPage.jsp");
 		
-		return null;
+		return actionInfo;
 		
 	}
 }

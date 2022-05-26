@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lawknow.LawyerJoinOk;
-import com.lawknow.UserJoinOk;
 import com.lawyer.action.ActionInfo;
 
 public class UserRegisterController extends HttpServlet {
@@ -35,7 +33,7 @@ public class UserRegisterController extends HttpServlet {
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/client_login.jsp");
        }else if(command.equals("UserDeleteAccountOk.urc")) {
-    	   actionInfo = new UserDeleteAccount().execute(req, resp);
+    	   actionInfo = new UserDeleteAccountOk().execute(req, resp);
        }else if(command.equals("UserCheckId.urc")) {
     	   actionInfo = new UserCheckId().execute(req, resp);
        }else if(command.equals("UserUpdateAccount.urc")) {//회원 정보 조회
