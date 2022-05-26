@@ -23,7 +23,7 @@ public class LawyerCommentDAO {
 
 	//변호사 글 삭제
 	public void commentDelete(LawyerCommentVO lawyer) {
-		sqlSession.insert("Lawyer.commentDelete", lawyer);
+		sqlSession.delete("Lawyer.commentDelete", lawyer);
 	}
 	
 	//변호사 글 번호
