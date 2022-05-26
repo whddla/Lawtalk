@@ -4,8 +4,14 @@
 
 <mapper namespace="UserWrite"> 
    <insert id ="userWrtie" parameterType="userwriteVO"> 
-   insert into tbl_user_wrtie
-   (request_num,user_num, user_write_num, user_title ,user_content,user_write_date)
-   values(#{requestNum}, #{userNum},#{userWriteNum}, #{userTitle}, #{userContent}, #{userWriteDate})
+   	insert into tbl_user_write
+	(title, content, write_date)
+	values(#{title}, #{content}, #{writeDate});
    </insert>
+   
+   <select id ="checkUserWrite" parameterType="_int">
+   	select userWriteNum, requestNum, userNum, title, content, writeDate
+	from tbl_user_write
+	where userWriteNum = #{userWriteNum}
+   </select>
 </mapper>
