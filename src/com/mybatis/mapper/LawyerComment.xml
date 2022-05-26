@@ -3,10 +3,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="LawyerComment"> 
-	<insert id ="comment" parameterType="LawyercommentVO"> 
-	insert into tbl_lawyer_comment
-	(lawyer_write_num, lawyer_num, request_num, lawyer_title, lawyer_content, lawyer_write_date)
-	values(#{lawyerWriteNum}, #{lawyerNum},#{requestNum}, #{lawyerTitle}, #{lawyerContent}, #{lawyerWriteDate})
+	<insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> 
+	insert into  tbl_lawyer_comment
+	(title, content, write_date)
+	VALUES(#{title},#{titleContent},#{writeDate});
 	</insert>
 	
 </mapper>

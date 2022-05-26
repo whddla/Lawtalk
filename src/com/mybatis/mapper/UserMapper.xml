@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="User_register"> <
-	<insert id ="userJoin" parameterType="UserVO"> 	insert into tbl_user_register
+	<insert id ="userJoin" parameterType="userVO"> 	insert into tbl_user_register
 	(user_num, user_id, user_name, user_email, user_pw, user_phone_num,user_gender,user_birth,user_kakao_email)
 	values(#{userNum}, #{userId},#{userName}, #{userEmail}, #{userPw}, #{userPw},#{userPhoneNum},#{userGender},#{userBirth},#{userKakaoEmail})
 	</insert>
-	<delete id="deleteAccount" parameterType="UserVO">
+	<delete id="deleteAccount" parameterType="userVO">
 		delete from tbl_user_register
 		WHERE user_num=;
 	</delete>
