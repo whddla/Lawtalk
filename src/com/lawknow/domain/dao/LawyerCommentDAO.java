@@ -5,8 +5,7 @@ import java.sql.Date;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.lawyer.domain.vo.LawyerVO;
-import com.lawyercomment.domain.vo.LawyerCommentVO;
+import com.lawknow.domain.vo.LawyerCommentVO;
 import com.mybatis.config.MyBatisConfig;
 
 public class LawyerCommentDAO {
