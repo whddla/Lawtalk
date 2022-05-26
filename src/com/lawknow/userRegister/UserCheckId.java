@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
+import com.lawknow.domain.dao.UserDAO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-import com.user.domain.dao.UserDAO;
 
 public class UserCheckId implements Action{
 	

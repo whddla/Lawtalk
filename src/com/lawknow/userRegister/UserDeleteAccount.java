@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
+import com.lawknow.domain.dao.UserDAO;
+import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-import com.user.domain.dao.UserDAO;
 
 public class UserDeleteAccount implements Action{
 
@@ -19,11 +20,17 @@ public class UserDeleteAccount implements Action{
 		
 		req.setCharacterEncoding("UTF-8"); 
 		
-		UserDAO userDAO = new UserDAO();
-		JSONObject resultJSON = new JSONObject();
+		ActionInfo actionInfo = new ActionInfo();
 		
-		String userId = req.getParameter("memberId");
-		resultJSON.remove("click", userDAO.checkId(userId));
+		UserVO userVO = new UserVO();
+		UserDAO userDAO = new UserDAO();
+		
+		userVO.getUserNum();
+		
+		userDAO.deleteAccount(userId);
+		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/LawKnowMainPage.jsp");
 		
 		return null;
 		
