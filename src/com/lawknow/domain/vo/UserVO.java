@@ -1,4 +1,4 @@
-package com.user.domain.vo;
+package com.lawknow.domain.vo;
 
 public class UserVO {
 
