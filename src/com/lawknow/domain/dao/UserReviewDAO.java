@@ -6,7 +6,6 @@ import java.sql.Date;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.lawknow.domain.vo.LawyerCommentVO;
 import com.lawknow.domain.vo.UserReviewVO;
 import com.mybatis.config.MyBatisConfig;
 
