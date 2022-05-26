@@ -29,18 +29,12 @@ public class LawyerCommentFrontController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("LawyerJoinOk.me")) {
+       if(command.equals("LawyerCommentOK.me")) {
     	   actionInfo = new UserJoinOk().execute(req, resp);
        } else if(command.equals("LawyerJoin.me")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/join.jsp");
-       }else if(command.equals("LawyerCheckId.me")) {
-          
-       }else if(command.equals("LawyerDeleteAccount.me")) {
-          
-       }else if(command.equals("LawyerUpdateAccount.me")) {
-          
        }
        
        

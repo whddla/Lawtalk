@@ -4,7 +4,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserReview"> 
-	<insert id ="reviewwrite" parameterType="UserreviewVO"> 
+	<insert id ="reviewwrite" parameterType="UserReviewVO"> 
 	insert into tbl_user_revies
 	(review_num,request_num, user_name, user_content,user_content,review_write_date)
 	values(#{reviewNum}, #{requestNum},#{userName}, #{userContent}, #{userContent}, #{userWriteDate})

@@ -3,15 +3,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="lawyerRegister"> 
-	<insert id ="lawyerJoin" parameterType="LawyerVO"> 
+	<insert id ="lawyerJoin" parameterType="lawyerVO"> 
 	insert into tbl_lawyer_register
-	(lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_phone_num,lawyer_gender,lawyer_birth,lawyer_kakao_email)
-	values(#{lawyerNum}, #{lawyerId},#{lawyerName}, #{lawyerEmail}, #{lawyerPw}, #{lawyerPw},#{userPhoneNum},#{userGender},#{userBirth},#{userKakaoEmail})
+	(lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test)
+	VALUES(#{lawyerNum}, #{lawyerId}, #{lawyerName},#{lawyerEmail}, #{lawyerPw}, #{lawerOffice}, #{lawerOfficeNum}, #{lawyerPhoneNUM},#{lawyerGraduateTest});
 	</insert>
 	
-	<delete id="deleteAccount" parameterType="UserVO">
-		delete from tbl_user_register
-		WHERE user_num=;
+	<delete id="deleteAccount" parameterType="lawyerVO">
+		delete from tbl_lawyer_register
+		where #{lawyernum}=?
 	</delete>
+	
+	<update id ="updateAccount" parameterType="lawyerVO">
+		update tbl_lawyer_register
+		set  #{lawyerId}='', #{lawyerPw}='', lawyer_office='', lawyer_phone_num='' 
+		WHERE #{lawyerNum}=?
+	</update>
+	
+	<select id = "getUserInfo" parameterType ="lawyerVO">
+		select #{lawyerNum}, #{lawyerId}, #{lawyerName},#{lawyerEmail}, #{lawyerPw}, #{lawerOffice}, #{lawerOfficeNum}, #{lawyerPhoneNUM},#{lawyerGraduateTest}
+		from tbl_lawyer_register
+	</select>
 	
 </mapper>

@@ -3,7 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserWrite"> 
-   <insert id ="userWrtie" parameterType="UserwriteVO"> 
+   <insert id ="userWrtie" parameterType="userwriteVO"> 
    insert into tbl_user_wrtie
    (request_num,user_num, user_write_num, user_title ,user_content,user_write_date)
    values(#{requestNum}, #{userNum},#{userWriteNum}, #{userTitle}, #{userContent}, #{userWriteDate})
