@@ -1,4 +1,4 @@
-package com.user.domain.dao;
+package com.lawknow.domain.dao;
 
 
 import java.sql.Date;

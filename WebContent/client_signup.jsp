@@ -218,7 +218,8 @@
 	    	if(nameCheck.test($name.val())){
 	    		nameChecked.css("color", "rgb(99 193 76)");
 	    		nameChecked.text("이름 입력 완료");
-	    	else {
+	    	}
+	    		else {
 	    		nameChecked.css("color", "red");
 	    		nameChecked.text("잘못된 이름입니다.");
 	    	}

@@ -1,4 +1,4 @@
-package com.lawyercomment.dao;
+package com.lawknow.domain.dao;
 
 import java.sql.Date;
 
