@@ -39,9 +39,9 @@ public class UserRegisterController extends HttpServlet {
            actionInfo.setRedirect(true); // 리다이렉트 방법으로 전송했을때는 req객체가 사라 질 수 있으니  eq.getContextPath()를 경로앞에쏴준다
            actionInfo.setPath(req.getContextPath() + "/join.jsp");
        }else if(command.equals("UserDeleteAccount.me")) {
-          
+    	   actionInfo = new UserJoinOk().execute(req, resp);
        }else if(command.equals("UserUpdateAccount.me")) {
-          
+    	   actionInfo = new UserJoinOk().execute(req, resp);
        }else if(command.equals("UserLoginCheck.me")) {
           
        }  
