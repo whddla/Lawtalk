@@ -11,12 +11,12 @@
   </welcome-file-list>
   
   <servlet>
-  	<servlet-name>LawKnowFrontControllerr</servlet-name>
-  	<servlet-class>com.lawknow.LawKnowFrontController</servlet-class>
+  	<servlet-name>LawAllController</servlet-name>
+  	<servlet-class>com.lawknow.LawAllController</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>LawKnowFrontController</servlet-name>
+  		<servlet-name>LawAllController</servlet-name>
   		<url-pattern>*.me</url-pattern>
   </servlet-mapping>
 </web-app>
