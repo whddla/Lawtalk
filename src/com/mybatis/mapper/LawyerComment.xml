@@ -6,7 +6,19 @@
 	<insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> 
 	insert into  tbl_lawyer_comment
 	(title, content, write_date)
-	VALUES(#{title},#{titleContent},#{writeDate});
+	values(#{title},#{titleContent},#{writeDate});
 	</insert>
+	<!--글 삭제  -->
+	<delete id ="commentDelete" parameterType ="LawyerCommentVO">
+		delete from tbl_lawyer_comment
+		where lawyer_write_num=#{lawyerWriteNum}
+	</select>
+	<!-- 변호사 글 번호  -->
+	<mapper>
+    <delete id="commentDelete" parameterType="lawyerCommentVO">
+        delete from tbl_lawyer_comment
+        where lawyerNum = #{lawyerNum}
+    </delete>
+</mapper>
 	
 </mapper>
