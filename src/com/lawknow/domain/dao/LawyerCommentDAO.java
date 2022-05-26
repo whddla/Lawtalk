@@ -16,17 +16,27 @@ public class LawyerCommentDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+	//변호사 글 작성
+	public void commentWirte(LawyerCommentVO lawyer) {
+		sqlSession.insert("Lawyer.commentWrite", lawyer);
+	}
+
+	//변호사 글 삭제
+	public void commentDelete(LawyerCommentVO lawyer) {
+		sqlSession.insert("Lawyer.commentDelete", lawyer);
+	}
+	
 	//변호사 글 번호
-	public int lawyerWirteNum(LawyerCommentVO lawyerVO) {
-		return 0;
+	public int lawyerWriteNum(LawyerCommentVO lawyer) {
+		return sqlSession.selectOne("Lawyer.lawyerWriteNum") ;
 	}
 	
 	//사건 번호
-	public int requestNum(LawyerCommentVO lawyerVO) {
-		return 0;
+	public int requestNum(LawyerCommentVO lawyer) {
+		return sqlSession.selectOne("Lawyer.requestNum") ;
 	}
 	
-	public Date lawyerWriteDate(LawyerCommentVO lawyerVO) {
+	public Date lawyerWriteDate(LawyerCommentVO lawyer) {
 		return null;
 	}
 	

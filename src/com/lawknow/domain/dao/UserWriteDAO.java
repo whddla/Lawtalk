@@ -15,19 +15,29 @@ public class UserWriteDAO {
 	public UserWriteDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
-	
-	//사건 번호
-	public int requestNum(UserWriteVO userVO) {
-		return 0;
+
+	//의뢰인 글 삭제
+	public void userDelete(UserWriteVO user)  {
+		sqlSession.delete("User.userDelete", user);
 	}
 	
+	//의뢰인 글 작성
+	public void userWirte(UserWriteVO user) {
+		sqlSession.insert("User.userWrite" , user);
+	}
+
+	//사건 번호
+	public int requestNum(UserWriteVO user) {
+		return sqlSession.selectOne("User.requestNum");
+	}
+
 	//의뢰인 글 번호
-	public int userWirteNum(UserWriteVO userVO) {
-		return 0;
+	public int userWirteNum(UserWriteVO user) {
+		return sqlSession.selectOne("User.userWriteNum");
 	}
 	
 	//의뢰인 글 날짜
-	public Date userWriteDate(UserWriteVO userVO) {
+	public Date userWriteDate(UserWriteVO user) {
 		return null;
 	}
 }
