@@ -20,7 +20,12 @@ public class LawyerCommentDAO {
 	public void commentWirte(LawyerCommentVO lawyer) {
 		sqlSession.insert("Lawyer.commentWrite", lawyer);
 	}
-
+	
+	//변호사 글 수정
+	public int commentUpdate(LawyerCommentVO lawyer) {
+		return sqlSession.update("Lawyer.commentUpdate", lawyer);
+	}
+	
 	//변호사 글 삭제
 	public void commentDelete(LawyerCommentVO lawyer) {
 		sqlSession.delete("Lawyer.commentDelete", lawyer);
