@@ -6,8 +6,8 @@ import java.sql.Date;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.user.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
+import com.user.domain.vo.UserVO;
 
 public class UserDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
