@@ -12,6 +12,7 @@ import com.lawknow.UserJoinOk;
 import com.lawyer.action.ActionInfo;
 
 public class UserWriteFrontController {
+	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        doProcess(req, resp);
     }
@@ -25,9 +26,11 @@ public class UserWriteFrontController {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("UserWriteOk.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       } else if(command.equals("UserJoin.me")) {
+       if(command.equals("UserWrite.uwfc")) {
+    	   actionInfo = new ActionInfo();
+           actionInfo.setRedirect(true);
+           actionInfo.setPath(req.getContextPath() + "/write.jsp");
+       } else if(command.equals("UserJoin.uwfc")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/join.jsp");

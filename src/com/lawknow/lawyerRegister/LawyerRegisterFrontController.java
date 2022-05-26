@@ -29,19 +29,19 @@ public class LawyerRegisterFrontController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("LawyerJoinOk.me")) {
-    	   actionInfo = new UserJoinOk().execute(req, resp);
-       } else if(command.equals("LawyerJoin.me")) {
+       if(command.equals("LawyerJoinOk.lrfc")) {
+    	   actionInfo = new LawyerJoinOk().execute(req, resp);
+       } else if(command.equals("LawyerJoin.lrfc")) {//로그인 창
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
-          actionInfo.setPath(req.getContextPath() + "/join.jsp");
-       }else if(command.equals("LawyercheckId.me")) {
+          actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
+       }else if(command.equals("LawyerDeleteAccount.lrfc")) {
+    	   actionInfo = new LawyerDeleteAccount().execute(req, resp);
+       }else if(command.equals("LawyerUpdateAccount.lrfc")) {
     	   actionInfo = new ActionInfo();
-           actionInfo.setRedirect(true); // 리다이렉트 방법으로 전송했을때는 req객체가 사라 질 수 있으니  eq.getContextPath()를 경로앞에쏴준다
-           actionInfo.setPath(req.getContextPath() + "/join.jsp");
-       }else if(command.equals("LawyerUpdateAccount.me")) {
-          
-       }else if(command.equals("LawyerLoginCheck.me")) {
+           actionInfo.setRedirect(true);
+           actionInfo.setPath(req.getContextPath() + "/privacyPage.jsp");
+       }else if(command.equals("LawyerLoginCheck.lrfc")) {
           
        }
        
