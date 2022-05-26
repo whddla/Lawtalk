@@ -26,7 +26,7 @@ public class LawyerCommentOk implements Action{
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		
-		lawyerCommentDAO.lawyerWirteNum(lawyerCommentVO);
+		lawyerCommentDAO.commentWirte(lawyerCommentVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/LawKnowMainPage.jsp");
