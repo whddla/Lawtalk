@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.ibatis.session.SqlSession;
 
+import com.lawknow.lawyerRegister.LawyerJoinOk;
+import com.lawknow.userRegister.UserJoinOk;
 import com.lawyer.action.ActionInfo;
 
 public class LawAllController extends HttpServlet{
