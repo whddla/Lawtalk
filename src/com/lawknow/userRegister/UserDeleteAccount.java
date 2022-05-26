@@ -18,11 +18,12 @@ public class UserDeleteAccount implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		req.setCharacterEncoding("UTF-8"); 
+		
 		UserDAO userDAO = new UserDAO();
 		JSONObject resultJSON = new JSONObject();
 		
 		String userId = req.getParameter("memberId");
-		resultJSON.remove("check", userDAO.checkId(userId));
+		resultJSON.remove("click", userDAO.checkId(userId));
 		
 		return null;
 		
