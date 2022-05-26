@@ -20,11 +20,17 @@ public class UserDeleteAccount implements Action{
 		
 		req.setCharacterEncoding("UTF-8"); 
 		
+		ActionInfo actionInfo = new ActionInfo();
+		
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
-		JSONObject resultJSON = new JSONObject();
 		
-		resultJSON.remove("click", userDAO.checkId("userId"));
+		userVO.getUserNum();
+		
+		userDAO.deleteAccount(userId);
+		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/LawKnowMainPage.jsp");
 		
 		return null;
 		
