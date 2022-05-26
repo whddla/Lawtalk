@@ -1,3 +1,5 @@
+package com.mybatis.config;
+
 import java.io.IOException;
 import java.io.Reader;
 

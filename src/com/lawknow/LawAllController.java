@@ -26,16 +26,17 @@ public class LawAllController extends HttpServlet{
        ActionInfo actionInfo = null;
        
        if(command.equals("UserJoinOk.me")) {
-         //actionInfo = new MemberJoinOk().execute(req, resp);
-          
+    	   actionInfo = new UserJoinOk().execute(req, resp);
        } else if(command.equals("UserJoin.me")) {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/join.jsp");
        }else if(command.equals("LawyerJoinOk.me")) {
-          
+    	   actionInfo = new LawyerJoinOk().execute(req, resp);
        }else if(command.equals("LawyerJoin.me")) {
-          
+    	   actionInfo = new ActionInfo();
+           actionInfo.setRedirect(true);
+           actionInfo.setPath(req.getContextPath() + "/join.jsp");
        }else if(command.equals("UsercheckId.me")) {
           
        }else if(command.equals("UserDeleteAccount.me")) {
