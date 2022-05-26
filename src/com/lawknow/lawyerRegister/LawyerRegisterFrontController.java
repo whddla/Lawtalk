@@ -33,14 +33,16 @@ public class LawyerRegisterFrontController extends HttpServlet {
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
-       }else if(command.equals("LawyerDeleteAccount.lrfc")) {
+       }else if(command.equals("LawyerDeleteAccount.lrfc")) { // 계정삭제
     	   actionInfo = new LawyerDeleteAccount().execute(req, resp);
-       }else if(command.equals("LawyerUpdateAccount.lrfc")) {
+       }else if(command.equals("LawyerUpdateAccount.lrfc")) { // 계정 업데이트
     	   actionInfo = new ActionInfo();
            actionInfo.setRedirect(true);
            actionInfo.setPath(req.getContextPath() + "/privacyPage.jsp");
        }else if(command.equals("LawyerLoginCheck.lrfc")) {
-          
+    	   actionInfo = new ActionInfo();
+           actionInfo.setRedirect(true);
+           actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
        }
        
        
