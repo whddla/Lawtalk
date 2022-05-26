@@ -2,12 +2,13 @@ package com.lawknow.domain.dao;
 
 
 import java.sql.Date;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.lawknow.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
-import com.user.domain.vo.UserVO;
 
 public class UserDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
@@ -27,29 +28,22 @@ public class UserDAO {
 		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
 	}
 	//계정 탈퇴	
-	public void deleteAccount(String userId) {
-		
+	public void deleteAccount(UserVO user) {
+		sqlSession.delete("User.deleteAccount", user);
 	}
 		
 	//회원정보 수정
-	public void updateAccount(UserDAO user) {
-		
+	public int updateAccount(UserVO user) {
+		return sqlSession.update("User.updateAccount", user);
 	}
 	
 	//회원정보 가져오기
-	public void getUserInfo(UserDAO user) {
-		
+	public List<Object> getUserInfo(UserVO user) {
+		return sqlSession.selectList("User.getUserInfo", user);
 	}
 	
 	//답글시간 가져오기
-	public Date stringToDate(UserDAO user) {
+	public Date stringToDate(UserVO user) {
 		return null;
-	}
-	
-		
-	//로그인, 비밀번호 체크
-	public int loginCheck(String userId, String userPw) {
-		int x = 0;
-		return x;
 	}
 }
