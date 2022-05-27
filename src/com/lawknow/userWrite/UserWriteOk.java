@@ -1,17 +1,18 @@
-package com.lawknow.userRegister;
+package com.lawknow.userWrite;
 
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lawknow.domain.dao.UserDAO;
+import com.lawknow.domain.dao.UserWriteDAO;
 import com.lawknow.domain.vo.UserVO;
+import com.lawknow.domain.vo.UserWriteVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class UserUpdateAccount implements Action {
-
+public class UserWriteOk implements Action {
+	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -19,18 +20,16 @@ public class UserUpdateAccount implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		
 		UserVO userVO = new UserVO();
-		UserDAO userDAO = new UserDAO();
+		UserWriteVO userWriteVO = new  UserWriteVO();
+		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		
-		userVO.getUserNum();
-		
-		userDAO.updateAccount(userVO);
+		userWriteVO.setTitle(req.getParameter("title"));
+		userWriteVO.setContent(req.getParameter("content"));
+		userWriteVO.setUserNum(userVO.getUserNum());
 		
 		actionInfo.setRedirect(false);
-		/*업데이트*/
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/");
 		
 		return actionInfo;
-	
 	}
-	
 }

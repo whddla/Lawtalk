@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lawknow.userRegister.UserJoinOk;
 import com.lawyer.action.ActionInfo;
 
 public class LawyerCommentFrontController extends HttpServlet {
@@ -35,11 +34,11 @@ public class LawyerCommentFrontController extends HttpServlet {
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/LawKnowMain.jsp");
        }else if(command.equals("LawyerCommentCount.lcc")) { // 변호사 답변한 글 갯수
-    	   actionInfo = new LawyerCommentCount().execute(req, resp);
+    	   actionInfo = new LawyerCommentDeleteOk().execute(req, resp);
        } else if(command.equals("LawyerCommentUpdate.lcc")) { // 변호사 글 수정
     	   actionInfo = new LawyerCommentUpdate().execute(req, resp);
        }else if(command.equals("LawyerCommentDelete.lcc")) { // 변호사 글 삭제
-    	   actionInfo = new LawyerCommentDelete().execute(req, resp);
+    	   actionInfo = new LawyerCommentDeleteOk().execute(req, resp);
        }
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성

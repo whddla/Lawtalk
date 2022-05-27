@@ -1,4 +1,4 @@
-package com.lawknow.lawyerRegister;
+package com.lawknow.userRegister;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,22 +8,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
-import com.lawknow.domain.dao.LawyerDAO;
+import com.lawknow.domain.dao.UserDAO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class LawyerCheckId implements Action{
+public class UserCheckIdOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		req.setCharacterEncoding("UTF-8");
 		PrintWriter out = resp.getWriter();
-		LawyerDAO lawyerDAO = new LawyerDAO();
+		UserDAO userDAO = new UserDAO();
 		JSONObject resultJSON = new JSONObject();
 		
-		String lawyerId = req.getParameter("lawyerId");
-		resultJSON.put("check", lawyerDAO.checkId(lawyerId));
+		String userId = req.getParameter("memberId");
+		resultJSON.put("check", userDAO.checkId(userId));
 		
 		out.print(resultJSON.toJSONString());
 		out.close();
