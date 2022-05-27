@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="User_register"> <
-	<insert id ="userJoin" parameterType="userVO"> 	insert into tbl_user_register
-	(user_num, user_id, user_name, user_email, user_pw, user_phone_num,user_gender,user_birth,user_kakao_email)
-	values(#{userNum}, #{userId},#{userName}, #{userEmail}, #{userPw}, #{userPw},#{userPhoneNum},#{userGender},#{userBirth},#{userKakaoEmail})
-	</insert>
-	<delete id="deleteAccount" parameterType="userVO">
-		delete from tbl_user_register
-		WHERE user_num=;
-	</delete>
+<mapper namespace="UserRegister"> <
+	<!-- 회원가입 -->
+   <insert id ="userJoin" parameterType="userVO"> 
+   insert into tbl_user_register
+   (user_num, user_id, user_name, user_email, user_pw, user_phone_num, user_gender, user_birth, user_kakao_email, user_facebook_email)
+   values(0, #{userId}, #{userName}, #{userEmail}, #{userPw}, #{userPhoneNum}, #{userGender}, #{userBirth}, #{userKakaoEmail}, #{userFacebookEmail})
+   </insert>
+   
+   
+   <!--아이디 중복검사  -->
+   <select id ="checkId" parameterType ="string" resultType="int">   
+      select count(user_id) from tbl_user_register where user_id = #{userId}
+   </select>
+   
+   <!--계정 탈퇴  -->
+   <delete id="deleteAccount" parameterType="string">
+      delete from tbl_lawyer_register
+      where user_num =  #{userNum}
+   </delete>
+   
+   <!-- 회원정보수정  -->
+   <update id ="updateAccount" parameterType ="userVO" >
+   update tbl_user_register
+   set user_id=#{userId}, user_name=#{userName}, user_email=#{userEmail}, user_pw=#{userPw}, user_phone_num=#{userPhoneNum}, user_gender=#{userGender}, user_birth=#{userBirth}, user_kakao_email=#{userKakaoEmail}, user_facebook_email=#{userFacebookEmail}
+   where user_num=#{userNum}
+   </update>
+   
+   
+   <!-- 회원정보 조회  -->
+   <select id ="getUserInfo" parameterType ="userVO" resultType ="object">
+   select user_num, user_id, user_name, user_email, user_pw, user_phone_num, user_gender, user_birth, user_kakao_email, user_facebook_email
+   from tbl_user_register where user_num = #{userNum}
+   </select>
+	
 	
 </mapper>

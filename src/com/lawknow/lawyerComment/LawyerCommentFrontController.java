@@ -30,17 +30,21 @@ public class LawyerCommentFrontController extends HttpServlet {
        ActionInfo actionInfo = null;
        
        if(command.equals("LawyerCommentOK.lcc")) {
-    	   actionInfo = new LawyerCommentOk().execute(req, resp);
+          actionInfo = new LawyerCommentOk().execute(req, resp);
        } else if(command.equals("LawyerComment.lcc")) { //변호사 글  작성
           actionInfo = new ActionInfo();
-          actionInfo.setRedirect(true);
-          actionInfo.setPath(req.getContextPath() + "/LawKnowMain.jsp");
-       }else if(command.equals("LawyerCommentCount.lcc")) { // 변호사 답변한 글 갯수
-    	   actionInfo = new LawyerCommentCount().execute(req, resp);
-       } else if(command.equals("LawyerCommentUpdate.lcc")) { // 변호사 글 수정
-    	   actionInfo = new LawyerCommentUpdate().execute(req, resp);
-       }else if(command.equals("LawyerCommentDelete.lcc")) { // 변호사 글 삭제
-    	   actionInfo = new LawyerCommentDelete().execute(req, resp);
+          actionInfo.setRedirect(false);
+          actionInfo.setPath("/LawKnowMain.jsp");
+       }else if(command.equals("LawyerCommentCountOk.lcc")) { // 변호사 답변한 글 갯수
+          actionInfo = new LawyerCommentCount().execute(req, resp);
+       } else if(command.equals("LawyerCommentUpdateOk.lcc")) { // 변호사 글 수정
+          actionInfo = new LawyerCommentUpdate().execute(req, resp);
+       }else if(command.equals("LawyerCommentDeleteOk.lcc")) { // 변호사 글 삭제
+          actionInfo = new LawyerCommentDelete().execute(req, resp);
+       }else if(command.equals("LawyerCommentRequestNumOk.lcc")) {//사건 번호 조회
+          actionInfo = new LawyerRequestNum().execute(req, resp);
+       }else if(command.equals("LawyerWriteNumOk.lcc")) {//변호사 글 번호조회 
+          actionInfo = new LawyerWriteNum().execute(req, resp);
        }
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성

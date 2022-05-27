@@ -3,22 +3,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="LawyerComment"> 
-	<insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> 
-	insert into  tbl_lawyer_comment
-	(title, content, write_date)
-	values(#{title},#{titleContent},#{writeDate});
-	</insert>
-	<!--글 삭제  -->
-	<delete id ="commentDelete" parameterType ="LawyerCommentVO">
-		delete from tbl_lawyer_comment
-		where lawyer_write_num=#{lawyerWriteNum}
-	</select>
-	<!-- 변호사 글 번호  -->
-	<mapper>
-    <delete id="commentDelete" parameterType="lawyerCommentVO">
-        delete from tbl_lawyer_comment
-        where lawyerNum = #{lawyerNum}
-    </delete>
-</mapper>
+	 <!--변호사 글 작성 -->
+   <insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> 
+   insert into  tbl_lawyer_comment
+   (title, content, write_date)
+   values(#{title},#{titleContent},#{writeDate});
+   </insert>
+   <!--글 삭제  -->
+   <delete id ="commentDelete" parameterType ="LawyerCommentVO">
+      delete from tbl_lawyer_comment
+      where lawyer_write_num=#{lawyerWriteNum}
+   </select>
+   <!-- 변호사 글 수정  -->
+   <update id ="commentUpdate" parameterType ="LawyerCommentVO">
+      update tbl_lawyer_comment
+      set  title=#{title}, content=#{content}, write_date=#{writeDate}
+      where lawyer_write_num=#{lawyerWriteNum};
+   </update>
+   <!-- 사건 번호 조회-->
+   <select id="requestNum" parameterType ="_int" resultType="int">
+     select request_num
+     from tbl_laywer_comment
+     where request_num = #{requestNum}
+    </select>
+   <!-- 변호사 글 번호조회  -->
+    <select id="lawyerWriteNum" parameterType ="_int" resultType="int">
+     select lawyer_write_num
+     from tbl_lawyer_comment
+     where lawyer_write_num = #{lawyerWriteNum}
+    </select>
+   
 	
 </mapper>
