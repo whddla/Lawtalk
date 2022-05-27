@@ -20,26 +20,26 @@ public class UserDAO {
 	
 	//회원가입
 	public void join(UserVO userVO) {
-		sqlSession.insert("User.join", userVO);
+		sqlSession.insert("userRegister.join", userVO);
 	}
 	
 	//아이디 중복검사
 	public boolean checkId(String userId) {
-		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
+		return (Integer)sqlSession.selectOne("userRegister.checkId", userId) == 1;
 	}
 	//계정 탈퇴	
-	public void deleteAccount(UserVO user) {
-		sqlSession.delete("User.deleteAccount", user);
+	public void deleteAccount(UserVO userVO) {
+		sqlSession.delete("userRegister.deleteAccount", userVO);
 	}
 		
 	//회원정보 수정
-	public int updateAccount(UserVO user) {
-		return sqlSession.update("User.updateAccount", user);
+	public int updateAccount(UserVO userVO) {
+		return sqlSession.update("userRegister.updateAccount", userVO);
 	}
 	
 	//회원정보 가져오기
-	public List<Object> getUserInfo(UserVO user) {
-		return sqlSession.selectList("User.getUserInfo", user);
+	public List<Object> getUserInfo(UserVO userVO) {
+		return sqlSession.selectList("userRegister.getUserInfo", userVO);
 	}
 	
 	//답글시간 가져오기
