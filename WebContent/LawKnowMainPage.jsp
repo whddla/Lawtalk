@@ -34,7 +34,7 @@ left: -100px;
 div.btns{
 	bottom: 4px;
 }
-}
+
 .btn{
     outline: none;
 }
