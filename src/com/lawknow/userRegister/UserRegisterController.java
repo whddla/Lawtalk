@@ -35,7 +35,7 @@ public class UserRegisterController extends HttpServlet {
        }else if(command.equals("UserDeleteAccountOk.urc")) {
     	   actionInfo = new UserDeleteAccountOk().execute(req, resp);
        }else if(command.equals("UserCheckId.urc")) {
-    	   actionInfo = new UserCheckId().execute(req, resp);
+    	   actionInfo = new UserCheckIdOk().execute(req, resp);
        }else if(command.equals("UserUpdateAccount.urc")) {//회원 정보 조회
     	   actionInfo = new ActionInfo();
            actionInfo.setRedirect(true);

@@ -10,7 +10,7 @@ import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class LawyerDeleteAccount implements Action{
+public class LawyerUpdateAccountOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -20,16 +20,17 @@ public class LawyerDeleteAccount implements Action{
 		LawyerVO lawyerVO = new LawyerVO();
 		LawyerDAO lawyerDAO = new LawyerDAO();
 		
-		
 		lawyerVO.getLawyerNum();
 		
-		lawyerDAO.deleteAccount(lawyerVO);
+		lawyerDAO.updateAccount(lawyerVO);
 		
 		actionInfo.setRedirect(false);
-		/*회원탈퇴*/
+		/*회원정보 업데이트*/
 		actionInfo.setPath("/LawKnowMainPage.jsp");
 		
 		return actionInfo;
+
 		
 	}
 }
+
