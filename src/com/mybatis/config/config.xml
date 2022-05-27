@@ -3,6 +3,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
   <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.UserVO" alias="userVO"/>
    </typeAliases> 
@@ -28,6 +31,9 @@
 
 <!--  -->
 <configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
  <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.LawyerVO" alias="lawyerVO"/>
    </typeAliases> 
@@ -55,6 +61,9 @@
 
 
 <configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
  <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
   </typeAliases>
@@ -80,6 +89,9 @@
 
 
 <configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
  <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
    </typeAliases> 
@@ -103,6 +115,9 @@
 
 
 <configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
   <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
    </typeAliases> 
