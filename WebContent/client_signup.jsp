@@ -28,7 +28,7 @@
                     </span>
                 </div>
             </div>
-            <form class="sign-main-container">
+            <form action="JoinOk.ul" name="joinForm" method="post" class="sign-main-container">
                 <button class="kakao-signup-button">
                     <i class="kakao-icon"></i>
                     <span class="vertical-line"></span>
@@ -42,19 +42,21 @@
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <input class="form-control" id="account-email" type="email" placeholder="예) name@example.com" >
+                        <input name="userEmail" class="form-control" id="account-email" type="email" placeholder="예) name@example.com" >
                         <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
                     </div>
                 	<div class="form-group">
-                        <input class="form-control" id="account-name" type="text" placeholder="이름">
+                        <input name="userName" class="form-control" id="account-name" type="text" placeholder="이름">
                         <label class="account-name-error" for="account-name" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-id" type="text" placeholder="아이디">
+                        <input name="userId"class="form-control" id="account-id" type="text" placeholder="아이디">
+                        <input type="button" value="중복확인" onclick="checkId()">
+						<p id="result"></p>
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-password" type="password" placeholder="비밀번호">
+                        <input name="userPw" class="form-control" id="account-password" type="password" placeholder="비밀번호">
                         <label class="account-password-error" for="account-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
@@ -66,7 +68,7 @@
                 <div class="input-info">
                     <div class="form-group">
 						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
-                        <input class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
+                        <input name="userPhoneNum" class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
                         <button type="button" class="code-button">[ 인증번호 발송 ]</button>
                     </div>
                     <div class="form-group">
@@ -83,31 +85,17 @@
 							</div>
 						</div>
                 </div>
-                <h3 class="info">기타정보</h3>
-                <div class="input-info">
-                    <div class="form-group">
-                        <select class="form-control-button" name="방문경로 선택">
-						  <option value="" selected>방문경로 선택</option>
-						  <option value="blog">블로그</option>
-						  <option value="naver-in">네이버 지식인</option>
-						  <option value="naver-search">네이버 검색</option>
-						  <option value="google">구글 검색</option>
-						  <option value="facebook">페이스북</option>
-						  <option value="기타">기타</option>
-						</select>
-                    </div>
-                </div>
                 <h3 class="info">선택정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <select class="form-control-button" name="gender-choice">
+                        <select class="form-control-button" name="userGender">
 						  <option value="" selected>성별 선택</option>
-						  <option value="man">남자</option>
-						  <option value="women">여자</option>
+						  <option value="M">남자</option>
+						  <option value="W">여자</option>
 						</select>
                     </div>
-                    <div class="form-group">
-                        <select class="form-control-button" name="yy" id="year">
+                   <div class="form-group">
+                        <select class="form-control-button" name="userBirth" id="year">
 		                      <option value="" selected>출생년도 선택</option>
 	                      </select>
                     </div>
@@ -170,7 +158,7 @@
                     </div>
                 </div>
                 <div class="footer-button">
-                    <button type="summit" class="footer-button-click">
+                    <button type="button" value="가입 완료" onclick="join()" class="footer-button-click">
                         가입신청
                     </button>
                 </div>
@@ -191,7 +179,33 @@
     </div>
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+function checkId(){
+	$.ajax({
+		url: "/test/UserCheckIdOk.ul",
+		type: "get",
+		data: {userId: $("input[name='userId']").val()},
+		contentType: "application/json; charset=utf-8",
+		success: function(result){
+			if(result == 'check'){
+				$("#result").text("중복된 아이디입니다.");
+			}else{
+				$("#result").text("사용가능한 아이디입니다.");
+			}
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+function join(){
+	joinForm.submit();
+}
     var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
     var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
     var nameCheck = RegExp(/^[가-힣]{2,6}$/);
@@ -218,7 +232,8 @@
 	    	if(nameCheck.test($name.val())){
 	    		nameChecked.css("color", "rgb(99 193 76)");
 	    		nameChecked.text("이름 입력 완료");
-	    	else {
+	    	}
+	    		else {
 	    		nameChecked.css("color", "red");
 	    		nameChecked.text("잘못된 이름입니다.");
 	    	}
@@ -317,7 +332,6 @@
     			hpCheck.text("핸드폰 번호를 입력해주세요.");
     		}
     	});
-    	
     	
     	$(document).ready(function(){            
     	    var now = new Date();

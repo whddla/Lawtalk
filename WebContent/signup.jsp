@@ -35,7 +35,7 @@
                     </div>
                     <button class="signup-button">
                     <!-- 의뢰인 가입 페이지 -->
-                        <a href="http://localhost:9000/kovengerss/assets/client_signup.jsp">
+                        <a href="http://localhost:9000/kovengerss/client_signup.jsp">
                             의뢰인으로 가입하기 >
                         </a>
                     </button>
@@ -53,7 +53,7 @@
                     </div>
                     <button class="signup-button">
                     <!-- 변호사 가입 페이지  -->
-                        <a href="http://localhost:9000/kovengerss/assets/lawyer_signup.jsp">
+                        <a href="http://localhost:9000/kovengerss/lawyer_signup.jsp">
                             변호사로 가입하기 >
                         </a>
                     </button>
@@ -62,13 +62,13 @@
             <div class="row-footer">
                 <div class="row" style="font-size: 12px;">
                 <!-- 로그인 사이트 -->
-                    <a href="http://localhost:9000/kovengerss/assets/client_login.jsp">로그인</a>
+                    <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                     <!-- 변호사 가입안내 페이지 -->
                     <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
                 </div>
                 <div class="row">
                 <!-- 회사 소개 -->
-                    <a style="font-size: 5px;" href="http://lawcompany.co.kr/">
+                    <a style="font-size: 5px;" href="http://localhost:9000/kovengerss/compani.jsp">
                         (C) Law&Company Co., Ltd.
                     </a>
                 </div>
