@@ -34,5 +34,11 @@
      from tbl_user_write
      where review_num = #{reviewNum}
     </select>
+    
+   
+    
+    
+    
+    
 	
 </mapper>
