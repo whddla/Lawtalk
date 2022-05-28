@@ -28,12 +28,14 @@
 						    <div id="tab1" class="cont">
 								<div class="login-box">
                             		<div class="input-id">
-                                		<input type="text" name="id" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
-                            		</div>
-                            		<div class="input-password">
-                                		<input type="text" name="password" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
-                            		</div>
-                            		<button type="submit" class="submit-button">로그인</button>
+                            		<form action="UserLoginOk.ul" method="post" name="loginForm">
+	                                		<input type="text" name="userId" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
+	                            		</div>
+	                            		<div class="input-password">
+	                                		<input type="password" name="userPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
+	                            		</div>
+	                            		<input type="button" id="login" value="로그인"  class="submit-button">로그인</button>
+                            		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
                                     		<input type="checkbox" name="login-checkbox" >
@@ -110,6 +112,7 @@
 		</div>
 	</div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   const tabList = document.querySelectorAll('.tab_menu .list li');
   
@@ -122,6 +125,21 @@
       this.parentNode.classList.add('is_on');
     });
   }
+  
+	let form = document.loginForm;
+	
+	$("input#login").on("click", function(){
+		if(!form.userId.value){
+			alert("아이디를 입력해주세요.");
+			return;
+		}
+		if(!form.userPw.value){
+			alert("패스워드를 입력해주세요.");
+			return;
+		}
+		
+		form.submit();
+	});
 </script>
 </body>
 </html>
