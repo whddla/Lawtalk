@@ -22,7 +22,7 @@ public class UserCheckIdOk implements Action{
 		UserDAO userDAO = new UserDAO();
 		JSONObject resultJSON = new JSONObject();
 		
-		String userId = req.getParameter("memberId");
+		String userId = req.getParameter("userId");
 		resultJSON.put("check", userDAO.checkId(userId));
 		
 		out.print(resultJSON.toJSONString());

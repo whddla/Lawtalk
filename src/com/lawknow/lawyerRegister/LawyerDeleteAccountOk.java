@@ -28,7 +28,7 @@ public class LawyerDeleteAccountOk implements Action{
 		actionInfo.setRedirect(false);
 		/*회원탈퇴*/
 		actionInfo.setPath("/LawKnowMainPage.jsp");
-		
+	
 		return actionInfo;
 		
 	}

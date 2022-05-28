@@ -2,6 +2,7 @@ package com.lawknow.domain.dao;
 
 
 import java.sql.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -17,15 +18,24 @@ public class UserDAO {
 	public UserDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
+	//로그인 확인
+	public Integer loginOk(HashMap<String, String> userMap) {
+		return sqlSession.selectOne("User.loginOk", userMap);
+	}
+	
 	
 	//회원가입
 	public void join(UserVO userVO) {
-		sqlSession.insert("userRegister.join", userVO);
+		sqlSession.insert("User.join", userVO);
+	}
+	
+	public List<UserVO> selectUsers(){
+		return sqlSession.selectList("User.selectUsers");
 	}
 	
 	//아이디 중복검사
 	public boolean checkId(String userId) {
-		return (Integer)sqlSession.selectOne("userRegister.checkId", userId) == 1;
+		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
 	}
 	//계정 탈퇴	
 	public void deleteAccount(UserVO userVO) {
@@ -42,8 +52,4 @@ public class UserDAO {
 		return sqlSession.selectList("userRegister.getUserInfo", userVO);
 	}
 	
-	//답글시간 가져오기
-	public Date stringToDate(UserVO user) {
-		return null;
-	}
 }

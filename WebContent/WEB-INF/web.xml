@@ -9,6 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- 의뢰인 로그인 컨트롤러 -->
+    <servlet>
+  	<servlet-name>UserLoginFrontController</servlet-name>
+  	<servlet-class>com.lawknow.userRegister.UserLoginFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>UserLoginFrontController</servlet-name>
+  		<url-pattern>*.ul</url-pattern>
+  </servlet-mapping>
+  
   <!-- lawyercomment -->
   <servlet>
   	<servlet-name>LawyerCommentFrontController</servlet-name>
