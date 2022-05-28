@@ -8,9 +8,11 @@
    </settings>
   <typeAliases>
       <typeAlias type="com.lawknow.domain.vo.UserVO" alias="userVO"/>
+       <typeAlias type="com.lawknow.domain.vo.LawyerVO" alias="lawyerVO"/>
+       <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
+        <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
+         <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
    </typeAliases> 
-  
-
    <environments default="mysql">
       <environment id="mysql">
          <transactionManager type="JDBC"/>
@@ -22,119 +24,13 @@
          </dataSource>
       </environment>
    </environments>
-   
    <mappers>
       <mapper resource="com/mybatis/mapper/UserMapper.xml"/>
+        <mapper resource="com/mybatis/mapper/LawyerMapper.xml"/>
+         <mapper resource="com/mybatis/mapper/UserWrite.xml"/>
+          <mapper resource="com/mybatis/mapper/UserReview.xml"/>
+          <mapper resource="com/mybatis/mapper/LawyerComment.xml"/>
    </mappers>
 </configuration>
 
 
-<!--  -->
-<configuration>
-   <settings>
-      <setting name="mapUnderscoreToCamelCase" value="true"/>
-   </settings>
- <typeAliases>
-      <typeAlias type="com.lawknow.domain.vo.LawyerVO" alias="lawyerVO"/>
-   </typeAliases> 
-  
-
-   <environments default="mysql">
-      <environment id="mysql">
-         <transactionManager type="JDBC"/>
-         <dataSource type="POOLED">
-            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/form"/>
-            <property name="username" value="root"/>
-            <property name="password" value="1234"/>
-         </dataSource>
-      </environment>
-   </environments>
-   
-   <mappers>
-      <mapper resource="com/mybatis/mapper/LawyerMapper.xml"/>
-   </mappers>
-</configuration>
-
-
-
-
-
-<configuration>
-   <settings>
-      <setting name="mapUnderscoreToCamelCase" value="true"/>
-   </settings>
- <typeAliases>
-      <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
-  </typeAliases>
-
-   <environments default="mysql">
-      <environment id="mysql">
-         <transactionManager type="JDBC"/>
-         <dataSource type="POOLED">
-            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/form"/>
-            <property name="username" value="root"/>
-            <property name="password" value="1234"/>
-         </dataSource>
-      </environment>
-   </environments>
-   
-   <mappers>
-      <mapper resource="com/mybatis/mapper/UserWrite.xml"/>
-   </mappers>
-</configuration>
-
-
-
-
-<configuration>
-   <settings>
-      <setting name="mapUnderscoreToCamelCase" value="true"/>
-   </settings>
- <typeAliases>
-      <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
-   </typeAliases> 
-
-   <environments default="mysql">
-      <environment id="mysql">
-         <transactionManager type="JDBC"/>
-         <dataSource type="POOLED">
-            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/form"/>
-            <property name="username" value="root"/>
-            <property name="password" value="1234"/>
-         </dataSource>
-      </environment>
-   </environments>
-   
-   <mappers>
-      <mapper resource="com/mybatis/mapper/UserReview.xml"/>
-   </mappers>
-</configuration>
-
-
-<configuration>
-   <settings>
-      <setting name="mapUnderscoreToCamelCase" value="true"/>
-   </settings>
-  <typeAliases>
-      <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
-   </typeAliases> 
-
-   <environments default="mysql">
-      <environment id="mysql">
-         <transactionManager type="JDBC"/>
-         <dataSource type="POOLED">
-            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/form"/>
-            <property name="username" value="root"/>
-            <property name="password" value="1234"/>
-         </dataSource>
-      </environment>
-   </environments>
-   
-   <mappers>
-      <mapper resource="com/mybatis/mapper/LawyerComment.xml"/>
-   </mappers>
-</configuration>
