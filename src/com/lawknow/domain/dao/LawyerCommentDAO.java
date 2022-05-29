@@ -15,10 +15,10 @@ public class LawyerCommentDAO {
 	public LawyerCommentDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
-	
+	 
 	//변호사 글 작성
 	public void commentWrite(LawyerCommentVO lawyer) {
-		sqlSession.insert("Lawyer.commentWrite", lawyer);
+		sqlSession.insert("Lawyer.commentWrite", lawyer); //lawyercommentVO??
 	}
 	
 	//변호사 글 수정
