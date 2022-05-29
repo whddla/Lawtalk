@@ -3,7 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserWrite"> 
-    <insert id ="userWrtie" parameterType="userwriteVO"> 
+    <insert id ="userWrtie" parameterType="userWriteVO"> 
       insert into tbl_user_write
    (title, content, write_date)
    values(#{title}, #{content}, #{writeDate});
@@ -11,30 +11,40 @@
    
    
    <!-- 작성글삭제  -->
-    <delete id="userDelete" parameterType="userwriteVO">
+    <delete id="userDelete" parameterType="userWriteVO">
         delete from tbl_user_write
         where user_num = #{userNum}
     </delete>
     <!--작성 글 수정  -->
-    <update id="userWriteUpdate" parameterType ="userwriteVO">
+    <update id="userWriteUpdate" parameterType ="userWriteVO">
     update tbl_user_write
     set title=#{title}, content = #{content}
     where user_write_num = #{userWriteNum}
     </update>
    
    <!-- requestNum조회  -->
-    <select id="requestNum" parameterType ="_int">
+    <select id="requestNum" parameterType ="userWriteVO" resultType="_int">
         select user_write_num, request_num, title, content, write_date
         from tbl_user_write
         where request_num = #{requestNum}
     </select>
    
    
-   <select id ="userWirteNum" parameterType="_int">
+   <select id ="userWirteNum" parameterType="userWriteVO" resultType="_int">
       select user_write_num, request_num, title, content, write_date
    from tbl_user_write
    where user_write_num = #{userWriteNum}
    </select> 
+   
+   
+   <select id="selectField" parameterType ="userWriteVO" resultType="_int">
+        select field
+        from tbl_user_write
+        where field = #{field}
+    </select>
+   
+   
+   
 
    
 </mapper>
