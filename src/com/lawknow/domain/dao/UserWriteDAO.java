@@ -19,31 +19,36 @@ public class UserWriteDAO {
 
 	//의뢰인 글 삭제
 	public void userDelete(UserWriteVO user)  {
-		sqlSession.delete("User.userDelete", user);
+		sqlSession.delete("UserWrite.userDelete", user);
 	}
 	
 	//의뢰인 글 수정
 	public int userWriteUpdate(UserWriteVO user) {
-		return sqlSession.update("user.userWriteUpdate", user);
+		return sqlSession.update("UserWrite.userWriteUpdate", user);
 	}
 	
 	//의뢰인 글 작성
 	public void userWirte(UserWriteVO user) {
-		sqlSession.insert("User.userWrite" , user);
+		sqlSession.insert("UserWrite.userWrite" , user);
 	}
 
 	//사건 번호
 	public int requestNum(UserWriteVO user) {
-		return sqlSession.selectOne("User.requestNum");
+		return sqlSession.selectOne("UserWrite.requestNum");
 	}
 
 	//의뢰인 글 번호
 	public int userWirteNum(UserWriteVO user) {
-		return sqlSession.selectOne("User.userWriteNum");
+		return sqlSession.selectOne("UserWrite.userWriteNum");
 	}
 	
 	//의뢰인 글 날짜
 	public Date userWriteDate(UserWriteVO user) {
 		return null;
 	}
+	public int selectField(UserWriteVO user) {
+		
+		return sqlSession.selectOne("UserWrite.selectField");
+	}
+	
 }

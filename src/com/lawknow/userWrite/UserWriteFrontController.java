@@ -33,11 +33,13 @@ public class UserWriteFrontController {
 	           actionInfo.setPath(req.getContextPath() + "/write.jsp");
 	       } 
 	       else if(command.equals("UserWriteUpdateOk.uwfc")) { // 글 수정
-	          actionInfo = new writeUpdateOk().execute(req, resp);
+	          actionInfo = new UserWriteUpdateOk().execute(req, resp);
 	       } else if(command.equals("UserWriteDeleteOk.uwfc")) {// 글 삭제
-	          actionInfo = new writeDeleteOk().execute(req, resp);
+	          actionInfo = new UserWriteDeleteOk().execute(req, resp);
 	       }else if(command.equals("UserRequestNumOk.uwfc")) {// 번호 조회
 	          actionInfo = new UserRequestNumOk().execute(req, resp);
+	       }else if(command.equals("UserSelectFieldOk.uwfc")) {
+	    	   actionInfo = new UserSelectFieldOk().execute(req, resp);
 	       }
 	       else {
 	          // 404 일 때 출력할 에러 페이지 경로 작성
