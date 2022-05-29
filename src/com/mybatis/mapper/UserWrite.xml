@@ -36,11 +36,16 @@
    where user_write_num = #{userWriteNum}
    </select> 
    
-   
+   <!--카테고리 가져오기  -->
    <select id="selectField" parameterType ="userWriteVO" resultType="_int">
         select field
         from tbl_user_write
         where field = #{field}
+    </select>
+    
+    <select id ="selectUserWrite" resultType = "userWriteVO">
+    	select user_write_num, request_num, user_num, title, content, write_date
+		from tbl_user_write
     </select>
    
    

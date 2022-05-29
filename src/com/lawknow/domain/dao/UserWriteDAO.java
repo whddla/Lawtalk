@@ -1,6 +1,7 @@
 package com.lawknow.domain.dao;
 
 import java.sql.Date;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -49,6 +50,11 @@ public class UserWriteDAO {
 	public int selectField(UserWriteVO user) {
 		
 		return sqlSession.selectOne("UserWrite.selectField");
+	}
+	
+	//전체 정보가져오기
+	public List<UserWriteVO> selectUserWrite(){
+		return sqlSession.selectList("UserWrite.selectUserWrite");
 	}
 	
 }
