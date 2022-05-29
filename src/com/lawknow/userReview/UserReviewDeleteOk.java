@@ -10,10 +10,12 @@ import com.lawknow.domain.vo.UserReviewVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class UserReviewOk implements Action{
-	
+public class UserReviewDeleteOk implements Action {
+
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		
+		
 		req.setCharacterEncoding("UTF-8");
 		
 		ActionInfo actionInfo = new ActionInfo();
@@ -21,17 +23,14 @@ public class UserReviewOk implements Action{
 		UserReviewDAO userReviewDAO = new UserReviewDAO();
 		
 		userReviewVO.setContent(req.getParameter("content"));
-		userReviewVO.setWriteDate(req.getParameter("writeDate"));
+		userReviewVO.setReviewNum(Integer.parseInt(req.getParameter("requestNum")));
 		
-		userReviewDAO.requestNum(userReviewVO);
+		userReviewDAO.reviewDelete(userReviewVO);
 		
-		
-		req.setAttribute("userReviewContent", userReviewVO.getContent());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/mypage.jsp");
-		
 		return actionInfo;
 	}
-	
+
 }
