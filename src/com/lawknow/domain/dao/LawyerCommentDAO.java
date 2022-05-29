@@ -17,7 +17,7 @@ public class LawyerCommentDAO {
 	}
 	
 	//변호사 글 작성
-	public void commentWirte(LawyerCommentVO lawyer) {
+	public void commentWrite(LawyerCommentVO lawyer) {
 		sqlSession.insert("Lawyer.commentWrite", lawyer);
 	}
 	
