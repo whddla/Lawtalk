@@ -2,6 +2,7 @@ package com.lawknow.domain.dao;
 
 
 import java.sql.Date;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -46,5 +47,9 @@ public class UserReviewDAO {
 	//리뷰 날짜
 	public Date reviewWriteDate(UserReviewVO user) {
 		return null;
+	}
+	//전체 가져오기
+	public List<UserReviewVO> selectUserReview(){
+		return sqlSession.selectList("UserReview.selectUserReview");
 	}
 }
