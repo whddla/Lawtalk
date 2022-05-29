@@ -22,14 +22,14 @@
    </delete>
 
    <!-- 사건 번호 가져오기  -->
-    <select id="requestNum" parameterType ="_int" resultType ="int">
+    <select id="requestNum" parameterType ="UserReviewVO" resultType ="int">
      select request_num
      from tbl_user_write
      where request_num = #{requestNum}
     </select>
 
    <!-- 리뷰 번호가져오기  -->
-    <select id="reviewNum" parameterType ="_int" resultType ="int">
+    <select id="reviewNum" parameterType ="UserReviewVO" resultType ="int">
      select review_num
      from tbl_user_write
      where review_num = #{reviewNum}

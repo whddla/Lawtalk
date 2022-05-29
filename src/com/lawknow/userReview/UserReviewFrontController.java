@@ -34,13 +34,11 @@ public class UserReviewFrontController extends HttpServlet {
           actionInfo.setRedirect(true);
           actionInfo.setPath(req.getContextPath() + "/join.jsp");
        }else if(command.equals("UserReivewUpdateOk.urfc")) { //후기 수정
-          actionInfo = new reviewUpdateOk().execute(req, resp);
+          actionInfo = new UserReviewUpdateOk().execute(req, resp);
        }else if(command.equals("UserReivewDeleteOk.urfc")) { // 후기 삭제 
-          actionInfo = new reviewDeleteOk().execute(req, resp);
+          actionInfo = new UserReviewDeleteOk().execute(req, resp);
        }else if(command.equals("UserRequestNumOk.urfc")) { //사건번호가져오기
           actionInfo = new UserRequestNumOk().execute(req, resp);
-       }else if(command.equals("UseReviewNumOk.urfc")) {//리뷰 번로 가져오기
-          actionInfo = new UseReviewNumOk().execute(req, resp);
        }
        else {
           // 404 일 때 출력할 에러 페이지 경로 작성
