@@ -16,20 +16,24 @@ public class LawyerCommentOk implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		req.setCharacterEncoding("UTF-8");
-
+		
 		ActionInfo actionInfo = new ActionInfo();
 		
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-		lawyerCommentVO.setTitle(req.getParameter("title"));
+//		lawyerCommentVO.setTitle(req.getParameter("title"));
+//		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
-		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 		
+		
+//		req.setAttribute("contentView", lawyerCommentDAO.commentView(lawyerCommentVO));
+		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
+		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/answer_page.jsp");
 
 		return actionInfo;
 		

@@ -7,6 +7,7 @@ public class LawyerCommentVO {
 		private String title;
 		private String content;
 		private String writeDate;
+		//name 추가
 
 		public LawyerCommentVO() {;}
 
