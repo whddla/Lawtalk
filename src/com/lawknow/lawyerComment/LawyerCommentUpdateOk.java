@@ -21,6 +21,7 @@ public class LawyerCommentUpdateOk implements Action {
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
+		lawyerCommentVO.setLawyerWriteNum(Integer.parseInt(req.getParameter("lawyerWriteNum")));
 		lawyerCommentVO.setTitle(req.getParameter("title"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));

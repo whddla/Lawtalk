@@ -21,7 +21,8 @@ public class LawyerCommentRequestNumOk implements Action {
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-		lawyerCommentVO.setTitle(req.getParameter("title"));
+		lawyerCommentVO.setRequestNum(Integer.parseInt(req.getParameter("requestNum")));
+//		lawyerCommentVO.setTitle(req.getParameter("title")); 
 		
 		lawyerCommentDAO.requestNum(lawyerCommentVO);
 				
