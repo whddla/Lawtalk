@@ -183,16 +183,17 @@
 <script>
 function checkId(){
 	$.ajax({
-		url: "/test/UserCheckIdOk.ul",
+		url: "/kovengerss/UserCheckIdOk.ul",
 		type: "get",
 		data: {userId: $("input[name='userId']").val()},
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function(result){
-			if(result.check){
-				$("#result").text("중복된 아이디입니다.");
+			if(result.check ==1){
+				console.log(result);
+				$("P#result").text("중복된 아이디입니다.");
 			}else{
-				$("#result").text("사용가능한 아이디입니다.");
+				$("P#result").text("사용가능한 아이디입니다.");
 			}
 		},
 		error: function(request, status, error){
