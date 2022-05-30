@@ -13,12 +13,12 @@
         <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
          <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
    </typeAliases> 
-   <environments default="mysql">
-      <environment id="mysql">
+   <environments default="lawknow">
+      <environment id="lawknow">
          <transactionManager type="JDBC"/>
          <dataSource type="POOLED">
             <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/form"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/lawknow"/>
             <property name="username" value="root"/>
             <property name="password" value="1234"/>
          </dataSource>

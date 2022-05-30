@@ -53,11 +53,11 @@
 <!-- userwrite -->
   <servlet>
   	<servlet-name>UserWriteFrontController</servlet-name>
-  	<servlet-class>com.lawknow.userWrite</servlet-class>
+  	<servlet-class>com.lawknow.userWrite.UserWriteFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>
   		<servlet-name>UserWriteFrontController</servlet-name>
-  		<url-pattern>*.uwfc</url-pattern>
+  		<url-pattern>*.uw</url-pattern>
   </servlet-mapping>
 </web-app>

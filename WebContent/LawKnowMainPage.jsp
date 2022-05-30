@@ -60,6 +60,10 @@ div.btns{
 .menu-ractive{
 	background: #00000078;
 }
+#leftBannerGo{
+	text-decoration :none;
+	color:black;
+}
 </style>
 </head>
 <body>
@@ -109,7 +113,7 @@ div.btns{
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+                    <a href ="write.jsp" id ="leftBannerGo"><img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;></a>       
                     </div>
 
 

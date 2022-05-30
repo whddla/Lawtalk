@@ -23,7 +23,8 @@
             <div class="word1">상담글을 작성하고</div>
             <div class="word2">무료로</div>
           <div class="word3">변호사의 답변을 받으세요.</div>
-        
+          
+        <form action="UserWriteOk.uw" name ="joinForm" method = "post">
         <div id="text">
             <div class="text_1">제목</div>
             <div class="text_2">(10자이상&nbsp;&nbsp;)</div>
@@ -32,14 +33,13 @@
           <div class="text_5">(200자이상&nbsp;&nbsp;)</div>
           <div class="text_6">*</div>    
         </div>   
-        <form action="">
-            <textarea id="input1" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
-            <textarea id="input2" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요"></textarea>
+            <textarea id="input1" name = "title" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
+            <textarea id="input2" name ="content" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요"></textarea>
           
             <input type="checkbox" id="checkbox1">
             <label for="" id="label1">안내사항을 모두 확인했으며, 동의합니다.</label>
             
-        </form>
+        
         <hr class="hr2">
         <div class="ul">
                <h3>상담글 등록 전 반드시 확인해주세요!</h3> 
@@ -57,10 +57,10 @@
            <li>동일/유사한 내용의 게시물을 지속적으로 반복 게재하는 경우</li>
            <li>의미없는 문자의 나열인 경우</li>
        </ul>
-    <button>
+    <button  id="wrtieButton" >
         <div class="register">상담글 등록하기</div>     
     </button>
-   
+   </form>
     </div>
 
 
@@ -195,6 +195,13 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+<script>
+	function join(){
+    joinForm.submit();
+    console.log("들어옴");
+ 	}
+
+</script>
 </html>
 
 

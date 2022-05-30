@@ -3,10 +3,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserWrite"> 
-    <insert id ="userWrtie" parameterType="userWriteVO"> 
+    <insert id ="userWrite" parameterType="userWriteVO"> 
       insert into tbl_user_write
-   (title, content, write_date)
-   values(#{title}, #{content}, #{writeDate});
+   		(title, content)
+  		 values(#{title}, #{content})
    </insert>
    
    
@@ -46,6 +46,12 @@
     <select id ="selectUserWrite" resultType = "userWriteVO">
     	select user_write_num, request_num, user_num, title, content, write_date
 		from tbl_user_write
+    </select>
+    
+    <select id= "countWrite" resultType="_int">
+    		select count(request_num)
+			from tbl_user_write
+			where user_num =#{userNum}
     </select>
    
    

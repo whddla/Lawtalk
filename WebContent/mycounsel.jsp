@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +23,12 @@
             </h3>
         </nav>
         <div class="mycounsel">
-            <h2 class="qna-page-title">
+            <p class="qna-page-title">
                 0개의 상담글을 작성하셨습니다.
-            </h2>
+                <c:if test="${userWriteCount>0}">
+                	<c:out value="${userWriteCount}">개의 상담글을 작성하셨습니다</c:out>
+                </c:if>
+            </p>
         </div>
     </div>
         <div class="big-box">
@@ -42,7 +46,19 @@
             <section class="qna-list-contents">
                 <div class="historybox">
                     <h2 class="qna-list-empty-title">
+                    <c:if test ="${empty userWriteTitle}">
                         작성한 상담글이 없습니다.
+                     </c:if>
+                     
+                    
+                     <div><c:out value="${userWriteTitle}"/></div>
+                    <div><c:out value="${userWritecontent}"/></div>
+                    
+                     
+                     
+                     
+                     
+                      <%-- <c:out value="${userWriteTitle}"></c:out> --%>
                     </h2>
                 </div>
                 <div class="bottombox">
