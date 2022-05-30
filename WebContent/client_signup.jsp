@@ -187,8 +187,9 @@ function checkId(){
 		type: "get",
 		data: {userId: $("input[name='userId']").val()},
 		contentType: "application/json; charset=utf-8",
+		dataType: "json",
 		success: function(result){
-			if(result == 'check'){
+			if(result.check){
 				$("#result").text("중복된 아이디입니다.");
 			}else{
 				$("#result").text("사용가능한 아이디입니다.");

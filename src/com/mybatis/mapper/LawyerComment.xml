@@ -13,7 +13,7 @@
    <delete id ="commentDelete" parameterType ="LawyerCommentVO">
       delete from tbl_lawyer_comment
       where lawyer_write_num=#{lawyerWriteNum}
-   </select>
+   </delete>
    <!-- 변호사 글 수정  -->
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
       update tbl_lawyer_comment

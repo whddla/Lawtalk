@@ -35,6 +35,12 @@
      where review_num = #{reviewNum}
     </select>
     
+    <!--전체 목록(userreview) 조회  -->
+    <select id = "selectUserReview" resultType ="UserReviewVO">
+    select review_num, request_num, user_num, content, write_date
+	from tbl_user_review
+    </select>
+    
    
     
     

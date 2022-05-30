@@ -34,7 +34,7 @@
 	                            		<div class="input-password">
 	                                		<input type="password" name="userPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
 	                            		</div>
-	                            		<input type="button" id="login" value="로그인"  class="submit-button">로그인</button>
+	                            		<input type="button" id="login" value="로그인"  class="submit-button"></button>
                             		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
@@ -77,13 +77,15 @@
 							<a href="#tab2" class="btn">변호사 로그인</a>
 						    <div id="tab2" class="cont" style="margin-left: -240px;">
 								<div class="login-box">
-                            		<div class="input-id">
-                                		<input type="text" name="id" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
-                            		</div>
-                            		<div class="input-password">
-                                		<input type="text" name="password" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
-                            		</div>
-                            		<button type="submit" class="submit-button">로그인</button>
+                            		<form action="LawyerLoginOk.ll" method="post" name="loginForm">
+                            			<div class="input-id">
+	                                		<input type="text" name="lawyerId" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
+	                            		</div>
+	                            		<div class="input-password">
+	                                		<input type="password" name="lawyerPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
+	                            		</div>
+	                            		<input type="button" id="lawlogin" value="로그인"  class="submit-button"></button>
+                            		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
                                     		<input type="checkbox" name="login-checkbox" >
@@ -114,18 +116,6 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  const tabList = document.querySelectorAll('.tab_menu .list li');
-  
-  for(var i = 0; i < tabList.length; i++){
-    tabList[i].querySelector('.btn').addEventListener('click', function(e){
-      e.preventDefault();
-      for(var j = 0; j < tabList.length; j++){
-        tabList[j].classList.remove('is_on');
-      }
-      this.parentNode.classList.add('is_on');
-    });
-  }
-  
 	let form = document.loginForm;
 	
 	$("input#login").on("click", function(){
@@ -140,6 +130,30 @@
 		
 		form.submit();
 	});
+	$("input#lawlogin").on("click", function(){
+		if(!form.lawyerId.value){
+			alert("아이디를 입력해주세요.");
+			return;
+		}
+		if(!form.lawyerPw.value){
+			alert("패스워드를 입력해주세요.");
+			return;
+		}
+		
+		form.submit();
+	});
+  const tabList = document.querySelectorAll('.tab_menu .list li');
+  
+  for(var i = 0; i < tabList.length; i++){
+    tabList[i].querySelector('.btn').addEventListener('click', function(e){
+      e.preventDefault();
+      for(var j = 0; j < tabList.length; j++){
+        tabList[j].classList.remove('is_on');
+      }
+      this.parentNode.classList.add('is_on');
+    });
+  }
+  
 </script>
 </body>
 </html>

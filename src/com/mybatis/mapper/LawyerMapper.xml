@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="lawyerRegister"> 
-	!--  변호사 회원가입 메소드-->
-   <insert id ="join" parameterType="lawyerVO"> 
+<mapper namespace="Lawyer"> 
+	<!--  변호사 회원가입 메소드-->
+   <insert id ="join" parameterType="lawyerVO">
    insert into tbl_lawyer_register
-   (lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test)
-   values(#{lawyerNum}, #{lawyerId}, #{lawyerName},#{lawyerEmail}, #{lawyerPw}, #{lawerOffice}, #{lawerOfficeNum}, #{lawyerPhoneNum},#{lawyerGraduateTest})
+   (lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test , lawyer_birth)
+   values(#{lawyerNum}, #{lawyerId}, #{lawyerName},#{lawyerEmail}, #{lawyerPw}, #{lawyerOffice}, #{lawyerOfficeNum}, #{lawyerPhoneNum},#{lawyerGraduateTest},#{lawyerBirth})
    </insert>
+   
+   <!-- 로그인 -->
+	<select id="loginOk" parameterType="map" resultType="int">
+		select lawyer_num from tbl_lawyer_register
+		where lawyer_id = #{lawyerId} and lawyer_pw = #{lawyerPw}
+	</select>
    
    <!--아이디 중복 조회  -->
    <select id ="checkId" parameterType ="string" resultType ="int">   
       select count(lawyer_id) from tbl_lawyer_register where lawyer_id = #{lawyerId}
    </select>
    
-   
-   <!-- 변호사 계정 탈퇴  -->
-   <delete id="deleteAccount" parameterType="_int">
-      delete from tbl_lawyer_register
-      where lawyer_num=#{lawyerNum}
-   </delete>
-   <!-- 변호사 정보 수정 -->
-   <update id ="updateAccount" parameterType="lawyerVO">
-      update tbl_lawyer_register
-      set  lawyer_id=#{lawyerId}, lawyer_pw =#{lawyerPw}, lawyer_office=#{lawyerOffice}, lawyer_phone_num=#{lawyerPhoneNum} 
-      where lawyer_num=#{lawyerNum}
-   </update>
-   <!--변호사 정보 가져오기  -->
-   <select id = "getUserInfo" parameterType ="lawyerVO" resultType ="object">
-      select lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test
-      from tbl_lawyer_register where lawyer_num = #{lawyerNum}
-   </select>
-	
+   <!-- 회원목록 -->
+	<select id="selectLawyers" resultType="lawyerVO">
+		select lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test , lawyer_birth
+		from tbl_lawyer_register
+	</select>
 </mapper>

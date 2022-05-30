@@ -109,7 +109,7 @@ div.btns{
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <img src="assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+                    <img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
                     </div>
 
 
@@ -238,7 +238,7 @@ div.btns{
                 </div>
                 <button class = "dotbogi" >
                
-                    <img src ="assets/css/img/돋보기.PNG">
+                    <img src ="assets/img/돋보기.PNG">
                 
                 </button>
                 </div>
@@ -248,10 +248,10 @@ div.btns{
     <section class="container"> <!-- 여기에 relative를 주고  안에 div.arrow들을 absolute를 주어야한다. -->
         <div class="arrow prev">&lt;</div>
         <div class="banner"> <!-- 배너를 움직여줘야한다https://d2ai3ajp99ywjy.cloudfront.net/app/images/9f438fd6b08a1c32bcba.jpg-->
-            <div class="img"><img src="assets/css/img/배너1.png"></div>
-            <div class="img"><img src="assets/css/img/배너2.png"></div>
-            <div class="img"><img src="assets/css/img/배너3.png"></div>
-            <div class="img"><img src="assets/css/img/배너4.png"></div>
+            <div class="img"><img src="assets/img/배너1.png"></div>
+            <div class="img"><img src="assets/img/배너2.png"></div>
+            <div class="img"><img src="assets/img/배너3.png"></div>
+            <div class="img"><img src="assets/img/배너4.png"></div>
            
         </div>
         <div class="arrow next">&gt;</div>
@@ -412,7 +412,7 @@ div.btns{
  
        <section class="counsel-banner-section">
         <div class="counsel-banner-section-container" style="width: 113%;"> <!-- 임시방편 해결 -->
-            <div class="counsel-banner-section--wrap">
+            <div class="counsel-banner-section--wrap" style="left: -142px;">
                 <p class="counsel-banner-title">상황에 맞게 변호사와 다양한 법률상담.</p>
                 <div class="counsel-banners-img-box">
                     <div class="counsel-banners">
