@@ -3,13 +3,13 @@ package com.lawknow.domain.vo;
 public class UserVO {
 
 	private int userNum;
+	private int userBirth;
 	private String userId;
 	private String userName;
 	private String userEmail;
 	private String userPw;
 	private String userPhoneNum;
 	private String userGender;
-	private int userBirth;
 	private String userKakaoEmail;
 	private String userFacebookEmail;
 	
