@@ -9,7 +9,7 @@ public class UserVO {
 	private String userPw;
 	private String userPhoneNum;
 	private String userGender;
-	private int userBirth;
+	private String userBirth;
 	private String userKakaoEmail;
 	private String userFacebookEmail;
 	
@@ -87,12 +87,12 @@ public class UserVO {
 	}
 
 
-	public int getUserBirth() {
+	public String getUserBirth() {
 		return userBirth;
 	}
 
 
-	public void setUserBirth(int userBirth) {
+	public void setUserBirth(String userBirth) {
 		this.userBirth = userBirth;
 	}
 

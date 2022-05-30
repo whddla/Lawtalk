@@ -29,8 +29,8 @@
 	</select>
    
    <!--계정 탈퇴  -->
-   <delete id="deleteAccount" parameterType="string">
-      delete from tbl_lawyer_register
+   <delete id="UserdeleteAccount" parameterType="_int">
+      delete from tbl_user_register
       where user_num =  #{userNum}
    </delete>
    
@@ -41,5 +41,12 @@
    where user_num=#{userNum}
    </update>
    
+   <!-- 비밀번호 변경 -->
+   	<update id ="PwChange" parameterType= "userVO">
+		update tbl_user_register
+		set user_pw = #{userPw}
+		where user_num = #{userNum}
+	</update>
 
+	
 </mapper>
