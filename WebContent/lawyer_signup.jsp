@@ -28,19 +28,21 @@
                     </span>
                 </div>
             </div>
-            <form name ="accoun-sign-up" class="sign-main-container">
+            <form action="JoinOk.ll" name="joinForm" method="post" class="sign-main-container">
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <input class="form-control" id="account-email" type="email" placeholder="예) name@example.com">
+                        <input name="lawyerEmail" class="form-control" id="account-email" type="email" placeholder="예) name@example.com">
                         <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-id" type="text" placeholder="아이디">
+                        <input name="lawyerId" class="form-control" id="account-id" type="text" placeholder="아이디">
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
+                    	<input type="button" value="중복확인" onclick="checkId()">
+						<p id="result"></p>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-password" type="password" placeholder="비밀번호">
+                        <input name="lawyerPw" class="form-control" id="account-password" type="password" placeholder="비밀번호">
                         <label class="account-password-error" for="account-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
@@ -51,28 +53,28 @@
                 <h3 class="info">인증정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <input class="form-control" id="account-name" type="text" placeholder="이름">
+                        <input name="lawyerName" class="form-control" id="account-name" type="text" placeholder="이름">
                         <label class="account-name-error" for="account-name" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-office" type="text" placeholder="소속(사무소, 회사명)">
+                        <input name="lawyerOffice" class="form-control" id="account-office" type="text" placeholder="소속(사무소, 회사명)">
                         <label class="account-office-error" for="account-office" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-office-hp" type="tel" placeholder="소속전화번호">
+                        <input name="lawyerOfficeNum" class="form-control" id="account-office-hp" type="tel" placeholder="소속전화번호">
                         <label class="account-office-hp-error" for="account-office-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-hp" type="text" placeholder="휴대폰 번호">
+                        <input name="lawyerPhoneNum" class="form-control" id="account-hp" type="text" placeholder="휴대폰 번호">
                         <label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <select class="form-control-button" name="test-choice">
+                        <select class="form-control-button" name="lawyerGraduateTest">
 						  <option value="" selected>출신시험 선택</option>
-						  <option value="">사법시험</option>
-						  <option value="">변호사시험</option>
-						  <option value="">군법무관 임용시험</option>
-						  <option value="">고등고시</option>
+						  <option value="사법시험">사법시험</option>
+						  <option value="변호사시험">변호사시험</option>
+						  <option value="군법무관 임용시험">군법무관 임용시험</option>
+						  <option value="고등고시">고등고시</option>
 						</select>
                     </div>
                 </div>
@@ -85,31 +87,17 @@
 							</div>
 						</div>
                 </div>
-                <h3 class="info">기타정보</h3>
-                <div class="input-info">
-                    <div class="form-group">
-                        <select class="form-control-button" name="방문경로 선택">
-						  <option value="" selected>방문경로 선택</option>
-						  <option value="blog">블로그</option>
-						  <option value="naver-in">네이버 지식인</option>
-						  <option value="naver-search">네이버 검색</option>
-						  <option value="google">구글 검색</option>
-						  <option value="facebook">페이스북</option>
-						  <option value="기타">기타</option>
-						</select>
-                    </div>
-                </div>
                 <h3 class="info">선택정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <select class="form-control-button" name="gender-choice">
+                        <select class="form-control-button" name="lawyerGender">
 						  <option value="" selected>성별 선택</option>
-						  <option value="man">남자</option>
-						  <option value="women">여자</option>
+						  <option value="M">남자</option>
+						  <option value="W">여자</option>
 						</select>
                     </div>
                     <div class="form-group">
-	                      <select class="form-control-button" name="yy" id="year">
+	                      <select class="form-control-button" name="lawyerBirth" id="year">
 		                      <option value="" selected>출생년도 선택</option>
 	                      </select>
                     </div>
@@ -161,20 +149,6 @@
                         <span class="span-tag">(선택)</span>
                     </div>      
                 </div>
-                <div class="naver-lawyer">
-                    <div class="naver-lawyer-card">
-                        <label>
-                            네이버 지식iN 변호사등록도 함께 신청합니다.
-                            <input type="checkbox" id="naver-chk">
-                        </label>
-                        <div class="naver-comment">
-                            로톡에서 네이버 지식iN 전문가 등록을 하면, 네이버 검색결과에서 변호사님 지식iN 답변이 상위노출됩니다.
-                        </div>
-                        <div class="naver-form-group">
-                            <input class="form-control" type="text" name="layerNaverId" id="lawyer-naver-id" placeholder="네이버 아이디">
-                        </div>
-                    </div>
-                </div>
                 <div class="input-info">
                     <div class="description">
                         <img src="https://cdn-icons-png.flaticon.com/512/25/25607.png" class="description-img">
@@ -182,7 +156,7 @@
                     </div>
                 </div>
                 <div class="footer-button">
-                    <button type="summit" class="footer-button-click">
+                    <button type="button" value="가입 완료" onclick="join()" class="footer-button-click">
                         가입신청
                     </button>
                 </div>
@@ -192,11 +166,11 @@
                 <!-- 로그인 페이지 -->
                     <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
                     <!-- 변호사 가입안내 페이지 -->
-                    <a href="https://lawyer.lawtalk.co.kr/">변호사 가입안내</a>
+                    <a href="">변호사 가입안내</a>
                 </div>
                 <div class="row">
                 <!-- 회사소개  -->
-                    <a style="font-size: 5px;" href="http://lawcompany.co.kr/">
+                    <a style="font-size: 5px;" href="http://localhost:9000/kovengerss/compani.jsp">
                         (C) Law&Company Co., Ltd.
                     </a>
                 </div>
@@ -206,6 +180,33 @@
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+function checkId(){
+	$.ajax({
+		url: "/test/LawyerCheckIdOk.ll",
+		type: "get",
+		data: {lawyerId: $("input[name='lawyerId']").val()},
+		contentType: "application/json; charset=UTF-8",
+		dataType: "json",
+		success: function(result){
+			if(result.check){
+			console.log(result);
+				$("#result").text("중복된 아이디입니다.");
+			}else{
+				$("#result").text("사용가능한 아이디입니다.");
+			}
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+function join(){
+	joinForm.submit();
+}
 var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
 var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
 var nameCheck = RegExp(/^[가-힣]{2,6}$/);
@@ -366,6 +367,6 @@ $(document).ready(function() {
 		        $('#year').append('<option value="' + i + '">' + i + '년</option>');    
 		    }
 		   
-		})
+		});
 </script>
 </html>

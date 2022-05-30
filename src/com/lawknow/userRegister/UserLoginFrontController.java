@@ -34,7 +34,7 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/client_signup.jsp");
-		} else if(command.equals("CheckIdOk.ul")) {
+		} else if(command.equals("UserCheckIdOk.ul")) {
 			new UserCheckIdOk().execute(req, resp);
 		} else if(command.equals("UserLoginOk.ul")) {
 			actionInfo = new UserLoginOk().execute(req, resp);

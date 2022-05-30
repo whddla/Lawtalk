@@ -11,8 +11,26 @@ public class LawyerVO {
 	private String lawyerOfficeNum;
 	private String lawyerPhoneNum;
 	private String lawyerGraduateTest;
-	
+	private String lawyerBirth;
+	private String lawyerGender;
+
 	public LawyerVO(){;}
+	
+	public String getLawyerBirth() {
+		return lawyerBirth;
+	}
+	
+	public void setLawyerBirth(String lawyerBirth) {
+		this.lawyerBirth = lawyerBirth;
+	}
+	
+	public String getLawyerGender() {
+		return lawyerGender;
+	}
+	
+	public void setLawyerGender(String lawyerGender) {
+		this.lawyerGender = lawyerGender;
+	}
 
 	public int getLawyerNum() {
 		return lawyerNum;
