@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,21 +20,21 @@
 				</h1>
 				<a class="back-click" href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp">< 돌아가기</a>
 			</div>
-			<div sign-in-box>
+			<div class="sign-in-box">
 				<div class="tab_menu">
 					<ul class="list">
 						<li class="is_on">
 						    <a href="#tab1" class="btn">로그인</a>
 						    <div id="tab1" class="cont">
 								<div class="login-box">
-                            		<div class="input-id">
-                            		<form action="UserLoginOk.ul" method="post" name="loginForm">
+                            		<form action="UserLoginOk.ul" method="post" name="userForm">
+ 		                           		<div class="input-id">
 	                                		<input type="text" name="userId" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
 	                            		</div>
 	                            		<div class="input-password">
 	                                		<input type="password" name="userPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
 	                            		</div>
-	                            		<input type="button" id="login" value="로그인"  class="submit-button"></button>
+	                            			<input type="button" id="userLogin" value="로그인"  class="submit-button">
                             		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
@@ -77,14 +77,14 @@
 							<a href="#tab2" class="btn">변호사 로그인</a>
 						    <div id="tab2" class="cont" style="margin-left: -240px;">
 								<div class="login-box">
-                            		<form action="LawyerLoginOk.ll" method="post" name="loginForm">
+                            		<form action="LawyerLoginOk.ll" method="post" name="lawyerForm">
                             			<div class="input-id">
 	                                		<input type="text" name="lawyerId" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
 	                            		</div>
 	                            		<div class="input-password">
 	                                		<input type="password" name="lawyerPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
 	                            		</div>
-	                            		<input type="button" id="lawlogin" value="로그인"  class="submit-button"></button>
+	                            			<input type="button" id="lawLogin"  value="로그인"  class="submit-button">
                             		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
@@ -116,9 +116,11 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-	let form = document.loginForm;
+
+	let form = document.userForm;
 	
-	$("input#login").on("click", function(){
+	$("input#userLogin").on("click", function(){
+			console.log(form.userId);
 		if(!form.userId.value){
 			alert("아이디를 입력해주세요.");
 			return;
@@ -130,18 +132,24 @@
 		
 		form.submit();
 	});
-	$("input#lawlogin").on("click", function(){
-		if(!form.lawyerId.value){
+
+	let lwForm = document.lawyerForm;
+	
+	$("input#lawLogin").on("click", function(){
+			console.log(lwForm.lawyerId);
+		if(!lwForm.lawyerId.value){
 			alert("아이디를 입력해주세요.");
 			return;
 		}
-		if(!form.lawyerPw.value){
+		if(!lwForm.lawyerPw.value){
 			alert("패스워드를 입력해주세요.");
 			return;
 		}
 		
-		form.submit();
+		lwForm.submit();
 	});
+	
+	
   const tabList = document.querySelectorAll('.tab_menu .list li');
   
   for(var i = 0; i < tabList.length; i++){

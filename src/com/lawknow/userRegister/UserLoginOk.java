@@ -12,7 +12,6 @@ import com.lawknow.domain.dao.UserDAO;
 import com.lawyer.action.ActionInfo;
 
 public class UserLoginOk {
-
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		
@@ -24,9 +23,10 @@ public class UserLoginOk {
 		String userPw = req.getParameter("userPw");
 		int userNum = 0;
 		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
-		
+		System.out.println("거의다왔어");
 		userMap.put("userId", userId);
 		userMap.put("userPw", userPw);
+		System.out.println(userPw);
 		
 		try {
 			System.out.println(userMap);
@@ -34,6 +34,7 @@ public class UserLoginOk {
 //			그래서 int로 못바꾸니까 Exception 뜸!
 			userNum = userDAO.loginOk(userMap);
 			System.out.println(userNum);
+			System.out.println("성공");
 			//여기 밑으로 내려오는 건 로그인 성공 시에만 가능
 			session.setAttribute("userNum", userNum);
 				//세션 초기화

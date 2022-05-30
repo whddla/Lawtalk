@@ -31,7 +31,6 @@ public class UserJoinOk implements Action{
       userVO.setUserFacebookEmail(req.getParameter("userFacebookEmail"));
       
       userDAO.join(userVO);
-      
       req.setAttribute("userList", userDAO.selectUsers());
       
       actionInfo.setRedirect(false);
