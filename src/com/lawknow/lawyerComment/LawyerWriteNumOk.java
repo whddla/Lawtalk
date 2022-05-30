@@ -21,7 +21,7 @@ public class LawyerWriteNumOk implements Action {
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-//		lawyerCommentVO.setlawyerWriteNum(req.getParameter("lawyerWriteNum"));
+		lawyerCommentVO.setLawyerWriteNum(Integer.parseInt(req.getParameter("lawyerWriteNum")));
 
 		
 		lawyerCommentDAO.lawyerWriteNum(lawyerCommentVO);
