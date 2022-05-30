@@ -21,7 +21,8 @@ public class LawyerCommentDeleteOk implements Action {
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-		lawyerCommentVO.getLawyerWriteNum();
+		lawyerCommentVO.setLawyerWriteNum(Integer.parseInt(req.getParameter("lawyerWriteNum")));
+
 		
 		lawyerCommentDAO.commentDelete(lawyerCommentVO);
 		

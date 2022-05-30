@@ -4,7 +4,7 @@
 
 <mapper namespace="LawyerComment"> 
 	 <!--변호사 글 작성 -->
-   <insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> 
+   <insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> <!-- controller에서는 소문자임 -->
    insert into  tbl_lawyer_comment
    (title, content, write_date)
    values(#{title},#{titleContent},#{writeDate});

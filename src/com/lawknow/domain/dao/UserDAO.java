@@ -1,7 +1,6 @@
 package com.lawknow.domain.dao;
 
 
-import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,6 +19,7 @@ public class UserDAO {
 	}
 	//로그인 확인
 	public Integer loginOk(HashMap<String, String> userMap) {
+		System.out.println("나 왔엉");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
