@@ -182,13 +182,13 @@
 <script>
 function checkId(){
 	$.ajax({
-		url: "/test/LawyerCheckIdOk.ll",
+		url: "/kovengerss/LawyerCheckIdOk.ll",
 		type: "get",
 		data: {lawyerId: $("input[name='lawyerId']").val()},
 		contentType: "application/json; charset=UTF-8",
 		dataType: "json",
 		success: function(result){
-			if(result.check){
+			if(result.check ==1){
 			console.log(result);
 				$("#result").text("중복된 아이디입니다.");
 			}else{

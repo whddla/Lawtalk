@@ -26,10 +26,9 @@ public class UserJoinOk implements Action{
       userVO.setUserPw(new String(Base64.getEncoder().encode(req.getParameter("userPw").getBytes())));
       userVO.setUserPhoneNum(req.getParameter("userPhoneNum"));
       userVO.setUserGender(req.getParameter("userGender"));
-      userVO.setUserBirth(Integer.parseInt(req.getParameter("userBirth"))); //수정 재원
+      userVO.setUserBirth(req.getParameter("userBirth")); //수정 재원
       userVO.setUserKakaoEmail(req.getParameter("userKakaoEmail"));
       userVO.setUserFacebookEmail(req.getParameter("userFacebookEmail"));
-      
       userDAO.join(userVO);
       
       req.setAttribute("userList", userDAO.selectUsers());

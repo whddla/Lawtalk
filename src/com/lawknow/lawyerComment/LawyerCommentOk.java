@@ -24,13 +24,15 @@ public class LawyerCommentOk implements Action{
 		
 //		lawyerCommentVO.setTitle(req.getParameter("title"));
 //		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
+		
+		lawyerCommentVO.setLawyerName(req.getParameter("lawyerName"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 		
 		
-//		req.setAttribute("contentView", lawyerCommentDAO.commentView(lawyerCommentVO));
 		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
+		req.setAttribute("lawyername", lawyerCommentVO.getLawyerName());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/answer_page.jsp");

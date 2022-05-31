@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-     <%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --%>
-     
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +18,6 @@
 </head>
 <body>
 
-	<c:out value="${lawyercontent}"/>
 
 
 
@@ -214,7 +212,7 @@
 								</form>								
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
-								<div class="a-card-question-list">  <!-- 여기 부터 form;; -->
+								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
 									<aside class="a-card-aside-card">
 										<div class="a-wrapper">
 											<div class="badge">
@@ -258,11 +256,49 @@
 										</div>
 									</div>
 								</div>
+								
+								<hr>
+								
+								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
+									<aside class="a-card-aside-card">
+										<div class="a-wrapper">
+											<div class="badge">
+												<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
+												<p class="number">231</p>
+											</div>
+										</div>
+									</aside>
+									<div class="a-card-main">
+										<header class="a-card-header">
+											<a href="">
+												<h1 class="a-card-header-title">
+													<c:out value="${lawyername}"/>
+												</h1>
+												<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
+											</a>
+										</header>
+										<div class="a-card-content">
+										<c:out value="${lawyercontent}"/>
+										</div>
+										<div class="a-card-footer">
+											<span class="viewCount">
+											조회수
+												<i class="number">12</i>
+											</span>
+											<span class="answer">2시간전 답변 작성됨</span>
+										</div>
+									</div>
+								</div>
+								<!--=======  -->
 							</div>
 						</div>
 				</main>
 		</section>
 		</div>
+		
+		
+		
+		
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 <script>

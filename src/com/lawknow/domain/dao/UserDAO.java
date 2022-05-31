@@ -1,7 +1,6 @@
 package com.lawknow.domain.dao;
 
 
-import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,6 +19,7 @@ public class UserDAO {
 	}
 	//로그인 확인
 	public Integer loginOk(HashMap<String, String> userMap) {
+		System.out.println("나 왔엉");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
@@ -35,11 +35,18 @@ public class UserDAO {
 	
 	//아이디 중복검사
 	public boolean checkId(String userId) {
+		System.out.println(userId);
 		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
 	}
+	
+	//의뢰인 비밀번호 변경
+	public boolean PwChange(UserVO userVO) {
+		return sqlSession.update("User.PwChange", userVO) == 1;
+	}
+	
 	//계정 탈퇴	
-	public void deleteAccount(UserVO userVO) {
-		sqlSession.delete("userRegister.deleteAccount", userVO);
+	public boolean UserdeleteAccount(String userId) {
+		return (Integer)sqlSession.delete("User.UserdeleteAccount", userId) == 1;
 	}
 		
 	//회원정보 수정

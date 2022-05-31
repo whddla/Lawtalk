@@ -51,8 +51,8 @@
                     </div>
                     <div class="form-group">
                         <input name="userId"class="form-control" id="account-id" type="text" placeholder="아이디">
-                        <input type="button" value="중복확인" onclick="checkId()">
-						<p id="result"></p>
+                        <input style="border:0; background-color: #fff; margin-top: -18px;padding:0;" type="button" value="중복확인" onclick="checkId()">
+						<p style= "color: blue; width: auto; display: inline-block;  margin-left: 54px;"id="result"></p>
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
@@ -115,21 +115,21 @@
                     <div class="constract-text">
                         <label>
                             서비스 이용약관 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox" id="term1" name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 취급방침 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox"  id="term2"  name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 이용/수집 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox"  id="term3"  name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>      
@@ -181,32 +181,54 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-function checkId(){
+
+
+let check = false;
+
+function checkId(userId){
 	$.ajax({
-		url: "/test/UserCheckIdOk.ul",
+		url: "/kovengerss/UserCheckIdOk.ul",
 		type: "get",
 		data: {userId: $("input[name='userId']").val()},
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function(result){
-			if(result.check){
-				$("#result").text("중복된 아이디입니다.");
+			const $result = $("P#result");
+			if(result.result == "success"){
+				$result.text("사용가능한 아이디입니다.");
+				$result.css("color", "rgb(99, 193, 76);");
+				check = true;
 			}else{
-				$("#result").text("사용가능한 아이디입니다.");
+				$result.text("중복된 아이디입니다.");
+				$result.css("color", "red");
+				check = false;
 			}
-		},
-		error: function(request, status, error){
-			console.log("실패..");
-			console.log(request);
-			console.log(status);
-			console.log(error);
 		}
 	});
 }
 
+
+$("input#userId").keyup(function(){
+	checkId($(this).val());
+})
+
+
 function join(){
+	
+	if(!check){
+		alert("아이디를 다시 확인해주세요.");
+		return;
+	}
+
+	if(!$all.is(":checked")){
+		alert("약관 동의가 필요합니다.");
+		return;
+	}
+	
 	joinForm.submit();
 }
+
+
     var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
     var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
     var nameCheck = RegExp(/^[가-힣]{2,6}$/);

@@ -3,13 +3,13 @@ package com.lawknow.domain.vo;
 public class UserVO {
 
 	private int userNum;
-	private int userBirth;
 	private String userId;
 	private String userName;
 	private String userEmail;
 	private String userPw;
 	private String userPhoneNum;
 	private String userGender;
+	private String userBirth;
 	private String userKakaoEmail;
 	private String userFacebookEmail;
 	
@@ -87,12 +87,12 @@ public class UserVO {
 	}
 
 
-	public int getUserBirth() {
+	public String getUserBirth() {
 		return userBirth;
 	}
 
 
-	public void setUserBirth(int userBirth) {
+	public void setUserBirth(String userBirth) {
 		this.userBirth = userBirth;
 	}
 
