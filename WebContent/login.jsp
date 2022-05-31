@@ -97,7 +97,6 @@
                                 			</div>
                             		</form>
                             		</div>
-                        		</div>
                             		<div class="p-tag">
                             			<p>변호사님, 아직 가입 안하셨나요?</p>
                         			</div>
@@ -108,6 +107,7 @@
 			                                </span>
 			                            </button>
                         			</div>
+                        		</div>
 							</div>
 						</li>
 					</ul>
