@@ -28,8 +28,7 @@ public class UserLoginFrontController extends HttpServlet{
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("JoinOk.ul")) {
-//			actionInfo = new UserJoinOk().execute(req, resp);
-			
+			actionInfo = new UserJoinOk().execute(req, resp);
 		} else if(command.equals("join.ul")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);

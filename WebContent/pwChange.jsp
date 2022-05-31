@@ -66,6 +66,12 @@ if(checkPw){
 	alert("비밀번호 변경 완료");
 }
 
+let msg = "${msg}";
+
+if(msg){
+	alert("현재 비밀번호가 같습니다.");
+}
+
 	function inchk(f){
 		if(f.newPw.value != f.newPw2.value){
 			alert("변경 비밀번호 와 변경 비밀번호 재입력이 다릅니다.");
