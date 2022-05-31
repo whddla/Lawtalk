@@ -28,13 +28,8 @@
 						    <a href="#tab1" class="btn">로그인</a>
 						    <div id="tab1" class="cont">
 								<div class="login-box">
-<<<<<<< HEAD
-                            		<form action="UserLoginOk.ul" method="post" name="loginForm">
-                            		<div class="input-id">
-=======
                             		<form action="UserLoginOk.ul" method="post" name="userForm">
  		                           		<div class="input-id">
->>>>>>> master
 	                                		<input type="text" name="userId" placeholder="아이디" style="width: 100%; border: 0; padding: 10px 0;">
 	                            		</div>
 	                            		<div class="input-password">

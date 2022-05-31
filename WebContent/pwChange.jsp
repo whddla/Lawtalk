@@ -20,7 +20,7 @@
 			</div>
 			
 			<div class = "allform-layout">
-				<form class ="first-form" action="PwChange.ul" method="post" onsubmit="return inchk(this)" name="f">
+				<form class ="first-form" action="PwChangeOk.ul" method="post" onsubmit="return inchk(this)" name="f">
 					<h3 class = "form-title-text">비밀번호 변경</h3>
 					<div class ="input-layout">
 						<div class="pw-intro-layout">
@@ -61,6 +61,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+let checkPw = "${checkPw}";
+if(checkPw){
+	alert("비밀번호 변경 완료");
+}
+
 	function inchk(f){
 		if(f.newPw.value != f.newPw2.value){
 			alert("변경 비밀번호 와 변경 비밀번호 재입력이 다릅니다.");

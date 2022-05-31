@@ -592,6 +592,12 @@ div.btns{
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+let checkDel = "${checkDel}";
+if(checkDel){
+	alert("탈퇴완료");
+}
+
+
 const banner = document.querySelector("div.banner");
 const arrows = document.querySelectorAll("div.arrow");
 const btns = document.querySelectorAll("button.btn");
