@@ -25,13 +25,17 @@ public class UserLoginOk {
 		String autoLogin = req.getParameter("autoLogin");
 		int userNum = 0;
 		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
-		System.out.println("거의다왔어");
 		userMap.put("userId", userId);
 		userMap.put("userPw", userPw);
+		System.out.println(userId);
 		System.out.println(userPw);
+
 		userNum = userDAO.loginOk(userMap);
+		System.out.println(userNum);
+		if(userNum != 0) {
+			session.setAttribute("userNum", userNum);
 		
-		 if(autoLogin != null) {
+			if(autoLogin != null) {
 	            //아이디, 비밀번호, 자동로그인 체크박스를 쿠키에 저장
 	            Cookie cookieId = new Cookie("userId", userId);
 	            Cookie cookiePw = new Cookie("userPw", userPw);
@@ -44,6 +48,9 @@ public class UserLoginOk {
 	            resp.addCookie(cookieId);
 	            resp.addCookie(cookiePw);
 	            resp.addCookie(cookieAutoLogin);
+	            System.out.println(cookieId);
+	            System.out.println(cookiePw);
+	            System.out.println(cookieAutoLogin);
 	            
 	         }else {
 	            //자동 로그인 해제 시 기존 쿠키 삭제
@@ -55,13 +62,13 @@ public class UserLoginOk {
 	               }
 	            }
 	         }
-	         
-	         actionInfo.setPath("/kovengerss/UserLogin.ul");
-	         
-	      actionInfo.setRedirect(false);
-	      
-	      return actionInfo;
-	   }
+			actionInfo.setPath("/loginSuccess.jsp");
+		}else {
+			actionInfo.setPath("/login.jsp");
+		}
+		actionInfo.setRedirect(false);
+		
+		return actionInfo;
 	}
 
-
+}

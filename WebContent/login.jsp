@@ -36,16 +36,16 @@
 	                                		<input type="password" name="userPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
 	                            		</div>
 	                            			<input type="button" id="userLogin" value="로그인"  class="submit-button">
-                            		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
-                                    		<input type="checkbox" name="login-checkbox" >
-                                    		로그인 상태유지
+                                    		<input type="checkbox" id="autoLogin" name="autoLogin" value="autoLogin" >
+                                    			<label for="autoLogin">로그인 상태유지</label>
                                 			</div>
                                 			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
                                 			</a>
                             		</div>
+                            		</form>
 								</div>
                             	<div class="p-tag">
                             		<p>이미 SNS계정으로 가입하셨다면</p>
@@ -86,15 +86,16 @@
 	                                		<input type="password" name="lawyerPw" placeholder="비밀번호" style="width: 100%; border: 0; padding: 10px 0">
 	                            		</div>
 	                            			<input type="button" id="lawLogin"  value="로그인"  class="submit-button">
-                            		</form>
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
-                                    		<input type="checkbox" name="login-checkbox" >
-                                    		로그인 상태유지
+                                    		<input type="checkbox" id="lawAutoLogin" name="lawAutoLogin" value="lawAutoLogin" >
+                                    			<label for="lawAutoLogin">로그인 상태유지</label>
                                 			</div>
                                 			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
                                 			</a>
+                                			</div>
+                            		</form>
                             		</div>
                         		</div>
                             		<div class="p-tag">
@@ -149,7 +150,37 @@
 		
 		lwForm.submit();
 	});
-	
+	let userId = "${userId}";
+	let userPw = "${userPw}";
+	let autoLogin = "${autoLogin}";
+
+	//자동 로그인이 이전에 눌러져 있었다면
+	if(autoLogin){
+	   //다시 체크해주고
+	   $("input#autoLogin").prop("checked", true);
+	   //아이디 입력
+	   $("input[name='userId']").val(userId);
+	   //비밀번호 입력
+	   $("input[name='userPw']").val(userPw);
+	   //전송
+	   userForm.submit();
+	}
+
+	let lawyerId = "${lawyerId}";
+	let lawyerPw = "${lawyerPw}";
+	let lawAutoLogin = "${lawAutoLogin}";
+
+	//자동 로그인이 이전에 눌러져 있었다면
+	if(lawAutoLogin){
+	   //다시 체크해주고
+	   $("input#lawAutoLogin").prop("checked", true);
+	   //아이디 입력
+	   $("input[name='lawyerId']").val(lawyerId);
+	   //비밀번호 입력
+	   $("input[name='lawyerPw']").val(lawyerPw);
+	   //전송
+	   lawyerForm.submit();
+	}
 	
   const tabList = document.querySelectorAll('.tab_menu .list li');
   
