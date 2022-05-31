@@ -278,6 +278,9 @@ outline: white;
     position: absolute;
     bottom: 0;
     margin-left: 131px;
+    border: 1px solid;
+    border-radius: 74px;
+    margin-bottom: 7px;
 }
 
 .title-wrap {
