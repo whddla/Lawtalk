@@ -16,16 +16,21 @@ public class UserCheckIdOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
 		req.setCharacterEncoding("UTF-8");
+
 		PrintWriter out = resp.getWriter();
 		UserDAO userDAO = new UserDAO();
-		JSONObject resultJSON = new JSONObject();
-		
 		String userId = req.getParameter("userId");
-		resultJSON.put("check", userDAO.checkId(userId));
+		JSONObject json = new JSONObject();
 		
-		out.print(resultJSON.toJSONString());
+		if(userDAO.checkId(userId)) {
+			json.put("result", "fail");
+		}else {
+			json.put("result", "success");
+		}
+		
+		
+		out.print(json.toJSONString());
 		out.close();
 		return null;
 	}
