@@ -25,4 +25,11 @@
 		select lawyer_num, lawyer_id, lawyer_name, lawyer_email, lawyer_pw, lawyer_office, lawyer_office_num, lawyer_phone_num, lawyer_graduate_test , lawyer_birth
 		from tbl_lawyer_register
 	</select>
+	
+	<!-- 비밀번호 수정 -->
+	<update id ="PwChange" parameterType= "userVO">
+		update from tbl_lawyer_register
+		set lawyer_pw = #{lawyerPw}
+		where lawyer_num = #{lawyerNum}
+	</update>
 </mapper>

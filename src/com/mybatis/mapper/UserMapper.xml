@@ -20,23 +20,25 @@
 		select user_num, user_id, user_name, user_pw, user_gender, user_birth, user_email, user_phone_num
 		from tbl_user_register order by user_name desc
 	</select>
+	
+	
 	<!-- 로그인 -->
 	<select id="loginOk" parameterType="map" resultType="int">
 		select count(user_num) from tbl_user_register
 		where user_id = #{userId} and user_pw = #{userPw}
 	</select>
    
-   <!--계정 탈퇴  -->
+   <!-- 계정 탈퇴  -->
    <delete id="UserdeleteAccount" parameterType="_int">
       delete from tbl_user_register
       where user_num =  #{userNum}
    </delete>
    
-   <!-- 회원정보수정  -->
-   <update id ="updateAccount" parameterType ="userVO" >
+   <!-- 회원 이메일 수정  -->
+   <update id ="UserEmailUpdate" parameterType ="userVO" >
    update tbl_user_register
-   set user_id=#{userId}, user_name=#{userName}, user_email=#{userEmail}, user_pw=#{userPw}, user_phone_num=#{userPhoneNum}, user_gender=#{userGender}, user_birth=#{userBirth}, user_kakao_email=#{userKakaoEmail}, user_facebook_email=#{userFacebookEmail}
-   where user_num=#{userNum}
+   set user_email=#{userEmail}
+   where user_num= #{userNum}
    </update>
    
    <!-- 비밀번호 변경 -->
@@ -45,6 +47,13 @@
 		set user_pw = #{userPw}
 		where user_num = #{userNum}
 	</update>
+	
+	<!-- 비밀번호 체크 -->
+	<select id ="UserPwcheck" parameterType="userVO">
+		select user_pw from tbl_user_regiser
+		where user_num = #{userNum} and user_pw =#{userPw}
+	</select>
 
 	
 </mapper>
+
