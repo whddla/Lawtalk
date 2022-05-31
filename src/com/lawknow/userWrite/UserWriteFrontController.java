@@ -33,11 +33,16 @@ public class UserWriteFrontController extends HttpServlet{
 	         	actionInfo = new ActionInfo();
 	         	actionInfo.setRedirect(true);
 	         	actionInfo.setPath(req.getContextPath() + "/write.jsp");
-	       } 
+	       }else if(command.equals("UserWriteUpdate.uw")) { // 글 작성
+	         	actionInfo = new ActionInfo();
+	         	actionInfo.setRedirect(true);
+	         	actionInfo.setPath(req.getContextPath() + "/rewrite.jsp");
+	       }  
 	       else if(command.equals("UserWriteUpdateOk.uw")) { // 글 수정
 	    	   System.out.println("난 업데이트 프론트 컨트롤러");
 	          actionInfo = new UserWriteUpdateOk().execute(req, resp);
 	       } else if(command.equals("UserWriteDeleteOk.uw")) {// 글 삭제
+	    	   System.out.println("난 delete 프론트 컨트롤러");
 	          actionInfo = new UserWriteDeleteOk().execute(req, resp);
 	       }else if(command.equals("UserRequestNumOk.uw")) {// 번호 조회
 	          actionInfo = new UserRequestNumOk().execute(req, resp);
