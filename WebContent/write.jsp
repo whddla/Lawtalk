@@ -9,6 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/write.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    .btn-check{
+   border-color: aliceblue;
+    }
+    .btn-outline-primary:checked{
+    	background-color: white;
+    }
+    .btn-outline-primary:hover{
+    	background-color: white;
+    }
+     .btn-check:checked+.btn-outline-primary{
+         /* background-color: white;
+     }
+    </style>
     <title>Document</title>
 </head>
 <body style="overflow-x: hidden;">
@@ -24,7 +38,35 @@
             <div class="word2">무료로</div>
           <div class="word3">변호사의 답변을 받으세요.</div>
           
+       
+		
         <form action="UserWriteOk.uw" name ="joinForm" method = "post">
+   <div style="position: relative;
+    top: 238px;
+    left: 948px;">
+   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input  value ="이혼" type="radio" class="btn-check" name="field" id="btnradio1" autocomplete="off" >
+  <label class="btn btn-outline-primary" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
+
+  <input value ="상속" type="radio" class="btn-check " name="field" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
+
+  <input value ="성범죄" type="radio" class="btn-check" name="field" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
+  
+  <input value ="건설/부동산"  type="radio" class="btn-check" name="field" id="btnradio4" autocomplete="off" >
+  <label class="btn btn-outline-primary" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
+
+  <input value ="재산범죄" type="radio" class="btn-check" name="field" id="btnradio5" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
+
+  <input value ="기업일반" type="radio" class="btn-check" name="field" id="btnradio6" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
+  
+  <input value ="형사기타" type="radio" class="btn-check" name="field" id="btnradio7" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
+</div> 
+</div>
         <div id="text">
             <div class="text_1">제목</div>
             <div class="text_2">(10자이상&nbsp;&nbsp;)</div>
@@ -57,7 +99,7 @@
            <li>동일/유사한 내용의 게시물을 지속적으로 반복 게재하는 경우</li>
            <li>의미없는 문자의 나열인 경우</li>
        </ul>
-    <button  id="wrtieButton" >
+    <button  id="wrtieButton"  type="button" onclick="join()">
         <div class="register">상담글 등록하기</div>     
     </button>
    </form>
@@ -201,6 +243,8 @@
     console.log("들어옴");
  	}
 
+	
+	
 </script>
 </html>
 

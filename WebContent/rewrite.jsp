@@ -8,20 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>글 수정하기</title>
+  
     <link rel="stylesheet" href="assets/css/rewrite.css">
+      
 </head>
 <body>
 
     <nav class="header-nav directive">
         <a class ="left" href="LawKnowMainPage.jsp">
-            <img  class = "lefthwa" src = "assets/css/img/왼화살jpg.jpg">
+            <img  class = "lefthwa" src = "assets/img/왼화살jpg.jpg">
         </a>
         <h3 class="title">
             <a class = "maintitles">상담글 수정하기</a>
         </h3>
     </nav>
 
-
+	<form action ="UserWriteUpdateOk.uw" method ="post" name ="joinForm">
+	
+	
+	
+	
     <div class="board_wrap">
         <div class="board_title">
             <strong>글 수정하기</strong>
@@ -32,24 +38,55 @@
                 <div class="title">
                     <dl>
                         <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목을 입력해주세요" maxlength="30" class="DOC_TEXT"></dd>
+                        <dd><input name="title" type="text" placeholder="제목을 입력해주세요" maxlength="30" class="DOC_TEXT"></dd>
                         <div><span style="color:#aaa;" id="counter">(0 / 최대 200자)</span></div>
                     </dl>
                 </div>
              
                 <div class="cont">
-                    <textarea placeholder="내용을  입력해주세요" id="test" name="test"></textarea>
+                    <textarea placeholder="내용을  입력해주세요" id="test" name="content"></textarea>
                    <div id="test_cnt" style="height: 50px;font-size: 17px;">
                    (0 / 300)
                    </div>
                 </div>
             </div>
             <div class="bt_wrap">
-                <a href="" class="on">수정</a>
-                <a href="">취소</a>
+             <button  id="wrtieButton"  type="button" onclick="join()" style="width: 100px; height: 45px;">
+        	<div class="register"><a>수정</a></div>     
+  		  	</button>
+                <!-- <input type="button"><a href="" class="on">수정</a> -->
+                <button style="width: 100px; height: 45px;"><a href="LawKnowMainPage.jsp">취소</a></button>
             </div>
         </div>
     </div>
+    
+    <div >
+   <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="position: relative;
+    top: -637px;
+    left: 441px;
+    font-size: 20px;">
+  <input  value ="이혼" type="radio" class="btn-check" name="field" id="btnradio1" autocomplete="off" >
+  <label class="btn btn-outline-primary" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
+
+  <input value ="상속" type="radio" class="btn-check " name="field" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
+
+  <input value ="성범죄" type="radio" class="btn-check" name="field" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
+  
+  <input value ="건설/부동산"  type="radio" class="btn-check" name="field" id="btnradio4" autocomplete="off" >
+  <label class="btn btn-outline-primary" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
+
+  <input value ="재산범죄" type="radio" class="btn-check" name="field" id="btnradio5" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
+
+  <input value ="기업일반" type="radio" class="btn-check" name="field" id="btnradio6" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
+  
+  <input value ="형사기타" type="radio" class="btn-check" name="field" id="btnradio7" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
+</div>  
+    </form>
 
 
 
@@ -135,7 +172,7 @@
         </div>
         </footer>
 
-
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -161,6 +198,10 @@ $(document).ready(function() {
     });
 });
  
+function join(){
+    joinForm.submit();
+    alert("글 수정완료");
+ 	}
  
  </script>
 </html>

@@ -24,8 +24,8 @@ public class UserWriteDAO {
 	}
 	
 	//의뢰인 글 수정
-	public int userWriteUpdate(UserWriteVO userWriteVO) {
-		return sqlSession.update("UserWrite.userWriteUpdate", userWriteVO);
+	public int userWriteUpdate(int userWriteNum) {
+		return sqlSession.update("UserWrite.userWriteUpdate", userWriteNum);
 	}
 	
 	//의뢰인 글 작성

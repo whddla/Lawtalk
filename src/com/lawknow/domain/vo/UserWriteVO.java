@@ -5,7 +5,7 @@ public class UserWriteVO {
 		private int userWriteNum;
 		private int requestNum;
 		private int userNum;
-		private int field;
+		private String field;
 		private String title;
 		private String content;
 		private String writeDate;
@@ -60,11 +60,11 @@ public class UserWriteVO {
 			this.writeDate = writeDate;
 		}
 
-		public int getField() {
+		public String getField() {
 			return field;
 		}
 		
-		public void setField(int field) {
+		public void setField(String field) {
 			this.field = field;
 		}
 	
