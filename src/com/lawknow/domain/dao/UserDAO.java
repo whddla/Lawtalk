@@ -35,6 +35,7 @@ public class UserDAO {
 	
 	//아이디 중복검사
 	public boolean checkId(String userId) {
+		System.out.println(userId);
 		return (Integer)sqlSession.selectOne("User.checkId", userId) == 1;
 	}
 	//계정 탈퇴	
