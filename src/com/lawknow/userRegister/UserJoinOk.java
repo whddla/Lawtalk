@@ -34,7 +34,7 @@ public class UserJoinOk implements Action{
       req.setAttribute("userList", userDAO.selectUsers());
       
       actionInfo.setRedirect(false);
-      actionInfo.setPath("/Success.jsp");
+      actionInfo.setPath("/joinSuccess.jsp");
       
       
       return actionInfo;

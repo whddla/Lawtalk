@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Base64;
 import java.util.HashMap;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -21,34 +22,46 @@ public class UserLoginOk {
 		UserDAO userDAO = new UserDAO();
 		String userId = req.getParameter("userId");
 		String userPw = req.getParameter("userPw");
+		String autoLogin = req.getParameter("autoLogin");
 		int userNum = 0;
 		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
 		System.out.println("거의다왔어");
 		userMap.put("userId", userId);
 		userMap.put("userPw", userPw);
 		System.out.println(userPw);
+		userNum = userDAO.loginOk(userMap);
 		
-		try {
-			System.out.println(userMap);
-//			로그인 실패시, null들어온다!
-//			그래서 int로 못바꾸니까 Exception 뜸!
-			userNum = userDAO.loginOk(userMap);
-			System.out.println(userNum);
-			System.out.println("성공");
-			//여기 밑으로 내려오는 건 로그인 성공 시에만 가능
-			session.setAttribute("userNum", userNum);
-				//세션 초기화
-//			session.invalidate();
-		} catch (Exception e) {
-			//로그인 실패
-			System.out.println("로그인 실패");
-			actionInfo.setRedirect(false);
-			actionInfo.setPath("/login.jsp");
-		}
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/loginSuccess.jsp");
-		
-		return actionInfo;
+		 if(autoLogin != null) {
+	            //아이디, 비밀번호, 자동로그인 체크박스를 쿠키에 저장
+	            Cookie cookieId = new Cookie("userId", userId);
+	            Cookie cookiePw = new Cookie("userPw", userPw);
+	            Cookie cookieAutoLogin = new Cookie("autoLogin", "autoLogin");
+	            
+	            cookieId.setMaxAge(60*60*24*365);
+	            cookiePw.setMaxAge(60*60*24*365);
+	            cookieAutoLogin.setMaxAge(60*60*24*365);
+	            
+	            resp.addCookie(cookieId);
+	            resp.addCookie(cookiePw);
+	            resp.addCookie(cookieAutoLogin);
+	            
+	         }else {
+	            //자동 로그인 해제 시 기존 쿠키 삭제
+	            if(req.getHeader("Cookie") != null) {
+	               Cookie[] cookies =req.getCookies();
+	               for(Cookie cookie : cookies) {
+	                  cookie.setMaxAge(0);
+	                  resp.addCookie(cookie);
+	               }
+	            }
+	         }
+	         
+	         actionInfo.setPath("/kovengerss/UserLogin.ul");
+	         
+	      actionInfo.setRedirect(false);
+	      
+	      return actionInfo;
+	   }
 	}
 
-}
+

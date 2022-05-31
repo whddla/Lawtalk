@@ -183,9 +183,7 @@
 <script>
 
 
-let check = false;
-
-function checkId(userId){
+function checkId(){
 	$.ajax({
 		url: "/kovengerss/UserCheckIdOk.ul",
 		type: "get",
@@ -193,41 +191,25 @@ function checkId(userId){
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function(result){
-			const $result = $("P#result");
-			if(result.result == "success"){
-				$result.text("사용가능한 아이디입니다.");
-				$result.css("color", "rgb(99, 193, 76);");
-				check = true;
+			if(result.check ==1){
+				console.log(result);
+				$("P#result").text("중복된 아이디입니다.");
 			}else{
-				$result.text("중복된 아이디입니다.");
-				$result.css("color", "red");
-				check = false;
+				$("P#result").text("사용가능한 아이디입니다.");
 			}
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
 		}
 	});
 }
 
-
-$("input#userId").keyup(function(){
-	checkId($(this).val());
-})
-
-
 function join(){
-	
-	if(!check){
-		alert("아이디를 다시 확인해주세요.");
-		return;
-	}
-
-	if(!$all.is(":checked")){
-		alert("약관 동의가 필요합니다.");
-		return;
-	}
-	
 	joinForm.submit();
 }
-
 
     var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
     var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
