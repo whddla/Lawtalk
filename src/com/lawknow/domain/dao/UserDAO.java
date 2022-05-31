@@ -44,8 +44,8 @@ public class UserDAO {
 	}
 	
 	//계정 탈퇴	
-	public boolean UserdeleteAccount(String userId) {
-		return (Integer)sqlSession.delete("User.UserdeleteAccount", userId) == 1;
+	public boolean UserdeleteAccount(int userNum) {
+		return (Integer)sqlSession.delete("User.UserdeleteAccount", userNum) == 1;
 	}
 		
 	//회원정보 수정

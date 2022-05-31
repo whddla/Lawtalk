@@ -28,7 +28,7 @@ public class UserLoginFrontController extends HttpServlet{
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("JoinOk.ul")) {
-			actionInfo = new UserJoinOk().execute(req, resp);
+//			actionInfo = new UserJoinOk().execute(req, resp);
 			
 		} else if(command.equals("join.ul")) {
 			actionInfo = new ActionInfo();
@@ -38,10 +38,22 @@ public class UserLoginFrontController extends HttpServlet{
 			new UserCheckIdOk().execute(req, resp);
 		} else if(command.equals("UserLoginOk.ul")) {
 			actionInfo = new UserLoginOk().execute(req, resp);
-		} else if(command.equals("pwChange.ul")){
-			actionInfo = new PwChange().execute(req, resp);
-		}else if(command.equals("Clientwithdrawal.ul")) {
-			actionInfo = new UserDeleteAccount().execute(req, resp);
+		} else if(command.equals("UserLogin.ul")) {
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/login.jsp");
+		} else if(command.equals("PwChange.ul")){
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/pwChange.jsp");
+		} else if(command.equals("pwChangeOk.ul")){
+			actionInfo = new PwChangeOk().execute(req, resp);
+		}else if(command.equals("Clientwithdrawal.ul")){
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/Clientwithdrawal.jsp");
+		}else if(command.equals("ClientwithdrawalOk.ul")) {
+			actionInfo = new UserDeleteAccountOk().execute(req, resp);
 		}
 		  else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

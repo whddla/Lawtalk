@@ -11,7 +11,7 @@ import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class PwChange implements Action {
+public class PwChangeOk implements Action {
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -21,27 +21,19 @@ public class PwChange implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = new UserVO();
-		int num = 2;
-		
 		
 		String newPw = req.getParameter("newPw");
 		
-//		int userNum = (int)session.getAttribute("userNum");
+		int userNum = (int)session.getAttribute("userNum");
 		
-//		userVO.setUserNum(num);
-		
-		userVO.setUserNum(2);
-//		userVO.setUserNum(userNum);
+		userVO.setUserNum(userNum);
 		userVO.setUserPw(newPw);
-		
 		userDAO.PwChange(userVO);
 		
-		req.setAttribute("userPw", userDAO.PwChange(userVO));
-		
-		
+		req.setAttribute("checkPw", userDAO.PwChange(userVO));
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/pwChange.jsp");
 		
 		return actionInfo;
 	}
