@@ -32,7 +32,9 @@ public class LawyerCommentOk implements Action{
 		
 		
 		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
+		
 		req.setAttribute("lawyername", lawyerCommentVO.getLawyerName());
+		req.setAttribute("lawyerwritenum", lawyerCommentVO.getLawyerWriteNum());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/answer_page.jsp");

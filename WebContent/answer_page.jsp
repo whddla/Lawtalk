@@ -15,9 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/answer_page.css">
 <title>로노 | 답변</title>
+ <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
-
 
 
 
@@ -208,7 +208,7 @@
 										</div>
 									
 									
-										<button class="answer-button">답변등록</button>
+										<button class="answer-button" id="click">답변등록</button>
 								</form>								
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
@@ -259,7 +259,11 @@
 								
 								<hr>
 								
-								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
+								
+								<!-- 여기 부터 답글 등록 -->
+								<c:if test ="${empty lawyercontent}"></c:if>
+								<c:if test ="${not empty lawyercontent}">
+								<div class="a-card-question-list" id="jstest">  							
 									<aside class="a-card-aside-card">
 										<div class="a-wrapper">
 											<div class="badge">
@@ -289,6 +293,7 @@
 										</div>
 									</div>
 								</div>
+								</c:if>
 								<!--=======  -->
 							</div>
 						</div>
@@ -296,11 +301,18 @@
 		</section>
 		</div>
 		
-		
-		
+		<%-- <c:if test ="${lawyerwritenum}"/> --%>
 		
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 <script>
+
+
+$("#jstest").after("<h4>${lawyercontent}</h4>");
+
+
+
+
+
 </script>
 </html>
