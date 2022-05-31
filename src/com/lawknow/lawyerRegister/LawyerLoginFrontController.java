@@ -39,10 +39,9 @@ import com.lawyer.action.ActionInfo;
 				new LawyerCheckIdOk().execute(req, resp);
 			} else if(command.equals("LawyerLoginOk.ll")) {
 				actionInfo = new LawyerLoginOk().execute(req, resp);
-			} else {
-				// 404 일 때 출력할 에러 페이지 경로 작성
+			} else if(command.equals("LawyerLogin.ll")){
+				actionInfo = new LawyerLogin().execute(req, resp);
 			}
-			
 			
 			if(actionInfo != null) {
 				if(actionInfo.isRedirect()) {

@@ -26,9 +26,11 @@ public class UserLoginFrontController extends HttpServlet{
 		String requestURL = req.getRequestURI();
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
+		System.out.println(command);
 		
 		if(command.equals("JoinOk.ul")) {
 			actionInfo = new UserJoinOk().execute(req, resp);
+			
 		} else if(command.equals("join.ul")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
@@ -38,9 +40,7 @@ public class UserLoginFrontController extends HttpServlet{
 		} else if(command.equals("UserLoginOk.ul")) {
 			actionInfo = new UserLoginOk().execute(req, resp);
 		} else if(command.equals("UserLogin.ul")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(false);
-			actionInfo.setPath("/login.jsp");
+			actionInfo = new UserLogin().execute(req, resp);
 		} else if(command.equals("PwChange.ul")){
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);

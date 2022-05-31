@@ -18,8 +18,8 @@ public class UserDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	//로그인 확인
-	public Integer loginOk(HashMap<String, String> userMap) {
-		System.out.println("나 왔엉");
+	public int loginOk(HashMap<String, String> userMap) {
+		System.out.println("다오 등장");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
