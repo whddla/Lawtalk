@@ -18,8 +18,8 @@ public class UserDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	//로그인 확인
-	public int loginOk(HashMap<String, String> userMap) {
-		System.out.println("다오 등장");
+	public Integer loginOk(HashMap<String, String> userMap) {
+		System.out.println("나 왔엉");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
@@ -49,9 +49,9 @@ public class UserDAO {
 		return (Integer)sqlSession.delete("User.UserdeleteAccount", userNum) == 1;
 	}
 		
-	//회원정보 수정
-	public int updateAccount(UserVO userVO) {
-		return sqlSession.update("userRegister.updateAccount", userVO);
+	//이메일 수정
+	public boolean UserEmailUpdate(UserVO userVO) {
+		return (Integer)sqlSession.update("User.UserEmailUpdate", userVO) == 1;
 	}
 	
 	//회원정보 가져오기
@@ -59,4 +59,10 @@ public class UserDAO {
 		return sqlSession.selectList("userRegister.getUserInfo", userVO);
 	}
 	
+	//현재 비밀번호 가져오기
+	public boolean UserPwcheck(UserVO userVO) {
+		return (Integer)sqlSession.selectOne("User.UserPwcheck", userVO) == 1;
+	}
+	
 }
+

@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.lawknow.domain.vo.LawyerVO;
+import com.lawknow.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
 
 public class LawyerDAO {
@@ -36,5 +37,10 @@ public class LawyerDAO {
 	//변호사 리스트
 	public List<LawyerVO> selectLawyers(){
 		return sqlSession.selectList("Lawyer.selectLawyers");
+	}
+	
+	//비밀번호 변경
+	public boolean LawyerPwChange(LawyerVO lawyerVO) {
+		return sqlSession.update("Lawyer.LawyerPwChange", lawyerVO) == 1;
 	}
 }

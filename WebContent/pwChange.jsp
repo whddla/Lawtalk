@@ -62,6 +62,19 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 let checkPw = "${checkPw}";
+let oldPwCheck = "${oldPwCheck}";
+const oldPw = ${"#accout-pw"};
+
+
+	oldPw.on("keyup", function(){
+		if(oldPwCheck){
+			$(".pw-error").text("현재 비밀번호가 같습니다.");
+		}else{
+			$(".pw-error").text("비밀번호가 틀립니다.");
+		}
+	});
+
+
 if(checkPw){
 	alert("비밀번호 변경 완료");
 }

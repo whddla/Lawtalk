@@ -1,4 +1,4 @@
-package com.lawknow.userRegister;
+package com.lawknow.lawyerRegister;
 
 import java.io.IOException;
 
@@ -11,10 +11,11 @@ import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class PwChangeOk implements Action {
-	
+public class LawyerPwChangeOk implements Action{
+
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		
 		req.setCharacterEncoding("UTF-8");
 		
 		HttpSession session = req.getSession();
@@ -23,18 +24,11 @@ public class PwChangeOk implements Action {
 		UserVO userVO = new UserVO();
 		
 		String newPw = req.getParameter("newPw");
-		int userNum = (int)session.getAttribute("userNum");
-		
-		userVO.setUserNum(userNum);
-		userVO.setUserPw(newPw);
-
-		boolean checkPw = userDAO.PwChange(userVO);
-		
-		req.setAttribute("checkPw", checkPw);
+		String oldPw = req.getParameter("oldPw");
+		int lawyerNum = (int)session.getAttribute("lawyerNum");
+		String lawyerrPw = (String)session.getAttribute("lawyerPw");
 		
 		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/pwChange.jsp");
 		
 		return actionInfo;
 	}
