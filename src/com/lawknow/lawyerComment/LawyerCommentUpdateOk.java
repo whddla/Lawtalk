@@ -26,12 +26,15 @@ public class LawyerCommentUpdateOk implements Action {
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		
+		req.setAttribute("lawyerUpdateTitle",lawyerCommentVO.getTitle());
+		req.setAttribute("lawyerUpdatecontent",lawyerCommentVO.getContent());
+		
 		lawyerCommentDAO.commentUpdate(lawyerCommentVO);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/mycounsel2.jsp");
 		
-		return null;
+		return actionInfo;
 	}
 
 }
