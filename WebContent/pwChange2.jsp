@@ -64,8 +64,8 @@
 	function inchk(f){
 		if(f.newPw.value != f.newPw2.value){
 			alert("변경 비밀번호 와 변경 비밀번호 재입력이 다릅니다.");
-			f.newPw2.value=""; 
-			f.newPw2.focus(); 
+			f.newPw2.value=""; //chgpass2 다시입력받을수 있도록지워주고
+			f.newPw2.focus(); //chgpass2에 커서를 클릭하도록 해줌
 			return false;
 		}
 		return true;

@@ -38,7 +38,12 @@ public class UserLoginFrontController extends HttpServlet{
 			new UserCheckIdOk().execute(req, resp);
 		} else if(command.equals("UserLoginOk.ul")) {
 			actionInfo = new UserLoginOk().execute(req, resp);
-		} else {
+		} else if(command.equals("pwChange.ul")){
+			actionInfo = new PwChange().execute(req, resp);
+		}else if(command.equals("Clientwithdrawal.ul")) {
+			actionInfo = new UserDeleteAccount().execute(req, resp);
+		}
+		  else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
 		

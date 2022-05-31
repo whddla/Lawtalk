@@ -34,7 +34,7 @@ public class UserRegisterController extends HttpServlet {
           actionInfo.setPath(req.getContextPath() + "/client_login.jsp");
 
        }else if(command.equals("UserDeleteAccountOk.urc")) {
-    	   actionInfo = new UserDeleteAccountOk().execute(req, resp);
+    	   actionInfo = new UserDeleteAccount().execute(req, resp);
        }else if(command.equals("UserCheckId.urc")) {
     	   actionInfo = new UserCheckIdOk().execute(req, resp);
        }else if(command.equals("UserUpdateAccount.urc")) {//회원 정보 조회
@@ -43,7 +43,7 @@ public class UserRegisterController extends HttpServlet {
            actionInfo.setPath(req.getContextPath() + "/privacyPage.jsp");
 
        }else if(command.equals("UserDeleteAccountOk.urc")) { //계정삭제 
-          actionInfo = new UserDeleteAccountOk().execute(req, resp);
+          actionInfo = new UserDeleteAccount().execute(req, resp);
        }else if(command.equals("UserCheckIdOk.urc")) { // 아이디  중복 검사
           actionInfo = new UserCheckIdOk().execute(req, resp);
        }else if(command.equals("UserUpdateAccountOk.urc")) {//회원 정보 수정
