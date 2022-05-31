@@ -4,11 +4,19 @@
 
 <mapper namespace="LawyerComment"> 
 	 <!--변호사 글 작성 -->
-   <insert id ="lawyerWirteNum" parameterType="LawyerCommentVO"> <!-- controller에서는 소문자임 -->
-   insert into  tbl_lawyer_comment
-   (title, content, write_date)
-   values(#{title},#{titleContent},#{writeDate});
+   <insert id ="commentWrite" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
+   insert into tbl_lawyer_comment
+   (content)
+   values(#{content})
    </insert>
+   
+   	 <!--변호사 글 불러오기 -->
+   <select id ="commentView" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
+   select content
+   from tbl_lawyer_content
+   where lawyer_write_num = #{lawyer_write_num}
+   </select>
+   
    <!--글 삭제  -->
    <delete id ="commentDelete" parameterType ="LawyerCommentVO">
       delete from tbl_lawyer_comment
@@ -18,7 +26,7 @@
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
       update tbl_lawyer_comment
       set  title=#{title}, content=#{content}, write_date=#{writeDate}
-      where lawyer_write_num=#{lawyerWriteNum};
+      where lawyer_write_num=#{lawyerWriteNum}
    </update>
    <!-- 사건 번호 조회-->
    <select id="requestNum" parameterType ="_int" resultType="int">

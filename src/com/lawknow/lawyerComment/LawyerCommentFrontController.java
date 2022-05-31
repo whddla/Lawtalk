@@ -28,12 +28,13 @@ public class LawyerCommentFrontController extends HttpServlet {
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
        ActionInfo actionInfo = null;
        
-       if(command.equals("LawyerCommentOK.lcc")) {
+       if(command.equals("LawyerCommentOk.lcc")) {
           actionInfo = new LawyerCommentOk().execute(req, resp);
-       } else if(command.equals("LawyerComment.lcc")) { //변호사 글  작성
+          System.out.println("난 프론트컨트롤러");
+       } else if(command.equals("Comment.lcc")) { //변호사 글  작성
           actionInfo = new ActionInfo();
           actionInfo.setRedirect(false);
-          actionInfo.setPath("/LawKnowMain.jsp");
+          actionInfo.setPath("/lawyerCommentSuccess.jsp");
        }else if(command.equals("LawyerCommentCountOk.lcc")) { // 변호사 답변한 글 갯수
           actionInfo = new LawyerCommentCountOk().execute(req, resp);
        } else if(command.equals("LawyerCommentUpdateOk.lcc")) { // 변호사 글 수정

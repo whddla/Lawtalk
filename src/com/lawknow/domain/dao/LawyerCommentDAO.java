@@ -1,6 +1,7 @@
 package com.lawknow.domain.dao;
 
 import java.sql.Date;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,9 +17,20 @@ public class LawyerCommentDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	 
+	
+//	//글 목록
+//	public List<LawyerCommentVO> selectComment(){
+//		return sqlSession.selectList("LawyerComment.selectComment");
+//	}
+	
 	//변호사 글 작성
-	public void commentWrite(LawyerCommentVO lawyer) {
-		sqlSession.insert("Lawyer.commentWrite", lawyer); //lawyercommentVO??
+	public void commentWrite(LawyerCommentVO lawyerCommentVO) {
+		sqlSession.insert("LawyerComment.commentWrite", lawyerCommentVO); 
+	}
+	
+	//변호사 글 불러오기
+	public void commentView(LawyerCommentVO lawyerCommentVO) {
+		sqlSession.selectOne("LawyerComment.commentView",lawyerCommentVO); 
 	}
 	
 	//변호사 글 수정

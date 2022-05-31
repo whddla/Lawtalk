@@ -4,11 +4,29 @@ public class LawyerCommentVO {
 		private int lawyerWriteNum;
 		private int requestNum;
 		private int lawyerNum;
+		private String field;
 		private String title;
 		private String content;
 		private String writeDate;
+		private String lawyerName;
+
+		public String getLawyerName() {
+			return lawyerName;
+		}
+
+		public void setLawyerName(String lawyerName) {
+			this.lawyerName = lawyerName;
+		}
 
 		public LawyerCommentVO() {;}
+
+		public String getField() {
+			return field;
+		}
+
+		public void setField(String field) {
+			this.field = field;
+		}
 
 		public int getLawyerWriteNum() {
 			return lawyerWriteNum;
@@ -57,7 +75,8 @@ public class LawyerCommentVO {
 		public void setWriteDate(String writeDate) {
 			this.writeDate = writeDate;
 		}
-
+		
+	
 		
 		
 }
