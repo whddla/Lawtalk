@@ -21,12 +21,17 @@ public class PwChange implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = new UserVO();
-		int num = 1;
+		int num = 2;
 		
 		
 		String newPw = req.getParameter("newPw");
 		
-		userVO.setUserNum(num);
+//		int userNum = (int)session.getAttribute("userNum");
+		
+//		userVO.setUserNum(num);
+		
+		userVO.setUserNum(2);
+//		userVO.setUserNum(userNum);
 		userVO.setUserPw(newPw);
 		
 		userDAO.PwChange(userVO);
