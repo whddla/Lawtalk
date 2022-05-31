@@ -19,8 +19,8 @@ public class UserWriteDAO {
 	}
 
 	//의뢰인 글 삭제
-	public void userDelete(UserWriteVO userWriteVO)  {
-		sqlSession.delete("UserWrite.userDelete", userWriteVO);
+	public void userDelete(int userWriteNum)  {
+		sqlSession.delete("UserWrite.userDelete", userWriteNum);
 	}
 	
 	//의뢰인 글 수정

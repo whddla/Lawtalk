@@ -20,6 +20,11 @@
     position: relative;
     bottom:146px;
     } */
+    .mycounsel{
+        width: 100%;
+        position: relative;
+    left: 1px;
+    }
     .jstlBigBox{
     display: flex;
     position: relative;
@@ -31,17 +36,17 @@
        text-align: left;
     position: relative;
     bottom: 186px;
-    width: 709px;
+	width: 836px;;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    left: 122px;
+    left: 55px;
     color: black;
     }
     .updateButton{
     position: relative;
     bottom: 252px;
-    right: -397px;
+    right: -314px;
     color:black;
     }
     .updateButton a{
@@ -51,6 +56,19 @@
     .updateButton a:hover{
     	color:black;
     }
+    .deleteButton{
+    position: relative;
+    top: -252px;
+    left: 315px;
+    }
+    .deleteButton a{
+    	text-decoration:none;
+    	color:black;
+    }
+    .deleteButton a:hover{
+    	color:black;
+    }
+    
     </style>
     <title>mycounsel</title>
     
@@ -88,20 +106,25 @@
                 </div>
             </div>
             <section class="qna-list-contents">
+            
                 <div class="historybox">
-                    <h2 class="qna-list-empty-title">
+                    <h2 class="qna-list-empty-title" style ="font-size: 21px;">
                     <!--jstl-->
                     <!-- userwrite의 제목과 내용  -->
                     <c:if test ="${empty userWriteTitle and empty userUpdateTitle}">
                         작성한 상담글이 없습니다.
                      </c:if>
+                     
                      <c:if test ="${not empty userWriteTitle}">
+                     <c:forEach  var ="writeLists" items="${writeList}">
                     <div style="display:flex;" class="jstlBigBox">
                      <div class = "seedivOne" style="width:500px"><c:out value=""/>질문 분야 : ${field}</div>
                      <div class = "seedivTwo"><c:out value=""/>제목 :${userWriteTitle}</div>
                     </div>
-                    <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div>
-                    <button type="button" class="btn btn-outline-secondary updateButton"><a href="rewrite.jsp">글수정하기</a></button>
+                    <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div><!-- rewrite.jsp -->
+                      <button type="button" class="btn btn-outline-secondary updateButton"><a href="UserWriteUpdate.uw">글수정하기</a></button>
+             		<button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
+             		 </c:forEach> 
              		</c:if>
              		
              		
@@ -111,11 +134,15 @@
                      <div class = "seedivTwo"><c:out value=""/>제목 :${userUpdateTitle}</div>
                     </div>
                     <div class = "seedivThree"><c:out value=""/>${userUpdatecontent}</div>
+                    
                     <button type="button" class="btn btn-outline-secondary updateButton"><a href="rewrite.jsp">글수정하기</a></button>
+                    <button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
+                    
              		</c:if>
              		<!--jstl-->
                     </h2>
                 </div>
+               
                 <div class="bottombox">
                     <h5 class="lt-counsel">
                         상담을 시작하세요!
@@ -243,9 +270,57 @@
     </a>
      </button>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
+<script>
 
-<script></script>
+
+
+/* $(".historybox").after( '<div class="historybox">sd</div>' ); */
+        
+
+
+ /*  $( document ).ready( function() {
+	        $( '.historybox' ).append( ' <div class="historybox">
+            <h2 class="qna-list-empty-title" style ="font-size: 21px;">
+            <!--jstl-->
+            <!-- userwrite의 제목과 내용  -->
+            <c:if test ="${empty userWriteTitle and empty userUpdateTitle}">
+                작성한 상담글이 없습니다.
+             </c:if>
+             
+             <c:if test ="${not empty userWriteTitle}">
+             <c:forEach  var ="writeLists" items="${writeList}">
+            <div style="display:flex;" class="jstlBigBox">
+             <div class = "seedivOne" style="width:500px"><c:out value=""/>질문 분야 : ${field}</div>
+             <div class = "seedivTwo"><c:out value=""/>제목 :${userWriteTitle}</div>
+            </div>
+            <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div>
+              <button type="button" class="btn btn-outline-secondary updateButton"><a href="rewrite.jsp">글수정하기</a></button>
+     		<button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
+     		 </c:forEach> 
+     		</c:if>
+     		
+     		
+     		<c:if test ="${not empty userUpdateTitle }">
+            <div style="display:flex;" class="jstlBigBox">
+             <div class = "seedivOne" style="width:500px"><c:out value=""/>질문 분야 : ${userUpdateField}</div>
+             <div class = "seedivTwo"><c:out value=""/>제목 :${userUpdateTitle}</div>
+            </div>
+            <div class = "seedivThree"><c:out value=""/>${userUpdatecontent}</div>
+            
+            <button type="button" class="btn btn-outline-secondary updateButton"><a href="rewrite.jsp">글수정하기</a></button>
+            <button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
+            
+     		</c:if>
+     		<!--jstl-->
+            </h2>
+        </div>' );    
+	 } ); */
+
+
+
+</script>
 </html>
 
 

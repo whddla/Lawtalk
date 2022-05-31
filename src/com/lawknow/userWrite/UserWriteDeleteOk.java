@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.lawknow.domain.dao.UserWriteDAO;
 import com.lawknow.domain.vo.UserVO;
@@ -15,24 +16,24 @@ public class UserWriteDeleteOk implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		System.out.println("나는 딜리트 컨트롤러");
 		req.setCharacterEncoding("UTF-8");
-		
+		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		UserVO userVO = new UserVO();
 		UserWriteVO userWriteVO = new  UserWriteVO();
 		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		
 		/*userWriteVO.setUserWriteNum(req.getParameter("userWriteNum"));*/
 		userWriteVO.setTitle(req.getParameter("title"));
 		userWriteVO.setContent(req.getParameter("content"));
-		userWriteVO.setWriteDate(req.getParameter("writeDate"));// 여기까지 글작성에대한 디비를 가져왔다
 		
-		userWriteDAO.userDelete(userWriteVO);
 		
+		/*userWriteDAO.userDelete(userWriteVO);*/
+		userWriteDAO.userDelete((Integer)session.getAttribute("userWriteNum")); //여기서 쿼리문 실행
 		req.setAttribute("userWriteDeleteNum",userWriteVO.getUserWriteNum());
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/mypage.jsp");
+		actionInfo.setPath("/mycounsel.jsp");
 		
 		return actionInfo;
 	}

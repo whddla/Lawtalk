@@ -32,7 +32,7 @@ public class UserWriteOk implements Action {
 		userWriteVO.setContent(req.getParameter("content"));
 		userWriteVO.setField(req.getParameter("field"));
 		/*userWriteVO.setUserNum(userWriteVO.getUserNum());*/
-		userWriteDAO.userWrite(userWriteVO);
+		userWriteDAO.userWrite(userWriteVO);// 메소드 실행
 		
 		req.setAttribute("field", userWriteVO.getField());
 		req.setAttribute("userWriteTitle",userWriteVO.getTitle());
@@ -42,18 +42,18 @@ public class UserWriteOk implements Action {
 		
 		session.getAttribute("userNum");  // session에있는 값 가져옴
 		
-		req.setAttribute("userWriteCount", userWriteDAO.countWrite());
+		/*req.setAttribute("userWriteCount", userWriteDAO.countWrite());*/ //이건 내가 왜넣은거지 갯수인데
 		
-		userWriteNum = userWriteVO.getUserWriteNum();
+		userWriteNum = userWriteVO.getUserWriteNum(); // 이게맞나
 		System.out.println(" 숫자 " +userWriteNum);
-		/*if(userWriteNum!=0) {*/
-			session.setAttribute("userWriteNum", userWriteNum); // 로그인된것을 session에 담아둠 -- > 어떤 컨틀롤러에서도 다 쓸수 있다 
+		/*if(userWriteNum>0) { // unsigned 해줘서
+*/			session.setAttribute("userWriteNum", userWriteNum); // 로그인된것을 session에 담아둠 -- > 어떤 컨틀롤러에서도 다 쓸수 있다 
 																					//session.getAttribute 로 다른 컨틀롤러로 쓸 수 있다
 																				// 파라미터를 보내지 않아도 어디에서나 쓸 수 있다.
 			
 			//세션초기화
 			/*session.invalidate();*/
-		/*}*/
+/*		}*/
 		
 		
 		

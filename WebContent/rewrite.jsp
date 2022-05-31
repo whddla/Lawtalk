@@ -180,7 +180,7 @@ $('.DOC_TEXT').keyup(function (e){
     var content = $(this).val();
     $('#counter').html("("+content.length+" / 최대 200자)");    //글자수 실시간 카운팅
     if (content.length > 20){
-        alert("제목은  최대 30자까지 입력 가능합니다.");
+        alert("제목은  최대 20자까지 입력 가능합니다.");
         $(this).val(content.substring(0, 20));
         $('#counter').html("(200 / 최대 200자)");
     }
@@ -191,7 +191,7 @@ $(document).ready(function() {
     $('#test').on('keyup', function() {
         $('#test_cnt').html("("+$(this).val().length+" / 300)");
 
-        if($(this).val().length > 100) {
+        if($(this).val().length > 300) {
             $(this).val($(this).val().substring(0, 100));
             $('#test_cnt').html("(300 / 300)");
         }

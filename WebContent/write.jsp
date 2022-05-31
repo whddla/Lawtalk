@@ -75,10 +75,10 @@
           <div class="text_5">(200자이상&nbsp;&nbsp;)</div>
           <div class="text_6">*</div>    
         </div>   
-            <textarea id="input1" name = "title" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
+            <textarea id="input1"  class ="DOC_TEXT" name = "title" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
             <textarea id="input2" name ="content" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요"></textarea>
           
-            <input type="checkbox" id="checkbox1">
+            <input type="checkbox" id="checkbox1" onclick ="getBlack()">
             <label for="" id="label1">안내사항을 모두 확인했으며, 동의합니다.</label>
             
         
@@ -100,7 +100,7 @@
            <li>의미없는 문자의 나열인 경우</li>
        </ul>
     <button  id="wrtieButton"  type="button" onclick="join()">
-        <div class="register">상담글 등록하기</div>     
+        <div class="register" id ="blackBox">상담글 등록하기</div>     
     </button>
    </form>
     </div>
@@ -237,13 +237,49 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+	
+
 	function join(){
     joinForm.submit();
     console.log("들어옴");
  	}
 
+	/* function getBlack(){
+		console.log("sadasd")
+		const checkbox1 = document.getElementById("checkbox1");
+		const blackBox = document.getElementById("blackBox");
+		
+		if(checkbox1.checked){
+			blackBox.style.background-color= black;
+			console.log("ssssssssssssssss")
+		}
+		
+	} */
 	
+	
+	jQuery(document).ready(function(){
+		jQuery('#checkbox1').on('click', function(){
+			if(jQuery('#checkbox1').is(':checked')){
+				jQuery('#blackBox').css('background-color', 'black');
+			}
+			else{
+				jQuery('#blackBox').css('background-color', '#cfcfcf');
+			}
+		});
+	});
+	
+	$('.DOC_TEXT').keyup(function (e){
+	    var content = $(this).val();
+	    $('#counter').html("("+content.length+" / 최대 200자)");    //글자수 실시간 카운팅
+	    if (content.length > 20){
+	        alert("제목은  최대 20자까지 입력 가능합니다.");
+	        $(this).val(content.substring(0, 20));
+	        $('#counter').html("(200 / 최대 200자)");
+	    }
+	});
 	
 </script>
 </html>
