@@ -58,7 +58,6 @@ public class UserLoginFrontController extends HttpServlet{
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
 		
-		
 		if(actionInfo != null) {
 			if(actionInfo.isRedirect()) {
 				resp.sendRedirect(actionInfo.getPath());
