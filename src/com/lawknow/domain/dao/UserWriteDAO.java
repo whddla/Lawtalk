@@ -19,27 +19,27 @@ public class UserWriteDAO {
 	}
 
 	//의뢰인 글 삭제
-	public void userDelete(UserWriteVO user)  {
-		sqlSession.delete("UserWrite.userDelete", user);
+	public void userDelete(UserWriteVO userWriteVO)  {
+		sqlSession.delete("UserWrite.userDelete", userWriteVO);
 	}
 	
 	//의뢰인 글 수정
-	public int userWriteUpdate(UserWriteVO user) {
-		return sqlSession.update("UserWrite.userWriteUpdate", user);
+	public int userWriteUpdate(int userWriteNum) {
+		return sqlSession.update("UserWrite.userWriteUpdate", userWriteNum);
 	}
 	
 	//의뢰인 글 작성
-	public void userWirte(UserWriteVO user) {
-		sqlSession.insert("UserWrite.userWrite" , user);
+	public void userWrite(UserWriteVO userWriteVO) {
+		sqlSession.insert("UserWrite.userWrite" , userWriteVO);
 	}
 
 	//사건 번호
-	public int requestNum(UserWriteVO user) {
+	public int requestNum(UserWriteVO userWriteVO) {
 		return sqlSession.selectOne("UserWrite.requestNum");
 	}
 
 	//의뢰인 글 번호
-	public int userWirteNum(UserWriteVO user) {
+	public int userWirteNum(UserWriteVO userWriteVO) {
 		return sqlSession.selectOne("UserWrite.userWriteNum");
 	}
 	
@@ -55,6 +55,10 @@ public class UserWriteDAO {
 	//전체 정보가져오기
 	public List<UserWriteVO> selectUserWrite(){
 		return sqlSession.selectList("UserWrite.selectUserWrite");
+	}
+	
+	public int countWrite() {
+		return sqlSession.selectOne("UserWrite.countWrite");
 	}
 	
 }

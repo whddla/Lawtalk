@@ -3,10 +3,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserWrite"> 
-    <insert id ="userWrtie" parameterType="userWriteVO"> 
+    <insert id ="userWrite" parameterType="userWriteVO"> 
       insert into tbl_user_write
-   (title, content, write_date)
-   values(#{title}, #{content}, #{writeDate});
+   		(field,title, content)
+  		 values(#{field},#{title}, #{content})
    </insert>
    
    
@@ -16,7 +16,7 @@
         where user_num = #{userNum}
     </delete>
     <!--작성 글 수정  -->
-    <update id="userWriteUpdate" parameterType ="userWriteVO">
+    <update id="userWriteUpdate" parameterType ="_int">
     update tbl_user_write
     set title=#{title}, content = #{content}
     where user_write_num = #{userWriteNum}
@@ -24,14 +24,14 @@
    
    <!-- requestNum조회  -->
     <select id="requestNum" parameterType ="userWriteVO" resultType="_int">
-        select user_write_num, request_num, title, content, write_date
+        select request_num, title
         from tbl_user_write
         where request_num = #{requestNum}
     </select>
    
    
    <select id ="userWirteNum" parameterType="userWriteVO" resultType="_int">
-      select user_write_num, request_num, title, content, write_date
+   select user_write_num, request_num, title, content, write_date
    from tbl_user_write
    where user_write_num = #{userWriteNum}
    </select> 
@@ -46,6 +46,12 @@
     <select id ="selectUserWrite" resultType = "userWriteVO">
     	select user_write_num, request_num, user_num, title, content, write_date
 		from tbl_user_write
+    </select>
+    
+    <select id= "countWrite" resultType="_int">
+    		select count(request_num)
+			from tbl_user_write
+			where user_num =#{userNum}
     </select>
    
    
