@@ -55,7 +55,7 @@
 	                    </div>
 	                 </div>
 	                 <div class="writeglesigi">
-	                    <img src="assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+	                    <img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
 	                 </div>
 	                    <div class = "menu-items-bottom">
                         <a class ="bottom-inner">
@@ -106,7 +106,7 @@
 				<div class="banner">
 					<div class="container">
 						<div class="image-wrap">
-							<img class="category-image" src="assets/css/img/이혼.jpg">
+							<img class="category-image" src="assets/img/이혼.jpg">
 						</div>
 						<div class="title-wrap">
 							<div class="title">

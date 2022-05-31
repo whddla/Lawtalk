@@ -64,7 +64,7 @@
 	                    </div>
 	                 </div>
 	                 <div class="writeglesigi">
-	                    <img src="assets/css/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
+	                    <img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;>       
 	                 </div>
 	                 <div class = "menu-items-bottom">
                         <a href="http://localhost:9000/kovengerss/compani.jsp" class ="bottom-inner">
@@ -104,8 +104,10 @@
                     </div>
 	           	</div>
 		</div>			
-			<div class = "logo-law">
+			<div class = "logo-law" >
+			<a href="http://localhost:9000/kovengerss/LawKnowMainPage.jsp" style="color: #FF6431">
 				<strong>LAWKNOW</strong>
+			</a>
             </div> 
 		</div>
 		<div class="page-container">
@@ -113,7 +115,7 @@
 				<div class="banner">
 					<div class="container">
 						<div class="image-wrap">
-							<img class="category-image" src="assets/css/img/이혼사진.png">
+							<img class="category-image" src="assets/img/이혼.jpg">
 						</div>
 						<div class="title-wrap">
 							<div class="title">
@@ -169,7 +171,7 @@
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
 										<div class="badge">
-											<img style="width: 21px;" src="assets/css/img/물음표.png">
+											<img style="width: 21px;" src="assets/img/물음표.png">
 											<p class="number">231</p>
 										</div>
 									</div>
@@ -177,7 +179,7 @@
 								<div class="a-card-main">
 									<header class="a-card-header">
 										<h1 class="a-card-header-title">
-											<img class="question-img" src="assets/css/img/questionpng.png">
+											<img class="question-img" src="assets/img/questionpng.png">
 											전남편이 돈을 주지 않고 있습니다. 빨리받는 방법이 있나요? 
 										</h1>
 										<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
