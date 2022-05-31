@@ -23,14 +23,21 @@ public class PwChangeOk implements Action {
 		UserVO userVO = new UserVO();
 		
 		String newPw = req.getParameter("newPw");
-		
+		String oldPw = req.getParameter("oldPw");
 		int userNum = (int)session.getAttribute("userNum");
+		String userPw = (String)session.getAttribute("userPw");
 		
 		userVO.setUserNum(userNum);
 		userVO.setUserPw(newPw);
 		userDAO.PwChange(userVO);
 		
-		req.setAttribute("checkPw", userDAO.PwChange(userVO));
+		if(oldPw != userPw) {
+			req.setAttribute("checkPw", userDAO.PwChange(userVO));
+		}else {
+			req.setAttribute("msg", true);
+		}
+			
+		
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/pwChange.jsp");
