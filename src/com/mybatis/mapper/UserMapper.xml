@@ -24,7 +24,7 @@
 	
 	<!-- 로그인 -->
 	<select id="loginOk" parameterType="map" resultType="int">
-		select count(user_num) from tbl_user_register
+		select user_num from tbl_user_register
 		where user_id = #{userId} and user_pw = #{userPw}
 	</select>
    

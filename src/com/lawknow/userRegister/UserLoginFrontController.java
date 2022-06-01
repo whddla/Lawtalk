@@ -53,12 +53,18 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/Clientwithdrawal.jsp");
-		} else if(command.equals("/UserPwCheckOk.ul")) {
+		} else if(command.equals("UserPwCheckOk.ul")) {
 			actionInfo = new UserPwCheckOk().execute(req, resp) ;
-		} else if(command.equals("/UserPwCheck.ul")) {
+		} else if(command.equals("UserPwCheck.ul")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/pwChange.jsp");
+		} else if(command.equals("UserEmailUpdateOk.ul")) {
+			actionInfo = new UserEmailUpdateOk().execute(req, resp);
+		} else if(command.equals("UserEmailUpdate.ul")) {
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/privacyPage.jsp");
 		}
 		  else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
