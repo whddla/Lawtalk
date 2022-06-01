@@ -27,22 +27,12 @@
     
             <form action="" id="check1">
                 <input type="checkbox" id="check11">
-            </form>
-            <form action="" id="check2">
                 <input type="checkbox" id="check22">
-            </form>
-            <form action="" id="check3">
                 <input type="checkbox" id="check33">
-            </form>
-            <form action="" id="check4">
                 <input type="checkbox" id="check44">
-            </form>
-            <form action="" id="check5">
                 <input type="checkbox" id="check55">
-            </form>
-            <form action="">
                 <textarea style="resize: none;" id="text1" type="text" placeholder="&nbsp;&nbsp;&nbsp;후기를 간단하게 작성해주세요"></textarea>
-            </form>
+           
 
             <div id="bottom"></div>
        </div>
@@ -76,7 +66,7 @@
 
 
     <a href="mycounsel.jsp"><button class="coment">후기 작성하기</button></a>
-
+ </form>
 
     <div id="final"> 
         <div class="last1">공지사항</div>
