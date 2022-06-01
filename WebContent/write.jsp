@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +42,7 @@
        
 		
         <form action="UserWriteOk.uw" name ="joinForm" method = "post">
+        <c:set var="Writelist" value="${userWriteCount}"/>
    <div style="position: relative;
     top: 238px;
     left: 948px;">

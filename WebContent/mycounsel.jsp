@@ -46,7 +46,7 @@
     .updateButton{
     position: relative;
     bottom: 252px;
-    right: -314px;
+    right: -242px;
     color:black;
     }
     .updateButton a{
@@ -59,13 +59,27 @@
     .deleteButton{
     position: relative;
     top: -252px;
-    left: 315px;
+    left: 244px;
     }
     .deleteButton a{
     	text-decoration:none;
     	color:black;
     }
     .deleteButton a:hover{
+    	color:black;
+    }
+    .listButton{
+    position: relative;
+    bottom: 252px;
+    right: -242px;
+    color: black;
+    }
+    
+       .listButton a{
+    	text-decoration:none;
+    	color:black;
+    }
+  		.listButton a:hover{
     	color:black;
     }
     
@@ -86,9 +100,11 @@
         </nav>
         <div class="mycounsel">
             <p class="qna-page-title">
+           <%--  <c:if test ="${userWriteCount=0}">
                 0개의 상담글을 작성하셨습니다.
+                </c:if> --%>
                 <c:if test="${userWriteCount>0}">
-                	<c:out value="${userWriteCount}">개의 상담글을 작성하셨습니다</c:out>
+                	<c:out value="${userWriteCount} 개의 상담글을 작성하셨습니다"></c:out>
                 </c:if>
             </p>
         </div>
@@ -122,6 +138,7 @@
                      <div class = "seedivTwo"><c:out value=""/>제목 :${userWriteTitle}</div>
                     </div>
                     <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div><!-- rewrite.jsp -->
+                    <button type="button" class="btn btn-outline-secondary listButton"><a href="UserWriteListOk.uw">내가 쓴 글 목록</a></button>
                       <button type="button" class="btn btn-outline-secondary updateButton"><a href="UserWriteUpdate.uw">글수정하기</a></button>
              		<button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
              		 </c:forEach> 

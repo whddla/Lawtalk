@@ -44,14 +44,13 @@
     </select>
     
     <select id ="selectUserWrite" resultType = "userWriteVO">
-    	select user_write_num, request_num, user_num, title, content, write_date
+    	select user_write_num, request_num, user_num,field, title, content, write_date
 		from tbl_user_write
     </select>
     
     <select id= "countWrite" resultType="_int">
-    		select count(request_num)
+    		select count(field)
 			from tbl_user_write
-			where user_num =#{userNum}
     </select>
    
    
