@@ -44,10 +44,12 @@ public class UserWriteFrontController extends HttpServlet{
 	       } else if(command.equals("UserWriteDeleteOk.uw")) {// 글 삭제
 	    	   System.out.println("난 delete 프론트 컨트롤러");
 	          actionInfo = new UserWriteDeleteOk().execute(req, resp);
-	       }else if(command.equals("UserRequestNumOk.uw")) {// 번호 조회
-	          actionInfo = new UserRequestNumOk().execute(req, resp);
+	       }else if(command.equals("UserCountWriteOk.uw")) {// 번호 조회
+	          actionInfo = new UserCountWriteOk().execute(req, resp);
 	       }else if(command.equals("UserSelectFieldOk.uw")) {
 	    	   actionInfo = new UserSelectFieldOk().execute(req, resp);
+	       }else if(command.equals("UserWriteListOk.uw")) {
+	    	   actionInfo = new UserWriteListOk().execute(req, resp);
 	       }
 	       else {
 	          // 404 일 때 출력할 에러 페이지 경로 작성
