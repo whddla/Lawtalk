@@ -38,8 +38,8 @@
 	                            			<input type="button" id="userLogin" value="로그인"  class="submit-button">
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
-                                    		<input type="checkbox" id="autoLogin" name="autoLogin" value="autoLogin" >
-                                    			<label for="autoLogin">로그인 상태유지</label>
+                                    		<input type="checkbox" id="saveId" name="saveId" value="saveId" >
+                                    			<label for="saveId">아이디 저장</label>
                                 			</div>
                                 			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
@@ -88,8 +88,8 @@
 	                            			<input type="button" id="lawLogin"  value="로그인"  class="submit-button">
                             		<div class="search-id-password">
                                 		<div class="login-checkbox">
-                                    		<input type="checkbox" id="lawAutoLogin" name="lawAutoLogin" value="lawAutoLogin" >
-                                    			<label for="lawAutoLogin">로그인 상태유지</label>
+                                    		<input type="checkbox" id="lawSaveId" name="lawSaveId" value="lawSaveId" >
+                                    			<label for="lawSaveId">아이디 저장</label>
                                 			</div>
                                 			<a class="find-id-password" href="http://localhost:9000/kovengerss/find_idpw.jsp">
                                     		아이디/비밀번호 찾기
@@ -152,35 +152,27 @@
 	});
 	let userId = "${userId}";
 	let userPw = "${userPw}";
-	let autoLogin = "${autoLogin}";
+	let saveId = "${saveId}";
 
 	//자동 로그인이 이전에 눌러져 있었다면
-	if(autoLogin){
-	   //다시 체크해주고
-	   $("input#autoLogin").prop("checked", true);
-	   //아이디 입력
-	   $("input[name='userId']").val(userId);
-	   //비밀번호 입력
-	   $("input[name='userPw']").val(userPw);
-	   //전송
-	   userForm.submit();
-	}
+	 //아이디 저장버튼이 이전에 눌러져 있었다면
+      if(saveId){
+         //다시 체크해주고
+         $("input#saveId").prop("checked", true);
+         //아이디를 저장했던 아이디로 작성해준다.
+         $("input[name='userId']").val(userId);
+      }
 
 	let lawyerId = "${lawyerId}";
 	let lawyerPw = "${lawyerPw}";
-	let lawAutoLogin = "${lawAutoLogin}";
+	let lawSaveId= "${lawSaveId}";
 
-	//자동 로그인이 이전에 눌러져 있었다면
-	if(lawAutoLogin){
-	   //다시 체크해주고
-	   $("input#lawAutoLogin").prop("checked", true);
-	   //아이디 입력
-	   $("input[name='lawyerId']").val(lawyerId);
-	   //비밀번호 입력
-	   $("input[name='lawyerPw']").val(lawyerPw);
-	   //전송
-	   lawyerForm.submit();
-	}
+	if(saveId){
+        //다시 체크해주고
+        $("input#saveId").prop("checked", true);
+        //아이디를 저장했던 아이디로 작성해준다.
+        $("input[name='lawyerId']").val(lawyerId);
+     }
 	
   const tabList = document.querySelectorAll('.tab_menu .list li');
   

@@ -19,7 +19,7 @@ public class LawyerLogin implements Action {
       //쿠키 검사
       String lawyerId = null;
       String lawyerPw = null;
-      String lawAutoLogin = null;
+      String lawSaveId = null;
       
       String cookieCheck = req.getHeader("Cookie");
       
@@ -33,8 +33,8 @@ public class LawyerLogin implements Action {
             } else if(cookie.getName().equals("lawyerPw")) {
             	lawyerPw = cookie.getValue();
                
-            }else if(cookie.getName().equals("lawAutoLogin")) {
-               lawAutoLogin = cookie.getValue();
+            }else if(cookie.getName().equals("lawSaveId")) {
+            	lawSaveId = cookie.getValue();
                
             }
          }
@@ -42,13 +42,13 @@ public class LawyerLogin implements Action {
       
       req.setAttribute("lawyerId", lawyerId);
       req.setAttribute("lawyerPw", lawyerPw);
-      req.setAttribute("lawAutoLogin", lawAutoLogin);
+      req.setAttribute("lawSaveId", lawSaveId);
       
       System.out.println(lawyerId);
       System.out.println(lawyerPw);
-      System.out.println(lawAutoLogin);
+      System.out.println(lawSaveId);
       
-      actionInfo.setPath("/LawloginSuccess.jsp");
+      actionInfo.setPath("/login.jsp");
       actionInfo.setRedirect(false);
       
       return actionInfo;

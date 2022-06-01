@@ -19,7 +19,7 @@ public class UserLogin implements Action {
       //쿠키 검사
       String userId = null;
       String userPw = null;
-      String autoLogin = null;
+      String saveId = null;
       
       String cookieCheck = req.getHeader("Cookie");
       
@@ -33,8 +33,8 @@ public class UserLogin implements Action {
             } else if(cookie.getName().equals("userPw")) {
                userPw = cookie.getValue();
                
-            }else if(cookie.getName().equals("autoLogin")) {
-               autoLogin = cookie.getValue();
+            }else if(cookie.getName().equals("saveId")) {
+               saveId = cookie.getValue();
                
             }
          }
@@ -42,14 +42,14 @@ public class UserLogin implements Action {
       
       req.setAttribute("userId", userId);
       req.setAttribute("userPw", userPw);
-      req.setAttribute("autoLogin", autoLogin);
+      req.setAttribute("saveId", saveId);
       
       System.out.println(userId);
       System.out.println(userPw);
-      System.out.println(autoLogin);
+      System.out.println(saveId);
       
-      actionInfo.setPath("/login.jsp");
       actionInfo.setRedirect(false);
+      actionInfo.setPath("/login.jsp");
       
       return actionInfo;
    }
