@@ -259,58 +259,30 @@
 									</div>
 								</div>
 								
-								<hr>
-								
-								
-								<!-- 여기 부터 답글 등록 -->
-								<c:if test ="${empty lawyercontent}"></c:if>
-								<c:if test ="${not empty lawyercontent}">
-								<div class="a-card-question-list" id="jstest">  							
-									<aside class="a-card-aside-card">
-										<div class="a-wrapper">
-											<div class="badge">
-												<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
-												<p class="number">231</p>
-											</div>
-										</div>
-									</aside>
-									<div class="a-card-main">
-										<header class="a-card-header">
-											<a href="">
-												<h1 class="a-card-header-title">
-													<c:out value="${lawyername}"/>
-												</h1>
-												<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
-											</a>
-										</header>
-										<div class="a-card-content">
-										<c:out value="${lawyercontent}"/>
-										</div>
-										<div class="a-card-footer">
-											<span class="viewCount">
-											조회수
-												<i class="number">12</i>
-											</span>
-											<span class="answer">2시간전 답변 작성됨</span>
-										</div>
-									</div>
-								</div>
-								</c:if>
-								<!--=======  -->
-							</div>
-						</div>
-				</main>
-		</section>
-		</div>
-		
-		<%-- <c:if test ="${lawyerwritenum}"/> --%>
-		
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 <script>
 
 
-$("#jstest").after("<h4>${lawyercontent}</h4>");
+/* function getList(){
+	ajax({
+		url: "/day07/CheckIdOk.me",
+		type: "get",
+		data: {memberId: $("input[name='memberId']").val()},
+		contentType: "application/json; charset=utf-8",
+	  	success: function(list){
+	    for(...){
+	      str += "<div> list[i].content </div>"
+	      str += "..."
+	    }
+	    $(...).append(str);
+	  }
+	});
+}
+ */
+
+
+
 
 
 

@@ -275,6 +275,31 @@ a:hover {
 
 
 
+#check11{
+    position: absolute;
+    left:1px;
+    top: 10px;
+}
+#check22{
+    position: absolute;
+    left:210px;
+    top: 10px;
+}
+#check33{
+    position: absolute;
+    left:404px;
+    top: 10px;
+}
+#check44{
+    position: absolute;
+    left:606px;
+    top: 10px;
+}
+#check55{
+    position: absolute;
+    left:806px;
+    top: 10px;
+}
 #check1{
     position: absolute;
     left: 890px;
@@ -302,8 +327,8 @@ a:hover {
 }
 #text1{
     position: absolute;
-    left: 845px;
-    top: 708px;
+    left: -45px;
+    top: 95px;
     width: 900px;
     height: 113px;
     border-radius: 2px;

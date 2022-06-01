@@ -31,6 +31,7 @@ public class UserWriteUpdateOk implements Action {
 		userWriteVO.setTitle(req.getParameter("title"));
 		userWriteVO.setContent(req.getParameter("content"));// 여기까지 글작성에대한 디비를 가져왔다
 		userWriteVO.setWriteDate(req.getParameter("writeDate"));
+		
 		/*userWriteVO.setUserWriteNum(Integer.parseInt(session.getAttribute("userWriteCount")) );*/
 //		session.getAttribute("userWrite");
 		

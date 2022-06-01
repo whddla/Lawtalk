@@ -30,7 +30,7 @@ public class UserWriteDAO {
 	
 	//의뢰인 글 작성
 	public void userWrite(UserWriteVO userWriteVO) {
-		sqlSession.insert("UserWrite.userWrite" , userWriteVO);
+		sqlSession.insert("UserWrite.userWrite", userWriteVO);
 	}
 
 	//사건 번호
