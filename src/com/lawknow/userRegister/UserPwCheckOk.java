@@ -16,8 +16,8 @@ public class UserPwCheckOk implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		
+		ActionInfo actionInfo = new  ActionInfo();
 		HttpSession session = req.getSession();
-		ActionInfo actionInfo = new ActionInfo();
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
 		
@@ -27,11 +27,9 @@ public class UserPwCheckOk implements Action{
 		
 		boolean pwCheck = userDAO.UserPwcheck(userVO);
 		
-		req.setAttribute("oldPwCheck", pwCheck);
-		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/pwChange.jsp");
+		actionInfo.setPath("/pwChnage.jsp");
 		
-		return actionInfo;
+		return null;
 	}
 }

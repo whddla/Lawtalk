@@ -1,6 +1,7 @@
 package com.lawknow.userRegister;
 
 import java.io.IOException;
+import java.util.Base64;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,10 +24,12 @@ public class PwChangeOk implements Action {
 		UserVO userVO = new UserVO();
 		
 		String newPw = req.getParameter("newPw");
+		System.out.println("들어옴");
 		int userNum = (int)session.getAttribute("userNum");
+		System.out.println("들어옴");
 		
 		userVO.setUserNum(userNum);
-		userVO.setUserPw(newPw);
+		userVO.setUserPw(new String(Base64.getEncoder().encode(newPw.getBytes())));
 
 		boolean checkPw = userDAO.PwChange(userVO);
 		

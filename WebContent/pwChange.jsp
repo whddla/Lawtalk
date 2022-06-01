@@ -30,7 +30,7 @@
 							<p class="pw-intron-text-row">이전에 사용한 적 없는 비밀번호가 안전합니다.</p>
 						</div>
 						<div class = "input-tag-layout">
-							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;" >
+							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;">
 								<span class="pw-error"></span>						
 						</div>
 						<div class = "input-tag-layout">
@@ -63,16 +63,12 @@
 <script>
 let checkPw = "${checkPw}";
 let oldPwCheck = "${oldPwCheck}";
-const oldPw = ${"#accout-pw"};
+let $oldPw = ${"#account-pw"};
 
+$oldPw.on("keyup",function(){
+	$oldPw.submit;
+});
 
-	oldPw.on("keyup", function(){
-		if(oldPwCheck){
-			$(".pw-error").text("현재 비밀번호가 같습니다.");
-		}else{
-			$(".pw-error").text("비밀번호가 틀립니다.");
-		}
-	});
 
 
 if(checkPw){
