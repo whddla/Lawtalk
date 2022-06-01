@@ -29,8 +29,7 @@ public class LawyerCommentOk implements Action{
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
-		
-		
+				
 		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
 		
 		req.setAttribute("lawyername", lawyerCommentVO.getLawyerName());
