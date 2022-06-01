@@ -30,7 +30,7 @@ public class UserWriteDeleteOk implements Action {
 		
 		
 		/*userWriteDAO.userDelete(userWriteVO);*/
-		userWriteDAO.userDelete((Integer)session.getAttribute("userWriteNum")); //여기서 쿼리문 실행
+		userWriteDAO.userDelete((int)session.getAttribute("userWriteNum")); //여기서 쿼리문 실행
 		req.setAttribute("userWriteDeleteNum",userWriteVO.getUserWriteNum());
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/mycounsel.jsp");

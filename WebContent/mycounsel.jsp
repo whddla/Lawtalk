@@ -103,9 +103,10 @@
            <%--  <c:if test ="${userWriteCount=0}">
                 0개의 상담글을 작성하셨습니다.
                 </c:if> --%>
-                <c:if test="${userWriteCount>0}">
+             <%--    <c:if test="${userWriteCount>0}">
                 	<c:out value="${userWriteCount} 개의 상담글을 작성하셨습니다"></c:out>
-                </c:if>
+                </c:if> --%>
+                <c:out value="${sessionScope.fields}">sadasd</c:out>
             </p>
         </div>
     </div>
@@ -151,8 +152,9 @@
                      <div class = "seedivTwo"><c:out value=""/>제목 :${userUpdateTitle}</div>
                     </div>
                     <div class = "seedivThree"><c:out value=""/>${userUpdatecontent}</div>
-                    
-                    <button type="button" class="btn btn-outline-secondary updateButton"><a href="rewrite.jsp">글수정하기</a></button>
+                
+                    																									                       <!--  rewrite.jsp -->
+                    <button type="button" class="btn btn-outline-secondary updateButton"><a href="UserWriteUpdate.uw">글수정하기</a></button>
                     <button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>
                     
              		</c:if>
@@ -162,12 +164,12 @@
                
                 <div class="bottombox">
                     <h5 class="lt-counsel">
-                        상담을 시작하세요!
+                        	상담을 시작하세요!
                     </h5>
                     <div class="thth">
                     <div class="phone-advice">
                        <span class="fkfk">ROWKNOW 지식 IN<br>
-                        당신의 고민을 여러 전문가가 답해드립니다</span><br>
+                        	당신의 고민을 여러 전문가가 답해드립니다</span><br>
                         <a class="linkline" href="write.jsp">ROWKNOW 지식 IN ></a>
                     </div>
                     <div class="slash">
@@ -175,7 +177,7 @@
                     </div>
                     <div class="phone-advice">
                         <span class="fkfk">ROWKNOW 1:1 바로상담<br>
-                            원하는 변호사와 빠르게 상담하고 싶다면</span><br>
+                            	원하는 변호사와 빠르게 상담하고 싶다면</span><br>
                         <a class="linkline" href="list.jsp">ROWKNOW 1:1 바로상담 ></a>
                     </div>
                     </div>  
@@ -290,6 +292,34 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 <script>
+function checkCount(field){
+	console.log(field);
+	
+	$.ajax({
+		url: "/kovengerss/UserCountWriteOk.uw",
+		type: "get",
+		dataType: "json",
+		success: function(result){
+			const $result = $("span#result");
+			if(result.result == "success"){
+				$result.text("사용가능한 아이디입니다.");
+				$result.css("color", "blue");
+				check = true;
+			}else{
+				$result.text("중복된 아이디입니다.");
+				$result.css("color", "red");
+				check = false;
+			}
+		}
+	});
+}
+
+
+
+
+
+
+
 
 
 

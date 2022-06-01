@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.lawknow.domain.dao.UserWriteDAO;
 import com.lawknow.domain.vo.UserVO;
@@ -17,7 +18,7 @@ public class UserCountWriteOk implements Action {
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 	
 		req.setCharacterEncoding("UTF-8");
-		
+		HttpSession  session  = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		
 	
@@ -32,7 +33,12 @@ public class UserCountWriteOk implements Action {
 		
 		userWriteDAO.countWrite();
 		
-		req.setAttribute("userWriteCount", userWriteDAO.countWrite());
+		/*req.setAttribute("userWriteCount", userWriteDAO.countWrite());*/
+		
+		 session.setAttribute("writeCounts", userWriteDAO.countWrite());
+		
+		
+		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/write.jsp");
 		

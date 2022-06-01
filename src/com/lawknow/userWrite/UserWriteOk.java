@@ -21,7 +21,7 @@ public class UserWriteOk implements Action {
 		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		/*UserVO userVO = new UserVO();*/
+		UserVO userVO = new UserVO();
 		UserWriteVO userWriteVO = new  UserWriteVO();
 		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		
@@ -41,6 +41,7 @@ public class UserWriteOk implements Action {
 		
 		
 		session.getAttribute("userNum");  // session에있는 값 가져옴
+		req.setAttribute("num", session.getAttribute("userNum"));
 		
 		/*req.setAttribute("userWriteCount", userWriteDAO.countWrite());*/ //이건 내가 왜넣은거지 갯수인데
 		
@@ -50,7 +51,7 @@ public class UserWriteOk implements Action {
 */			session.setAttribute("userWriteNum", userWriteNum); // 로그인된것을 session에 담아둠 -- > 어떤 컨틀롤러에서도 다 쓸수 있다 
 																					//session.getAttribute 로 다른 컨틀롤러로 쓸 수 있다
 																				// 파라미터를 보내지 않아도 어디에서나 쓸 수 있다.
-			
+			session.setAttribute("fields", userWriteVO.getField());
 			//세션초기화
 			/*session.invalidate();*/
 /*		}*/
