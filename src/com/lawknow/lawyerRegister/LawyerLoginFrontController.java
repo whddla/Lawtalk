@@ -41,6 +41,12 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new LawyerLoginOk().execute(req, resp);
 			} else if(command.equals("LawyerLogin.ll")){
 				actionInfo = new LawyerLogin().execute(req, resp);
+			} else if(command.equals("LawyerPwChangeOk.ll")) {
+				actionInfo = new LawyerPwChangeOk().execute(req, resp);
+			} else if(command.equals("LawyerPwChange.ll")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/pwChange2.jsp");
 			}
 			  else {
 				// 404 일 때 출력할 에러 페이지 경로 작성

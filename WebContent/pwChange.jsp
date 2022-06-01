@@ -61,25 +61,23 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-let checkPw = "${checkPw}";
-let oldPwCheck = "${oldPwCheck}";
-let $oldPw = ${"#account-pw"};
-
-$oldPw.on("keyup",function(){
-	$oldPw.submit;
-});
-
+let checkPw ="${checkPw}";
 
 
 if(checkPw){
 	alert("비밀번호 변경 완료");
 }
 
-let msg = "${msg}";
+let userPw = "${userPw}";
 
-if(msg){
-	alert("현재 비밀번호가 같습니다.");
-}
+	$("#account-pw").on("keyup",function(){
+		if(userPw == $("#account-pw").val()){
+			$(".pw-error").text("현재 비밀번호가 같습니다.");
+		}else{
+			$(".pw-error").text("비밀번호가 같지 않습니다.");
+		}
+	});
+
 
 	function inchk(f){
 		if(f.newPw.value != f.newPw2.value){
