@@ -24,10 +24,14 @@ public class UserDeleteAccountOk implements Action{
 		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
+		UserVO userVO = new UserVO();
+		System.out.println("들어옴1");
 		
 		int userNum = (int)session.getAttribute("userNum");
-		
-		req.setAttribute("checkDel", userDAO.UserdeleteAccount(userNum));
+		userVO.setUserNum(userNum);
+		System.out.println("들어옴2");
+		req.setAttribute("checkDel", userDAO.UserDeleteAccount(userVO));
+		System.out.println("들어옴3");
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/LawKnowMainPage.jsp");

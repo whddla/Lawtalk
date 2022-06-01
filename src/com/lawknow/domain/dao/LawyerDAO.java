@@ -41,6 +41,11 @@ public class LawyerDAO {
 	
 	//비밀번호 변경
 	public boolean LawyerPwChange(LawyerVO lawyerVO) {
-		return sqlSession.update("Lawyer.LawyerPwChange", lawyerVO) == 1;
+		return (Integer)sqlSession.update("Lawyer.LawyerPwChange", lawyerVO) == 1;
+	}
+	
+	//변호사 회원탈퇴
+	public boolean LawyerDeleteAccount(LawyerVO lawyerVO) {
+		return (Integer)sqlSession.delete("Lawyer.LawyerDeleteAccount", lawyerVO) == 1;
 	}
 }

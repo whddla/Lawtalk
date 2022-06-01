@@ -70,6 +70,18 @@
 		}
 		return true;
 	}
+	
+	let checkPw ="${checkPw}";
+	
+	if(checkPw){
+		alert("비밀번호 변경 완료");
+	}
+
+	let msg = "${msg}";
+
+	if(!msg){
+		alert("현재 비밀번호가 같습니다.");
+	}
 
 </script>
 </html>
