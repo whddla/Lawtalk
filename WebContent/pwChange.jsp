@@ -24,14 +24,14 @@
 					<h3 class = "form-title-text">비밀번호 변경</h3>
 					<div class ="input-layout">
 						<div class="pw-intro-layout">
-							<h2 class="pw-intro-text">비빌번호 변경</h2>
+							<h2 class="pw-intro-text">비밀번호 변경</h2>
 							<p class="pw-intron-text-row">안전한 비밀번호로 내정보를 보호하세요</p>
 							<p class="pw-intron-text-row">다른 아이디/사이트에서 사용한 적 없는 비밀번호</p>
 							<p class="pw-intron-text-row">이전에 사용한 적 없는 비밀번호가 안전합니다.</p>
 						</div>
 						<div class = "input-tag-layout">
-							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;" onkeyup="">
-								<span class="pw-error"></span>						
+							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;" onkeyup="checkOldPw()">
+								<span id ="result" class="pw-error"></span>						
 						</div>
 						<div class = "input-tag-layout">
 							<input name="newPw" id="accout-newPw" class="accout-border allInput-border" type="password" placeholder="새 비밀번호" style="padding:10px 0;">
@@ -61,6 +61,36 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+	function checkOldPw(){
+		$.ajax({
+			url:"/kovengerss/UserPwCheckOk.ul",
+			type:"get",
+			data:{oldPw: $("input[name='oldPw']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType:"json",
+			success: function(result){
+				console.log(result);
+				if(result.check){
+					$("span#result").css("color","blue");
+					$("span#result").text("현재비밀번호와 일치합니다");
+				}else{
+					$("span#result").css("color","red");
+					$("span#result").text("현재비밀번호와 다릅니다");
+				}
+			},
+			error:function(request, status, error){
+				console.log("실패..!!!!");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+	}
+
+
+
+
+
 let checkPw ="${checkPw}";
 let pwCheck ="${pwCheck}";
 let UserPwCheck = "${UserPwCheck}";
@@ -100,7 +130,7 @@ const $newPwCheck = $("#accout-newPwCheck");
 let newPWerror =$(".pw-newPw-Error");
 let checkerror =$(".pw-newPwCheck-error")
 
-$("#accout-pw").on("keyup",function(){
+/* $("#accout-pw").on("keyup",function(){
 	if($("#accout-pw").val() == ""){
 		$(".pw-error").css("color","red");
 		$(".pw-error").text("현재 비밀번호를 입력해주세요");
@@ -109,7 +139,7 @@ $("#accout-pw").on("keyup",function(){
 		$(".pw-error").text("비밀번호 입력완료.");
 	}
 });	
-
+ */
 $newPw.on("keyup",function(){
 	if(!check2.test($newPw.val())){
 		newPWerror.css("color","red");
