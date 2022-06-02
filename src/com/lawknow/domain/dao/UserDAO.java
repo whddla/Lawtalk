@@ -65,8 +65,8 @@ public class UserDAO {
 	}
 	
 	//현재 비밀번호 가져오기
-	public boolean UserPwcheck(UserVO userVO) {
-		return (Integer)sqlSession.selectOne("User.UserPwcheck", userVO) == 1;
+	public boolean UserPwcheck(int userNum) {
+		return (Integer)sqlSession.selectOne("User.UserPwcheck", userNum) == 1;
 	}
 	
 }

@@ -23,7 +23,7 @@
     .mycounsel{
         width: 100%;
         position: relative;
-    left: 1px;
+    	left: 1px;
     }
     .jstlBigBox{
     display: flex;
@@ -92,7 +92,7 @@
    <div>
         <nav class="header-nav directive">
             <a class ="left" href="mypage.jsp">
-                <img  class = "lefthwa"src = "assets/css/img/왼화살jpg.jpg">
+                <img  class = "lefthwa"src = "assets/img/왼화살jpg.jpg">
             </a>
             <h3 class="title">
                 <a class = "maintitles">마이페이지</a>
@@ -100,13 +100,13 @@
         </nav>
         <div class="mycounsel">
             <p class="qna-page-title">
-           <%--  <c:if test ="${userWriteCount=0}">
-                0개의 상담글을 작성하셨습니다.
-                </c:if> --%>
-             <%--    <c:if test="${userWriteCount>0}">
-                	<c:out value="${userWriteCount} 개의 상담글을 작성하셨습니다"></c:out>
-                </c:if> --%>
-                <c:out value="${sessionScope.fields}">sadasd</c:out>
+               <c:if test ="${count==0}"> 
+               		<span>0개의 상담글을 작성하셨습니다.</span>
+               </c:if>
+               <c:if test="${count>=1}">
+               <c:out value="${count}개의 상담글을 작성하셨습니다"></c:out>
+               <c:out value ="${sessionScope.userNum} 번 회원님 환영합니다"></c:out>
+               </c:if> 
             </p>
         </div>
     </div>
@@ -129,7 +129,7 @@
                     <!--jstl-->
                     <!-- userwrite의 제목과 내용  -->
                     <c:if test ="${empty userWriteTitle and empty userUpdateTitle}">
-                        작성한 상담글이 없습니다.
+                       	 작성한 상담글이 없습니다.
                      </c:if>
                      
                      <c:if test ="${not empty userWriteTitle}">
@@ -138,7 +138,7 @@
                      <div class = "seedivOne" style="width:500px"><c:out value=""/>질문 분야 : ${field}</div>
                      <div class = "seedivTwo"><c:out value=""/>제목 :${userWriteTitle}</div>
                     </div>
-                    <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div><!-- rewrite.jsp -->
+                    <div class = "seedivThree"><c:out value=""/>${userWritecontent}</div><!-- rewrite.jsp --><%-- 	<a href="${pageContext.request.contextPath}/board/BoardListOk.bo?page=${page - 1}">&lt;</a> --%>
                     <button type="button" class="btn btn-outline-secondary listButton"><a href="UserWriteListOk.uw">내가 쓴 글 목록</a></button>
                       <button type="button" class="btn btn-outline-secondary updateButton"><a href="UserWriteUpdate.uw">글수정하기</a></button>
              		<button type="button" class="btn btn-outline-secondary deleteButton"><a href="UserWriteDeleteOk.uw">글 삭제하기</a></button>

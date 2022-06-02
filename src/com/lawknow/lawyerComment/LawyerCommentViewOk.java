@@ -1,16 +1,20 @@
 package com.lawknow.lawyerComment;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import com.lawknow.domain.dao.LawyerCommentDAO;
 import com.lawknow.domain.vo.LawyerCommentVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class LawyerCommentOk implements Action{
+public class LawyerCommentViewOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -22,22 +26,17 @@ public class LawyerCommentOk implements Action{
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-//		lawyerCommentVO.setTitle(req.getParameter("title"));
-		
-		lawyerCommentVO.setLawyerName(req.getParameter("lawyerName"));
-		lawyerCommentVO.setContent(req.getParameter("content"));
-		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
-		
-		lawyerCommentDAO.commentWrite(lawyerCommentVO);
-				
-		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
-		
-		req.setAttribute("lawyerName", lawyerCommentVO.getLawyerName());
-		req.setAttribute("lawyerWriteDate", lawyerCommentVO.getWriteDate());
-		
+		int lawyer_write_num = Integer.parseInt(req.getParameter("lawyer_write_num"));
+		List<LawyerCommentVO> commentList = lawyerCommentDAO.getCommentList(lawyer_write_num);
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/answer_page.jsp");
 
+		JSONArray comments = new JSONArray();
+		for(LawyerCommentVO comment : commentList) {
+				JSONObject obj = new JSONObject();
+				obj.put("requestnum", comments.getrequestnum());
+		}
+		
 		return actionInfo;
 		
 	}

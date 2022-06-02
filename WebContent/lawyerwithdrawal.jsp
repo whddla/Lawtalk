@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel ="stylesheet" href ="assets\css\Clientwithdrawal.css">
+<link rel ="stylesheet" href ="assets\css\lawlayorWithdrawal.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="//db.onlinewebfonts.com/c/3a8ef215f4437b176fe0901f44ffbab0?family=NotoKR-Regular" rel="stylesheet" type="text/css"/>
 <title>탈퇴</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
 						<a class = "title-font" href="LawKnowMainPage.jsp" style="font-size:21px">LawKnow</a>
 						<span style ="display : block; color: #fefefe; font-size: 22px;">Good Lawyers</span>
 					</h1>
-					<h2>의뢰인 회원 탈퇴</h2>
+					<h2>변호사 회원 탈퇴</h2>
 				</div>
 				
 				<div class ="allform-layout">
@@ -40,7 +41,7 @@
 								</ol>
 							</div>
 						</div>
-						<form action = "LawyerDeleteAccount.ul" method="post">
+						<form action = "LawyerDeleteAccountOk.ll" method="post">
 						<div class ="button-footer-layout">
 							<div class="button-footer-text">
 								[ 회원탈퇴 ] 를 누르는 것은 위 안내사항을

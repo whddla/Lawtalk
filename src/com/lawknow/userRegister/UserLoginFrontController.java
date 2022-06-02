@@ -54,12 +54,9 @@ public class UserLoginFrontController extends HttpServlet{
 		} else if(command.equals("UserDeleteAccountOk.ul")){
 			actionInfo = new UserDeleteAccountOk().execute(req, resp);
 		} else if(command.equals("UserPwCheckOk.ul")) {
-			actionInfo = new UserPwCheckOk().execute(req, resp) ;
-		} else if(command.equals("UserPwCheck.ul")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(false);
-			actionInfo.setPath("/pwChange.jsp");
-		} else if(command.equals("UserEmailUpdateOk.ul")) {
+			System.out.println("비밀번호체크 DAO들어옴");
+			new UserPwCheckOk().execute(req, resp);
+		}  else if(command.equals("UserEmailUpdateOk.ul")) {
 			actionInfo = new UserEmailUpdateOk().execute(req, resp);
 		} else if(command.equals("UserEmailUpdate.ul")) {
 			actionInfo = new ActionInfo();

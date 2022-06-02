@@ -40,7 +40,6 @@ public class LawyerPwChangeOk implements Action{
 				req.setAttribute("LawyerPwCheck", true);
 			}
 		
-		System.out.println("끝");
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/pwChange2.jsp");
 		

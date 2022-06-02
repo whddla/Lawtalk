@@ -54,9 +54,9 @@
 	</update>
 	
 	<!-- 비밀번호 체크 -->
-	<select id ="UserPwcheck" parameterType="userVO">
-		select user_pw from tbl_user_regiser
-		where user_num = #{userNum} and user_pw =#{userPw}
+	<select id ="UserPwcheck" parameterType="int" resultType = "_int">
+		select count(user_pw) from tbl_user_register
+		where user_num = #{userNum};
 	</select>
 
 	

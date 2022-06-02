@@ -12,6 +12,7 @@
        <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
         <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
          <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
+         <typeAlias type="com.lawknow.domain.vo.FileVO" alias="fileVO"/>
    </typeAliases> 
    <environments default="lawknow">
       <environment id="lawknow">
@@ -30,6 +31,7 @@
          <mapper resource="com/mybatis/mapper/UserWrite.xml"/>
           <mapper resource="com/mybatis/mapper/UserReview.xml"/>
           <mapper resource="com/mybatis/mapper/LawyerComment.xml"/>
+          <mapper resource="com/mybatis/mapper/FileMapper.xml"/>
    </mappers>
 </configuration>
 

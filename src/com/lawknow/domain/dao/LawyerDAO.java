@@ -57,7 +57,12 @@ public class LawyerDAO {
 	
 	//이메일 수정
 	public boolean LawyerEmailUpdate(LawyerVO lawyerVO) {
-		return (Integer)sqlSession.update("User.LawyerEmailUpdate", lawyerVO) == 1;
+		return (Integer)sqlSession.update("Lawyer.LawyerEmailUpdate", lawyerVO) == 1;
 	}
 
+	//현재 비밀번호 가져오기
+	public boolean LawyerPwcheck(int lawyerNum) {
+		return (Integer)sqlSession.selectOne("Lawyer.LawyerPwcheck", lawyerNum) == 1;
+	}
+	
 }
