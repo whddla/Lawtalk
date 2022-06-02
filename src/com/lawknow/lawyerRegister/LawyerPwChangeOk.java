@@ -28,7 +28,7 @@ public class LawyerPwChangeOk implements Action{
 		String oldPw = (new String(Base64.getEncoder().encode(req.getParameter("oldPw").getBytes())));
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		System.out.println(session.getAttribute("lawyerNum"));
-		String lawyerPw = (String)req.getSession().getAttribute("lawyerPw");
+		String lawyerPw = (String)session.getAttribute("lawyerPw");
 		
 		
 			if(lawyerPw.equals(oldPw)) {
@@ -40,7 +40,6 @@ public class LawyerPwChangeOk implements Action{
 				req.setAttribute("LawyerPwCheck", true);
 			}
 		
-		System.out.println("끝");
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/pwChange2.jsp");
 		

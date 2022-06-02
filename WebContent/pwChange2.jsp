@@ -30,8 +30,8 @@
 							<p class="pw-intron-text-row">이전에 사용한 적 없는 비밀번호가 안전합니다.</p>
 						</div>
 						<div class = "input-tag-layout">
-							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;" >
-								<span class="pw-error"></span>						
+							<input name= "oldPw"id="accout-pw" class="accout-border allInput-border" type="password" placeholder="현재비밀번호" style="padding:10px 0;" onkeyup="checkOldPw()" >
+								<span id ="result"class="pw-error"></span>						
 						</div>
 						<div class = "input-tag-layout">
 							<input name="newPw" id="accout-newPw" class="accout-border allInput-border" type="password" placeholder="새 비밀번호" style="padding:10px 0;">
@@ -61,9 +61,42 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+function checkOldPw(){
+	$.ajax({
+		url:"/kovengerss/LawyerPwCheckOk.ll",
+		type:"get",
+		data:{oldPw: $("input[name='oldPw']").val()},
+		contentType: "application/json; charset=utf-8",
+		dataType:"json",
+		success: function(result){
+			console.log(result);
+			if(result.check){
+				$("span#result").css("color","blue");
+				$("span#result").text("현재비밀번호와 일치합니다");
+			}else{
+				$("span#result").css("color","red");
+				$("span#result").text("현재비밀번호와 다릅니다");
+			}
+		},
+		error:function(request, status, error){
+			console.log("실패..!!!!");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+
+
+
+
 let checkPw ="${checkPw}";
 let pwCheck ="${pwCheck}";
 let UserPwCheck = "${UserPwCheck}";
+
+let check3 = RegExp(/(?=.*[a-zA-ZS])(?=.*?[#?!@$%^&*-]).{6,18}/); // 문자와 특수문자 조합의 6~24 자리
 
 function inchk(f){
 	if(f.newPw.value != f.newPw2.value){
@@ -99,7 +132,7 @@ const $newPwCheck = $("#accout-newPwCheck");
 let newPWerror =$(".pw-newPw-Error");
 let checkerror =$(".pw-newPwCheck-error")
 
-$("#accout-pw").on("keyup",function(){
+/* $("#accout-pw").on("keyup",function(){
 	if($("#accout-pw").val() == ""){
 		$(".pw-error").css("color","red");
 		$(".pw-error").text("현재 비밀번호를 입력해주세요");
@@ -107,7 +140,7 @@ $("#accout-pw").on("keyup",function(){
 		$(".pw-error").css("color","blue");
 		$(".pw-error").text("비밀번호 입력완료.");
 	}
-});	
+});	 */
 
 $newPw.on("keyup",function(){
 	if(!check2.test($newPw.val())){

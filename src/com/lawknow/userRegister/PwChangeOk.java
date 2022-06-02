@@ -25,15 +25,10 @@ public class PwChangeOk implements Action {
 		
 		String newPw = req.getParameter("newPw");
 		String oldPw = (new String(Base64.getEncoder().encode(req.getParameter("oldPw").getBytes())));
-		System.out.println("현재 비밀번호 확인 : " + oldPw);
-		System.out.println("들어왓으");
 		int userNum = (int)session.getAttribute("userNum");
-		System.out.println("유저 넘버 : " + userNum);
 		String userPw = (String)session.getAttribute("userPw");
-		System.out.println("유저 비번 : " + userPw);
 		
 			if(userPw.equals(oldPw)) {
-				System.out.println("들어옴");
 				userVO.setUserNum(userNum);
 				userVO.setUserPw(new String(Base64.getEncoder().encode(newPw.getBytes())));
 				boolean checkPw = userDAO.PwChange(userVO);
@@ -42,7 +37,6 @@ public class PwChangeOk implements Action {
 				req.setAttribute("UserPwCheck", true);
 			}
 		
-			System.out.println("끝");
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/pwChange.jsp");
 		

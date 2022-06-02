@@ -601,6 +601,10 @@ if(checkDel){
 	alert("탈퇴완료");
 }
 
+let checkDel2 = "${checkDel2}";
+if(checkDel2){
+	alert("탈퇴완료");
+}
 
 const banner = document.querySelector("div.banner");
 const arrows = document.querySelectorAll("div.arrow");
