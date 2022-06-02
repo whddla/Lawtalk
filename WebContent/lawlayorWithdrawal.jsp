@@ -41,14 +41,16 @@
 								</ol>
 							</div>
 						</div>
+						<form action = "LawyerDeleteAccountOk.ll" method="post">						
 						<div class ="button-footer-layout">
 							<div class="button-footer-text">
 								[ 회원탈퇴 ] 를 누르는 것은 위 안내사항을
 								<br>
 								모두 확인하였으며, 이에 동의함을 의미합니다.
 							</div>
-							<button type="button" class="button-text button-border">[ 회원 탈퇴 ]</button>
+							<button type="submit" class="button-text button-border">[ 회원 탈퇴 ]</button>
 						</div>
+						</form>
 					</div>
 					<div class="footer-text-layout">
 						<div class="row">

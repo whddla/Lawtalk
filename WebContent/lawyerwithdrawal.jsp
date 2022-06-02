@@ -40,7 +40,7 @@
 								</ol>
 							</div>
 						</div>
-						<form action = "UserDeleteAccountOk.ul" method="post">
+						<form action = "LawyerDeleteAccount.ul" method="post">
 						<div class ="button-footer-layout">
 							<div class="button-footer-text">
 								[ 회원탈퇴 ] 를 누르는 것은 위 안내사항을
