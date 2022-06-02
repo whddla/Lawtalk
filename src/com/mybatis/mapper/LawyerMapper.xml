@@ -44,6 +44,13 @@
 		delete from tbl_lawyer_register
 		where lawyer_num = #{lawyerNum}
 	</delete>
+
+	<!-- 회원 이메일 수정  -->
+	<update id ="LawyerEmailUpdate" parameterType ="lawyerVO" >
+	   update tbl_lawyer_register
+	   set lawyer_email=#{lawyerEmail}
+	   where lawyer_num= #{lawyerNum}
+	</update>
 	
 	
 	

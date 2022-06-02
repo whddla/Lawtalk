@@ -47,12 +47,12 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo.setPath("/pwChange.jsp");
 		} else if(command.equals("PwChangeOk.ul")){
 			actionInfo = new PwChangeOk().execute(req, resp);
-		} else if(command.equals("UserDeleteAccountOk.ul")){
-			actionInfo = new UserDeleteAccountOk().execute(req, resp);
 		} else if(command.equals("UserDeleteAccount.ul")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/Clientwithdrawal.jsp");
+		} else if(command.equals("UserDeleteAccountOk.ul")){
+			actionInfo = new UserDeleteAccountOk().execute(req, resp);
 		} else if(command.equals("UserPwCheckOk.ul")) {
 			actionInfo = new UserPwCheckOk().execute(req, resp) ;
 		} else if(command.equals("UserPwCheck.ul")) {

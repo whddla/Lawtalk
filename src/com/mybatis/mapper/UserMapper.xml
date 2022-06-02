@@ -34,7 +34,7 @@
 	</select>
    
    <!-- 계정 탈퇴  -->
-   <delete id="UserdeleteAccount" parameterType="_int">
+   <delete id="UserDeleteAccount" parameterType="userVO">
       delete from tbl_user_register
       where user_num =  #{userNum}
    </delete>

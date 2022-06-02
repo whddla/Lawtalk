@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lawknow.userRegister.UserDeleteAccountOk;
+import com.lawknow.userRegister.UserEmailUpdateOk;
 import com.lawyer.action.ActionInfo;
 
 	public class LawyerLoginFrontController extends HttpServlet{
@@ -47,6 +49,18 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(false);
 				actionInfo.setPath("/pwChange2.jsp");
+			} else if(command.equals("LawyerEmailUpdateOk.ll")) {
+				actionInfo = new UserEmailUpdateOk().execute(req, resp);
+			} else if(command.equals("LawyerEmailUpdate.ll")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/privacyPage2.jsp");
+			} else if(command.equals("LawyerDeleteAccountOk.ul")){
+				actionInfo = new UserDeleteAccountOk().execute(req, resp);
+			} else if(command.equals("LawyerDeleteAccount.ul")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/lawyerwithdrawal.jsp");
 			}
 			  else {
 				// 404 일 때 출력할 에러 페이지 경로 작성

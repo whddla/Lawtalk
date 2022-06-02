@@ -24,36 +24,28 @@ public class PwChangeOk implements Action {
 		UserVO userVO = new UserVO();
 		
 		String newPw = req.getParameter("newPw");
-		String oldPw = new String (Base64.getEncoder().encode(req.getParameter("oldPw").getBytes()));
+		String oldPw = (new String(Base64.getEncoder().encode(req.getParameter("oldPw").getBytes())));
+		System.out.println("현재 비밀번호 확인 : " + oldPw);
 		System.out.println("들어왓으");
 		int userNum = (int)session.getAttribute("userNum");
-		System.out.println(session.getAttribute("userNum"));
+		System.out.println("유저 넘버 : " + userNum);
 		String userPw = (String)session.getAttribute("userPw");
-		System.out.println("들와따");
+		System.out.println("유저 비번 : " + userPw);
 		
-		try {
-			if(oldPw == userPw) {
-				System.out.println("들와따1");
+			if(userPw.equals(oldPw)) {
+				System.out.println("들어옴");
 				userVO.setUserNum(userNum);
-				System.out.println("들와따2");
 				userVO.setUserPw(new String(Base64.getEncoder().encode(newPw.getBytes())));
-				System.out.println("들와따3");
 				boolean checkPw = userDAO.PwChange(userVO);
-				System.out.println("들와따4");
 				req.setAttribute("checkPw", checkPw);
-				System.out.println("들와따5");
 			}else {
-				req.setAttribute("UserPw", userPw);
+				req.setAttribute("UserPwCheck", true);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("들와따 오류");
-		}
 		
-		System.out.println("끝");
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/pwChange.jsp");
+			System.out.println("끝");
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/pwChange.jsp");
 		
-		return actionInfo;
+			return actionInfo;
 	}
 }

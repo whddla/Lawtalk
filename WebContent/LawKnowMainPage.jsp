@@ -599,8 +599,6 @@ div.btns{
 let checkDel = "${checkDel}";
 if(checkDel){
 	alert("탈퇴완료");
-}else{
-	alert("탈퇴실패");
 }
 
 
