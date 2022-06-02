@@ -14,7 +14,13 @@
 		select lawyer_num from tbl_lawyer_register
 		where lawyer_id = #{lawyerId} and lawyer_pw = #{lawyerPw}
 	</select>
-   
+   	
+   	<!-- 번호로 이름가져오기 -->
+	<select id="getLawyerName" parameterType="int" resultType = "string">
+		select lawyer_name from tbl_lawyer_register
+		where lawyer_num = #{lawyerNum}
+	</select>
+	
    <!--아이디 중복 조회  -->
    <select id ="checkId" parameterType ="string" resultType ="int">   
       select count(lawyer_id) from tbl_lawyer_register where lawyer_id = #{lawyerId}
