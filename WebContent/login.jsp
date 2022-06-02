@@ -108,14 +108,13 @@
 			                            </button>
                         			</div>
                         		</div>
-							</div>
 						</li>
 					</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
@@ -150,29 +149,9 @@
 		
 		lwForm.submit();
 	});
-	let userId = "${userId}";
-	let userPw = "${userPw}";
-	let saveId = "${saveId}";
 
-	//자동 로그인이 이전에 눌러져 있었다면
-	 //아이디 저장버튼이 이전에 눌러져 있었다면
-      if(saveId){
-         //다시 체크해주고
-         $("input#saveId").prop("checked", true);
-         //아이디를 저장했던 아이디로 작성해준다.
-         $("input[name='userId']").val(userId);
-      }
-
-	let lawyerId = "${lawyerId}";
-	let lawyerPw = "${lawyerPw}";
-	let lawSaveId= "${lawSaveId}";
-
-	if(saveId){
-        //다시 체크해주고
-        $("input#saveId").prop("checked", true);
-        //아이디를 저장했던 아이디로 작성해준다.
-        $("input[name='lawyerId']").val(lawyerId);
-     }
+	
+	
 	
   const tabList = document.querySelectorAll('.tab_menu .list li');
   
