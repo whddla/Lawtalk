@@ -40,7 +40,7 @@
 	</update>
 	
 	<!-- 변호사 회원 탈퇴  -->
-	<delete  id="LawyerDeleteAccount" parameterType="_int">
+	<delete  id="LawyerDeleteAccount" parameterType="lawyerVO">
 		delete from tbl_lawyer_register
 		where lawyer_num = #{lawyerNum}
 	</delete>

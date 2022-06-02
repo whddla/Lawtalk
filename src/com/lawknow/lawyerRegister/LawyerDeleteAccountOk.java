@@ -21,13 +21,10 @@ public class LawyerDeleteAccountOk implements Action{
 		ActionInfo actionInfo = new ActionInfo();
 		LawyerDAO lawyerDAO = new LawyerDAO();
 		LawyerVO lawyerVO = new LawyerVO();
-		System.out.println("들어옴1");
 		
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		lawyerVO.setLawyerNum(lawyerNum);
-		System.out.println("들어옴2");
 		req.setAttribute("checkDel", lawyerDAO.LawyerDeleteAccount(lawyerVO));
-		System.out.println("들어옴3");
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/lawyerwithdrawal.jsp");
