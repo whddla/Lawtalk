@@ -27,6 +27,7 @@ public class PwChangeOk implements Action {
 		String oldPw = new String (Base64.getEncoder().encode(req.getParameter("oldPw").getBytes()));
 		System.out.println("들어왓으");
 		int userNum = (int)session.getAttribute("userNum");
+		System.out.println(session.getAttribute("userNum"));
 		String userPw = (String)session.getAttribute("userPw");
 		System.out.println("들와따");
 		
