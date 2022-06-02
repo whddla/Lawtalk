@@ -53,13 +53,17 @@
                         		<div class="button-kakao">
                            			<button type="button" class="button-kakao-login">
                                 		<i class="kakao-icon"></i>
-                                		<span class="text">카카오로 로그인</span>
+                                		<a i href="#0" id="kakaoLogin" style="color: black;">
+	                                		<span class="text">카카오로 로그인</span>
+                                		</a>
                             		</button>
                         		</div>
                         		<div class="button-facebook">
 			                         <button type="button" class="button-facebook-login">
 			                             <i class="facebook-icon"></i>
-			                             <span class="text">페이스북으로 로그인</span>
+			                             <a href="javascript:void(0)" onclick="fnFbCustomLogin();" style="color: black;">
+			                             	<span class="text">페이스북으로 로그인</span>
+			                             </a>
 			                          </button>
                         		</div>
                     			</div>
@@ -115,6 +119,72 @@
 			</div>
 		</div>
 	</div>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+        function saveToDos(token) { //item을 localStorage에 저장합니다. 
+            typeof(Storage) !== 'undefined' && sessionStorage.setItem('AccessKEY', JSON.stringify(token)); 
+        };
+
+        window.Kakao.init('ce8ffd83b94def59565558100e1c525c');
+        
+        function kakaoLogin() {
+            window.Kakao.Auth.login({
+                scope: 'profile_nickname, account_email, gender', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+                success: function(response) {
+                    saveToDos(response.access_token)  // 로그인 성공하면 사용자 엑세스 토큰 sessionStorage에 저장
+                    window.Kakao.API.request({ // 사용자 정보 가져오기 
+                        url: '/v2/user/me',
+                        success: (res)=> {
+                            const kakao_account = res.kakao_account;
+                            alert('로그인 성공');
+                            window.location.href='/kovengerss/LawKnowMainPage.jsp'
+                        }
+                    });
+                },
+                fail: function(error) {
+                    console.log(error);
+                }
+            });
+        };
+
+        const login = document.querySelector('#kakaoLogin');
+        login.addEventListener('click', kakaoLogin);
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v10.0&appId=581665816618857" nonce="SiOBIhLG"></script>
+<script>
+
+//기존 로그인 상태를 가져오기 위해 Facebook에 대한 호출
+function statusChangeCallback(res){
+	statusChangeCallback(response);
+}
+
+function fnFbCustomLogin(){
+	FB.login(function(response) {
+		if (response.status === 'connected') {
+			FB.api('/me', 'get', {fields: 'name,email'}, function(r) {
+				console.log(r);
+			})
+		} else if (response.status === 'not_authorized') {
+			// 사람은 Facebook에 로그인했지만 앱에는 로그인하지 않았습니다.
+			alert('앱에 로그인해야 이용가능한 기능입니다.');
+		} else {
+			// 그 사람은 Facebook에 로그인하지 않았으므로이 앱에 로그인했는지 여부는 확실하지 않습니다.
+			alert('페이스북에 로그인해야 이용가능한 기능입니다.');
+		}
+	}, {scope: 'public_profile,email'});
+}
+
+window.fbAsyncInit = function() {
+	FB.init({
+		appId      : '581665816618857', // 내 앱 ID를 입력한다.
+		cookie     : true,
+		xfbml      : true,
+		version    : 'v10.0'
+	});
+	FB.AppEvents.logPageView();   
+};
+</script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 window.onload = function() {

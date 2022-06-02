@@ -35,8 +35,10 @@ public class LawyerLoginOk {
 		if(lawyerNum != 0) {
 			req.getSession().setAttribute("lawyerNum", lawyerNum);
 			req.getSession().setAttribute("lawyerName", lawyerName);
+			req.getSession().setAttribute("lawyerPw", lawyerPw);
 			System.out.println("변호사 식별번호 : "+lawyerNum );
 			System.out.println("변호사 이름 : " + lawyerName);
+			System.out.println("변호사 비번 : " + lawyerPw);
 			
 			actionInfo.setPath("/LawKnowMainPage.jsp");
 		}else {

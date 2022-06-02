@@ -69,10 +69,10 @@ body {
     font-weight: 700;
     height: 44px;
     line-height: 44px;
-    margin: 12px 0 ;
+    margin: 12px 0 12px 6px ;
     padding: 0;
     text-align: left;
-    width: 100%;
+    width: 97%;
     cursor: pointer;
 }
 .facebook-signup-button {
@@ -84,10 +84,10 @@ body {
     font-weight: 700;
     height: 44px;
     line-height: 44px;
-    margin: 4px 0 12px;
+    margin: 12px 0 12px 6px ;
     padding: 0;
     text-align: left;
-    width: 100%;
+    width: 97%;
     cursor: pointer;
 }
 
