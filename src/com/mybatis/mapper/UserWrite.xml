@@ -54,7 +54,27 @@
     </select>
    
    
-   
+   <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+	<select id="getSeq" resultType="_int">
+		select user_write_num from tbl_user_write
+		order by 1 desc limit 0, 1  
+	</select>
+	
+	<!-- <select id="selectAll" parameterType="map" resultType="userWriteDTO">
+		select user_write_num, title, content, user_id, write_date, read_count 
+		from tbl_user_write b join tbl_user_register m 
+		on b.user_num = m.user_num
+		order by 1 desc limit #{startRow}, #{rowCount}어디서부터 가져올건지 몇개를 가져올건지 
+	</select>
+
+
+	게시글 전체 개수 
+	<select id="getTotal" resultType="_int">
+		select count(user_write_number) from tbl_user_write
+	</select> -->
+	
+	
+	
    
 </mapper>

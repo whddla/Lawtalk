@@ -25,7 +25,7 @@
         
             
     
-            <form action="" id="check1">
+           <form action="" id="check1">
                 <input type="checkbox" id="check11">
                 <input type="checkbox" id="check22">
                 <input type="checkbox" id="check33">
