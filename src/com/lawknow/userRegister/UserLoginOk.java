@@ -38,7 +38,7 @@ public class UserLoginOk {
 			req.getSession().setAttribute("userPw", userPw);
 			System.out.println("의뢰인 식별번호 : " + userNum);
 			System.out.println("의뢰인 이름 : " + userName);
-			System.out.println("의뢰인 비번 : ", userPw);
+			System.out.println("의뢰인 비번 : " + userPw);
 		
 			actionInfo.setPath("/LawKnowMainPage.jsp");
 		
