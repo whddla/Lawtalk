@@ -24,6 +24,7 @@ public class LawyerLoginOk {
 		String lawyerPw = req.getParameter("lawyerPw");
 		String lawSaveId = req.getParameter("lawSaveId");
 		int lawyerNum = 0;
+		String lawyerName = null;
 		lawyerPw = new String(Base64.getEncoder().encode(lawyerPw.getBytes()));
 		lawyerMap.put("lawyerId", lawyerId);
 		lawyerMap.put("lawyerPw", lawyerPw);
@@ -31,10 +32,13 @@ public class LawyerLoginOk {
 		System.out.println(lawyerPw);
 
 		lawyerNum = lawyerDAO.loginOk(lawyerMap);
+		lawyerName = lawyerDAO.getLawyerName(lawyerNum);
 		if(lawyerNum != 0) {
 			req.getSession().setAttribute("lawyerNum", lawyerNum);
-			System.out.println(lawyerNum +"lawyerNum 등장");
-		
+			req.getSession().setAttribute("lawyerName", lawyerName);
+			System.out.println("변호사 식별번호 : "+lawyerNum );
+			System.out.println("변호사 이름 : " + lawyerName);
+			
 			actionInfo.setPath("/LawKnowMainPage.jsp");
 		}else {
 			actionInfo.setPath("/login.jsp");

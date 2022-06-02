@@ -19,10 +19,15 @@ public class UserDAO {
 	}
 	//로그인 확인
 	public int loginOk(HashMap<String, String> userMap) {
-		System.out.println("다오 등장");
+		System.out.println("로그인 다오 등장");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
+	//userNum으로 userName 가져오기
+	public String getUserName(int userNum) {
+		System.out.println("NAME 다오 등장");
+		return sqlSession.selectOne("User.getUserName", userNum);
+	}
 	
 	//회원가입
 	public void join(UserVO userVO) {

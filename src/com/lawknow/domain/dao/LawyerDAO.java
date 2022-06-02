@@ -34,6 +34,12 @@ public class LawyerDAO {
 		return sqlSession.selectOne("Lawyer.loginOk", lawyerMap);
 	}
 	
+	//lawyerNum으로 lawyerName 가져오기
+	public String getLawyerName(int lawyerNum) {
+		System.out.println("NAME 다오 등장");
+		return sqlSession.selectOne("Lawyer.getLawyerName", lawyerNum);
+	}
+		
 	//변호사 리스트
 	public List<LawyerVO> selectLawyers(){
 		return sqlSession.selectList("Lawyer.selectLawyers");
