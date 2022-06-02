@@ -9,6 +9,7 @@ public class UserWriteVO {
 		private String title;
 		private String content;
 		private String writeDate;
+		private int readCount;
 	
 		public UserWriteVO() {;}
 
@@ -66,6 +67,14 @@ public class UserWriteVO {
 		
 		public void setField(String field) {
 			this.field = field;
+		}
+
+		public int getReadCount() {
+			return readCount;
+		}
+
+		public void setReadCount(int readCount) {
+			this.readCount = readCount;
 		}
 	
 	

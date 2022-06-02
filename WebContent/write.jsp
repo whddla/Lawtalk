@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,57 @@
      .btn-check:checked+.btn-outline-primary{
          /* background-color: white;
      }
+     
+      form textarea{
+            border-radius:0; 
+            resize:none;
+            color:black !important;
+         }
+     
+     
+     
+      form div#reply{
+            display:flex;
+            margin-bottom:3%;
+         }
+         
+         input[type='submit']:not(#register), input[type='button'] {border-radius:0;}
+         
+         ul.actions li {
+             padding: 0 0 0 0.2em;
+         }
+         
+         input#board_title{
+            border-radius: 0;
+            border: none;
+            text-align: left;
+            font-size: 1.75em;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            padding:0;
+         }
+         
+         input[type='file']{
+            display:none;
+         }
+         
+         div.files{
+            text-align:center;
+            margin-right: 3%;
+         }
+         
+         textarea {
+            font-size: 1em;
+             font-weight: 600;
+             letter-spacing: 0.1em;
+         }
+         .chumbo{
+         	position: relative;
+
+   	 		top: 469px;
+    		left: 851px;
+         }
     </style>
     <title>Document</title>
 </head>
@@ -40,8 +92,8 @@
           <div class="word3">변호사의 답변을 받으세요.</div>
           
        
-		
-        <form action="UserWriteOk.uw" name ="joinForm" method = "post">
+		<!--만약에 루트경로가 바뀔경우에는   contextPath-->
+        <form action="UserWriteOk.uw" name ="joinForm" method = "post" enctype="multipart/form-data">
         <c:set var="Writelist" value="${userWriteCount}"/>
    <div style="position: relative;
     top: 238px;
@@ -104,8 +156,32 @@
     <button  id="wrtieButton"  type="button" onclick="join()">
         <div class="register" id ="blackBox">상담글 등록하기</div>     
     </button>
+    
+    <div class="chumbo">
+    	   <hr style="margin-top:0;">
+                           <div style="margin-bottom:2%;">
+                              첨부파일
+                           </div>
+                           <div style="display:flex;display: flex; position: relative; left: 1479px;top: 246px;">
+                              <div class="files">
+                                 <div>
+                                    <label for="board_file1" style="display:inline;">
+                                       <img id="board_file1Img" src="${pageContext.request.contextPath}/assets/img/filePlus.png" width="110px" height="110px" style="display:inline;width: 67px;height: 62px;">
+                                    </label>
+                                 </div>
+                                 <input id="board_file1" name="board_file1" type="file" style="display:none" >
+                                 <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제">
+                              </div>
+                           </div>
+    </div>
+    
+    
    </form>
     </div>
+    
+    
+    
+    
 
 
 
@@ -286,9 +362,19 @@
 	
 	
 	
-	
-	
-	
+	$(".files").change(function(e){
+ 		let img = $(this).find("img");
+ 		let reader = new FileReader();
+ 		reader.readAsDataURL(e.target.files[0]);
+ 		
+ 		reader.onload = function(e){
+ 			if(e.target.result.indexOf("image") != -1){
+ 				img.attr("src", e.target.result);
+ 			}else{
+ 				img.attr("src", "${pageContext.request.contextPath}/assets/img/no_img.jpg");
+ 			}
+ 		}
+ 	})
 	
 	
 	
