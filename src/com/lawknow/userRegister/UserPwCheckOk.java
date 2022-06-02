@@ -27,8 +27,10 @@ public class UserPwCheckOk implements Action{
 		
 		boolean pwCheck = userDAO.UserPwcheck(userVO);
 		
+		req.setAttribute("pwCheck", pwCheck);
+		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/pwChnage.jsp");
+		actionInfo.setPath("/pwChange.jsp");
 		
 		return null;
 	}

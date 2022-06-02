@@ -20,11 +20,11 @@ public class UserDeleteAccountOk implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		req.setCharacterEncoding("UTF-8"); 
-		
 		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = new UserVO();
+		
 		System.out.println("들어옴1");
 		
 		int userNum = (int)session.getAttribute("userNum");

@@ -19,7 +19,7 @@
 				<h2>개인정보 수정</h2>
 			</div>
 			<div class = "allform-layout">
-				<form class ="first-form" action="UserEmailUpdateOk.ul" method="post">
+				<form class ="first-form" action="LawyerEmailUpdateOk.ll" method="post">
 					<h3 class = "form-title-text">계정정보</h3>
 					<div class ="input-layout">
 						<div class = "input-tag-layout">
@@ -83,7 +83,7 @@
 					<h3 class = "form-title-text">전화번호</h3>
 					<div class ="input-hp-layout" >
 						<div class="hp-layout">
-							<input name ="phonNum" type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13">
+							<input name ="phonNum"type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13">
 							<label class="tel-error" for="accout-hp" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
 						</div>
 					</div>
@@ -107,17 +107,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-	function userPhoneCheck(){
-		$.ajax({
-			url : "/kovengerss/UserPhoneNumCheck2Ok.ul",
-			type: "get",
-			data: {}
-		});
-	}
-	
-
-
-
 
 	let emailCheck = "${emailCheck}";
 

@@ -54,4 +54,10 @@ public class LawyerDAO {
 	public boolean LawyerDeleteAccount(LawyerVO lawyerVO) {
 		return (Integer)sqlSession.delete("Lawyer.LawyerDeleteAccount", lawyerVO) == 1;
 	}
+	
+	//이메일 수정
+	public boolean LawyerEmailUpdate(LawyerVO lawyerVO) {
+		return (Integer)sqlSession.update("User.LawyerEmailUpdate", lawyerVO) == 1;
+	}
+
 }

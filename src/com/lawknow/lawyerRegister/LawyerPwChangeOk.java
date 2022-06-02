@@ -25,35 +25,22 @@ public class LawyerPwChangeOk implements Action{
 		LawyerVO lawyerVO = new LawyerVO();
 		
 		String newPw = req.getParameter("newPw");
-		String oldPw = req.getParameter("oldPw");
+		String oldPw = (new String(Base64.getEncoder().encode(req.getParameter("oldPw").getBytes())));
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		System.out.println(session.getAttribute("lawyerNum"));
 		String lawyerPw = (String)session.getAttribute("lawyerPw");
 		
 		
-		try {
-			if(oldPw == lawyerPw) {
-				System.out.println("들와따1");
+			if(lawyerPw.equals(oldPw)) {
 				lawyerVO.setLawyerNum(lawyerNum);
-				System.out.println("들와따2");
 				lawyerVO.setLawyerPw(new String(Base64.getEncoder().encode(newPw.getBytes())));
-				System.out.println("들와따3");
 				boolean checkPw = lawyerDAO.LawyerPwChange(lawyerVO);
-				System.out.println("들와따4");
 				req.setAttribute("checkPw", checkPw);
-				System.out.println("들와따5");
 			}else {
-				req.setAttribute("LawyerPw", lawyerPw);
+				req.setAttribute("LawyerPwCheck", true);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("들와따 오류");
-		}
 		
 		System.out.println("끝");
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/pwChange.jsp");
-		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/pwChange2.jsp");
 		

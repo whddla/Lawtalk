@@ -599,8 +599,6 @@ div.btns{
 let checkDel = "${checkDel}";
 if(checkDel){
 	alert("탈퇴완료");
-}else{
-	alert("탈퇴실패");
 }
 
 
@@ -624,7 +622,7 @@ btns.forEach(function(btn, i, ar){
 
 
 
-arrows.forEach((arrow)=>{
+arrows.forEach((arrow)=> {
  arrow.addEventListener("click",function(){
     let arrowType = arrow.classList[1]; 
    if(arrowType = "prev"){

@@ -4,33 +4,39 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.lawknow.domain.dao.LawyerDAO;
 import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class LawyerUpdateAccountOk implements Action{
-	
+public class LawyerEmailUpdateOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		
 		req.setCharacterEncoding("UTF-8");
-	
+		
+		
+		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		LawyerVO lawyerVO = new LawyerVO();
-		LawyerDAO lawyerDAO = new LawyerDAO();
+		LawyerDAO lawyerDAO = new  LawyerDAO();
 		
-		lawyerVO.getLawyerNum();
+		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		
-		lawyerDAO.updateAccount(lawyerVO);
+		lawyerVO.setLawyerEmail(req.getParameter("email"));
+		lawyerVO.setLawyerNum(lawyerNum);
+		
+		
+		boolean emailCheck = lawyerDAO.LawyerEmailUpdate(lawyerVO);
+		
+		req.setAttribute("emailCheck", emailCheck);
 		
 		actionInfo.setRedirect(false);
-		/*회원정보 업데이트*/
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/privacyPage2.jsp");
 		
 		return actionInfo;
-
-		
+	
 	}
 }
-
