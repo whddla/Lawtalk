@@ -18,10 +18,10 @@ public class LawyerCommentDAO {
 	}
 	 
 	
-//	//글 목록
-//	public List<LawyerCommentVO> selectComment(){
-//		return sqlSession.selectList("LawyerComment.selectComment");
-//	}
+	//글 목록
+	public List<LawyerCommentVO> getCommentList(int lawyer_write_num) {
+		return sqlSession.selectList("LawyerComment.commentList", lawyer_write_num);
+	}
 	
 	//변호사 글 작성
 	public void commentWrite(LawyerCommentVO lawyerCommentVO) {
