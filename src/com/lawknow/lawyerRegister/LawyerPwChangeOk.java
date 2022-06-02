@@ -27,6 +27,7 @@ public class LawyerPwChangeOk implements Action{
 		String newPw = req.getParameter("newPw");
 		String oldPw = req.getParameter("oldPw");
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
+		System.out.println(session.getAttribute("lawyerNum"));
 		String lawyerPw = (String)session.getAttribute("lawyerPw");
 		
 		
