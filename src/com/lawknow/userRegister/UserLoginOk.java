@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.lawknow.domain.dao.UserDAO;
-import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.ActionInfo;
 
 public class UserLoginOk {
@@ -36,8 +35,10 @@ public class UserLoginOk {
 		if(userNum != 0) {
 			req.getSession().setAttribute("userNum", userNum);
 			req.getSession().setAttribute("userName", userName);
+			req.getSession().setAttribute("userPw", userPw);
 			System.out.println("의뢰인 식별번호 : " + userNum);
 			System.out.println("의뢰인 이름 : " + userName);
+			System.out.println("의뢰인 비번 : ", userPw);
 		
 			actionInfo.setPath("/LawKnowMainPage.jsp");
 		
