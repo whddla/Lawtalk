@@ -13,7 +13,7 @@ import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
 public class UserWriteDeleteOk implements Action {
-
+//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		System.out.println("나는 딜리트 컨트롤러");

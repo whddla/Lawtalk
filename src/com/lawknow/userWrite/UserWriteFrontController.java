@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.lawyer.action.ActionInfo;
 
 public class UserWriteFrontController extends HttpServlet{
-	
+	//
 	  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	       doProcess(req, resp);
 	    }

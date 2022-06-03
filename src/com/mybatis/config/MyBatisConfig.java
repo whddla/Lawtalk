@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisConfig {
 	
-	
+	//
 		private static SqlSessionFactory sqlSessionFactory; // 여기는 초기화가 되어있으니까  null값이 들어가있다
 	
 	

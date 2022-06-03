@@ -15,7 +15,7 @@ import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
 public class UserDeleteAccountOk implements Action{
-
+//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		

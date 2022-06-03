@@ -13,7 +13,7 @@ import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 public class UserEmailUpdateOk implements Action{
-	
+	//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
