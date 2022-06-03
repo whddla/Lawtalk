@@ -162,15 +162,15 @@
                            <div style="margin-bottom:2%;">
                               첨부파일
                            </div>
-                           <div style="display:flex;display: flex; position: relative; left: 1479px;top: 246px;">
+                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 239px;">
                               <div class="files">
                                  <div>
-                                    <label for="board_file1" style="display:inline;">
-                                       <img id="board_file1Img" src="${pageContext.request.contextPath}/assets/img/filePlus.png" width="110px" height="110px" style="display:inline;width: 67px;height: 62px;">
+                                    <label for="board_file1" style="display:inline; cursor:pointer">
+                                       <img id="board_file1Img" src="${pageContext.request.contextPath}/assets/img/구글첨부파일.png"  style="display:inline;width: 44px;height: 37px;">
                                     </label>
                                  </div>
                                  <input id="board_file1" name="board_file1" type="file" style="display:none" >
-                                 <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제">
+                                 <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제" style="width: 59px;font-size: 10px; position: relative;left: 52px; top: -29px;">
                               </div>
                            </div>
     </div>
