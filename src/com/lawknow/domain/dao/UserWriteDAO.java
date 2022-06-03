@@ -7,7 +7,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.board.app.domain.vo.BoardDTO;
+
 import com.lawknow.domain.vo.UserReviewVO;
 
 import com.lawknow.domain.vo.UserWriteVO;
