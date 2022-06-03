@@ -12,7 +12,7 @@ import com.lawknow.domain.dao.UserDAO;
 import com.lawyer.action.ActionInfo;
 
 public class UserLoginOk {
-	
+	//
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		

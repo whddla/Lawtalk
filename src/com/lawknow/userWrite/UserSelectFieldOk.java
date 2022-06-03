@@ -12,7 +12,7 @@ import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
 public class UserSelectFieldOk implements Action {
-
+//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");

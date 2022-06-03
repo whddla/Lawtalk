@@ -13,7 +13,7 @@ import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
 public class PwChangeOk implements Action {
-	
+	//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
