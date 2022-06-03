@@ -15,7 +15,7 @@ import com.lawknow.userRegister.UserPwCheckOk;
 import com.lawyer.action.ActionInfo;
 
 	public class LawyerLoginFrontController extends HttpServlet{
-		
+		//
 		@Override
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			doProcess(req, resp);

@@ -16,7 +16,7 @@ public class LawyerPwChangeOk implements Action{
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
+		//
 		req.setCharacterEncoding("UTF-8");
 		
 		HttpSession session = req.getSession();

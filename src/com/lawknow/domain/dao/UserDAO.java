@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.lawknow.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
-
+//
 public class UserDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;
