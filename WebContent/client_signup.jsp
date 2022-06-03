@@ -35,8 +35,8 @@
 					<span class="text">카카오로 회원가입</span>
 				</a>
 			</button>
-                <!-- <a href="#0" id="secession">탈퇴</a>
-                <a href="#0" id="kakaoLogout">로그아웃</a>-->            
+               	<a href="#0" id="secession">탈퇴</a>
+                <a href="#0" id="kakaoLogout">로그아웃</a>
              <button class="facebook-signup-button">
                  <i class="facebook-icon"></i>
                  <span class="vertical-line2"></span>
@@ -44,7 +44,7 @@
                  <span class="text">페이스북으로 회원가입</span>
                  </a>
              </button>
-                <form action="JoinOk.ul" id="form" name="joinForm" method="post" class="sign-main-container">
+                <form onsubmit="return checks()" action="JoinOk.ul" id="form" name="joinForm" method="post" class="sign-main-container">
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
@@ -58,7 +58,7 @@
                     <div class="form-group">
                         <input name="userId"class="form-control" id="account-id" type="text" placeholder="아이디">
                         <input style="cursor: pointer; border:0; background-color: #fff; margin-top: -18px;padding:0;" type="button" value="중복확인" onclick="checkId()">
-						<p style= "color: blue; width: auto; display: inline-block;  margin-left: 54px; "id="result" ></p>
+						<p style= "color: blue; width: auto; display: inline-block;  margin-left: 54px; "id="result" name="result"></p>
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
@@ -66,7 +66,7 @@
                         <label class="account-password-error" for="account-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-password-confirm" type="password" placeholder="비밀번호 재확인">
+                        <input class="form-control" name="reuserPw" id="account-password-confirm" type="password" placeholder="비밀번호 재확인">
                         <label class="account-password-confirm-error" for="account-confirm-password" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-group">
                         <input class="form-control" id="inputCode" type="text" placeholder="인증번호" name="codeNum">
-                        <button type="button" class="code-button" id="signUpCode">[인증]</button>
+                        <button type="button" class="code-button" id="signUpCode" name="submitCode">[인증]</button>
                     </div>
                 </div>
                 <div class="cons-info">
@@ -94,7 +94,7 @@
                 <h3 class="info">선택정보</h3>
                 <div class="input-info">
                     <div class="form-group">
-                        <select class="form-control-button" name="userGender">
+                        <select class="form-control-button" name="userGender" id="userGender">
 						  <option value="" selected>성별 선택</option>
 						  <option value="M">남자</option>
 						  <option value="W">여자</option>
@@ -121,21 +121,21 @@
                     <div class="constract-text">
                         <label>
                             서비스 이용약관 동의
-                            <input type="checkbox" id="term1" name="chk">
+                            <input type="checkbox" id="checkList1" name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 취급방침 동의
-                            <input type="checkbox"  id="term2"  name="chk">
+                            <input type="checkbox"  id="checkList2"  name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 이용/수집 동의
-                            <input type="checkbox"  id="term3"  name="chk">
+                            <input type="checkbox"  id="checkList3"  name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
                     </div>      
@@ -158,13 +158,13 @@
                     </div>
                     <div class="check-age">
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="checkList4">
                             만 14세 이상입니다.
                         </label>
                     </div>
                 </div>
                 <div class="footer-button">
-                    <button type="submit" value="가입 완료" onclick="join()" class="footer-button-click">
+                    <button type="submit" value="가입 완료" class="footer-button-click">
                         가입신청
                     </button>
                 </div>
@@ -233,7 +233,7 @@ window.fbAsyncInit = function() {
                     saveToDos(response.access_token)  // 로그인 성공하면 사용자 엑세스 토큰 sessionStorage에 저장
                     window.Kakao.API.request({ // 사용자 정보 가져오기 
                         url: '/v2/user/me',
-                        success: (res)=>{
+                        success: (res)=> {
                             const kakao_account = res.kakao_account;
                             alert('로그인 성공');
                             window.location.href='/kovengerss/LawKnowMainPage.jsp'
@@ -282,11 +282,12 @@ window.fbAsyncInit = function() {
         const logout = document.querySelector('#kakaoLogout');
         const sion = document.querySelector('#secession');
 
-        logout.addEventListener('click', kakaoLogout);
-        sion.addEventListener('click', secession);
+       logout.addEventListener('click', kakaoLogout);
+       sion.addEventListener('click', secession);
     </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="assets/js/clientSignUp.js"></script>
 <script>
 
 
@@ -315,161 +316,7 @@ $("#signUpCode").click(function(){
 		$("codeNum").css("color","red");
 	}
 });
-function checkId(){
-	$.ajax({
-		url: "/kovengerss/UserCheckIdOk.ul",
-		type: "get",
-		data: {userId: $("input[name='userId']").val()},
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		success: function(result){
-			if(result.check ==1){
-				console.log(result);
-				$("P#result").text("중복된 아이디입니다.");
-			}else{
-				$("P#result").text("사용가능한 아이디입니다.");
-			}
-		},
-		error: function(request, status, error){
-			console.log("실패..");
-			console.log(request);
-			console.log(status);
-			console.log(error);
-		}
-	});
-}
 
-function join(){
-	joinForm.submit();
-}
-
-    var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
-    var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
-    var nameCheck = RegExp(/^[가-힣]{2,6}$/);
-    var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-    var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
-    $(document).ready(function() {
-    	$("#cbx_chkAll").click(function() {
-    		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
-    		else $("input[name=chk]").prop("checked", false);
-    	});
-
-    	$("input[name=chk]").click(function() {
-    		var total = $("input[name=chk]").length;
-    		var checked = $("input[name=chk]:checked").length;
-
-    		if(total != checked) $("#cbx_chkAll").prop("checked", false);
-    		else $("#cbx_chkAll").prop("checked", true); 
-    	});
-    });
-    
-    	let nameChecked = $(".account-name-error");
-    	let $name =$("#account-name");
-    	$name.on("keyup", function(){
-	    	if(nameCheck.test($name.val())){
-	    		nameChecked.css("color", "rgb(99 193 76)");
-	    		nameChecked.text("이름 입력 완료");
-	    	}
-	    		else {
-	    		nameChecked.css("color", "red");
-	    		nameChecked.text("잘못된 이름입니다.");
-	    	}
-		});
-    	
-    
-		/* 이메일 유효성 검사 */    	
-        let emailCheck = $(".account-email-error");
-    	let $email = $("#account-email");
-    	$email.on("keyup", function(){
-    		if(emailCheck2.test($email.val())){
-    			emailCheck.css("color","rgb(99 193 76)");
-    			emailCheck.text("이메일 입력완료.");
-    		} else if(nameCheck.test($email.val())){
-    			emailCheck.css("color","red");
-    			emailCheck.text("한글은 입력 할 수 없습니다.");
-    		} else if($email.val() ==""){
-    			emailCheck.css("color","red");
-    			emailCheck.text("이메일을 입력해주세요");
-    		}
-    		else{
-    			emailCheck.css("color","red");
-    			emailCheck.text("이메일 형식에 맞지 않습니다.");
-    		}
-    	});
-    	
-    	
-    	
-		/* 아이디 유효성 검사  */    	
-        let idCheck = $(".account-id-error");
-    	let $id = $("#account-id");
-    	$id.on("keyup", function(){
-    		if(userIdCheck.test($id.val())){
-    			idCheck.css("color","rgb(99 193 76)");
-    			idCheck.text("아이디 입력완료.");
-    		}else if($id.val() == ""){
-	        	idCheck.css("color","red");
-	        	idCheck.text("아이디는 반드시 입력해야합니다.");
-    		}
-    		else{
-    			idCheck.css("color","red");
-    			idCheck.text("아이디 형식에 맞지 않습니다.");
-    		}
-    	});
-    	
-    	
-    	
-    	
-        let pwCheck = $(".account-password-error");
-    	let $pw = $("#account-password");
-    	$pw.on("keyup", function(){
-    		if(passwdCheck.test($pw.val())){
-    			pwCheck.css("color","rgb(99 193 76)");
-    			pwCheck.text("비밀번호 입력완료.");
-    		}
-    		else if($pw.val() == ""){
-    			pwCheck.css("color","red");
-    			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
-    		}
-    		else {
-    			pwCheck.css("color","red");
-    			pwCheck.text("8~16자로 영문 대 소문자, 숫자, 특수기호를 조합해서 사용하세요.");
-    		}
-    	});
-
-    	let pwConfirm= $(".account-password-confirm-error");
-    	let $pwc= $("#account-password-confirm");
-    	
-    	
-    	$pwc.on("keyup", function(){
-    		
-    		if($pwc.val() !== passwdCheck.test($pw.val())){
-    			pwConfirm.css("color","red");
-    			pwConfirm.text("비밀번호가 일치하지 않습니다.");
-    			if($pwc.val() == ""){
-    				pwConfirm.css("color","red");
-    				pwConfirm.text("비밀번호를 입력해주세요.");
-    			}
-    		}
-    		
-    		if($pwc.val() == $pw.val()){
-    			pwConfirm.css("color","rgb(99 193 76)");
-    			pwConfirm.text("비밀번호 일치");
-    		}
-    	});
-    	
-    	/* 핸드폰 유효성 검사  */
-    	let $hp = $("#account-hp");
-    	let hpCheck = $(".tel-error");
-    	$hp.on("keyup",function(){
-    		if(phoneNumCheck.test($hp.val())){
-    			hpCheck.css("color","rgb(99 193 76)");
-    			hpCheck.text("핸드폰 번호 입력완료.");
-    		}else{
-    			hpCheck.css("color","red");
-    			hpCheck.text("핸드폰 번호를 입력해주세요.");
-    		}
-    	});
-    	
     	$(document).ready(function(){            
     	    var now = new Date();
     	    var year = now.getFullYear();
@@ -479,7 +326,6 @@ function join(){
     	    }
     	   
     	});
-    	
     	
 </script>
 </html>
