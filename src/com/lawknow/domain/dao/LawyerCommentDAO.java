@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.lawknow.domain.vo.LawyerCommentVO;
 import com.mybatis.config.MyBatisConfig;
-
+//
 public class LawyerCommentDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;

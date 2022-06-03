@@ -17,7 +17,7 @@ import com.lawyer.action.ActionInfo;
 public class LawyerPwCheckOk implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
+		//
 		req.setCharacterEncoding("UTF-8");
 		HttpSession session = req.getSession();
 		PrintWriter out =resp.getWriter();

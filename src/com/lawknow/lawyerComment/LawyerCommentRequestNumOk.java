@@ -15,7 +15,7 @@ public class LawyerCommentRequestNumOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-
+//
 		ActionInfo actionInfo = new ActionInfo();
 		
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
