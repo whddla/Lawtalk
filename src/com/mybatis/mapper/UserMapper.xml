@@ -58,7 +58,17 @@
 		select count(user_pw) from tbl_user_register
 		where user_num = #{userNum};
 	</select>
-
 	
+	<!-- 아이디 가져오기 -->
+	<select id = "UserId" resultType ="string">
+		select user_id from tbl_user_register
+		where user_num = #{userNum}
+	</select>	
+	
+	<!-- 이메일 가져오기 -->
+	<select id = "UserEmail" resultType ="string">
+		select user_email from tbl_user_register
+		where user_num = #{userNum}
+	</select>
 </mapper>
 

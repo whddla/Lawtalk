@@ -69,5 +69,15 @@ public class UserDAO {
 		return (Integer)sqlSession.selectOne("User.UserPwcheck", userNum) == 1;
 	}
 	
+	//아이디 가져오기
+	public String UserId(int userNum) {
+		return sqlSession.selectOne("User.UserId", userNum);
+	}
+	
+	//이메일 가져오기
+	public String UserEmail(int userNum) {
+		return sqlSession.selectOne("User.UserId", userNum);
+	}
+	
 }
 

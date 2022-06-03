@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,15 +24,15 @@
 					<h3 class = "form-title-text">계정정보</h3>
 					<div class ="input-layout">
 						<div class = "input-tag-layout">
-							<input name ="email" id="accout-email" class="accout-border allInput-border" type="email" placeholder="ex) name@example.com" style="padding:10px 0;">
+							<input name ="email" id="accout-email" class="accout-border allInput-border" type="email" placeholder="ex) name@example.com" style= "padding:10px 0; " >
 							<label class= "accout-email-error" for ="accout-email" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
 						</div>
 						
 						<div class ="input-tag-layout">
-							<div class="allInput-border" style="border-bottom-color:#ddd; color: #757372;  padding: 10px 0;">dnrwhddla14erl</div>
+							<div class="allInput-border" style="border-bottom-color:#ddd; color: #757372;  padding: 10px 0;" ><c:out value="${randomId} "/></div>
 							<label style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">아이디</label>
 						</div>
-						<p class="login-alert">소셜 로그인한 경우, 임의의 아이디가 부여됩니다.</p>
+						<p class="login-alert">소셜 로그인한 경우, 이메일 저장 후에 임의의 아이디가 부여됩니다.</p>
 					</div>
 						<div class ="button-layout" >
 							<button type="submit">[저장 ]</button>
@@ -107,26 +108,20 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-	function userPhoneCheck(){
-		$.ajax({
-			url : "/kovengerss/UserPhoneNumCheck2Ok.ul",
-			type: "get",
-			data: {}
-		});
-	}
-	
+let emailCheck = "${emailCheck}";
+
+if(emailCheck){
+	alert("변경완료");
+}
+
+if(!emailCheck){
+	alert("변경실패")
+}
+
+</script>
+<script>
 
 
-
-
-	let emailCheck = "${emailCheck}";
-
-	if(emailCheck){
-		alert("변경완료");
-	}else{
-		alert("변경실패");
-	}
-	
 
 	let emailCheck = $(".accout-email-error");
 	let $email = $("#accout-email");

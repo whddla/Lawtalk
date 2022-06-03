@@ -62,7 +62,7 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/privacyPage.jsp");
-		}
+		} 
 		  else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
