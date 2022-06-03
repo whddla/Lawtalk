@@ -15,7 +15,7 @@ public class LawyerJoinOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-
+//
 		ActionInfo actionInfo = new ActionInfo();
 		LawyerVO lawyerVO = new LawyerVO();
 		LawyerDAO lawyerDAO = new LawyerDAO();

@@ -20,7 +20,7 @@
 <body>
 
 
-
+<!-- // -->
 
 	<div class="top-header">
 		<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton">
@@ -214,6 +214,7 @@
 								</form>								
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
+							
 								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
 									<aside class="a-card-aside-card">
 										<div class="a-wrapper">
@@ -232,7 +233,7 @@
 												<span class="a-card-headerInfo">2022. 05. 06. 21:05</span>
 											</a>
 										</header>
-										<div class="a-card-content">
+										<div class="a-card-content" id="testt">
 										안녕하세요, 지식인 답변 [우주신] 로시오피스 최우수협력 LAWFIRM 법무법인 리버티 대표변호사 이혼 및 형사전문변호사 김지진 입니다.
 										우선적으로 위 사안과 관련된 핵심결론부터 말씀드리면,
 										1) 상대방이 협의한 바를 이행하지 않는다면 집행권원을 만들어 상대방 재산 압류 등 강제집행하여 해당 금원을 추심하는 방법을
@@ -259,12 +260,14 @@
 									</div>
 								</div>
 								
+  <c:set var="centent" value="${content}"/>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 <script>
+  $("#testt").append("<h3>${content}"</h3>);
 
 
-/* function getList(){
+/*  function getCommentList(){
 	ajax({
 		url: "/day07/CheckIdOk.me",
 		type: "get",
@@ -279,11 +282,31 @@
 	  }
 	});
 }
- */
+  */
 
 
-
-
+function comment(){
+	 let content = $("textarea[name='content']").val();
+	
+	 $.ajax({
+			url: "/LawyerCommentOk.lcc",
+			type: "post",
+			data: {"lawyerName" :lawyerName, "content" : content)},
+			contentType: "application/json; charset=utf-8",
+		  	success: function(){
+		  		$("textarea[name='content']".val(""));
+		  	}
+	 }); 
+	  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 

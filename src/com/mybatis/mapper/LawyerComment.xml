@@ -9,12 +9,16 @@
    (content)
    values(#{content})
    </insert>
+  
+   <!--  -->
    
-   	 <!--변호사 글 불러오기 -->
-   <select id ="commentView" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
-   select content
-   from tbl_lawyer_content
+   
+   	 <!--변호사 답글 목록 -->
+   <select id ="commentList" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
+   select lawyer_write_num, request_num, content
+   from tbl_lawyer_comment
    where lawyer_write_num = #{lawyer_write_num}
+   order by lawyer_write_num desc
    </select>
    
    <!--글 삭제  -->

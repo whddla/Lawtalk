@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.lawknow.domain.vo.FileVO;
 import com.mybatis.config.MyBatisConfig;
 import com.oreilly.servlet.MultipartRequest;
-
+//
 public class FileDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;

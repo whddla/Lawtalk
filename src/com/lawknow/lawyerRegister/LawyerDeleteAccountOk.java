@@ -12,7 +12,7 @@ import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
 public class LawyerDeleteAccountOk implements Action{
-	
+	//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8"); 
@@ -22,11 +22,10 @@ public class LawyerDeleteAccountOk implements Action{
 		LawyerDAO lawyerDAO = new LawyerDAO();
 		LawyerVO lawyerVO = new LawyerVO();
 		System.out.println("들어옴1");
-		
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		lawyerVO.setLawyerNum(lawyerNum);
 		System.out.println("들어옴2");
-		req.setAttribute("checkDel", lawyerDAO.LawyerDeleteAccount(lawyerVO));
+		req.setAttribute("checkDel2", lawyerDAO.LawyerDeleteAccount(lawyerVO));
 		System.out.println("들어옴3");
 		
 		actionInfo.setRedirect(false);

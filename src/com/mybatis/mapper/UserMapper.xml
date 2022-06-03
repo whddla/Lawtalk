@@ -8,7 +8,7 @@
    (user_num, user_id, user_name, user_email, user_pw, user_phone_num, user_gender, user_birth, user_kakao_email, user_facebook_email)
    values(0, #{userId}, #{userName}, #{userEmail}, #{userPw}, #{userPhoneNum}, #{userGender}, #{userBirth}, #{userKakaoEmail}, #{userFacebookEmail})
    </insert>
-   
+   <!--  -->
    
    <!--아이디 중복검사  -->
    <select id ="checkId" parameterType ="string" resultType="int">   
@@ -21,6 +21,11 @@
 		from tbl_user_register order by user_name desc
 	</select>
 	
+	<!-- 번호로 이름가져오기 -->
+	<select id="getUserName" parameterType="int" resultType = "string">
+		select user_name from tbl_user_register
+		where user_num = #{userNum}
+	</select>
 	
 	<!-- 로그인 -->
 	<select id="loginOk" parameterType="map" resultType="_int">
@@ -29,7 +34,7 @@
 	</select>
    
    <!-- 계정 탈퇴  -->
-   <delete id="UserdeleteAccount" parameterType="_int">
+   <delete id="UserDeleteAccount" parameterType="userVO">
       delete from tbl_user_register
       where user_num =  #{userNum}
    </delete>
@@ -49,11 +54,21 @@
 	</update>
 	
 	<!-- 비밀번호 체크 -->
-	<select id ="UserPwcheck" parameterType="userVO">
-		select user_pw from tbl_user_regiser
-		where user_num = #{userNum} and user_pw =#{userPw}
+	<select id ="UserPwcheck" parameterType="int" resultType = "_int">
+		select count(user_pw) from tbl_user_register
+		where user_num = #{userNum};
 	</select>
-
 	
+	<!-- 아이디 가져오기 -->
+	<select id = "UserId" resultType ="string">
+		select user_id from tbl_user_register
+		where user_num = #{userNum}
+	</select>	
+	
+	<!-- 이메일 가져오기 -->
+	<select id = "UserEmail" resultType ="string">
+		select user_email from tbl_user_register
+		where user_num = #{userNum}
+	</select>
 </mapper>
 

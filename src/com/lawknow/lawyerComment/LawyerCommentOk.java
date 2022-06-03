@@ -14,7 +14,7 @@ public class LawyerCommentOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
+		//
 		req.setCharacterEncoding("UTF-8");
 		
 		ActionInfo actionInfo = new ActionInfo();
@@ -23,17 +23,17 @@ public class LawyerCommentOk implements Action{
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
 //		lawyerCommentVO.setTitle(req.getParameter("title"));
-//		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		
 		lawyerCommentVO.setLawyerName(req.getParameter("lawyerName"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
+		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
 		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 				
 		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
 		
-		req.setAttribute("lawyername", lawyerCommentVO.getLawyerName());
-		req.setAttribute("lawyerwritenum", lawyerCommentVO.getLawyerWriteNum());
+		req.setAttribute("lawyerName", lawyerCommentVO.getLawyerName());
+		req.setAttribute("lawyerWriteDate", lawyerCommentVO.getWriteDate());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/answer_page.jsp");

@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lawknow.userRegister.UserDeleteAccountOk;
+import com.lawknow.userRegister.UserEmailUpdateOk;
+import com.lawknow.userRegister.UserPwCheckOk;
 import com.lawyer.action.ActionInfo;
 
 	public class LawyerLoginFrontController extends HttpServlet{
-		
+		//
 		@Override
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			doProcess(req, resp);
@@ -35,6 +38,7 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(true);
 				actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
+				
 			} else if(command.equals("LawyerCheckIdOk.ll")) {
 				new LawyerCheckIdOk().execute(req, resp);
 			} else if(command.equals("LawyerLoginOk.ll")) {
@@ -47,8 +51,21 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(false);
 				actionInfo.setPath("/pwChange2.jsp");
-			}
-			  else {
+			} else if(command.equals("LawyerDeleteAccountOk.ll")){
+				actionInfo = new LawyerDeleteAccountOk().execute(req, resp);
+			} else if(command.equals("LawyerDeleteAccount.ll")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/lawyerWithdrawal.jsp");
+			} else if(command.equals("LawyerPwCheckOk.ll")) {
+				new LawyerPwCheckOk().execute(req, resp);
+			} else if(command.equals("LawyerEmailUpdateOk.ll")) {
+				actionInfo = new LawyerEmailUpdateOk().execute(req, resp);
+			} else if(command.equals("LawyerEmailUpdate.ll")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/privacyPage2.jsp");
+			} else {
 				// 404 일 때 출력할 에러 페이지 경로 작성
 			}
 

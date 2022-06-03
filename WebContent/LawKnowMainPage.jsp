@@ -599,10 +599,12 @@ div.btns{
 let checkDel = "${checkDel}";
 if(checkDel){
 	alert("탈퇴완료");
-}else{
-	alert("탈퇴실패");
 }
 
+let checkDel2 = "${checkDel2}";
+if(checkDel2){
+	alert("탈퇴완료");
+}
 
 const banner = document.querySelector("div.banner");
 const arrows = document.querySelectorAll("div.arrow");
@@ -624,7 +626,7 @@ btns.forEach(function(btn, i, ar){
 
 
 
-arrows.forEach((arrow)=>{
+arrows.forEach((arrow)=> {
  arrow.addEventListener("click",function(){
     let arrowType = arrow.classList[1]; 
    if(arrowType = "prev"){

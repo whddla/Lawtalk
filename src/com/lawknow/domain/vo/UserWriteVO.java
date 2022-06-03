@@ -1,7 +1,7 @@
 package com.lawknow.domain.vo;
 
 public class UserWriteVO {
-
+//
 		private int userWriteNum;
 		private int requestNum;
 		private int userNum;

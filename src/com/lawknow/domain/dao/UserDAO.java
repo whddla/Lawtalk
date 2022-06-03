@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.lawknow.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
-
+//
 public class UserDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;
@@ -19,10 +19,15 @@ public class UserDAO {
 	}
 	//로그인 확인
 	public int loginOk(HashMap<String, String> userMap) {
-		System.out.println("다오 등장");
+		System.out.println("로그인 다오 등장");
 		return sqlSession.selectOne("User.loginOk", userMap);
 	}
 	
+	//userNum으로 userName 가져오기
+	public String getUserName(int userNum) {
+		System.out.println("NAME 다오 등장");
+		return sqlSession.selectOne("User.getUserName", userNum);
+	}
 	
 	//회원가입
 	public void join(UserVO userVO) {
@@ -60,8 +65,18 @@ public class UserDAO {
 	}
 	
 	//현재 비밀번호 가져오기
-	public boolean UserPwcheck(UserVO userVO) {
-		return (Integer)sqlSession.selectOne("User.UserPwcheck", userVO) == 1;
+	public boolean UserPwcheck(int userNum) {
+		return (Integer)sqlSession.selectOne("User.UserPwcheck", userNum) == 1;
+	}
+	
+	//아이디 가져오기
+	public String UserId(int userNum) {
+		return sqlSession.selectOne("User.UserId", userNum);
+	}
+	
+	//이메일 가져오기
+	public String UserEmail(int userNum) {
+		return sqlSession.selectOne("User.UserId", userNum);
 	}
 	
 }

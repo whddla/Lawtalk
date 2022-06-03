@@ -10,7 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.lawknow.domain.vo.LawyerVO;
 import com.lawknow.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
-
+//
 public class LawyerDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;
@@ -34,6 +34,12 @@ public class LawyerDAO {
 		return sqlSession.selectOne("Lawyer.loginOk", lawyerMap);
 	}
 	
+	//lawyerNum으로 lawyerName 가져오기
+	public String getLawyerName(int lawyerNum) {
+		System.out.println("NAME 다오 등장");
+		return sqlSession.selectOne("Lawyer.getLawyerName", lawyerNum);
+	}
+		
 	//변호사 리스트
 	public List<LawyerVO> selectLawyers(){
 		return sqlSession.selectList("Lawyer.selectLawyers");
@@ -48,4 +54,15 @@ public class LawyerDAO {
 	public boolean LawyerDeleteAccount(LawyerVO lawyerVO) {
 		return (Integer)sqlSession.delete("Lawyer.LawyerDeleteAccount", lawyerVO) == 1;
 	}
+	
+	//이메일 수정
+	public boolean LawyerEmailUpdate(LawyerVO lawyerVO) {
+		return (Integer)sqlSession.update("Lawyer.LawyerEmailUpdate", lawyerVO) == 1;
+	}
+
+	//현재 비밀번호 가져오기
+	public boolean LawyerPwcheck(int lawyerNum) {
+		return (Integer)sqlSession.selectOne("Lawyer.LawyerPwcheck", lawyerNum) == 1;
+	}
+	
 }

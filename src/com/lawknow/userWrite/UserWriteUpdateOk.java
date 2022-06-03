@@ -16,7 +16,7 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class UserWriteUpdateOk implements Action {
-
+//
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		// TODO Auto-generated method stub

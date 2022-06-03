@@ -2,7 +2,6 @@ package com.lawknow.lawyerRegister;
 
 import java.io.IOException;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -14,7 +13,7 @@ import com.lawyer.action.ActionInfo;
 public class LawyerLogin implements Action {
 
    public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-      
+      //
       ActionInfo actionInfo = new ActionInfo();
       HttpSession session = req.getSession();
       
