@@ -13,12 +13,12 @@
    <!-- 작성글삭제  -->
     <delete id="userDelete" parameterType="_int">
         delete from tbl_user_write
-        where request_num = #{requestNum}
+        where user_write_num = #{userWriteNum}
     </delete>
     <!--작성 글 수정  -->
-    <update id="userWriteUpdate" parameterType ="_int">
+    <update id="userWriteUpdate" parameterType ="userWriteVO">
     update tbl_user_write
-    set   title=#{title}, content = #{content}
+    set  title=#{title}, content = #{content}
     where user_write_num = #{userWriteNum}
     </update>
    
