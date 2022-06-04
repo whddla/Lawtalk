@@ -1,5 +1,5 @@
 package com.lawknow.domain.dao;
-//
+
 import java.sql.Date;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 
 import com.lawknow.domain.vo.UserReviewVO;
-
+import com.lawknow.domain.vo.UserWriteDTO;
 import com.lawknow.domain.vo.UserWriteVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -60,35 +60,32 @@ public class UserWriteDAO {
 		return sqlSession.selectList("UserWrite.selectUserWrite");
 	}
 	
-	public int countWrite() {
-		return sqlSession.selectOne("UserWrite.countWrite");
-	}
+	
 	
 	public int getSeq() {
 		return sqlSession.selectOne("UserWrite.getSeq");
 	}
 	
-/*	//게시글 정보 조회
-		public BoardDTO selectDetail(int boardNumber) {
-			return sqlSession.selectOne("Board.selectDetail", boardNumber);
-		}
-		
-		//게시글 조회수 증가
-		public void updateReadCount(int boardNumber) {
-			sqlSession.update("Board.updateReadCount", boardNumber);
-		}*/
-	
-	
-/*	//게시글 목록
-		public List<UserWriteDTO> selectAll(Map<String, Integer> userWriteMap) {
-			return sqlSession.selectList("UserWrite.selectAll", userWriteMap);
-		}
-		
-		
-		//게시글 전체 개수
+	//게시글 전체 개수
 		public int getTotal() {
 			return sqlSession.selectOne("UserWrite.getTotal");
+		}
+		
+	/*	//게시글 목록
+		public List<UserWriteDTO> selectAll(Map<String, Integer> userWriteMap) {
+			return sqlSession.selectList("UserWrite.selectAll", userWriteMap);
 		}*/
+		
+		//게시글 정보 조회
+		public UserWriteVO selectDetail(int userWriteNum) {
+			return sqlSession.selectOne("UserWrite.selectDetail", userWriteNum);
+		}
+	
+	
+		//게시글 조회수 증가
+		public void updateReadCount(int userWriteNum) {
+			sqlSession.update("UserWrite.updateReadCount", userWriteNum);
+		}
 	
 	
 	

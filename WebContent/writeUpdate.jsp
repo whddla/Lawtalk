@@ -9,9 +9,731 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/write.css">
+ 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+    
+html,
+body {
+    width: 100%;
+}
+a { text-decoration:none;
+	color: black;
+}
+a:hover {
+  color : black;
+}
+body {
+    margin: 0;
+    padding: 0;
+	background:#fff;
+}
+
+
+.iflower{
+text-align: center;
+position: relative;
+top: -100px;
+}
+.ififif{
+color: #333;
+font-size: 18px;
+font-weight: bold;
+}
+.ansim{
+color: #222;
+font-size: 15px;
+margin-top: 16px;
+}
+.withlawer{
+color: #f50;
+font-size: 14px;
+margin: 0 8px;
+padding-bottom: 4px;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+
+}
+
+.quick-menu{
+height: 46px;
+width: 285px;
+margin-bottom: 17px;
+display: flex;
+margin-top: 40px;
+margin-left: 42px;
+}
+
+.one{
+height: 88px;
+width: 88px;
+display: inline-block;
+text-align: center;
+font-weight: 600;
+color: #999;
+margin: 0 auto;
+font-size:14px;
+}
+.secondpart{
+margin-bottom: 23px;
+padding: 21px 2px 19px;
+border-bottom: 1px solid #333;
+border-top: 1px solid #333;
+line-height: 2.5;
+text-align: left;
+width: 281px;
+height: 200px;
+margin: 0 auto;
+
+}
+.fourbox{
+width: 100%;
+height: 37px;
+}
+.findlower{
+color: black;
+text-decoration: none;
+font-weight: 900;
+font-size: 18px;
+}
+.writeglesigi{
+color: #333;
+border-bottom: 1px solid #333;
+cursor: pointer;
+font-family: Notokr-Bold;
+font-size: 16px;
+line-height: 28px;
+padding-bottom: 21px;
+position: relative;
+width: 285px;
+height: 45px;
+font-weight: bold;
+margin: 0 auto;
+margin-top: 20px;
+}
+
+
+#slidebutton{
+background-color: white;
+outline: none;
+color: #000;
+border: 0ch;
+width: 65px;
+height: 52px;
+}
+
+#slidebutton:focus{
+border: white;
+outline: none;
+outline: white;
+}
+#slidebutton:checked{
+outline: none;
+outline: white;
+border: white;
+}
+#slidebutton:visited{
+outline: none;
+border: white;
+outline: white;
+}
+
+#slidebutton { color: black; background-color: #fff; cursor: default; }
+#slidebutton:active, #slidebutton:focus { border: none; box-shadow: none; }
+
+.offcanvas-title strong {
+    width: 175px;
+    height: 38px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 46px;
+    position: relative;
+    left: 74px;
+    top: -3px;
+	color: #ff6d37;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+.menu-items-bottom{
+    margin-left: 39px;
+    margin-top: 21px;
+    margin-bottom: 0;
+    text-align: left;
+    width:99%;
+    height: 225px;
+    line-height: 41px;
+}
+
+.bottom-inner{
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+}
+.bottom-inner:hover{
+    color: #000;
+}
+
+.new-up{
+    color: #ff6d37;
+    font-family: Amplitude Medium;
+    font-size: 12px;
+    position: relative;
+    text-decoration: none;
+    transition: color .2s ease-out;
+    top: -8px;
+    left: -9px;
+    font-weight: bolder;
+}
+.realbottomSlide{
+    width: 100%;
+    display: flex;
+    height: 113px;
+    margin-left: 35px;
+
+}
+.slideLogin{
+    flex: 1;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.slideicon{
+    
+    font-size: 41px;
+
+}
+.realbottomSlide a{
+    text-decoration: none;
+    color: #000;
+}
+
+.realbottomSlide a:hover{
+    color: #000;
+}
+
+.one{
+    cursor: pointer;
+}
+
+#thbutton{ /* 카테고리 움직이는 버트 */
+    position: absolute;
+    left: 404px;
+    top: 19px;
+    cursor: pointer;
+}
+
+.slideLogin i{
+    position: absolute;
+    left: 235px;
+    top: 698px;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@ */
+div.all-layout{
+    width: 100%;
+    position: absolute;
+    right: 360px;
+ }
+ 
+ #Law{
+     position: absolute;
+     color: #f50;
+     font-size: 36px;
+     font-weight: bold;
+     top: 12px;
+     left: 835px;
+ }
+ 
+
+ 
+ .main{
+     position: absolute;
+     color: black;
+     font-size: 20px;
+     font-weight: bold;
+     left: 1260px;
+     top: -7px;
+     width: 200px;
+     margin-top: 24px;
+ }
+ 
+ .hr1{
+     position: absolute;
+     top: 57px;
+     left: 0px;
+     width: 2261px;
+     height: 0.1px;
+     font-size: 25px;
+     font-weight: bolder;
+     background-color: #999;
+ }
+ .hr2{
+     position: absolute;
+     left: 950px;
+     top: 541px;
+     width: 630px;
+     height: 0.1px;
+     font-size: 25px;
+     font-weight: bolder;
+     background-color: #999;
+ }
+ 
+#total{
+    position: absolute;
+    left: 46px;
+    top: -8px;
+    width: 2000px;
+}
+
+#total2{
+    position: absolute;
+    left: 39px;
+    top: -7px;
+    width: 2000px;
+}
+
+ .word1{
+     position: absolute;
+     color: black;
+     font-size: 18px;
+     font-weight: bold;
+     left: 950px;
+     top: 175px;
+ }
+ .word2{
+     position: absolute;
+     color: #f50;
+     font-size: 18px;
+     font-weight: bold;
+     left: 950px;
+     top: 205px;
+ }
+ .word3{
+     position: absolute;
+     color: black;
+     font-size: 18px;
+     font-weight: bold;
+     left: 1008px;
+     top: 205px;
+ }
+ 
+ #text > div{
+     position: absolute;
+     font-size: 16px;
+     font-weight: bold;
+ }
+ 
+ .text_1{
+     color: black;
+     left: 950px;
+     top: 279px;   
+ }
+ 
+ .text_2{
+     color: rgb(153, 153, 153);
+     left: 986px;
+     top: 278px;
+ }
+ .text_3{
+     color: #f50;
+     left: 1059px;
+     top: 277px;
+ }
+ 
+ .text_4{
+     color: black;
+     left: 950px;
+     top: 388px;   
+ }
+ .text_5{
+     color: rgb(153, 153, 153);
+     left: 985px;
+     top: 387px;
+ }
+ 
+ .text_6{
+     color: #f50;
+     left: 1068px;
+     top: 386px;
+ }
+ #input1{
+     position: absolute;
+     left: 950px;
+     top: 312px;
+     width: 630px;
+     height: 40px;
+     border-radius: 2px;
+     border-width: 1px;
+     border-color: gray;
+ }
+ 
+ #input2{
+     position: absolute;
+     left: 950px;
+     top: 420px;
+     width: 630px;
+     height: 100px;
+     border-radius: 2px;
+     border-width: 1px;
+     border-color: gray;
+     vertical-align: top;
+     line-height: 22px;
+ }
+ 
+ 
+ 
+ h3{
+     position: absolute;
+     width: 400px;
+     left: 950px;
+     top: 566px;
+     color: black;
+     font-size: 14px;
+     font-weight: bold;
+ }
+ 
+ 
+ ul{
+     position: absolute;
+     left: 926px;
+     top: 592px;
+     width: 315px;
+     height: 100px;
+    
+ }
+ 
+ 
+ .ul2{
+     position: absolute;
+     left: 945px;
+     top: 660px;
+     width: 315px;
+     height: 100px;
+     
+ }
+ 
+ .ul2 > li{
+     font-weight: bold;
+     font-size: 11px;
+     margin: 3px 0px;
+ }
+ 
+ li{
+     list-style: square;
+     padding-left: -15px;
+     font-size: 12px;
+     list-style: disc;
+     color: #757575;
+     width: 800px;
+     font-weight: bold;
+     margin: 5px 0px;
+ }
+ 
+ span{
+     color: black;
+     font-weight: bold;
+     font-size: 12px;
+ }
+ 
+ #checkbox1{
+     position: absolute;
+     left: 953px;
+     top: 752px;
+     height: 100px;
+ }
+ 
+ #label1{
+     position: absolute;
+     left: 978px;
+     top: 791px;
+     height: 100px;
+     font-size: 14px;
+ }
+ 
+ .register{
+     position: absolute;
+     left: 950px;
+     top: 850px;
+     border: 1px solid;
+     width: 630px;
+     height: 63px;
+     padding-top: 20px;
+     text-align: center;
+     background-color: #cfcfcf;
+     color: #fff;
+     font-weight: bold;
+ }
+ 
+ .hr3{
+     position: absolute;
+     left: 0px;
+     top: 1020px;
+     width: 2261px;
+     height: 0.1px;
+     font-size: 25px;
+     font-weight: bolder;
+     background-color: #999;
+}
+ 
+ .last1{
+     position: absolute;
+     left: 732px;
+     top: 1095px;
+     font-size: 14px;
+     font-weight: bolder;
+ }
+ .last2{
+     position: absolute;
+     left: 1419px;
+     top: 1095px;
+     font-size: 13px;
+     font-weight: bolder;
+ }
+ .last3{
+     position: absolute;
+     left: 1552px;
+     top: 1095px;
+     font-size: 13px;
+     font-weight: bolder;
+ }
+ .last4{
+     position: absolute;
+     left: 1685px;
+     top: 1095px;
+     font-size: 13px;
+     font-weight: bolder;
+ }
+ .last5{
+     position: absolute;
+     left: 732px;
+     top: 1122px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last6{
+     position: absolute;
+     left: 732px;
+     top: 1146px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last7{
+     position: absolute;
+     left: 732px;
+     top: 1170px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last8{
+     position: absolute;
+     left: 1258px;
+     top: 1122px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last26{
+     position: absolute;
+     left: 1420px;
+     top: 1122px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+     
+ }
+ .last27{
+     position: absolute;
+     left: 1551px;
+     top: 1122px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+     
+ }
+ .last28{
+     position: absolute;
+     left: 1686px;
+     top: 1122px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+     
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .last9{
+     position: absolute;
+     left: 1258px;
+     top: 1146px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last10{
+     position: absolute;
+     left: 1258px;
+     top: 1170px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ 
+ .last11{
+     position: absolute;
+     left: 732px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ 
+ .last12{
+     position: absolute;
+     left: 790px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last13{
+     position: absolute;
+     left: 850px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #f50;
+ }
+ .last14{
+     position: absolute;
+     left: 955px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last15{
+     position: absolute;
+     left: 1015px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last16{
+     position: absolute;
+     left: 1077px;
+     top: 1218px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: black;
+ }
+ .last17{
+     position: absolute;
+     left: 732px;
+     top: 1240px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last18{
+     position: absolute;
+     left: 732px;
+     top: 1262px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last19{
+     position: absolute;
+     left: 732px;
+     top: 1325px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last20{
+     position: absolute;
+     left: 732px;
+     top: 1345px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last21{
+     position: absolute;
+     left: 732px;
+     top: 1365px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last22{
+     position: absolute;
+     left: 732px;
+     top: 1385px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ .last23{
+     position: absolute;
+     left: 732px;
+     top: 1405px;
+     font-size: 12px;
+     font-weight: bolder;
+     color: #999;
+ }
+ 
+ .last24{
+     position: absolute;
+     left: 732px;
+     top: 1453px;
+     font-size: 30px;
+     font-weight: bolder;
+     color: black;
+ }
+ 
+ .last25{
+     position: absolute;
+     left: 880px;
+     top: 1475px;
+     font-size: 10px;
+     font-weight: bolder;
+     color: black;
+ }
+ 
+ .bottom{
+     position: absolute;
+     background-color: white;
+     width: 1973px;
+     height: 75px;
+     top: 1480px;
+     left: -2px;
+ }
+
     .btn-check{
    border-color: aliceblue;
     }
@@ -79,6 +801,11 @@
     <title>Document</title>
 </head>
 <body style="overflow-x: hidden;">
+<c:set var="page" value="${page}"/>
+<c:set var="userWrite" value="${userWrite}"/>
+	
+
+
     <div class="all-layout">
        <a href="LawKnowMainPage.jsp"><div id="Law">LN</div></a>
     
@@ -94,7 +821,9 @@
           
        
 		<!--만약에 루트경로가 바뀔경우에는   contextPath-->
-        <form action="UserWriteOk.uw" name ="joinForm" method = "post" enctype="multipart/form-data">
+        <form action="${pageContext.request.contextPath}/userWrite/UserWriteUpdateOk.uw" name ="joinForm" method = "post" enctype="multipart/form-data">
+       	<input type="hidden" name="userWriteNum" value="${userWrite.getUserWriteNum()}">
+		<input type="hidden" name="page" value="${page}">
         <c:set var="Writelist" value="${userWriteCount}"/>
    <div style="position: relative;
     top: 238px;
@@ -130,9 +859,9 @@
           <div class="text_5">(200자이상&nbsp;&nbsp;)</div>
           <div class="text_6">*</div>    
         </div>   
-            <textarea id="input1"  class ="DOC_TEXT" name = "title" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
-            <textarea id="input2" name ="content" style="resize: none; " type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요">
-            
+            <textarea id="input1"  class ="DOC_TEXT" name = "title" style="resize: none;" type="text" >${userWrite.getTitle()}</textarea>
+            <textarea id="input2" name ="content" style="resize: none; " type="text" >
+             ${userWrite.getContent()}
             </textarea>
           
             <input type="checkbox" id="checkbox1" onclick ="getBlack()">

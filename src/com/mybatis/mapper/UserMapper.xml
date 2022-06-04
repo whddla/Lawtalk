@@ -70,5 +70,7 @@
 		select user_email from tbl_user_register
 		where user_num = #{userNum}
 	</select>
+	
+	
 </mapper>
 

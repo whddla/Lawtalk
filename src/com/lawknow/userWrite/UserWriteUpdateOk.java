@@ -27,11 +27,12 @@ public class UserWriteUpdateOk implements Action {
 		int fileSize =1024*1024*5; //5M
 		
 		HttpSession session = req.getSession(); // req를 통해 session을 가져올 수 있다.
-		ActionInfo actionInfo = new ActionInfo();
+		
 		 
 		UserWriteVO userWriteVO = new  UserWriteVO();
 		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		FileDAO fileDAO = new FileDAO();
+		ActionInfo actionInfo = new ActionInfo();
 		
 		
 		int userWriteNum = 0, page = 0;
@@ -40,10 +41,13 @@ public class UserWriteUpdateOk implements Action {
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
 		/*userWriteVO.setUserWriteNum(req.getParameter("userWriteNum"));*/
+		page = Integer.parseInt(multipartRequest.getParameter("page"));
+		userWriteNum = Integer.parseInt(multipartRequest.getParameter("userWriteNum").trim());
 		userWriteVO.setField(multipartRequest.getParameter("field"));
 		userWriteVO.setTitle(multipartRequest.getParameter("title"));
 		userWriteVO.setContent(multipartRequest.getParameter("content"));// 여기까지 글작성에대한 디비를 가져왔다
-		userWriteVO.setWriteDate(multipartRequest.getParameter("writeDate"));
+		userWriteVO.setUserWriteNum(userWriteNum);
+		/*userWriteVO.setWriteDate(multipartRequest.getParameter("writeDate"));*/
 		
 		/*userWriteVO.setUserWriteNum(Integer.parseInt(session.getAttribute("userWriteCount")) );*/
 //		session.getAttribute("userWrite");
@@ -57,16 +61,16 @@ public class UserWriteUpdateOk implements Action {
 		fileDAO.delete(userWriteNum);
 		fileDAO.insert(multipartRequest, userWriteNum);
 		
-		req.setAttribute("userUpdateTitle",userWriteVO.getTitle());
+		/*req.setAttribute("userUpdateTitle",userWriteVO.getTitle());
 		req.setAttribute("userUpdatecontent",userWriteVO.getContent());
-		req.setAttribute("userUpdateField",userWriteVO.getField());
+		req.setAttribute("userUpdateField",userWriteVO.getField());*/
 		
 		
 	/*	req.setAttribute("userWriteTitle",userWriteVO.getTitle());
 		req.setAttribute("userWritecontent",userWriteVO.getContent());*/
 		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/mycounsel.jsp");
+		actionInfo.setRedirect(true);
+		actionInfo.setPath(req.getContextPath() + "/userWrite/UserWriteListsOk.uw?page=" + page);
 		
 		
 		return actionInfo;

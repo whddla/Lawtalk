@@ -1,4 +1,4 @@
-package com.lawknow.userWrite;
+/*package com.lawknow.userWrite;
 
 import java.io.IOException;
 
@@ -35,4 +35,4 @@ public class UserWriteListOk implements Action {
 		return actionInfo;
 	}
 
-}
+}*/
