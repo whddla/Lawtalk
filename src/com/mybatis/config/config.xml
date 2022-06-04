@@ -12,6 +12,7 @@
        <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
         <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
          <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
+         <typeAlias type="com.lawknow.domain.vo.LawyerCommentDTO" alias="lawyerCommentDTO"/>
          <typeAlias type="com.lawknow.domain.vo.FileVO" alias="fileVO"/>
    </typeAliases> 
    <environments default="lawknow">

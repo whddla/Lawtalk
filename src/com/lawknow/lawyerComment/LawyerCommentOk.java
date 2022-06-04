@@ -22,23 +22,23 @@ public class LawyerCommentOk implements Action{
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-//		lawyerCommentVO.setTitle(req.getParameter("title"));
+//		lawyerCommentVO.setUserWriteNum(Integer.parseInt(req.getParameter("userWriteNum")));
+//		lawyerCommentVO.setLawyerNum((Integer)req.getSession().getAttribute("lawyerNum"));
+
 		
-		lawyerCommentVO.setLawyerName(req.getParameter("lawyerName"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
-		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
-		
-		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 				
-		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());
-		
+		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());		
 		req.setAttribute("lawyerName", lawyerCommentVO.getLawyerName());
 		req.setAttribute("lawyerWriteDate", lawyerCommentVO.getWriteDate());
 		
+		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/answer_page.jsp");
 
 		return actionInfo;
+		
+//		return null;
 		
 	}
 		
