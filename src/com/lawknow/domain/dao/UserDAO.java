@@ -76,7 +76,17 @@ public class UserDAO {
 	
 	//이메일 가져오기
 	public String UserEmail(int userNum) {
-		return sqlSession.selectOne("User.UserId", userNum);
+		return sqlSession.selectOne("User.UserEmail", userNum);
+	}
+	
+	//핸드폰 번호 가져오기
+	public String UserPhonNum(int userNum) {
+		return sqlSession.selectOne("User.UserPhonNum",userNum);
+	}
+	
+	//핸드폰 번호 변경
+	public boolean UserPhoneChange(UserVO userVO) {
+		return sqlSession.update("User.UserPhoneChange", userVO) == 1;
 	}
 	
 }

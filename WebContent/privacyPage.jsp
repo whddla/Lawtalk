@@ -80,12 +80,18 @@
 							<button type="submit">[ 저장 ]</button>
 					</div>
 				</form>
-				<form class= "third-form">
+				<form class= "third-form" action = "UserPhonNumUpdateOk.ul" method="post">  <!-- action = "UserPhonNumUpdateOk.ul" method="post" -->
 					<h3 class = "form-title-text">전화번호</h3>
 					<div class ="input-hp-layout" >
 						<div class="hp-layout">
-							<input name ="phonNum" type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13">
+							<input type="text" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" name ="newPhoneNum">
+							<span style="position: absolute; right: 15px; top: 12px; cursor: pointer;" onclick ="pushCode()">인증번호 발송</span>
 							<label class="tel-error" for="accout-hp" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
+						</div>
+						<div class="hp-layout">
+							<input name ="codeChk" type="text" id="codeCheck" class="allInput-border"  style="padding:10px 0;" placeholder="인증번호 입력">
+							<span style="position: absolute; right: 15px; top: 12px; cursor: pointer;" id="checkButton">인증번호 확인</span>
+							<label class="code-error" for="codeCheck" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">인증번호</label>
 						</div>
 					</div>
 					<div class ="button-layout" >
@@ -108,22 +114,59 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+
+	let code2 = "";
+ 	function pushCode(){
+		$.ajax({
+			url:"/kovengerss/UserPhoneNumPushOk.ul",
+			type:"get",
+			data:{newPhoneNum: $("input[name='newPhoneNum']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType:"json",
+			success: function(result){
+				if(!result.error){
+					code2 = result.code;
+					alert("인증번호 발송 완료");
+				}else{
+					alert("중복된 핸드폰 번호입니다");
+					code2 = null;
+				}
+			}
+		});
+	}
+		$("#checkButton").on("click",function(){
+			console.log(code2);
+			console.log($("input[name=codeChk]").val());
+			if($("input[name=codeChk]").val() == code2){
+				alert("인증성공");
+			}else{
+				alert("인증실패");
+			}
+		});
+		
+</script>
+<script>
 let emailCheck = "${emailCheck}";
 
 if(emailCheck){
 	alert("변경완료");
 }
 
-if(!emailCheck){
-	alert("변경실패")
+let phoneNumCheck = "${phoneNumCheck}";
+let phoneError = "${phoneError}";
+
+if(phoneNumCheck){
+	alert("핸드폰 번호 변경완료");
 }
+
+if(phoneError){
+	alert("변경실패...동일한 핸드폰 번호입니다.");
+}
+
 
 </script>
 <script>
-
-
-
-	let emailCheck = $(".accout-email-error");
 	let $email = $("#accout-email");
 	
 	
