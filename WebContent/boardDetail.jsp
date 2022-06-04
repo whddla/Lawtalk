@@ -40,7 +40,39 @@
             width:20%;
             font-weight:bold;
          }
-         
+        #page-wrapper > :first-child{
+        	background-color: #ffd180;
+        }
+        #page-wrapper > :last-child{
+        background-color: #ffd180;
+            height: 500px;
+        }
+        input[type="button"].primary{
+        background-color: #ffd180;
+    color: #ffffff !important;
+        }
+         input[type="button"].primary:hover{
+         	   background-color: #ffd180;
+         }
+        .main{
+        margin-top: 123px;
+            width: 1000px;
+    	margin: 0 auto;
+        }
+         .logo-title {
+	    display: flex;
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 32px;
+	    align-content: space-between;
+	    justify-content: center;
+	    cursor: pointer;
+}
+.logo-title a{
+	color: white;
+    font-size: 40px;
+    text-transform: uppercase
+}
       </style>
    </head>
    <body class="is-preload">
@@ -56,9 +88,15 @@
                      <jsp:include page="/app/fix/header.jsp"/>
                   </div>
                </div> --%>
+		
+			
+
 
             <!-- Wrapper -->
                <div class="wrapper">
+               <div class="logo-title">
+			                  		<a style="cursor: poniner; color:#ff6d37; font-size:40px; text-transform: uppercase;" class="logo-title-font"><strong style="color: white;font-weight: bold;">lawknow</strong></a>
+			</div>	
                   <div class="inner">
 
                      <!-- Main -->
@@ -78,7 +116,7 @@
                         
                            <h2 style="text-align:left;">${userWrite.getTitle()}</h2>
                            <p style="text-align:left; margin-bottom:1%">질문분야 : ${userWrite.getField()}</p>
-                           <p style="text-align:left; margin-bottom:1%"><c:out value="회원번호 : ${userNum}"></c:out> </p>   
+                           <%-- <p style="text-align:left; margin-bottom:1%"><c:out value="회원번호 : ${userNum}"></c:out> </p>    --%>
                         </header>
 						<hr style="margin-top:0;">
                            <div>

@@ -1,4 +1,4 @@
-package com.lawknow.userWrite;
+/*package com.lawknow.userWrite;
 
 import java.io.IOException;
 
@@ -25,7 +25,7 @@ public class UserCountWriteOk implements Action {
 		UserWriteVO userWriteVO = new  UserWriteVO();
 		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		
-		/*userWriteVO.setUserWriteNum(req.getParameter("userWriteNum"));*/
+		userWriteVO.setUserWriteNum(req.getParameter("userWriteNum"));
 		userWriteVO.setField(req.getParameter("field"));
 		userWriteVO.setTitle(req.getParameter("title"));
 		userWriteVO.setContent(req.getParameter("content"));// 여기까지 글작성에대한 디비를 가져왔다
@@ -33,7 +33,7 @@ public class UserCountWriteOk implements Action {
 		
 		userWriteDAO.countWrite();
 		
-		/*req.setAttribute("userWriteCount", userWriteDAO.countWrite());*/
+		req.setAttribute("userWriteCount", userWriteDAO.countWrite());
 		
 		 session.setAttribute("writeCounts", userWriteDAO.countWrite());
 		
@@ -47,4 +47,4 @@ public class UserCountWriteOk implements Action {
 		
 	}
 
-}
+}*/

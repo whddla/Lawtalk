@@ -37,6 +37,34 @@
 				}
 			}
 			
+
+
+#page-wrapper > :first-child, #page-wrapper > :last-child {
+    background-color: #ffd180;
+}
+#page-wrapper > :last-child{
+    HEIGHT: 400PX;
+    }
+    .main{
+    	    margin: auto;
+    width: 1138px;
+    margin-top: 108px;
+    }
+    
+     .logo-title {
+	    display: flex;
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 32px;
+	    align-content: space-between;
+	    justify-content: center;
+	    cursor: pointer;
+}
+.logo-title a{
+	color: white;
+    font-size: 40px;
+    text-transform: uppercase
+}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -60,14 +88,18 @@
 
 				<!-- Wrapper -->
 					<div class="wrapper">
+					<div class="logo-title">
+			                  		<a style="cursor: poniner; color:#ff6d37; font-size:40px; text-transform: uppercase;" class="logo-title-font"><strong style="color: white;font-weight: bold;">lawknow</strong></a>
+					</div>	
 						<div class="inner">
 
 							<!-- Main -->
 								<section class="main">
 									<a href="#" class="image main"><img src="${pageContext.request.contextPath}/images/boardMain.png" alt="" /></a>
 									<header class="major">
-										<h1>게시판</h1>
-										<p>자유 게시판</p>
+									<a href="LawKnowMainPage.jsp" style="position: relative;top: -151px;left: -462px;font-weight: bold;">< LawKnow메인페이지</a>
+										<h1>MY LAWKNOW 지식인</h1>
+										<p></p>
 									</header>
 
 									<div class="table-wrapper">
@@ -158,7 +190,7 @@
 						<div class="inner">
 
 							<!-- Footer -->
-								<footer id="footer">
+								<!-- <footer id="footer">
 									<section class="links">
 										<div>
 											<h3>Magna</h3>
@@ -204,7 +236,7 @@
 									</ul>
 									<p class="copyright">&copy; Untitled. All rights reserved.</p>
 								</footer>
-
+ -->
 						</div>
 					</div>
 
