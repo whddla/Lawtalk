@@ -25,7 +25,7 @@ public class LawyerCommentOk implements Action{
 //		lawyerCommentVO.setUserWriteNum(Integer.parseInt(req.getParameter("userWriteNum")));
 //		lawyerCommentVO.setLawyerNum((Integer)req.getSession().getAttribute("lawyerNum"));
 
-		
+		//
 		lawyerCommentVO.setContent(req.getParameter("content"));
 				
 		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());		
