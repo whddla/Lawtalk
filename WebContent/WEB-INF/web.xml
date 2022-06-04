@@ -11,54 +11,54 @@
   </welcome-file-list>
   <!-- lawyercomment -->
   <servlet>
-  	<servlet-name>LawyerCommentFrontController</servlet-name>
-  	<servlet-class>com.lawknow.lawyerComment.LawyerCommentFrontController</servlet-class>
+     <servlet-name>LawyerCommentFrontController</servlet-name>
+     <servlet-class>com.lawknow.lawyerComment.LawyerCommentFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>LawyerCommentFrontController</servlet-name>
-  		<url-pattern>*.lcc</url-pattern>
+        <servlet-name>LawyerCommentFrontController</servlet-name>
+        <url-pattern>*.lcc</url-pattern>
   </servlet-mapping>
 
 <!-- 변호사 로그인, 회원가입 front controller-->
   <servlet>
-  	<servlet-name>LawyerLoginFrontController</servlet-name>
-  	<servlet-class>com.lawknow.lawyerRegister.LawyerLoginFrontController</servlet-class>
+     <servlet-name>LawyerLoginFrontController</servlet-name>
+     <servlet-class>com.lawknow.lawyerRegister.LawyerLoginFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>LawyerLoginFrontController</servlet-name>
-  		<url-pattern>*.ll</url-pattern>
+        <servlet-name>LawyerLoginFrontController</servlet-name>
+        <url-pattern>*.ll</url-pattern>
   </servlet-mapping>
 <!-- 의뢰인 로그인, 회원가입 front controller-->
   <servlet>
-  	<servlet-name>UserLoginFrontController</servlet-name>
-  	<servlet-class>com.lawknow.userRegister.UserLoginFrontController</servlet-class>
+     <servlet-name>UserLoginFrontController</servlet-name>
+     <servlet-class>com.lawknow.userRegister.UserLoginFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>UserLoginFrontController</servlet-name>
-  		<url-pattern>*.ul</url-pattern>
+        <servlet-name>UserLoginFrontController</servlet-name>
+        <url-pattern>*.ul</url-pattern>
   </servlet-mapping>
   
 <!-- userreview -->
   <servlet>
-  	<servlet-name>UserReviewFrontController</servlet-name>
-  	<servlet-class>com.lawknow.userReview</servlet-class>
+     <servlet-name>UserReviewFrontController</servlet-name>
+     <servlet-class>com.lawknow.userReview</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>UserReviewFrontController</servlet-name>
-  		<url-pattern>*.urfc</url-pattern>
+        <servlet-name>UserReviewFrontController</servlet-name>
+        <url-pattern>*.urfc</url-pattern>
   </servlet-mapping>
 <!-- userwrite -->
   <servlet>
-  	<servlet-name>UserWriteFrontController</servlet-name>
-  	<servlet-class>com.lawknow.userWrite.UserWriteFrontController</servlet-class>
+     <servlet-name>UserWriteFrontController</servlet-name>
+     <servlet-class>com.lawknow.userWrite.UserWriteFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  		<servlet-name>UserWriteFrontController</servlet-name>
-  		<url-pattern>*.uw</url-pattern>
+        <servlet-name>UserWriteFrontController</servlet-name>
+        <url-pattern>*.uw</url-pattern>
   </servlet-mapping>
 </web-app>

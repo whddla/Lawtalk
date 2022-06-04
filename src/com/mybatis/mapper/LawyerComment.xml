@@ -3,47 +3,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="LawyerComment"> 
-	 <!--변호사 글 작성 -->
-   <insert id ="commentWrite" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
-   insert into tbl_lawyer_comment
-   (content)
-   values(#{content})
-   </insert>
-  
-   <!--  -->
-   
-   
    	 <!--변호사 답글 목록 -->
-   <select id ="commentList" parameterType="lawyerCommentVO"> <!-- controller에서는 소문자임 --><!-- insert id 이름 수정 요망 -->
-   select lawyer_write_num, request_num, content
-   from tbl_lawyer_comment
-   where lawyer_write_num = #{lawyer_write_num}
-   order by lawyer_write_num desc
+   <select id ="commentList" parameterType="_int" resultType="lawyercommentDTO">
+   		 select lawyer_write_num, content , lawyer_id, user_write_num, lawyer_num
+  		 from tbl_lawyer_comment r join tbl_lawyer_register m
+  		 on r.member_number = m.lawyer_num and user_write_num = #{userWriteNum}
+  		 order by 1 desc
    </select>
    
-   <!--글 삭제  -->
-   <delete id ="commentDelete" parameterType ="LawyerCommentVO">
-      delete from tbl_lawyer_comment
-      where lawyer_write_num=#{lawyerWriteNum}
-   </delete>
+	 <!--변호사 글 작성 -->
+   <insert id ="commentWrite" parameterType="lawyerCommentVO">
+  		  insert into tbl_lawyer_comment(content)  <!--  , user_write_num, lawyer_num -->
+ 		  values(#{content}) <!-- , #{userWriteNum}, #{lawyerNum} -->
+   </insert>
+ 
+   <!--답 글 삭제  -->
+   <delete id ="commentDelete" parameterType ="_int">
+		delete from tbl_lawyer_comment where lawyer_write_num = #{lawyerWriteNum}
+   </delete>   
+   
    <!-- 변호사 글 수정  -->
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
-      update tbl_lawyer_comment
-      set  title=#{title}, content=#{content}, write_date=#{writeDate}
-      where lawyer_write_num=#{lawyerWriteNum}
+         update tbl_lawyer_comment
+         set  content = #{content}
+         where lawyer_write_num = #{lawyerWriteNum}
    </update>
-   <!-- 사건 번호 조회-->
-   <select id="requestNum" parameterType ="_int" resultType="int">
-     select request_num
-     from tbl_laywer_comment
-     where request_num = #{requestNum}
-    </select>
-   <!-- 변호사 글 번호조회  -->
-    <select id="lawyerWriteNum" parameterType ="_int" resultType="int">
-     select lawyer_write_num
-     from tbl_lawyer_comment
-     where lawyer_write_num = #{lawyerWriteNum}
-    </select>
-   
-	
 </mapper>

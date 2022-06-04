@@ -1,6 +1,6 @@
 package com.lawknow.domain.vo;
 //
-public class LawyerCommentVO {
+public class LawyerCommentDTO {
 		private int lawyerWriteNum;
 		private int requestNum;
 		private int lawyerNum;
@@ -9,13 +9,20 @@ public class LawyerCommentVO {
 		private String content;
 		private String writeDate;
 		private String lawyerName;
+		private String lawyerId;
 		
 		
 		
-		
-		public LawyerCommentVO() {;}
-		
-		
+		public LawyerCommentDTO() {;}
+
+		public String getLawyerId() {
+			return lawyerId;
+		}
+
+		public void setLawyerId(String lawyerId) {
+			this.lawyerId = lawyerId;
+		}
+
 //		public int getUserWriteNum() {
 //			return userWriteNum;
 //		}
