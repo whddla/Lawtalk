@@ -13,12 +13,12 @@
    <!-- 작성글삭제  -->
     <delete id="userDelete" parameterType="_int">
         delete from tbl_user_write
-        where request_num = #{requestNum}
+        where user_write_num = #{userWriteNum}
     </delete>
     <!--작성 글 수정  -->
-    <update id="userWriteUpdate" parameterType ="_int">
+    <update id="userWriteUpdate" parameterType ="userWriteVO">
     update tbl_user_write
-    set   title=#{title}, content = #{content}
+    set  field =#{field}, title=#{title}, content = #{content}
     where user_write_num = #{userWriteNum}
     </update>
    
@@ -44,14 +44,53 @@
     </select>
     
     <select id ="selectUserWrite" resultType = "userWriteVO">
-    	select user_write_num, request_num, user_num,field, title, content, write_date
+    	select user_write_num, user_num,field, title, content, write_date,read_count
 		from tbl_user_write
     </select>
     
-    <select id= "countWrite" resultType="_int">
+<!--     <select id= "countWrite" resultType="_int">
     		select count(title)
 			from tbl_user_write
-    </select>
+			
+			order by 1 desc limit #{startRow}, #{rowCount}
+    </select> -->
+    
+    <!-- 게시글 전체 개수  -->
+	<select id="getTotal" resultType="_int">
+		select count(user_write_num) from tbl_user_write
+	</select>
+	
+	<!--내가 쓴 게시글 수  -->
+	<select id ="getMyCount" resultType="_int" parameterType="userWriteDTO">
+		select count(title)
+		from tbl_user_write w join tbl_user_register r 
+		on u.user_num = r.user_num
+	</select>
+   
+   
+   <select id="selectAll" parameterType="map" resultType="userWriteDTO">
+		select user_write_num, request_num, b.user_num, field, title, content, write_date ,user_id, read_count 
+		from tbl_user_write b join tbl_user_register m 
+		on b.user_num = m.user_num
+		order by 1 desc limit #{startRow}, #{rowCount}
+	</select>
+   
+   
+   <!-- 게시글 상세보기(전체 정보 조회) -->
+	<select id="selectDetail" parameterType="_int" resultType="userWriteVO">
+		select user_write_num,title,content,user_num,field
+		from tbl_user_write where user_write_num= #{userWriteNum}
+	</select>
+	
+	
+	<!-- 조회수 -->
+	<update id="updateReadCount" parameterType="_int">
+		update tbl_user_write
+		set read_count = read_count + 1
+		where user_write_num= #{userWriteNum}
+	</update>
+   
+   
    
    
    <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->

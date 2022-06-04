@@ -113,7 +113,7 @@ div.btns{
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <a href ="write.jsp" id ="leftBannerGo"><img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;></a>       
+                    <a href ="UserWrite.uw" id ="leftBannerGo"><img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;></a>       
                     </div>
 
 

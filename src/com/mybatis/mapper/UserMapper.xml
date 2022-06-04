@@ -70,5 +70,20 @@
 		select user_email from tbl_user_register
 		where user_num = #{userNum}
 	</select>
+	
+	<!-- 핸드폰 번호 가져오기  -->
+	<select id= "UserPhonNum" resultType ="string">
+		select user_phone_num from tbl_user_register
+		where user_num = #{userNum}
+	</select>
+	
+	<!-- 핸드폰 번호 변경 -->
+	<update id ="UserPhoneChange" parameterType= "userVO">
+		update tbl_user_register
+		set user_phone_num = #{userPhoneNum}
+		where user_num = #{userNum}
+	</update>
+	
+	
 </mapper>
 
