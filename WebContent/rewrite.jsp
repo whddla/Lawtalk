@@ -10,6 +10,50 @@
     <title>글 수정하기</title>
   
     <link rel="stylesheet" href="assets/css/rewrite.css">
+    <style>
+    	  form div#reply{
+            display:flex;
+            margin-bottom:3%;
+         }
+         
+         input[type='submit']:not(#register), input[type='button'] {border-radius:0;}
+         
+         ul.actions li {
+             padding: 0 0 0 0.2em;
+         }
+         
+         input#board_title{
+            border-radius: 0;
+            border: none;
+            text-align: left;
+            font-size: 1.75em;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            padding:0;
+         }
+         
+         input[type='file']{
+            display:none;
+         }
+         
+         div.files{
+            text-align:center;
+            margin-right: 3%;
+         }
+         
+         textarea {
+            font-size: 1em;
+             font-weight: 600;
+             letter-spacing: 0.1em;
+         }
+         .chumbo{
+         	position: relative;
+
+   	 		top: 469px;
+    		left: 851px;
+         }
+    </style>
       
 </head>
 <body>
@@ -23,16 +67,33 @@
         </h3>
     </nav>
 
-	<form action ="UserWriteUpdateOk.uw" method ="post" name ="joinForm">
-	
-	
-	
+	<form action ="UserWriteUpdateOk.uw" method ="post" name ="joinForm" enctype="multipart/form-data">
 	
     <div class="board_wrap">
         <div class="board_title">
             <strong>글 수정하기</strong>
             <p>제목과 궁금하신 점을 수정해주세요</p>
         </div>
+        
+         <div class="chumbo" style ="position:absolute">
+ 
+                           <div style="margin-bottom:2%;">
+                              첨부파일
+                           </div>
+                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 239px;">
+                              <div class="files">
+                                 <div>
+                                    <label for="board_file1" style="display:inline; cursor:pointer">
+                                       <img id="board_file1Img" src="${pageContext.request.contextPath}/assets/img/구글첨부파일.png"  style="display:inline;/* width: 44px;height: 37px; */">
+                                    </label>
+                                 </div>
+                                 <input id="board_file1" name="board_file1" type="file" style="display:none" >
+                                 <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제" style="width: 59px;font-size: 10px; position: relative;left: 52px; top: -29px;">
+                              </div>
+                           </div>
+                         </div>
+        
+        
         <div class="board_write_wrap">
             <div class="board_write">
                 <div class="title">
@@ -44,7 +105,8 @@
                 </div>
              
                 <div class="cont">
-                    <textarea placeholder="내용을  입력해주세요" id="test" name="content"></textarea>
+                    <textarea placeholder="내용을  입력해주세요" id="test" name="content" >
+                    </textarea>
                    <div id="test_cnt" style="height: 50px;font-size: 17px;">
                    (0 / 300)
                    </div>
@@ -86,6 +148,9 @@
   <input value ="형사기타" type="radio" class="btn-check" name="field" id="btnradio7" autocomplete="off">
   <label class="btn btn-outline-primary" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
 </div>  
+
+
+    
     </form>
 
 

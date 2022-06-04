@@ -10,6 +10,7 @@
       <typeAlias type="com.lawknow.domain.vo.UserVO" alias="userVO"/>
        <typeAlias type="com.lawknow.domain.vo.LawyerVO" alias="lawyerVO"/>
        <typeAlias type="com.lawknow.domain.vo.UserWriteVO" alias="userWriteVO"/>
+       <typeAlias type="com.lawknow.domain.vo.UserWriteDTO" alias="userWriteDTO"/>
         <typeAlias type="com.lawknow.domain.vo.UserReviewVO" alias="userReviewVO"/>
          <typeAlias type="com.lawknow.domain.vo.LawyerCommentVO" alias="lawyerCommentVO"/>
          <typeAlias type="com.lawknow.domain.vo.FileVO" alias="fileVO"/>
