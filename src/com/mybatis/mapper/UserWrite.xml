@@ -44,7 +44,7 @@
     </select>
     
     <select id ="selectUserWrite" resultType = "userWriteVO">
-    	select user_write_num, user_num,field, title, content, write_date
+    	select user_write_num, user_num,field, title, content, write_date,read_count
 		from tbl_user_write
     </select>
     
