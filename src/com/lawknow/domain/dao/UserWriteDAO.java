@@ -86,6 +86,13 @@ public class UserWriteDAO {
 		public void updateReadCount(int userWriteNum) {
 			sqlSession.update("UserWrite.updateReadCount", userWriteNum);
 		}
+		
+		
+		
+		//종욱님이 쓰실 내가 쓴 게시글 개수
+		public int getMyCount(int userNum) {
+			return sqlSession.selectOne("UserWrite.getMyCount", userNum);
+		}
 	
 	
 	

@@ -131,9 +131,7 @@
           <div class="text_6">*</div>    
         </div>   
             <textarea id="input1"  class ="DOC_TEXT" name = "title" style="resize: none;" type="text" placeholder="&nbsp;&nbsp;&nbsp;제목을 작성해주세요"></textarea>
-            <textarea id="input2" name ="content" style="resize: none; " type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요">
-            
-            </textarea>
+            <textarea id="input2" rows="30"name ="content" style="resize: none;height: 137px; wrap:on;" type="text" placeholder="&nbsp;&nbsp;&nbsp;내용을 작성해주세요"></textarea>
           
             <input type="checkbox" id="checkbox1" onclick ="getBlack()">
             <label for="" id="label1">안내사항을 모두 확인했으며, 동의합니다.</label>
@@ -165,7 +163,7 @@
                            <div style="margin-bottom:2%;">
                               첨부파일
                            </div>
-                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 239px;">
+                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 255px;">
                               <div class="files">
                                  <div>
                                     <label for="board_file1" style="display:inline; cursor:pointer">

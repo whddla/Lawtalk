@@ -124,7 +124,7 @@
             </div>
             <section class="qna-list-contents">
             
-            <c:for
+            
                 <div class="historybox">
                     <h2 class="qna-list-empty-title" style ="font-size: 21px;">
                     <!--jstl-->

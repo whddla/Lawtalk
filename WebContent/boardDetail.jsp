@@ -15,6 +15,94 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main.css" />
       <style>
+      
+      .bottombox{
+    height: 142px;
+width: 100%;
+
+padding: 29px 0!important;
+}
+
+.onebox{
+flex: 1;
+}
+.oneinner{
+width: 100%;
+height: 100px;
+
+}
+.oneinnertwo{
+height: 100px;
+}
+
+
+
+.twobox{
+flex: 1;
+}
+.pencil{
+width: 10%;
+position: relative;
+top: 27px;
+left: 75px;
+}
+.pencilwrtie{
+position: relative;
+top: 11px;
+left: 80px;
+
+}
+.lt-counsel{
+font-size: 20px;
+margin-bottom: 19px;
+margin-top: 0px;
+color: #333;
+width: 100%;
+height: 54px;
+text-align: center;
+}
+
+.thth{
+width: 80%;
+height: 73px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+top: -11px;
+}
+.phone-advice{
+display: inline-block;
+vertical-align: middle; 
+width: 292px;
+height: 73px;
+font-size: 15px;
+line-height: 22px;
+margin-bottom: 8px;
+line-height: 27px;
+}
+.slash{
+height: 71px;
+margin-right: 22px;
+width: 71px;
+display: inline-block;
+vertical-align: middle;
+}
+.linkline{
+color: #ff4e00;
+text-decoration: none;
+/* border-bottom: 2px solid #ff4e00; */
+cursor: pointer;
+font-weight: bold;
+}
+.fkfk{
+font-size: 15px;
+
+color: #777;
+}
+
+      
+      
+      
          form textarea{
             border-radius:0; 
             resize:none;
@@ -41,18 +129,18 @@
             font-weight:bold;
          }
         #page-wrapper > :first-child{
-        	background-color: #ffd180;
+        	background-color: #e6e6e6;
         }
         #page-wrapper > :last-child{
-        background-color: #ffd180;
+        background-color: #e6e6e6;
             height: 500px;
         }
         input[type="button"].primary{
-        background-color: #ffd180;
+        background-color: #e6e6e6;
     color: #ffffff !important;
         }
          input[type="button"].primary:hover{
-         	   background-color: #ffd180;
+         	   background-color: #e6e6e6;
          }
         .main{
         margin-top: 123px;
@@ -73,6 +161,143 @@
     font-size: 40px;
     text-transform: uppercase
 }
+
+
+/*  */
+
+
+
+body{
+    background-color: #e6e6e6;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden
+}
+
+.faq{
+    width: 720px;
+    background-color: #e6e6e6;
+    line-height: 1;
+    margin: auto;
+    height: 1768px;
+}
+.header-nav{
+    background: #372e2c;
+    height: 48px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+}
+.left{
+    color: #aa999d;
+    font-size: 25px;
+    height: 48px;
+    left: 0;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 46px;
+    text-decoration: none!important;
+    cursor: pointer;
+    
+}
+.lefthwa{
+    background-color: white;
+    width: 54%;
+   
+
+}
+.title{
+    color: #aa999d;
+font-size: 18px;
+height: 48px;
+line-height: 48px;
+text-align: center;
+width: 100%;
+font-weight: 700;
+margin-top: 0px;
+}
+.maintitles{
+    color: inherit;
+    text-decoration: none!important;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+   
+}
+
+.mycounsel{
+    background: white;
+    height: 48px;
+    left: 0;
+    position: relative;
+top: 42px;
+left: -7px;
+    width: 1706px;
+    z-index: 100;
+    display: block;
+    
+}
+
+.qna-page-title{
+    padding: 0 4px;
+    width: 940px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.big-box{
+    margin: 0 auto;
+    width: 940px;
+    box-sizing: border-box;
+    height: 681px;
+    background: white;
+    position: relative;
+    top: 117px;
+
+}
+.sort{
+    margin-bottom: 0;
+    padding: 15px 0;
+    background-color: #fff;
+    color: #8c8c8c;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+    display: flex;
+    line-height: 34px;
+    font-weight: 800;
+   
+
+}
+.sort-box{
+    width: 81px;
+    height: 60px;
+    color: #8c8c8c;
+}
+.qna-list-contents{
+    border: 1px solid #e6e6e6;
+display: table;
+width: 100%;
+position: relative;
+    height: 635px;
+}
+
+.historybox{
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
       </style>
    </head>
    <body class="is-preload">
@@ -80,6 +305,18 @@
    		<c:set var="files" value="${files}"/>
    		<c:set var="page" value="${page}"/>
       <!-- Page Wrapper -->
+      
+      <nav class="header-nav directive">
+            <a class ="left" href="UserWriteListsOk.uw" >
+                <img  class = "lefthwa"src = "${pageContext.request.contextPath}/assets/img/왼화살jpg.jpg">
+            </a>
+            <h3 class="title">
+                <a class = "maintitles">마이페이지</a>
+            </h3>
+        </nav>
+      
+      
+      
          <div id="page-wrapper">
 
             <%-- <!-- Wrapper -->
@@ -94,8 +331,8 @@
 
             <!-- Wrapper -->
                <div class="wrapper">
-               <div class="logo-title">
-			                  		<a style="cursor: poniner; color:#ff6d37; font-size:40px; text-transform: uppercase;" class="logo-title-font"><strong style="color: white;font-weight: bold;">lawknow</strong></a>
+               <div class="logo-title" style="position: relative;top: 154px;">
+			                  		<a style="cursor: poniner; color:#ff6d37; font-size:40px; text-transform: uppercase;" class="logo-title-font"><strong style="color: orange;font-weight: bold;">lawknow</strong></a>
 			</div>	
                   <div class="inner">
 
@@ -160,54 +397,26 @@
                <div class="wrapper">
                   <div class="inner">
 
-                     <!-- Footer -->
-                        <!-- <footer id="footer">
-                           <section class="links">
-                              <div>
-                                 <h3>Magna</h3>
-                                 <ul class="plain">
-                                    <li><a href="#">Aliquam tempus</a></li>
-                                    <li><a href="#">Ultrecies nul</a></li>
-                                    <li><a href="#">Gravida ultricies</a></li>
-                                    <li><a href="#">Commodo etiam</a></li>
-                                 </ul>
-                              </div>
-                              <div>
-                                 <h3>Feugiat</h3>
-                                 <ul class="plain">
-                                    <li><a href="#">Morbi sem lorem</a></li>
-                                    <li><a href="#">Praes sed dapi</a></li>
-                                    <li><a href="#">Sed adipis nullam</a></li>
-                                    <li><a href="#">Fus dolor lacinia</a></li>
-                                 </ul>
-                              </div>
-                              <div>
-                                 <h3>Tempus</h3>
-                                 <ul class="plain">
-                                    <li><a href="#">Donecnec etiam</a></li>
-                                    <li><a href="#">Aapibus sedun</a></li>
-                                    <li><a href="#">Namnulla tempus</a></li>
-                                    <li><a href="#">Morbi set amet</a></li>
-                                 </ul>
-                              </div>
-                              <div>
-                                 <h3>Aliquam</h3>
-                                 <ul class="plain">
-                                    <li><a href="#">Lorem prasent dia</a></li>
-                                    <li><a href="#">Nellentes ipsum</a></li>
-                                    <li><a href="#">Diamsed arcu dolor</a></li>
-                                    <li><a href="#">Sit amet cursus</a></li>
-                                 </ul>
-                              </div>
-                           </section>
-                           <ul class="contact-icons">
-                              <li class="icon solid fa-home">1234 Fictional Street #5432 Nashville, TN 00000-0000</li>
-                              <li class="icon solid fa-phone"><a href="#">(000) 000-0000</a></li>
-                              <li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a></li>
-                           </ul>
-                           <p class="copyright">&copy; Untitled. All rights reserved.</p>
-                        </footer>
- -->
+         				<div class="bottombox">
+                    <h5 class="lt-counsel">
+                        	상담을 시작하세요!
+                    </h5>
+                    <div class="thth">
+                    <div class="phone-advice">
+                       <span class="fkfk">ROWKNOW 지식 IN<br>
+                        	당신의 고민을 여러 전문가가 답해드립니다</span><br>
+                        <a class="linkline" href="write.jsp">ROWKNOW 지식 IN ></a>
+                    </div>
+                    <div class="slash">
+
+                    </div>
+                    <div class="phone-advice">
+                        <span class="fkfk">ROWKNOW 1:1 바로상담<br>
+                            	원하는 변호사와 빠르게 상담하고 싶다면</span><br>
+                        <a class="linkline" href="list.jsp">ROWKNOW 1:1 바로상담 ></a>
+                    </div>
+                    </div>  
+                </div>
                   </div>
                </div>
 
