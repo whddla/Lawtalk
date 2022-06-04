@@ -28,7 +28,7 @@
                     </span>
                 </div>
             </div>
-            <form action="JoinOk.ll" name="joinForm" method="post" class="sign-main-container">
+            <form action="JoinOk.ll" id="checks()" name="joinForm" method="post" class="sign-main-container">
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
@@ -118,29 +118,23 @@
                     <div class="constract-text">
                         <label>
                             서비스 이용약관 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox" id="checkList1" name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
-                        <!--  서비스 이용약관 동의내용  -->
-                        <a href="https://www.lawtalk.co.kr/terms-of-service">내용보기</a>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 취급방침 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox" id="checkList2" name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
-                        <!-- 개인정보 취급방침 동의 내용 -->
-                        <a href="https://www.lawtalk.co.kr/privacy-policy">내용보기</a>
                     </div>        
                     <div class="constract-text">
                         <label>
                             개인정보 이용/수집 동의
-                            <input type="checkbox" name="chk">
+                            <input type="checkbox" id="checkList3" name="chk">
                         </label>
                         <span class="span-tag">(필수)</span>
-                        <!-- 개인정보 이용/수집 동의 내용 -->
-                        <a href="https://www.lawtalk.co.kr/personal-information-usage-agreement">내용보기</a>
                     </div>      
                     <div class="constract-text">
                         <label>
@@ -165,7 +159,7 @@
             <div class="row-footer">
                 <div class="row" style="font-size: 12px;">
                 <!-- 로그인 페이지 -->
-                    <a href="http://localhost:9000/kovengerss/login.jsp">로그인</a>
+                    <a href="http://localhost:9000/kovengerss/LawyerLogin.ll">로그인</a>
                     <!-- 변호사 가입안내 페이지 -->
                     <a href="">변호사 가입안내</a>
                 </div>
@@ -180,186 +174,8 @@
     </div>
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/lawyerSignUp.js"></script>
 <script>
-function checkId(){
-	$.ajax({
-		url: "/kovengerss/LawyerCheckIdOk.ll",
-		type: "get",
-		data: {lawyerId: $("input[name='lawyerId']").val()},
-		contentType: "application/json; charset=UTF-8",
-		dataType: "json",
-		success: function(result){
-			if(result.check ==1){
-			console.log(result);
-				$("#result").text("중복된 아이디입니다.");
-			}else{
-				$("#result").text("사용가능한 아이디입니다.");
-			}
-		},
-		error: function(request, status, error){
-			console.log("실패..");
-			console.log(request);
-			console.log(status);
-			console.log(error);
-		}
-	});
-}
-
-function join(){
-	joinForm.submit();
-}
-var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
-var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
-var nameCheck = RegExp(/^[가-힣]{2,6}$/);
-var officeCheck = RegExp(/^[가-힣]{1,12}$/);
-var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
-var officeHP= RegExp(/^0[1-7][0-9][0-9]{6,8}$/);
-$(document).ready(function() {
-	$("#cbx_chkAll").click(function() {
-		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
-		else $("input[name=chk]").prop("checked", false);
-	});
-
-	$("input[name=chk]").click(function() {
-		var total = $("input[name=chk]").length;
-		var checked = $("input[name=chk]:checked").length;
-
-		if(total != checked) $("#cbx_chkAll").prop("checked", false);
-		else $("#cbx_chkAll").prop("checked", true); 
-	});
-});
-    
-	
-	/* 이메일 유효성 검사 */    	
-    let emailCheck = $(".account-email-error");
-	let $email = $("#account-email");
-	$email.on("keyup", function(){
-		if(emailCheck2.test($email.val())){
-			emailCheck.css("color","rgb(99 193 76)");
-			emailCheck.text("이메일 입력완료.");
-		} else if(nameCheck.test($email.val())){
-			emailCheck.css("color","red");
-			emailCheck.text("한글은 입력 할 수 없습니다.");
-		} else if($email.val() ==""){
-			emailCheck.css("color","red");
-			emailCheck.text("이메일을 입력해주세요");
-		}
-		else{
-			emailCheck.css("color","red");
-			emailCheck.text("이메일 형식에 맞지 않습니다.");
-		}
-	});
-	
-	let nameChecked = $(".account-name-error");
-	let $name =$("#account-name");
-	$name.on("keyup", function(){
-    	if(nameCheck.test($name.val())){
-    		nameChecked.css("color", "rgb(99 193 76)");
-    		nameChecked.text("이름 입력 완료");
-    	}
-    	else {
-    		nameChecked.css("color", "red");
-    		nameChecked.text("잘못된 이름입니다.");
-    	}
-	});
-	
-	/* 아이디 유효성 검사  */    	
-    let idCheck = $(".account-id-error");
-	let $id = $("#account-id");
-	$id.on("keyup", function(){
-		if(userIdCheck.test($id.val())){
-			idCheck.css("color","rgb(99 193 76)");
-			idCheck.text("아이디 입력완료.");
-		}else if($id.val() == ""){
-        	idCheck.css("color","red");
-        	idCheck.text("아이디는 반드시 입력해야합니다.");
-		}
-		else{
-			idCheck.css("color","red");
-			idCheck.text("아이디 형식에 맞지 않습니다.");
-		}
-	});
-	
-	
-	
-	
-    let pwCheck = $(".account-password-error");
-	let $pw = $("#account-password");
-	$pw.on("keyup", function(){
-		if(passwdCheck.test($pw.val())){
-			pwCheck.css("color","rgb(99 193 76)");
-			pwCheck.text("비밀번호 입력완료.");
-		}
-		else if($pw.val() == ""){
-			pwCheck.css("color","red");
-			pwCheck.text("비밀번호는 반드시 입력해야합니다.");
-		}
-		else {
-			pwCheck.css("color","red");
-			pwCheck.text("8~16자로 영문 대 소문자, 숫자, 특수기호를 조합해서 사용하세요.");
-		}
-	});
-
-	let pwConfirm= $(".account-password-confirm-error");
-	let $pwc= $("#account-password-confirm");
-	
-	
-	$pwc.on("keyup", function(){
-		
-		if($pwc.val() !== passwdCheck.test($pw.val())){
-			pwConfirm.css("color","red");
-			pwConfirm.text("비밀번호가 일치하지 않습니다.");
-			if($pwc.val() == ""){
-				pwConfirm.css("color","red");
-				pwConfirm.text("비밀번호를 입력해주세요.");
-			}
-		}
-		
-		if($pwc.val() == $pw.val()){
-			pwConfirm.css("color","rgb(99 193 76)");
-			pwConfirm.text("비밀번호 일치");
-		}
-	});
-	
-	/* 핸드폰 유효성 검사  */
-	let $hp = $("#account-hp");
-	let hpCheck = $(".tel-error");
-	$hp.on("keyup",function(){
-		if(phoneNumCheck.test($hp.val())){
-			hpCheck.css("color","rgb(99 193 76)");
-			hpCheck.text("핸드폰 번호 입력완료.");
-		}else{
-			hpCheck.css("color","red");
-			hpCheck.text("핸드폰 번호를 입력해주세요.");
-		}
-	});	
-	
-	let $officeHP = $("#account-office-hp");
-	let officeHpError = $(".account-office-hp-error");
-	$officeHP.on("keyup", function(){
-		if(officeHP.test($officeHP.val())){
-			officeHpError.css("color","rgb(99 193 76)");/*색상변경*/
-			officeHpError.text("사무실 번호가 입력되었습니다.");/*오류메시지*/
-		}else{
-			officeHpError.css("color","red");/*색상변경*/
-			officeHpError.text("잘못된 번호입니다.");/*오류메시지*/
-		}
-	});
-	
-	let $office = $("#account-office");
-	let officeError = $(".account-office-error");
-		$office.on("keyup",function(){
-		if(officeCheck.test($office.val())){
-			officeError.css("color", "rgb(99 193 76)");/*색상변경*/
-			officeError.text("사무소,회사명 입력 완료.");/*오류메시지*/
-		}else{
-			officeError.css("color", "red");/*색상변경*/
-			officeError.text("한글로만 작성해주세요.");/*오류메시지*/
-		}		
-	});
-		
-		
 		$(document).ready(function(){            
 		    var now = new Date();
 		    var year = now.getFullYear();
