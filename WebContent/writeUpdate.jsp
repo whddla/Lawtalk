@@ -860,9 +860,7 @@ div.all-layout{
           <div class="text_6">*</div>    
         </div>   
             <textarea id="input1"  class ="DOC_TEXT" name = "title" style="resize: none;" type="text" >${userWrite.getTitle()}</textarea>
-            <textarea id="input2" name ="content" style="resize: none; " type="text" >
-             ${userWrite.getContent()}
-            </textarea>
+            <textarea id="input2" name ="content" style="resize: none;height: 137px; " type="text" >${userWrite.getContent()}</textarea>
           
             <input type="checkbox" id="checkbox1" onclick ="getBlack()">
             <label for="" id="label1">안내사항을 모두 확인했으며, 동의합니다.</label>
@@ -894,7 +892,7 @@ div.all-layout{
                            <div style="margin-bottom:2%;">
                               첨부파일
                            </div>
-                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 239px;">
+                           <div style="display:flex;display: flex; position: relative; left: 1089px;top: 255px;">
                               <div class="files">
                                  <div>
                                     <label for="board_file1" style="display:inline; cursor:pointer">
