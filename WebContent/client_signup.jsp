@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <input name="userId"class="form-control" id="account-id" type="text" placeholder="아이디">
-                        <input style="cursor: pointer; border:0; background-color: #fff; margin-top: -18px;padding:0;" type="button" value="중복확인" onclick="checkId()">
+		                <input style="cursor: pointer; border:0; background-color: #fff; margin-top: -18px;padding:0;" type="button" value="중복확인" onclick="checkId()">
 						<p style= "color: blue; width: auto; display: inline-block;  margin-left: 54px; "id="result" name="result"></p>
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>

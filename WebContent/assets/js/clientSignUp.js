@@ -14,22 +14,18 @@ function checkId() {
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function (result) {
-        if (result.check==1 && result.check == true) {
+        if (result.check==1) {
           alert("이미 존재하는 아이디 입니다.");
           idCheck.css("color","red");
           idCheck.text("이미 존재하는 아이디입니다.");
           $("#account-id").focus();
-          return false;
         } else {
           idCheck.css("color","rgb(99 193 76)");
           idCheck.text("사용 가능한 아이디입니다.");
           $('userId').attr("result", "success");
-          return true;
         }
       }
     });
-    
-	
   }
 
  var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
@@ -57,8 +53,8 @@ function checkId() {
     let $id = $("#account-id");
     $id.on("keyup", function(){
     	if(userIdCheck.test($id.val())){
-    		idCheck.css("color","rgb(99 193 76)");
-    		idCheck.text("아이디 입력완료.");
+    		idCheck.css("color","red");
+    		idCheck.text("아이디 중복 확인을 해주세요.");
     	}else if($id.val() == ""){
     		idCheck.css("color","red");
     		idCheck.text("아이디는 반드시 입력해야합니다.");
@@ -273,7 +269,13 @@ function checkId() {
         }
         
         
+        
+        if(checkId("#account-id")){
+        	alert("이미 존재하는 아이디 입니다.");
+        	return ;
+        }
         alert("회원가입이 완료되었습니다.");
 }        
+    	
     	
         
