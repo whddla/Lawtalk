@@ -22,11 +22,13 @@ public class LawyerCommentOk implements Action{
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-//		lawyerCommentVO.setUserWriteNum(Integer.parseInt(req.getParameter("userWriteNum")));
-		lawyerCommentVO.setLawyerNum((int)req.getSession().getAttribute("lawyerNum"));
 
-		
+//		lawyerCommentVO.setUserWriteNum(Integer.parseInt(req.getParameter("userWriteNum")));
 		lawyerCommentVO.setContent(req.getParameter("content"));
+		System.out.println("commentOk에서 content 받아옴");
+		lawyerCommentVO.setLawyerName((String)req.getSession().getAttribute("lawyerName"));
+		System.out.println("commentOk에서 lawyername 받아옴");
+		
 				
 //		req.setAttribute("lawyercontent", lawyerCommentVO.getContent());		
 //		req.setAttribute("lawyerName", lawyerCommentVO.getLawyerName());
