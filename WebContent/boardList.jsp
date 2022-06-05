@@ -721,8 +721,6 @@ position: relative;
     height: 400px;
     border-bottom: 1px solid #e6e6e6;
 }
-
-
 		</style>
 	</head>
 	<body class="is-preload">
@@ -775,7 +773,8 @@ position: relative;
 									<div class="table-wrapper">
 										<div style="display:flex; justify-content:space-between;">
 											<span>글 개수 : ${total}개</span>
-											<button style="border-radius:0;" onclick="location.href = '${pageContext.request.contextPath}/UserWrite.uw'">글 쓰기</button>
+											<button style="border-radius:0;" onclick="location.href ='${pageContext.request.contextPath}/UserWrite.uw'">글 쓰기</button>				
+												<button style="border-radius:0;" onclick="location.href ='${pageContext.request.contextPath}/UserAnswerOk.uw'">LawKnow전체 글목록</button>
 										</div>
 										<table>
 											<caption style="text-align:left; margin-bottom:3%;">
@@ -793,7 +792,7 @@ position: relative;
 											<tbody>
 												<c:choose>
 													<c:when test="${userWriteList != null and fn:length(userWriteList) > 0}">
-														<c:forEach var="userWrite" items="${userWriteList}">
+														<c:forEach var="userWrite" items="${userWriteList}"> 
 															<tr>
 																<td><c:out value="${userWrite.getUserWriteNum()}"></c:out></td>
 																<td>

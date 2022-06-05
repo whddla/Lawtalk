@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -485,6 +487,44 @@
 									</div>
 								</div>
 							</div>
+							
+					<!--  -->	
+						<c:forEach var="userWrite" items="${userWriteList}">
+								<div class="a-card-question-list">
+								<aside class="a-card-aside-card">
+									<div class="a-wrapper">
+										<div class="badge">
+											<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
+											<p class="number">12</p>
+										</div>
+									</div>
+								</aside>
+								<div class="a-card-main">
+									<header class="a-card-header">
+									<a href="${pageContext.request.contextPath }/userWrite/UserTotalDetailOk.uw?userWriteNum=${userWrite.getUserWriteNum()}">${userWrite.getTitle()}</a>
+										<!-- <a href="http://localhost:9000/kovengerss/answer_page.jsp"> -->
+											<h1 class="a-card-header-title">
+												${userWrite.getTitle()}
+											</h1>
+											<span class="a-card-headerInfo">${userWrite.getWriteDate()}</span>
+										</a>
+										
+									</header>
+									<div class="a-card-cotent">
+										<span class="viewCount">
+										조회수
+											<i class="number">${userWrite.getReadCount()}</i>
+										</span>
+										<span class="answer">2시간전 답변 작성됨</span>
+									</div>
+								</div>
+							</div>
+						</c:forEach>	
+					<!--  -->		
+							
+							
+							
+							
 						</div>
 				</main>
 		</section>

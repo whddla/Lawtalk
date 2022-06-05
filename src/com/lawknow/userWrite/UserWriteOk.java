@@ -29,7 +29,6 @@ public class UserWriteOk implements Action {
 		
 		UserVO userVO = new UserVO();
 		UserWriteVO userWriteVO = new  UserWriteVO();
-		
 		UserWriteDAO userWriteDAO = new UserWriteDAO();
 		FileDAO fileDAO = new FileDAO();
 		
