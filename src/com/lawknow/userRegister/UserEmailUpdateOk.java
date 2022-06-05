@@ -32,7 +32,7 @@ public class UserEmailUpdateOk implements Action{
 		String randomId = userId + random;
 		System.out.println(randomId);
 	
-			userVO.setUserEmail(req.getParameter(newEmail));
+			userVO.setUserEmail(newEmail);
 			userVO.setUserNum(userNum);
 			boolean emailCheck = userDAO.UserEmailUpdate(userVO);
 			req.setAttribute("emailCheck", emailCheck);

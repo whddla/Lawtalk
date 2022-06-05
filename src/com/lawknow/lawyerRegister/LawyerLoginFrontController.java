@@ -65,7 +65,18 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(false);
 				actionInfo.setPath("/privacyPage2.jsp");
-			} else {
+			} else if(command.equals("LawyerPhoneNumPushOk.ll")) {
+				new LawyerPhoneNumPushOk().execute(req, resp);
+			} else if(command.equals("LawyerPhonNumUpdateOk.ll")) {
+				actionInfo = new LawyerPhonNumUpdateOk().execute(req, resp);
+			} else if(command.equals("LawyerPhonNumUpdate.ll")) {
+				actionInfo = new ActionInfo();
+				actionInfo.setRedirect(false);
+				actionInfo.setPath("/privacyPage2.jsp"); 
+			} 
+			
+			
+			else {
 				// 404 일 때 출력할 에러 페이지 경로 작성
 			}
 
