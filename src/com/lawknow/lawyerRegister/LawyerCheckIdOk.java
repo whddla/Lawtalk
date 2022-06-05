@@ -24,7 +24,7 @@ public class LawyerCheckIdOk implements Action{
 		
 		String lawyerId = req.getParameter("lawyerId");
 		resultJSON.put("check", lawyerDAO.checkId(lawyerId));
-		System.out.println(lawyerId);
+		System.out.println(resultJSON);
 		
 		out.print(resultJSON.toJSONString());
 		out.close();

@@ -40,7 +40,7 @@ import com.lawyer.action.ActionInfo;
 				actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
 				
 			} else if(command.equals("LawyerCheckIdOk.ll")) {
-				new LawyerCheckIdOk().execute(req, resp);
+				actionInfo = new LawyerCheckIdOk().execute(req, resp);
 			} else if(command.equals("LawyerLoginOk.ll")) {
 				actionInfo = new LawyerLoginOk().execute(req, resp);
 			} else if(command.equals("LawyerLogin.ll")){
