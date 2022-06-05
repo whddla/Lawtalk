@@ -27,15 +27,15 @@ public class LawyerCommentListOk implements Action{
 		LawyerCommentDAO commentDAO = new LawyerCommentDAO();
 		JSONArray commentJSONs = new JSONArray();
 		
-		int userWriteNum = Integer.parseInt(req.getParameter("userWriteNum"));
-		List<LawyerCommentDTO> comments = commentDAO.getCommentList(userWriteNum);
+		int lawyerNum = Integer.parseInt(req.getParameter("lawyerNum"));
+		List<LawyerCommentDTO> comments = commentDAO.getCommentList(lawyerNum);
 		
 		comments.forEach(comment -> {
 			JSONObject commentJSON = new JSONObject();
 			commentJSON.put("lawyerWriteNum", comment.getLawyerWriteNum());
 //			commentJSON.put("userWriteNum", comment.getUserWriteNum());
 			commentJSON.put("lawyerNum", comment.getLawyerNum());
-			commentJSON.put("lawyerId", comment.getLawyerId());
+//			commentJSON.put("lawyerId", comment.getLawyerId());
 			commentJSON.put("content", comment.getContent());
 			
 			commentJSONs.add(commentJSON);
