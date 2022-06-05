@@ -41,6 +41,8 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new UserLoginOk().execute(req, resp);
 		} else if(command.equals("UserLogin.ul")) {
 			actionInfo = new UserLogin().execute(req, resp);
+		} else if(command.equals("UserCheckPhoneOk.ul")) {
+			new UserCheckPhoneOk().execute(req, resp);
 		} else if(command.equals("PwChange.ul")){
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);

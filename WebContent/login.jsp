@@ -69,7 +69,7 @@
                     			</div>
                         		<div class="footer">
                        	 			<div class="row sign-up-row">
-                            			<a href="http://localhost:9000/kovengerss/join.ul">회원가입</a>
+                            			<a href="http://localhost:9000/kovengerss/signup.jsp">회원가입</a>
                         			</div>
                         			<div class="row copyright-row">
                             			<a href="http://localhost:9000/kovengerss/compani.jsp">
