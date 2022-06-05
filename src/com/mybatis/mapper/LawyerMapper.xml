@@ -64,42 +64,6 @@
 		where lawyer_num = #{lawyerNum}
 	</select>
 	
-	<!-- 폰번호 가져오기 -->
-	<select id = "LawyerPhoneNum" resultType ="string">
-		select lawyer_phone_num from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
-	<!-- 성별 가져오기 -->
-	<select id = "LawyerGender" resultType ="string">
-		select lawyer_gender from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
-	<!-- 사무실이름 가져오기 -->
-	<select id = "LawyerOffice" resultType ="string">
-		select lawyer_office from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
-	<!-- 사무실번호 가져오기 -->
-	<select id = "LawyerOfficeNum" resultType ="string">
-		select lawyer_office_num from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
-	<!-- 출신시험 가져오기 -->
-	<select id = "LawyerGraduateTest" resultType ="string">
-		select lawyer_graduate_test from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
-	<!-- 출생년도 가져오기 -->
-	<select id = "LawyerBirth" resultType ="string">
-		select lawyer_birth from tbl_lawyer_register
-		where lawyer_num = #{lawyerNum}
-	</select>
-	
 
 	
 </mapper>

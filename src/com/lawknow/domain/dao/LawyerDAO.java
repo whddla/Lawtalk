@@ -71,34 +71,5 @@ public class LawyerDAO {
 		return sqlSession.selectOne("Lawyer.LawyerEmail", lawyerNum);
 	}
 	
-	//성별 가져오기
-	public String LawyerGender(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerGender", lawyerNum);
-	}
-	
-	//폰번호 가져오기
-	public String LawyerPhoneNum(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerPhoneNum", lawyerNum);
-	}
-	
-	//사무실 이름 가져오기
-	public String LawyerOffice(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerOffice", lawyerNum);
-	}
-	
-	//사무실 번호 가져오기
-	public String LawyerOfficeNum(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerOfficeNum", lawyerNum);
-	}
-
-	//출신시험 가져오기
-	public String LawyerGraduateTest(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerGraduateTest", lawyerNum);
-	}
-
-	//출생년도 가져오기
-	public String LawyerBirth(int lawyerNum) {
-		return sqlSession.selectOne("Lawyer.LawyerBirth", lawyerNum);
-	}
 	
 }
