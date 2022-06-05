@@ -11,7 +11,7 @@ getList();
 function insert(){
    let $content = $("#content").val();
    $.ajax({
-      url: contextPath + "/LawyerCommentOk.lcc",
+      url: contextPath + "/lawyerComment/LawyerCommentOk.lcc",
       type: "post",
       data: {content: $content},
       success: function(){

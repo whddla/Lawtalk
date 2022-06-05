@@ -198,19 +198,19 @@
 							<div class="question-detail">
 									
 									
-								<form action="LawyerCommentOk.lcc" name="commentForm" method="post">	
+								<form action="#" name="commentForm" method="post">	
 								<div class="board">
 									<div class="board-header">
 										<h4>당신의 지식을 공유해주세요!</h4>
 										<hr>
 								</div>
 											<div class="textarea">
-												<textarea name="content" class="comment" placeholder="의뢰인에게 답변을 작성해주세요."></textarea>
+												<textarea name="content" id="content" class="comment" placeholder="의뢰인에게 답변을 작성해주세요."></textarea>
 											</div>
 										</div>
 									
 									
-										<button class="answer-button" id="click" onclick="insert()">답변등록</button>
+										<button type="button" class="answer-button" id="click" onclick="insert()">답변등록</button>
 								</form>								
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
@@ -260,18 +260,7 @@
 									</div>
 								</div>
 								
-    		<!-- 			 <section class="main accent2" style="padding:3%">
-		                        <header class="major" style="text-align:left;">
-		                           <h2>댓글</h2>
-		                           <p>여러분의 소중한 댓글을 작성해주세요.</p>
-		                        </header>
-		                        <form method="post" action="#" class="combined" style="width:auto;">
-		                           <textarea name="content" id="content" placeholder="비속어를 사용하지 말아주세요." class="invert" rows="5" style="border-radius:0; resize:none;"></textarea>
-		                           <input id="register" type="button" class="primary" value="등록" onclick="insert()"/>
-		                        </form>
-		                        <form action="#" id="replies" class="combined" style="flex-direction:column; margin:0; display:contents;">
-		                        </form>
-                     </section> -->
+    				
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
    <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
          <script>
