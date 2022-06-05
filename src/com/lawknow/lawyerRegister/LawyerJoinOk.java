@@ -27,8 +27,8 @@ public class LawyerJoinOk implements Action {
 		lawyerVO.setLawyerOffice(req.getParameter("lawyerOffice"));
 		lawyerVO.setLawyerOfficeNum(req.getParameter("lawyerOfficeNum"));
 		lawyerVO.setLawyerPhoneNum(req.getParameter("lawyerPhoneNum"));
+		lawyerVO.setLawyerGender(req.getParameter("lawyerGender"));
 		lawyerVO.setLawyerGraduateTest(req.getParameter("lawyerGraduateTest"));
-		lawyerVO.setLawyerGraduateTest(req.getParameter("lawyerGender"));
 		lawyerVO.setLawyerBirth(req.getParameter("lawyerBirth"));
 		
 		lawyerDAO.join(lawyerVO);
@@ -37,7 +37,7 @@ public class LawyerJoinOk implements Action {
 	    req.setAttribute("lawyerList", lawyerDAO.selectLawyers());
 	      
 	    actionInfo.setRedirect(false);
-	    actionInfo.setPath("/LawjoinSuccess.jsp");
+	    actionInfo.setPath("/LawKnowMainPage.jsp");
 	      
 		
 		

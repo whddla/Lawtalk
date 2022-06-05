@@ -75,11 +75,12 @@
                     <div class="form-group">
 						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
                         <input name="userPhoneNum" class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
-                        <button type="button" class="code-button" id="sendCode">[ 인증번호 발송 ]</button>
+                        <button type="button" onclick="pushCode()" class="code-button"  id="sendPhoneNumber">[ 인증번호 발송 ]</button>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="inputCode" type="text" placeholder="인증번호" name="codeNum">
-                        <button type="button" class="code-button" id="signUpCode" name="submitCode">[인증]</button>
+						<label class="codeLabel" for="codeNum" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
+                        <input class="form-control" id="codeNum" type="text" placeholder="인증번호" name="codeNum">
+                        <button type="button" class="code-button" id="checkButton" name="checkButton" >[인증]</button>
                     </div>
                 </div>
                 <div class="cons-info">
@@ -185,6 +186,8 @@
     </div>
     </body>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v10.0&appId=581665816618857" nonce="SiOBIhLG"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/clientSignUp.js"></script>
 <script>
 
 //기존 로그인 상태를 가져오기 위해 Facebook에 대한 호출
@@ -285,37 +288,10 @@ window.fbAsyncInit = function() {
        logout.addEventListener('click', kakaoLogout);
        sion.addEventListener('click', secession);
     </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="assets/js/clientSignUp.js"></script>
 <script>
 
 
-
-//휴대폰 번호 인증
-var code2 = "";
-$("#sendCode").click(function(){
-	alert("인증번호 발송이 완료되었습니다.\n휴대폰에서 인증번호 확인을 해주십시오.");
-	var phone = $("#account-hp").val();
-	$.ajax({
-        type:"GET",
-        url:"/kovengerss/UserPhoneNumCheck1.ul" ,
-        cache : false,
-        success:function(data){
-        		code2 = data;
-        }
-    });
-});
-
-$("#signUpCode").click(function(){
-	if($("#inputCode").val() == code2){
-		$("codeNum").text("인증번호가 일치합니다.");
-		$("codeNum").css("color","green");
-	}else{
-		$("codeNum").text("인증번호가 일치하지 않습니다. 확인해주시기 바랍니다.");
-		$("codeNum").css("color","red");
-	}
-});
 
     	$(document).ready(function(){            
     	    var now = new Date();

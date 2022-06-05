@@ -76,6 +76,30 @@
 		select user_phone_num from tbl_user_register
 		where user_num = #{userNum}
 	</select>
+
+	<!-- 성별 가져오기 -->
+	<select id= "UserGender" resultType ="string">
+		select user_gender from tbl_user_register
+		where user_num = #{userNum}
+	</select>
+
+	<!-- 출생년도 가져오기 -->
+	<select id= "UserBirth" resultType ="string">
+		select user_birth from tbl_user_register
+		where user_num = #{userNum}
+	</select>
+
+	<!-- 카카오톡 이메일 가져오기 -->
+	<select id= "UserKakaoEmail" resultType ="string">
+		select user_kakao_email from tbl_user_register
+		where user_num = #{userNum}
+	</select>
+
+	<!-- 페이스북 이메일 가져오기 -->
+	<select id= "UserFaceBookEmail" resultType ="string">
+		select user_facebook_email from tbl_user_register
+		where user_num = #{userNum}
+	</select>
 	
 	<!-- 핸드폰 번호 변경 -->
 	<update id ="UserPhoneChange" parameterType= "userVO">

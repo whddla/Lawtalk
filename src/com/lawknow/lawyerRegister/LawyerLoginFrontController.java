@@ -45,6 +45,8 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new LawyerLoginOk().execute(req, resp);
 			} else if(command.equals("LawyerLogin.ll")){
 				actionInfo = new LawyerLogin().execute(req, resp);
+			} else if(command.equals("LawyerCheckPhoneOk.ll")) {
+				new LawyerCheckPhoneOk().execute(req, resp);
 			} else if(command.equals("LawyerPwChangeOk.ll")) {
 				actionInfo = new LawyerPwChangeOk().execute(req, resp);
 			} else if(command.equals("LawyerPwChange.ll")) {

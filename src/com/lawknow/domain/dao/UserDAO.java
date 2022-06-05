@@ -37,7 +37,7 @@ public class UserDAO {
 	public List<UserVO> selectUsers(){
 		return sqlSession.selectList("User.selectUsers");
 	}
-	
+
 	//아이디 중복검사
 	public boolean checkId(String userId) {
 		System.out.println(userId);
@@ -82,6 +82,23 @@ public class UserDAO {
 	//핸드폰 번호 가져오기
 	public String UserPhonNum(int userNum) {
 		return sqlSession.selectOne("User.UserPhonNum",userNum);
+	}
+	
+	//출생년도 가져오기
+	public String UserBirth(int userNum) {
+		return sqlSession.selectOne("User.UserBirth",userNum);
+	}
+	//성별 가져오기
+	public String UserGender(int userNum) {
+		return sqlSession.selectOne("User.UserGender",userNum);
+	}
+	//카카오톡 이메일 가져오기
+	public String UserKakaoEmail(int userNum) {
+		return sqlSession.selectOne("User.UserKakaoEmail",userNum);
+	}
+	//페이스북 이메일 가져오기
+	public String UserFaceBookEmail(int userNum) {
+		return sqlSession.selectOne("User.UserFaceBookEmail",userNum);
 	}
 	
 	//핸드폰 번호 변경
