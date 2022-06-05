@@ -167,7 +167,7 @@
                     </div>
                     <a class="my-index-list-row">
                         <div class="my-index-list-label">나의 LAW 지식IN</div>
-                        <div class="my-index-list-count zero">0</div>
+                        <div class="my-index-list-count zero"><c:out value="${userWriteCount}"/></div>
                     </a>
                     <a class="my-index-list-row">
                         <div class="my-index-list-label">나의 1:1 채팅상담</div>

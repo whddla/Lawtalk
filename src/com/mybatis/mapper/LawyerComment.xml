@@ -13,8 +13,9 @@
    
 	 <!--변호사 글 작성 -->
    <insert id ="commentWrite" parameterType="lawyerCommentVO">
-  		  insert into tbl_lawyer_comment(content)  <!--  , user_write_num, lawyer_num -->
- 		  values(#{content}) <!-- , #{userWriteNum}, #{lawyerNum} -->
+  		  insert into tbl_lawyer_comment 
+  		  (content , lawyer_name)
+ 		  values(#{content}, #{lawyerName})
    </insert>
  
    <!--답 글 삭제  -->
