@@ -32,7 +32,7 @@ public class LawyerJoinOk implements Action {
 		lawyerVO.setLawyerBirth(req.getParameter("lawyerBirth"));
 		
 		lawyerDAO.join(lawyerVO);
-		
+		System.out.println("회원가입 완료");
 	      
 	    req.setAttribute("lawyerList", lawyerDAO.selectLawyers());
 	      

@@ -9,7 +9,7 @@ function checkId() {
       return false;
     }
     $.ajax({
-    	url: "/kovengerss/LawyerCheckIdOk.ul",
+    	url: "/kovengerss/LawyerCheckIdOk.ll",
 		type: "get",
 		data: {lawyerId: $("input[name='lawyerId']").val()},
 		contentType: "application/json; charset=utf-8",
@@ -27,6 +27,7 @@ function checkId() {
         }
       }
     });
+    console.log("중복체크 들어옴");
   }
 var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
 var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
@@ -36,6 +37,7 @@ var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
 var officeHP= RegExp(/^0[1-7][0-9][0-9]{6,8}$/);
 $(document).ready(function() {
+	console.log("이용약관체크 들어옴");
 	$("#cbx_chkAll").click(function() {
 		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
 		else $("input[name=chk]").prop("checked", false);
@@ -55,6 +57,7 @@ $(document).ready(function() {
     let emailCheck = $(".account-email-error");
 	let $email = $("#account-email");
 	$email.on("keyup", function(){
+		console.log("이메일체크 들어옴");
 		if(emailCheck2.test($email.val())){
 			emailCheck.css("color","rgb(99 193 76)");
 			emailCheck.text("이메일 입력완료.");
@@ -74,6 +77,7 @@ $(document).ready(function() {
 	let nameChecked = $(".account-name-error");
 	let $name =$("#account-name");
 	$name.on("keyup", function(){
+		console.log("이름체크 들어옴");
     	if(nameCheck.test($name.val())){
     		nameChecked.css("color", "rgb(99 193 76)");
     		nameChecked.text("이름 입력 완료");
@@ -182,7 +186,7 @@ $(document).ready(function() {
 		
 
     	function checks(){
-    		
+    		console.log("checks 들어옴");
     		//이메일 공백 확인
     		if($("#account-email").val() == ""){
     			alert("이메일을 입력해주세요");
@@ -197,34 +201,16 @@ $(document).ready(function() {
     			$("#account-email").focus();
     			return false;
     		}
-    	
-    		//이름의 유효성 검사
-    		if(!nameCheck.test($("#account-name").val())){
-    			alert("이름을 다시 입력해주세요");
-    			$("#account-name").val("");
-    			$("#account-name").focus();
-    			return false;
-    		}
-    		
-    		  //이름 유효성
-            if (!nameCheck.test($("#account-name").val())) {
-              alert("이름을 다시 입력해주세요.");
-              $("#account-name").val("");
-              $("#account-name").focus();
-              return false;
-            }
-             
-            
     		//아이디 공백 확인
-    		if($("#account-Id").val() == ""){
+    		if($("#account-id").val() == ""){
     			alert("아이디 입력해주세요");
-    			$("#account-Id").focus();
+    			$("#account-id").focus();
     			return false;
     		}
 
-    		if(!userIdCheck.test($("#account-Id").val())){
+    		if(!userIdCheck.test($("#account-id").val())){
     			alert("아이디를 다시 확인해주세요.");
-    			$("#account-Id").focus();
+    			$("#account-id").focus();
     			return false;
     		}
     		
@@ -252,6 +238,33 @@ $(document).ready(function() {
         return false;
        }
    
+	        //이름의 유효성 검사
+	        if(!nameCheck.test($("#account-name").val())){
+	        	alert("이름을 다시 입력해주세요");
+	        	$("#account-name").val("");
+	        	$("#account-name").focus();
+	        	return false;
+	        }
+	        
+	        //이름 유효성
+	        if (!nameCheck.test($("#account-name").val())) {
+	        	alert("이름을 다시 입력해주세요.");
+	        	$("#account-name").val("");
+	        	$("#account-name").focus();
+	        	return false;
+	        }
+	        if(!officeCheck.test($("#account-office").val())) {
+	        	alert("사무실 이름을 확인해주세요.");
+	        	$("#account-office").val("");
+	        	$("#account-office").focus();
+	        	return false;
+	        }
+	        if(!officeHP.test($("#account-office-hp").val())) {
+	        	alert("사무실 번호를 확인해주세요.");
+	        	$("#account-office-hp").val("");
+	        	$("#account-office-hp").focus();
+	        	return false;
+	        }
         //핸드폰번호 확인
         if(!phoneNumCheck.test($("#account-hp").val())) {
         	alert("핸드폰 번호를 확인해주세요.");
@@ -260,6 +273,12 @@ $(document).ready(function() {
         	return false;
         }
    
+        if($("#lawyerGraduateTest").val() == ''){
+        	alert("출신시험을 선택해주세요.");
+        	$("#lawyerGraduateTest").focus();
+        	return false;
+        	
+        }
         // 성별 확인
         if($("#lawyerGender").val() == ''){
         	alert("성별을 선택해주세요.");

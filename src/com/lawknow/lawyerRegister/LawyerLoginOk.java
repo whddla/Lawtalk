@@ -3,13 +3,14 @@ package com.lawknow.lawyerRegister;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.lawknow.domain.dao.LawyerDAO;
+import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.ActionInfo;
 
 public class LawyerLoginOk {
@@ -24,6 +25,7 @@ public class LawyerLoginOk {
 		String lawyerPw = req.getParameter("lawyerPw");
 		String lawSaveId = req.getParameter("lawSaveId");
 		int lawyerNum = 0;
+		List<LawyerVO> lawyerList = lawyerDAO.selectLawyers();
 		String lawyerName = null;
 		lawyerPw = new String(Base64.getEncoder().encode(lawyerPw.getBytes()));
 		lawyerMap.put("lawyerId", lawyerId);
@@ -37,9 +39,11 @@ public class LawyerLoginOk {
 			req.getSession().setAttribute("lawyerNum", lawyerNum);
 			req.getSession().setAttribute("lawyerName", lawyerName);
 			req.getSession().setAttribute("lawyerPw", lawyerPw);
-			System.out.println("변호사 식별번호 : "+lawyerNum );
-			System.out.println("변호사 이름 : " + lawyerName);
-			System.out.println("변호사 이름 : " + lawyerPw);
+			req.getSession().setAttribute("lawyerList", lawyerList);
+			System.out.println("변호사 식별번호 	: "+lawyerNum );
+			System.out.println("변호사 이름 		: " + lawyerName);
+			System.out.println("변호사 이름 		: " + lawyerPw);
+			System.out.println("변호사 회원정보	: " + lawyerList);
 			
 			actionInfo.setPath("/LawKnowMainPage.jsp");
 		}else {

@@ -21,6 +21,7 @@ public class LawyerDAO {
 	
 	//회원가입
 	public void join(LawyerVO lawyerVO) {
+		System.out.println("joinDAO 등장");
 		sqlSession.insert("Lawyer.join", lawyerVO);
 	}
 	

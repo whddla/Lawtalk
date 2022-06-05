@@ -28,7 +28,7 @@
                     </span>
                 </div>
             </div>
-            <form action="JoinOk.ll" id="checks()" name="joinForm" method="post" class="sign-main-container">
+            <form onsubmit="return checks()" action="JoinOk.ll" id="form" name="joinForm" method="post" class="sign-main-container">
                 <h3 class="info">계정정보</h3>
                 <div class="input-info">
                     <div class="form-group">
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="footer-button">
-                    <button type="button" value="가입 완료" onclick="join()" class="footer-button-click">
+                    <button type="submit" value="가입 완료" class="footer-button-click">
                         가입신청
                     </button>
                 </div>
@@ -174,6 +174,7 @@
     </div>
     </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="assets/js/lawyerSignUp.js"></script>
 <script>
 		$(document).ready(function(){            
