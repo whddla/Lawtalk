@@ -260,7 +260,7 @@
 									</div>
 								</div>
 								
-    					 <section class="main accent2" style="padding:3%">
+    		<!-- 			 <section class="main accent2" style="padding:3%">
 		                        <header class="major" style="text-align:left;">
 		                           <h2>댓글</h2>
 		                           <p>여러분의 소중한 댓글을 작성해주세요.</p>
@@ -271,7 +271,7 @@
 		                        </form>
 		                        <form action="#" id="replies" class="combined" style="flex-direction:column; margin:0; display:contents;">
 		                        </form>
-                     </section>
+                     </section> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
    <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
          <script>
@@ -280,7 +280,7 @@
          	let lawyerNum = "${lawyerNum}";
          </script>
   
-   <script src="${pageContext.request.contextPath}/assets/js/reply.js"></script>
+   <script src="${pageContext.request.contextPath}/assets/js/comment.js"></script>
 </body>
 <script>
  /*  $("#testt").append("<h3>${content}"</h3>); */
