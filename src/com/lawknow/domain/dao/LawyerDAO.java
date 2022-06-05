@@ -66,4 +66,26 @@ public class LawyerDAO {
 		return (Integer)sqlSession.selectOne("Lawyer.LawyerPwcheck", lawyerNum) == 1;
 	}
 	
+	//아이디 가져오기
+	public String LawyerId(int lawyerNum) {
+		return sqlSession.selectOne("Lawyer.LawyerId", lawyerNum);
+	}
+	
+	//이메일 가져오기
+	public String LawyerEmail(int lawyerNum) {
+		return sqlSession.selectOne("Lawyer.LawyerEmail", lawyerNum);
+	}
+	
+	//핸드폰 번호 가져오기
+	public String LawyerPhonNum(int lawyerNum) {
+		return sqlSession.selectOne("Lawyer.LawyerPhonNum",lawyerNum);
+	}
+	
+	//핸드폰 번호 변경
+	public boolean LawyerPhoneChange(LawyerVO lawyerVO) {
+		return sqlSession.update("Lawyer.LawyerPhoneChange", lawyerVO) == 1;
+	}
+	
+	
+	
 }

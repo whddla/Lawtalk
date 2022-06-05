@@ -1,4 +1,4 @@
-package com.lawknow.userRegister;
+package com.lawknow.lawyerRegister;
 
 import java.io.IOException;
 
@@ -6,12 +6,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.lawknow.domain.dao.UserDAO;
-import com.lawknow.domain.vo.UserVO;
+import com.lawknow.domain.dao.LawyerDAO;
+import com.lawknow.domain.vo.LawyerVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
-public class UserPhonNumUpdateOk implements Action{
+public class LawyerPhonNumUpdateOk implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
@@ -19,29 +19,29 @@ public class UserPhonNumUpdateOk implements Action{
 		
 		ActionInfo actionInfo = new ActionInfo();
 		HttpSession session = req.getSession();
-		UserVO userVO = new UserVO();
-		UserDAO userDAO = new UserDAO();
+		LawyerVO lawyerVO = new LawyerVO();
+		LawyerDAO lawyerDAO = new LawyerDAO();
 		
-		int userNum = (int)req.getSession().getAttribute("userNum");
-		System.out.println(userNum);
+		int lawyerNum = (int)req.getSession().getAttribute("lawyerNum");
+		System.out.println(lawyerNum);
 		int newPhoneNumCheck = Integer.parseInt(req.getParameter("newPhoneNum"));
 		System.out.println(newPhoneNumCheck);
-		int userPhoneNum = Integer.parseInt((String) session.getAttribute("userPhoneNum"));
-		System.out.println(userPhoneNum);
-		System.out.println(userPhoneNum == newPhoneNumCheck);
+		int lawyerPhoneNum = Integer.parseInt((String) session.getAttribute("lawyerPhoneNum"));
+		System.out.println(lawyerPhoneNum);
+		System.out.println(lawyerPhoneNum == newPhoneNumCheck);
 		
-		if(userPhoneNum != newPhoneNumCheck) {
+		if(lawyerPhoneNum != newPhoneNumCheck) {
 			String newPhoneNum = req.getParameter("newPhoneNum");
-			userVO.setUserNum(userNum);
-			userVO.setUserPhoneNum(newPhoneNum);
-			boolean phoneNumCheck = userDAO.UserPhoneChange(userVO);
+			lawyerVO.setLawyerNum(lawyerNum);
+			lawyerVO.setLawyerPhoneNum(newPhoneNum);
+			boolean phoneNumCheck = lawyerDAO.LawyerPhoneChange(lawyerVO);
 			req.setAttribute("phoneNumCheck", phoneNumCheck);
 		}else {
 			req.setAttribute("phoneError", true);
 		}
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/privacyPage.jsp");
+		actionInfo.setPath("/privacyPage2.jsp");
 		
 		return actionInfo;
 	}

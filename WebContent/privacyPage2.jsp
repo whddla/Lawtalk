@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel ="stylesheet" href ="assets\css\privacyPage.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-<title>Insert title here</title>
+<title>변호사 회원정보 수정 || 로노</title>
 </head>
 <body>
 	<div class="container">
@@ -28,7 +29,7 @@
 						</div>
 						
 						<div class ="input-tag-layout">
-							<div class="allInput-border" style="border-bottom-color:#ddd; color: #757372;  padding: 10px 0;">dnrwhddla14erl</div>
+							<div class="allInput-border" style="border-bottom-color:#ddd; color: #757372;  padding: 10px 0;"><c:out value="${randomId} "/></div>
 							<label style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">아이디</label>
 						</div>
 						<p class="login-alert">소셜 로그인한 경우, 임의의 아이디가 부여됩니다.</p>
@@ -79,16 +80,22 @@
 							<button type="submit">[ 저장 ]</button>
 					</div>
 				</form>
-				<form class= "third-form">
+				<form class= "third-form"  action = "LawyerPhonNumUpdateOk.ll" method="post">
 					<h3 class = "form-title-text">전화번호</h3>
 					<div class ="input-hp-layout" >
 						<div class="hp-layout">
-							<input name ="phonNum"type="tel" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13">
+							<input type="text" id="accout-hp" class="allInput-border"  style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" name ="newPhoneNum">
+							<span style="position: absolute; right: 15px; top: 12px; cursor: pointer;" onclick ="pushCode()">인증번호 발송</span>
 							<label class="tel-error" for="accout-hp" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">전화번호</label>
+						</div>
+						<div class="hp-layout">
+							<input name ="codeChk" type="text" id="codeCheck" class="allInput-border"  style="padding:10px 0;" placeholder="인증번호 입력">
+							<span style="position: absolute; right: 15px; top: 12px; cursor: pointer;" id="checkButton">인증번호 확인</span>
+							<label class="code-error" for="codeCheck" style="font-size: 14px; font-weight: 400; line-height: 28px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">인증번호</label>
 						</div>
 					</div>
 					<div class ="button-layout" >
-							<button type="submit">[ 저장 ]</button>
+							<button class="hpChange"type="submit">[ 저장 ]</button>
 					</div>
 				</form>
 				<div class="footer">
@@ -107,13 +114,56 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+let code2 = "";
+	function pushCode(){
+	$.ajax({
+		url:"/kovengerss/LawyerPhoneNumPushOk.ll",
+		type:"get",
+		data:{newPhoneNum: $("input[name='newPhoneNum']").val()},
+		contentType: "application/json; charset=utf-8",
+		dataType:"json",
+		success: function(result){
+			if(!result.error){
+				code2 = result.code;
+				alert("인증번호 발송 완료");
+			}else{
+				alert("중복된 핸드폰 번호입니다");
+				code2 = null;
+			}
+		}
+	});
+}
+	$("#checkButton").on("click",function(){
+		console.log(code2);
+		console.log($("input[name=codeChk]").val());
+		if($("input[name=codeChk]").val() == code2){
+			alert("인증성공");
+		}else{
+			alert("인증실패");
+		}
+	});
+	
+	let phoneNumCheck = "${phoneNumCheck}";
+	
+	if(phoneNumCheck){
+		alert("변경완료")
+	}
+	
+	
+	$(".hpChange").on("click", function(){
+		if(!check){
+			alert("인증번호 또는 핸드폰 중복 오류입니다.");
+			return false;
+		}
+		return true;
+	});
+</script>
+<script>
 
 	let emailCheck = "${emailCheck}";
 
 	if(emailCheck){
 		alert("변경완료");
-	}else{
-		alert("변경실패");
 	}
 	
 

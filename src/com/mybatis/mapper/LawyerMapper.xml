@@ -58,6 +58,29 @@
 		where lawyer_num = #{lawyerNum};
 	</select>
 	
+		<!-- 아이디 가져오기 -->
+	<select id = "LawyerId" resultType ="string">
+		select lawyer_id from tbl_lawyer_register
+		where lawyer_num = #{lawyerNum}
+	</select>	
 	
+	<!-- 이메일 가져오기 -->
+	<select id = "LawyerEmail" resultType ="string">
+		select lawyer_email from tbl_lawyer_register
+		where lawyer_num = #{lawyerNum}
+	</select>
+	
+	<!-- 핸드폰 번호 가져오기  -->
+	<select id= "LawyerPhonNum" resultType ="string">
+		select lawyer_phone_num from tbl_lawyer_register
+		where lawyer_num = #{lawyerNum}
+	</select>
+	
+	<!-- 핸드폰 번호 변경 -->
+	<update id ="LawyerPhoneChange" parameterType= "userVO">
+		update tbl_lawyer_register
+		set lawyer_phone_num = #{lawyerPhoneNum}
+		where lawyer_num = #{lawyerNum}
+	</update>
 	
 </mapper>

@@ -1,9 +1,8 @@
-package com.lawknow.userRegister;
+package com.lawknow.lawyerRegister;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
 
-import com.lawknow.domain.dao.UserDAO;
-import com.lawknow.domain.vo.UserVO;
+import com.lawknow.domain.dao.LawyerDAO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
 
@@ -20,24 +18,22 @@ import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 
-public class UserPhoneNumPushOk implements Action{
+public class LawyerPhoneNumPushOk implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		
 		PrintWriter out =resp.getWriter();
 		JSONObject resultJSON = new JSONObject();
-		UserDAO userDAO = new UserDAO();
+		LawyerDAO lawyerDAO = new LawyerDAO();
 		
-		int userNum = (int)req.getSession().getAttribute("userNum");
-		String userPhoneNum = (String)userDAO.UserPhonNum(userNum);
+		int lawyerNum = (int)req.getSession().getAttribute("lawyerNum");
+		String lawyerPhoneNum = (String)lawyerDAO.LawyerPhonNum(lawyerNum);
 		String newPhoneNum = req.getParameter("newPhoneNum");
-		boolean PhoneNumCheck = userPhoneNum.equals(newPhoneNum);
-		System.out.println(!PhoneNumCheck);
-		System.out.println(newPhoneNum != "");
-		System.out.println(!PhoneNumCheck && newPhoneNum != null);
+		boolean PhoneNumCheck = lawyerPhoneNum.equals(newPhoneNum);
 		
-		if(!PhoneNumCheck && newPhoneNum != "") {
+		
+		if(!PhoneNumCheck && !(newPhoneNum == null)) {
 			
 //		String api_key = "NCSGDKSNDYTMCT5V"; // 임종욱 계정
 //	    String api_secret = "XHPDA2WDFAT5S3JGDF1A4SROWRWZXD5E"; // 임종욱 계정
@@ -66,11 +62,11 @@ public class UserPhoneNumPushOk implements Action{
 	      System.out.println(e.getMessage());
 	      System.out.println(e.getCode());
 	    }
-	    System.out.println("핸드폰 중복이 아님" + !PhoneNumCheck);
+	    System.out.println("핸드폰 중복이 아님" + PhoneNumCheck);
 	    resultJSON.put("code", code);
 		
 		} else {
-			System.out.println("핸드폰 중복시"+ PhoneNumCheck);
+			System.out.println("핸드폰 중복시"+PhoneNumCheck);
 			resultJSON.put("error", PhoneNumCheck);
 		}
 		
