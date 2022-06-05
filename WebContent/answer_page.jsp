@@ -280,7 +280,7 @@
          	let lawyerNum = "${lawyerNum}";
          </script>
   
-   <script src="${pageContext.request.contextPath}/assets/js/reply.js"></script>
+   <script src="${pageContext.request.contextPath}/assets/js/comment.js"></script>
 </body>
 <script>
  /*  $("#testt").append("<h3>${content}"</h3>); */
