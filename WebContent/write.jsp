@@ -96,9 +96,7 @@
 		<!--만약에 루트경로가 바뀔경우에는   contextPath-->
         <form action="UserWriteOk.uw" name ="joinForm" method = "post" enctype="multipart/form-data">
         <c:set var="Writelist" value="${userWriteCount}"/>
-   <div style="position: relative;
-    top: 238px;
-    left: 948px;">
+   <div style="position: relative;top: 238px;left: 948px;">
    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
   <input  value ="이혼" type="radio" class="btn-check" name="field" id="btnradio1" autocomplete="off" >
   <label class="btn btn-outline-primary" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
