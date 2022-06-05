@@ -28,7 +28,7 @@ public class LawyerEmailUpdateOk implements Action {
 		
 		int lawyerNum = (int)session.getAttribute("lawyerNum");
 		String lawyerId = lawyerDAO.LawyerId(lawyerNum);
-		String userEmail = lawyerDAO.LawyerEmail(lawyerNum);
+		String lawyerEmail = lawyerDAO.LawyerEmail(lawyerNum);
 		String newEmail = req.getParameter("email");
 		String randomId = lawyerId + random;
 		System.out.println(randomId);		
