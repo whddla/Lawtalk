@@ -70,7 +70,7 @@ public class LawyerLoginOk {
 			System.out.println("변호사 사무실번호	: " + lawyerOfficeNum);
 			
 			
-			actionInfo.setPath("/LawKnowMainPage.jsp");
+			actionInfo.setPath("/LawKnowMainPage2.jsp");
 		}else {
 			actionInfo.setPath("/login.jsp");
 		}

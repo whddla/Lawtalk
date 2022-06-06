@@ -37,7 +37,7 @@ public class LawyerJoinOk implements Action {
 	    req.setAttribute("lawyerList", lawyerDAO.selectLawyers());
 	      
 	    actionInfo.setRedirect(false);
-	    actionInfo.setPath("/LawKnowMainPage.jsp");
+	    actionInfo.setPath("/LawKnowMainPage2.jsp");
 	      
 		
 		

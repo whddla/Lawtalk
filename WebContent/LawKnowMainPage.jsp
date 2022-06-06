@@ -5,6 +5,7 @@
 	    if (session.getAttribute("userId")== null) {
 	        response.sendRedirect("logout.jsp");
 	    }
+    	
 	%>
 <!DOCTYPE html>
 <html lang="en">
