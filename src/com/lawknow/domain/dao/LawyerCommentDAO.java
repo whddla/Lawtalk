@@ -38,4 +38,12 @@ public class LawyerCommentDAO {
 		sqlSession.update("LawyerComment.commentUpdate", lawyerCommentVO);
 	}
 	
+	//변호사 이름가져오기
+	
+	public String commentLawyerName(int lawyerNum) {
+		return sqlSession.selectOne("LawyerComment.commentLawyerName", lawyerNum);
+	};
+	
+	
+	
 }

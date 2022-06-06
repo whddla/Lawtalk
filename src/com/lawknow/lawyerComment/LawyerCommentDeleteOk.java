@@ -14,8 +14,8 @@ public class LawyerCommentDeleteOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-	
-		new LawyerCommentDAO().commentDelete(Integer.parseInt(req.getParameter("lawyreWriteNum")));
+		System.out.println("delete ok 들어옴");
+		new LawyerCommentDAO().commentDelete(Integer.parseInt(req.getParameter("lawyerNum")));
 		
 		return null;
 	}

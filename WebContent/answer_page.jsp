@@ -24,6 +24,7 @@
 
 <!-- // -->
 
+
 	<div class="top-header">
 		<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton">
         	<i class="material-icons" id="thbutton">menu</i>
@@ -271,6 +272,7 @@
          	let contextPath = "${pageContext.request.contextPath}";
          	let content= "${comment.getContent()}";  
          	let lawyerName = "${lawyerName}";
+         	let lawyerNum = "${lawyerNum}";
          </script>
   
    <script src="${pageContext.request.contextPath}/assets/js/comment.js"></script>

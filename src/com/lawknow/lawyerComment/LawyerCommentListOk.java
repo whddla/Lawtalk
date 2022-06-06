@@ -21,18 +21,13 @@ public class LawyerCommentListOk implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-		System.out.println("list 테스트1");
 		
 		PrintWriter out = resp.getWriter();
 		
-		System.out.println("list 테스트2");
 		LawyerCommentDAO commentDAO = new LawyerCommentDAO();
 		JSONArray commentJSONs = new JSONArray();
-		System.out.println("list 테스트3");
-		
 		String lawyerName = (req.getParameter("lawyerName"));
 		List<LawyerCommentVO> comments = commentDAO.getCommentList(lawyerName);
-		System.out.println("list 테스트4");
 		comments.forEach(comment -> {
 			JSONObject commentJSON = new JSONObject();
 			commentJSON.put("lawyerName", comment.getLawyerName());
@@ -40,8 +35,10 @@ public class LawyerCommentListOk implements Action{
 			commentJSON.put("content", comment.getContent());
 			commentJSON.put("writeDate", comment.getWriteDate());
 			System.out.println("list Json put content 테스트");
+			commentJSON.put("lawyerWriteNum", comment.getLawyerWriteNum());
+			System.out.println("list lawyer writeNum" + comment.getLawyerWriteNum());
 			commentJSON.put("lawyerNum", comment.getLawyerNum());
-			System.out.println("list lawyerNum");
+			System.out.println("list lawyerNum  " + comment.getLawyerNum());
 			commentJSONs.add(commentJSON);
 		});
 		
