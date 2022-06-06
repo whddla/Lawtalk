@@ -3,7 +3,6 @@ package com.lawyer.action;
 public class ActionInfo {
 	private boolean isRedirect;
 	private String path;
-	//
 	public ActionInfo() {;}
 
 	public boolean isRedirect() {
