@@ -117,15 +117,15 @@
  				<div class="mypage-menu-layout mypage-menu-layout2">
 					<a class="mypage-menu">
 						<strong style="color : black;">이름</strong>
-						<span style="color : black; font-size: 22px;"><c:out value ="${lawyerName}"/></span>
+						<span style="color : black; font-size: 20px;"><c:out value ="${lawyerName}"/></span>
 					</a>
 					<a  class="mypage-menu">
 					<strong  style="color : black;">소속 사무실명</strong>
-						<span style="color : black; font-size: 22px;"><c:out value ="${officeName}"/></span>
+						<span style="color : black; font-size: 20px;"><c:out value ="${officeName}"/></span>
 					</a>	
 					<a class="mypage-menu">
 					<strong style="color : black;">사무실 전화번호</strong>
-						<span style="color : black; font-size: 20px;"><c:out value ="${officeNum}"/></span>
+						<span style="color : black; font-size: 18px;"><c:out value ="${officeNum}"/></span>
 					</a>
 				</div>
  			</div>

@@ -94,6 +94,10 @@ public class UserWriteDAO {
 			return sqlSession.selectOne("UserWrite.getMyCount", userNum);
 		}
 	
+		
+		public int writeCount(int userNum) {
+			return sqlSession.selectOne("UserWrite.writeCount", userNum);
+		}
 	
 	
 	
