@@ -14,7 +14,7 @@
 		<div class="all-layout">
 			<div class ="title-layout">
 				<h1>
-					<a class = "title-font" href="LawKnowMainPage.jsp">LawKnow</a>
+					<a class = "title-font" href="LawyerLoginOk.ll">LawKnow</a>
 					<span style ="display : block; color: #fefefe; font-size: 22px">Good Lawyers</span>
 				</h1>
 				<h2>개인정보 수정</h2>
@@ -100,12 +100,12 @@
 				</form>
 				<div class="footer">
 					<div class= "row" style ="display:flex; justify-content: space-around;">
-						<a href="Clientwithdrawal.jsp" style="color: #545352; font-size: 12px; text-decoration: none; ;">의뢰인 회원탈퇴</a>
-						<a href="LawKnowMainPage.jsp" style="color: #545352; font-size: 12px; text-decoration: none; ">로지식인 메인</a>
-						<a href="pwChange.jsp" style="color: #545352; font-size: 12px; text-decoration: none; padding-left: 39px;">PW 변경</a>
+						<a href="LawyerDeleteAccount.ll" style="color: #545352; font-size: 12px; text-decoration: none; ;">의뢰인 회원탈퇴</a>
+						<a href="LawyerLoginOk.ll" style="color: #545352; font-size: 12px; text-decoration: none; ">로지식인 메인</a>
+						<a href="LawyerPwChange.ll" style="color: #545352; font-size: 12px; text-decoration: none; padding-left: 39px;">PW 변경</a>
 					</div>
 					<div class ="row">
-						<a href="LawKnowMainPage.jsp" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
+						<a href="LawyerLoginOk.ll" style="color: #a9a7a6; font-size: 10px; text-decoration: none; ">(C) Law..Company Co.Ltd.</a>
 					</div>
 				</div>
 			</div>

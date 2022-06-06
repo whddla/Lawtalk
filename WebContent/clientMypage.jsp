@@ -100,11 +100,11 @@
                   		<a style="cursor: poniner; color:#ff6d37; font-size:40px; text-transform: uppercase;" class="logo-title-font"><strong>lawknow</strong></a>
                	</div>			
 				<div class="title-layout">
-					<a href="privacy.jsp" class="privacy-img">
+					<a href="UserEmailUpdate.ul" class="privacy-img">
 					개인정보 수정
 					<img src="assets/img/톱니바퀴.png"class="privacy-img-size">
 					</a>
-					<a href="">로그아웃</a>
+					<a href="logout.jsp">로그아웃</a>
 					</div>	
         </div>
       </div>  
