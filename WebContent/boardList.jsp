@@ -773,8 +773,8 @@ position: relative;
 									<div class="table-wrapper">
 										<div style="display:flex; justify-content:space-between;">
 											<span>글 개수 : ${total}개</span>
-											<button style="border-radius:0;" onclick="location.href ='${pageContext.request.contextPath}/UserWrite.uw'">글 쓰기</button>				
-												<button style="border-radius:0;" onclick="location.href ='${pageContext.request.contextPath}/UserAnswerOk.uw'">LawKnow전체 글목록</button>
+											<button style="border-radius:0;    border-radius: 0; position: relative;left: 209px;" onclick="location.href ='${pageContext.request.contextPath}/UserWrite.uw'">글 쓰기</button>				
+												<button style="border-radius:0;background-color: #ffb74d;" onclick="location.href ='${pageContext.request.contextPath}/UserAnswerOk.uw'">LawKnow 전체 글</button>
 										</div>
 										<table>
 											<caption style="text-align:left; margin-bottom:3%;">
@@ -838,7 +838,7 @@ position: relative;
 																<c:out value="${i}"/>&nbsp;&nbsp;
 															</c:when>
 															<c:otherwise>
-																<a href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${i}"><c:out value="${i}"/></a>&nbsp;&nbsp;
+																<a  style ="color:orange"href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${i}"><c:out value="${i}"/></a>&nbsp;&nbsp;
 															</c:otherwise>
 														</c:choose>
 													</c:forEach>
@@ -859,7 +859,7 @@ position: relative;
 						<div class="inner">
 						
 						
-						<div class="bottombox">
+				<div class="bottombox" style="background-color: white; width: 1137px; position: relative;left: 178px;height: 229px;">
                     <h5 class="lt-counsel">
                         	상담을 시작하세요!
                     </h5>
@@ -869,7 +869,7 @@ position: relative;
                         	당신의 고민을 여러 전문가가 답해드립니다</span><br>
                         <a class="linkline" href="write.jsp">ROWKNOW 지식 IN ></a>
                     </div>
-                    <div class="slash">
+                    <div class="slash" >
 
                     </div>
                     <div class="phone-advice">
