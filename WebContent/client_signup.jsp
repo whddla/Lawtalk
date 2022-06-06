@@ -35,8 +35,8 @@
 					<span class="text">카카오로 회원가입</span>
 				</a>
 			</button>
-               	<a href="#0" id="secession">탈퇴</a>
-                <a href="#0" id="kakaoLogout">로그아웃</a>
+               	<!-- <a href="#0" id="secession">탈퇴</a>
+                <a href="#0" id="kakaoLogout">로그아웃</a> -->
              <button class="facebook-signup-button">
                  <i class="facebook-icon"></i>
                  <span class="vertical-line2"></span>
@@ -285,8 +285,8 @@ window.fbAsyncInit = function() {
         const logout = document.querySelector('#kakaoLogout');
         const sion = document.querySelector('#secession');
 
-       logout.addEventListener('click', kakaoLogout);
-       sion.addEventListener('click', secession);
+     /*   logout.addEventListener('click', kakaoLogout);
+       sion.addEventListener('click', secession); */
     </script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
