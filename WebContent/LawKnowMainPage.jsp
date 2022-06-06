@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%  // 인증된 세션이 없는경우, 해당페이지를 볼 수 없게 함.
+	    if (session.getAttribute("userId")== null) {
+	        response.sendRedirect("logout.jsp");
+	    }
+	%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,20 +146,14 @@ div.btns{
                         <br>
                     </div>
                     
-                    <div class="realbottomSlide">
-                        <div class="slideLogin">
-                            <label>
-                            <i class="material-icons slideicon" style="font-size: 34px;" >person_add</i>
-                            <br>
-                           <a href="signup.jsp">회원가입</a>
-                        </label>
+                    <div style="display: block;" class="realbottomSlide">
+                        <div  class="slideLogin" style="margin-bottom: 20px; font-size: 20px;">
+                        	<%= session.getAttribute("userName") %>님 <small>반갑습니다.</small>
                         </div>
                         <div class="slideLogin">
-                            <label>
-                            <i class="material-icons slideicon" style="left: 11px; font-size: 34px;" >contacts</i>
-                            <br>
-                            <a href="login.jsp">로그인</a>
-                        </label>
+                             <a href="mypage.jsp"   style ="color: #333; cursor: pointer;">
+                    			마이페이지
+                			</a>
                         </div>
                     </div>
                     </div>
@@ -163,16 +163,11 @@ div.btns{
                 <strong>lawknow</strong>
             </div>
             <div id="small-menu">
-                <a class="twoandthree" href="login.jsp">
-                    로그인/가입
-                </a>
+                <h1    style="font-size: 15px; font-weight: 600; color: #333; margin-top: 9px;"><%= session.getAttribute("userName") %>님 <small>반갑습니다.</small></h1>
+        		<a style="margin: 0; padding: 0;" href="logout.jsp" class="twoandthree three">로그아웃</a>
             
-                <a class="twoandthree three"  href="list.jsp"style ="color: #333; cursor: pointer;">
-                    변호사찾기
-                </a>
-                <a>
-                    <i class="material-icons" style="position: relative;
-                    top: 9px;">zoom_in</i>
+                <a href="mypage.jsp" class="twoandthree three"  style ="color: #333; cursor: pointer;">
+                    마이페이지
                 </a>
             </div>
         </div>

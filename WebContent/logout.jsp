@@ -165,9 +165,11 @@ div.btns{
             </div>
             <div id="small-menu">
                 <a class="twoandthree" href="login.jsp">
-                    로그인/가입
+                    로그인
                 </a>
-            
+            	<a class="twoandthree" href="signup.jsp">
+            	회원가입
+            	</a>
             </div>
         </div>
         <div class = "aaa">
