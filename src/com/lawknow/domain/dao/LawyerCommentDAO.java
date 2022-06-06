@@ -30,12 +30,12 @@ public class LawyerCommentDAO {
 	
 	//변호사 글 삭제
 	public void commentDelete(int lawyerWriteNum) {
-		sqlSession.delete("Lawyer.commentDelete", lawyerWriteNum);
+		sqlSession.delete("LawyerComment.commentDelete", lawyerWriteNum);
 	}
 	
 	//변호사 글 수정
 	public void commentUpdate(LawyerCommentVO lawyerCommentVO) {
-		sqlSession.update("Lawyer.commentUpdate", lawyerCommentVO);
+		sqlSession.update("LawyerComment.commentUpdate", lawyerCommentVO);
 	}
 	
 }

@@ -5,7 +5,7 @@
 <mapper namespace="LawyerComment"> 
    	 <!--변호사 답글 목록 -->
    <select id ="commentList" resultType="lawyercommentVO">
-   		 select lawyer_name, content, lawyer_num
+   		 select lawyer_name, content
   		 from tbl_lawyer_comment
   		 order by 1 desc
    </select>
@@ -13,8 +13,8 @@
 	 <!--변호사 글 작성 -->
    <insert id ="commentWrite" parameterType="lawyerCommentVO">
   		  insert into tbl_lawyer_comment 
-  		  (content , lawyer_name)
- 		  values(#{content}, #{lawyerName})
+  		  (content , lawyer_name, lawyer_num)
+ 		  values(#{content}, #{lawyerName}, #{lawyerNum})
    </insert>
  
    <!--답 글 삭제  -->
@@ -29,4 +29,12 @@
          set content = #{content}
          where lawyer_num = #{lawyerNum}
    </update>
+   
+    <select id ="commentLawyerNum" resultType="_int">
+   		 select lawyer_num
+  		 from tbl_lawyer_comment
+   </select>
+   
+   
+   
 </mapper>

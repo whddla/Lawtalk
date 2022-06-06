@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.lawknow.domain.dao.LawyerCommentDAO;
+import com.lawknow.domain.dao.LawyerDAO;
 import com.lawknow.domain.vo.LawyerCommentVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
@@ -23,18 +24,14 @@ public class LawyerCommentUpdateOk implements Action {
 		
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		System.out.println("업뎃 컨텐트");
-		System.out.println(req.getParameter("lawyerNum"));
-		lawyerCommentVO.setLawyerNum((int)(req.getSession().getAttribute("lawyerNum")));
 		
-//		req.setAttribute("lawyerUpdateTitle",lawyerCommentVO.getTitle());
-//		req.setAttribute("lawyerUpdatecontent",lawyerCommentVO.getContent());
+		
+		lawyerCommentVO.setLawyerNum((int)req.getSession().getAttribute("lawyerNum"));
 		
 		lawyerCommentDAO.commentUpdate(lawyerCommentVO);
 		
-//		actionInfo.setRedirect(false);
-//		actionInfo.setPath("/mycounsel2.jsp");
 		
-//		return actionInfo;
+
 		return null;
 	}
 

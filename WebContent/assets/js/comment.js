@@ -79,7 +79,7 @@ function showList(comments){
                 text += "<input type='button' id='ready" + index + "' class='primary' value='수정' style='width: 63px;' onclick='readyToUpdate(" + index + ")'>"
                 text += "<input type='button' id='ok" + index + "' class='primary' style='display:none;' value='수정 완료' onclick='update(" + index +")'>"
                 //버튼 마다 삭제할 댓글의 번호를 같이 전달한다.
-                text += "<input type='button' style='width: 63px;' id='remove" + index + "' class='primary' value='삭제' onclick='remove(" + comment.lawyerWriteNum + ")'>"
+                text += "<input type='button' style='width: 63px;' id='remove" + index + "' class='primary' value='삭제' onclick='remove(" + comment.lawyerNum + ")'>"
                 text += "</div>"
             }
             text += "</div>"
@@ -137,7 +137,7 @@ function update(index){
       type: 'post',
 ////      JSON으로 데이터 전달할 때에는 아래와 같이 전달하고,
 ////      contentType:text로 반드시 설정한다. 생략 가능!
-      data: {lawyerName: commentList[index].lawyerName, content: $("#content" + index).val()},
+      data: {lawyerNum: commentList[index].lawyerNum, content: $("#content" + index).val()},
       success: function(){
          getList();
          check = false;
