@@ -69,7 +69,7 @@ public class UserWriteFrontController extends HttpServlet{
 	       else {
 	          // 404 일 때 출력할 에러 페이지 경로 작성
 	       }
-	        //////
+	        /////////////////////////////////
 	       
 	       if(actionInfo != null) { //actionInfo에 어떠한 값이라도 담겨있다면 
 	          if(actionInfo.isRedirect()) {
