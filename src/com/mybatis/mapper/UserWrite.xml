@@ -5,8 +5,8 @@
 <mapper namespace="UserWrite"> 
     <insert id ="userWrite" parameterType="userWriteVO"> 
       insert into tbl_user_write
-   		(field,title, content)
-  		 values(#{field},#{title}, #{content})
+   		(user_num,field,title, content)
+  		 values(#{userNum},#{field},#{title}, #{content})
    </insert>
    
    
@@ -43,7 +43,7 @@
         where field = #{field}
     </select>
     
-    <select id ="selectUserWrite" resultType = "userWriteVO">
+    <select id ="selectUserWrite"    resultType = "userWriteVO">
     	select user_write_num, user_num,field, title, content, write_date,read_count
 		from tbl_user_write
     </select>
@@ -78,7 +78,7 @@
    
    <!-- 게시글 상세보기(전체 정보 조회) -->
 	<select id="selectDetail" parameterType="_int" resultType="userWriteVO">
-		select user_write_num,title,content,user_num,field
+		select user_write_num,title,content,user_num,field,write_date
 		from tbl_user_write where user_write_num= #{userWriteNum}
 	</select>
 	
@@ -90,28 +90,34 @@
 		where user_write_num= #{userWriteNum}
 	</update>
    
+   <!--  좋아요 개수-->
+   <select id ="likeCount" parameterType="_int" resultType="_int">
+   	select like_it 
+   	from tbl_user_write
+   	where user_write_num= #{userWriteNum}
+   </select>
+   
+   <update id="plusCount" parameterType="_int" >
+    update  tbl_user_write
+    set like_it=like_it+1 
+    where user_write_num= #{userWriteNum}
+   </update>
+   
+   <update id="subCount" parameterType="_int" >
+    update  tbl_user_write
+    set like_it=0
+    where user_write_num= #{userWriteNum}
+   </update>
    
    
    
-   <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 	<select id="getSeq" resultType="_int">
 		select user_write_num from tbl_user_write
 		order by 1 desc limit 0, 1  
 	</select>
 	
-	<!-- <select id="selectAll" parameterType="map" resultType="userWriteDTO">
-		select user_write_num, title, content, user_id, write_date, read_count 
-		from tbl_user_write b join tbl_user_register m 
-		on b.user_num = m.user_num
-		order by 1 desc limit #{startRow}, #{rowCount}어디서부터 가져올건지 몇개를 가져올건지 
-	</select>
-
-
-	게시글 전체 개수 
-	<select id="getTotal" resultType="_int">
-		select count(user_write_number) from tbl_user_write
-	</select> -->
+	
 	
 	
 	

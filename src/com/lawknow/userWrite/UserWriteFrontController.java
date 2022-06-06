@@ -62,7 +62,9 @@ public class UserWriteFrontController extends HttpServlet{
 	       }else if(command.equals("UserAnswerOk.uw")) {
 	    	   actionInfo = new UserAnswerOk().execute(req, resp);
 	       }else if(command.equals("UserTotalDetailOk.uw")) {
-	    	   actionInfo = new UserAnswerOk().execute(req, resp);
+	    	   actionInfo = new UserTotalDetailOk().execute(req, resp);
+	       }else if(command.equals("UserLikeOk.uw")) {
+	    	   new UserLikeOk().execute(req, resp);
 	       }
 	       else {
 	          // 404 일 때 출력할 에러 페이지 경로 작성

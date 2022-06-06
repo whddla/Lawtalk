@@ -93,8 +93,20 @@ public class UserWriteDAO {
 		public int getMyCount(int userNum) {
 			return sqlSession.selectOne("UserWrite.getMyCount", userNum);
 		}
+		
+		//좋아요 개수
+		public int likeCount(int userWriteNum) {
+			return sqlSession.selectOne("UserWrite.likeCount",userWriteNum);
+		}
 	
+		//좋아요 +1 메소드
+		public void plusCount(int userWriteNum) {
+			 sqlSession.update("UserWrite.plusCount",userWriteNum);
+		}
 	
+		public void subCount(int userWriteNum) {
+			 sqlSession.update("UserWrite.subCount",userWriteNum);
+		}
 	
 	
 	

@@ -12,6 +12,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/client_request_waiting.css">
+<style>
+.btn-like {
+  color: transparent;
+  text-shadow: 0 0 2px rgba(255,255,255,.7), 0 0 0 #000;
+  font-size: 20px;
+}
+.btn-like:hover {
+  text-shadow: 0 0 0 #ea0;
+}
+.btn-like.done {
+  color: inherit;
+  text-shadow: 0;
+}
+.btn-like.done:hover {
+  color: transparent;
+  text-shadow: 0 0 0 #777;
+}
+</style>
 <title>로노 | 상담 목록</title>
 </head>
 <body>
@@ -282,8 +300,8 @@
 									</header>
 									<div class="a-card-cotent">
 										<span class="viewCount">
-										조회수
-											<i class="number">221</i>
+										분야 : 
+											<i class="number">이혼</i>
 										</span>
 										<span class="answer">1시간 전 답변 작성됨</span>
 									</div>
@@ -463,8 +481,8 @@
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
 										<div class="badge">
-											<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
-											<p class="number">12</p>
+									<button class="btn-like">👍</button>
+										 <div id="likeSpot" class="number">조회수:2</div>
 										</div>
 									</div>
 								</aside>
@@ -480,8 +498,8 @@
 									</header>
 									<div class="a-card-cotent">
 										<span class="viewCount">
-										조회수
-											<i class="number">231</i>
+										분야 : 
+											<i class="number">이혼</i>
 										</span>
 										<span class="answer">2시간전 답변 작성됨</span>
 									</div>
@@ -494,15 +512,19 @@
 								<aside class="a-card-aside-card">
 									<div class="a-wrapper">
 										<div class="badge">
+										<button class="btn-like">👍</button>
+										 <div id="likeSpot" class="number">조회수:${userWrite.getReadCount()}</div>
+											<!-- <button id="like" type ="button" value="좋아요"  onclick="iike()">
 											<img style="width: 21px;" src="http://rgo4.com/files/attach/images/2681740/530/423/028/872b2e6252060b8106541411529ba773.png">
-											<p class="number">12</p>
+										</button>	-->
+											 
 										</div>
 									</div>
 								</aside>
 								<div class="a-card-main">
-									<header class="a-card-header">
-									<a href="${pageContext.request.contextPath }/userWrite/UserTotalDetailOk.uw?userWriteNum=${userWrite.getUserWriteNum()}">${userWrite.getTitle()}</a>
-										<!-- <a href="http://localhost:9000/kovengerss/answer_page.jsp"> -->
+									<header class="a-card-header"> 
+									<%--  --%>
+									<a href="${pageContext.request.contextPath}/userWrite/UserTotalDetailOk.uw?userWriteNum=${userWrite.getUserWriteNum()}">${userWrite.getTitle()}</a>
 											<h1 class="a-card-header-title">
 												${userWrite.getTitle()}
 											</h1>
@@ -512,10 +534,10 @@
 									</header>
 									<div class="a-card-cotent">
 										<span class="viewCount">
-										조회수
-											<i class="number">${userWrite.getReadCount()}</i>
+										분야 : 
+											<i class="number">${userWrite.getField()}</i>
 										</span>
-										<span class="answer">2시간전 답변 작성됨</span>
+										<span class="answer">답변대기</span>
 									</div>
 								</div>
 							</div>
@@ -530,6 +552,7 @@
 		</section>
 		</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
 </body>
 <script >
 	function tabOpen(evt, contentName){
@@ -553,5 +576,38 @@
 				//class 생성 이벤트 발생
 				evt.currentTarget.className += " active"; 
 		}
+	
+	
+	$(".btn-like").click(function() {
+		$(this).toggleClass("done");
+		
+		})
+	
+	
+	
+	
+	/* function iike(){
+		
+		$.ajax({
+			url:   "/kovengerss/UserLikeOk.uw",
+			type: "get",
+			data: {userWriteNum:${userWrite.getUserWriteNum()}},
+			contentType: "application/json; charset=utf-8", //전송할 데이터의 타입
+			dataType: "json",
+			success: function(result){
+				$("#likeSpot").html(result);
+			},
+			 error: 
+				    function (request, status, error){  
+				      alert("ajax실패")                  
+				    }
+			
+		});
+		
+	}
+	 */
+	
+	
+	
 </script>
 </html>

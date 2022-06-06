@@ -23,6 +23,8 @@ public class UserAnswerOk implements Action{
 		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		
+		
+		
 		UserVO userVO = new UserVO();
 		UserWriteVO userWriteVO = new  UserWriteVO();
 		

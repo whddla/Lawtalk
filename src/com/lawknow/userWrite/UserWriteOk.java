@@ -24,6 +24,9 @@ public class UserWriteOk implements Action {
 		HttpSession session = req.getSession();
 		ActionInfo actionInfo = new ActionInfo();
 		
+		
+		
+		
 		String uploadPath ="D:\\web_1900_kgw\\jsp\\workspace\\kovengerss\\WebContent\\upload"; //여기다가 첨부된 파일을 업로드 하겠다
 		int fileSize =1024*1024*5; //5M
 		
@@ -43,6 +46,7 @@ public class UserWriteOk implements Action {
 		userWriteVO.setContent(multipartRequest.getParameter("content"));
 		userWriteVO.setField(multipartRequest.getParameter("field"));
 		userWriteVO.setUserNum((Integer)session.getAttribute("userNum"));
+		System.out.println((Integer)session.getAttribute("userNum"));
 		
 		userWriteDAO.userWrite(userWriteVO);//  게시글 추가 메소드 실행
 		

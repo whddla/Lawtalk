@@ -10,6 +10,7 @@ public class UserWriteVO {
 		private String content;
 		private String writeDate;
 		private int readCount;
+		private int likeIt;
 	
 		public UserWriteVO() {;}
 
@@ -75,6 +76,14 @@ public class UserWriteVO {
 
 		public void setReadCount(int readCount) {
 			this.readCount = readCount;
+		}
+
+		public int getLikeIt() {
+			return likeIt;
+		}
+
+		public void setLikeIt(int likeIt) {
+			this.likeIt = likeIt;
 		}
 	
 	
