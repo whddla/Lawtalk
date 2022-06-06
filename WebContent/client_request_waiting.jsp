@@ -542,12 +542,54 @@
 								</div>
 							</div>
 						</c:forEach>	
+						
+						
 					<!--  -->		
 							
 							
 							
 							
 						</div>
+						
+						
+								<!-- 페이징 처리 -->
+									<%--  	<table style="font-size:1.3rem">
+											<tr align="center" valign="middle">
+												<td class="mobile-view">
+													<c:if test="${page > 1}">
+														<a href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${page - 1}">&lt;</a>
+													</c:if>
+												
+													<c:out value="${page}"/>&nbsp;&nbsp;
+													
+													<c:if test="${page < realEndPage}">
+														<a href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${page + 1}">&gt;</a>
+													</c:if>
+												</td> 
+												<td class="web-view">
+													<c:if test="${startPage > 1}">
+														<a href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${startPage - 1}">&lt;</a>
+													</c:if>
+												
+													<c:forEach var="i" begin="${startPage}" end="${endPage}">
+														<c:choose>
+															<c:when test="${i eq page}">
+																<c:out value="${i}"/>&nbsp;&nbsp;
+															</c:when>
+															<c:otherwise>
+																<a  style ="color:orange"href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${i}"><c:out value="${i}"/></a>&nbsp;&nbsp;
+															</c:otherwise>
+														</c:choose>
+													</c:forEach>
+													
+													<c:if test="${endPage < realEndPage}">
+														<a href="${pageContext.request.contextPath}/userWrite/UserWriteListsOk.uw?page=${endPage + 1}">&gt;</a>
+													</c:if>
+												</td>
+											</tr>
+										</table> --%>
+						
+						
 				</main>
 		</section>
 		</div>
