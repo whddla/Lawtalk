@@ -82,7 +82,7 @@
    
    <!-- 게시글 상세보기(전체 정보 조회) -->
 	<select id="selectDetail" parameterType="_int" resultType="userWriteVO">
-		select user_write_num,title,content,user_num,field
+		select user_write_num,title,content,user_num,field,read_count
 		from tbl_user_write where user_write_num= #{userWriteNum}
 	</select>
 	
