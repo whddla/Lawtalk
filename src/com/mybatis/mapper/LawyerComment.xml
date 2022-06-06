@@ -27,14 +27,9 @@
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
          update tbl_lawyer_comment
          set content = #{content}
-         where lawyer_num = #{lawyerNum} and lawyer_write_num = #{lawyerWriteNum} 
+         where lawyer_num = #{lawyerNum}
    </update>
    
-    <select id ="commentLawyerName" resultType="string">
-   		 select lawyer_name
-  		 from tbl_lawyer_comment
-  		 where lawyer_num = #{lawyerNum}
-   </select>
    
    
    
