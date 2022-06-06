@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="writeglesigi">
-                    <img src="assets/img/연필1.jpg" style="width: 22px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;       
+                    <a href ="UserWrite.uw" id ="leftBannerGo"><img src="assets/img/연필.jpg" style="width: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;상담글쓰기&nbsp;></a>       
                     </div>
                     <div class = "menu-items-bottom">
                         <a class ="bottom-inner">
