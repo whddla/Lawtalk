@@ -66,8 +66,14 @@
                         <label class="account-office-hp-error" for="account-office-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input name="lawyerPhoneNum" class="form-control" id="account-hp" type="text" placeholder="휴대폰 번호">
-                        <label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
+						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
+                        <input name="lawyerPhoneNum" class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
+                        <button type="button" onclick="pushCode()" class="code-button"  id="sendPhoneNumber">[ 인증번호 발송 ]</button>
+                    </div>
+                    <div class="form-group">
+						<label class="codeLabel" for="codeNum" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
+                        <input class="form-control" id="codeNum" type="text" placeholder="인증번호" name="codeNum">
+                        <button type="button" class="code-button" id="checkButton" name="checkButton" >[인증]</button>
                     </div>
                     <div class="form-group">
                         <select class="form-control-button" name="lawyerGraduateTest">
@@ -77,16 +83,6 @@
 						  <option value="군법무관 임용시험">군법무관 임용시험</option>
 						  <option value="고등고시">고등고시</option>
 						</select>
-                    </div>
-                    <div class="form-group">
-						<label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
-                        <input name="lawyerPhoneNum" class="form-control" id="account-hp" type="tel" style="padding:10px 0;" placeholder="ex) 01012345678" maxlength="13" >
-                        <button type="button" onclick="pushCode()" class="code-button"  id="sendPhoneNumber">[ 인증번호 발송 ]</button>
-                    </div>
-                    <div class="form-group">
-						<label class="codeLabel" for="codeNum" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
-                        <input class="form-control" id="codeNum" type="text" placeholder="인증번호" name="codeNum">
-                        <button type="button" class="code-button" id="checkButton" name="checkButton" >[인증]</button>
                     </div>
                 </div>
                <div class="cons-info">

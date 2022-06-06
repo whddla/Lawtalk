@@ -150,7 +150,7 @@ div.btns{
                         	<%= session.getAttribute("lawyerName") %>변호사님 <small>반갑습니다.</small>
                         </div>
                         <div class="slideLogin">
-                             <a href="lawlayorMypage.jsp"   style ="color: #333; cursor: pointer;">
+                             <a href="LawyerOfficeNameOk.ll"   style ="color: #333; cursor: pointer;">
                     			마이페이지
                 			</a>
                         </div>
@@ -164,7 +164,7 @@ div.btns{
             <div id="small-menu">
                 <h1    style="font-size: 15px; font-weight: 600; color: #333; margin-top: 9px;"><%= session.getAttribute("lawyerName") %>변호사님 <small>반갑습니다.</small></h1>
         		<a style="margin: 0; padding: 0;" href="logout.jsp" class="twoandthree three" >로그아웃</a>
-                <a href="lawlayorMypage.jsp" class="twoandthree three"  style ="color: #333; cursor: pointer;">
+                <a href="LawyerOfficeNameOk.ll" class="twoandthree three"  style ="color: #333; cursor: pointer;">
                     마이페이지
                 </a>
             </div>

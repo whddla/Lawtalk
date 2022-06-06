@@ -36,9 +36,9 @@ function checkId() {
 let code2 = "";
 	function pushCode(){
 	$.ajax({
-		url:"/kovengerss/LawyerCheckPhoneOk.ul",
+		url:"/kovengerss/LawyerCheckPhoneOk.ll",
 		type:"get",
-		data:{userPhoneNum: $("input[name='lawyerPhoneNum']").val()},
+		data:{lawyerPhoneNum: $("input[name='lawyerPhoneNum']").val()},
 		contentType: "application/json; charset=utf-8",
 		dataType:"json",
 		success: function(result){
