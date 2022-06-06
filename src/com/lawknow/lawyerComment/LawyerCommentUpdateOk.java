@@ -26,8 +26,14 @@ public class LawyerCommentUpdateOk implements Action {
 		System.out.println("업뎃 컨텐트");
 		
 		
-		lawyerCommentVO.setLawyerNum((int)req.getSession().getAttribute("lawyerNum"));
+		lawyerCommentVO.setLawyerNum((int)req.getSession().getAttribute("lawyerNum"));	
 		
+		System.out.println("업뎃 lawyernum" + (int)req.getSession().getAttribute("lawyerNum"));
+		System.out.println(req.getSession().getAttribute("lawyerWriteNum"));
+		
+//		lawyerCommentVO.setLawyerWriteNum((int)req.getSession().getAttribute("lawyerWriteNum"));
+//		lawyerCommentVO.setLawyerWriteNum(Integer.parseInt(req.getParameter("lawyerWriteNum")));
+//		System.out.println("업뎃 롸잇넘");
 		lawyerCommentDAO.commentUpdate(lawyerCommentVO);
 		
 		

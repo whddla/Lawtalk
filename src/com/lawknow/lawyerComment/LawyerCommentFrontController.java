@@ -32,9 +32,11 @@ public class LawyerCommentFrontController extends HttpServlet {
 		new LawyerCommentOk().execute(req, resp);
 		break;
 	case "LawyerCommentUpdateOk.lcc":
+		System.out.println("update forntcontroller");
 		new LawyerCommentUpdateOk().execute(req, resp);
 		break;
 	case "LawyerCommentDeleteOk.lcc":
+		System.out.println("delete forntcontroller");
 		new LawyerCommentDeleteOk().execute(req, resp);
 		break;
    		}

@@ -146,11 +146,11 @@ function update(index){
 }
 
 //댓글 삭제
-function remove(lawyerName){
+function remove(lawyerNum){
    $.ajax({
-      url: contextPath + "/LawyerDeleteOk.lcc",
+      url: contextPath + "/LawyerCommentDeleteOk.lcc",
       type: 'get',
-      data: {content: content},
+      data: {lawyerNum: lawyerNum},
       success: function(){
          getList();
       }

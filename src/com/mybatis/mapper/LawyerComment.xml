@@ -5,7 +5,7 @@
 <mapper namespace="LawyerComment"> 
    	 <!--변호사 답글 목록 -->
    <select id ="commentList" resultType="lawyercommentVO">
-   		 select lawyer_name, content
+   		 select lawyer_name, content , lawyer_num, lawyer_write_num
   		 from tbl_lawyer_comment
   		 order by 1 desc
    </select>
@@ -18,21 +18,22 @@
    </insert>
  
    <!--답 글 삭제  -->
-   <delete id ="commentDelete" parameterType ="_int">
+   <delete id ="commentDelete" parameterType ="LawyerCommentVO">
 		delete from tbl_lawyer_comment 
-		where lawyer_name = #{lawyerName}
+		where lawyer_num = #{lawyerNum}
    </delete>   
    
    <!-- 변호사 글 수정  -->
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
          update tbl_lawyer_comment
          set content = #{content}
-         where lawyer_num = #{lawyerNum}
+         where lawyer_num = #{lawyerNum} and lawyer_write_num = #{lawyerWriteNum} 
    </update>
    
-    <select id ="commentLawyerNum" resultType="_int">
-   		 select lawyer_num
+    <select id ="commentLawyerName" resultType="string">
+   		 select lawyer_name
   		 from tbl_lawyer_comment
+  		 where lawyer_num = #{lawyerNum}
    </select>
    
    
