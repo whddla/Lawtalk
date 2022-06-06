@@ -1,14 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
     
     <%  // 인증된 세션이 없는경우, 해당페이지를 볼 수 없게 함.
 	    if (session.getAttribute("userId")== null) {
 	        response.sendRedirect("logout.jsp");
 	    }
 	%>
-=======
->>>>>>> 30cad7775c87f4ea73c45b2ce812c31dbeb2e6f5
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,24 +163,11 @@ div.btns{
                 <strong>lawknow</strong>
             </div>
             <div id="small-menu">
-<<<<<<< HEAD
                 <h1    style="font-size: 15px; font-weight: 600; color: #333; margin-top: 9px;"><%= session.getAttribute("userName") %>님 <small>반갑습니다.</small></h1>
         		<a style="margin: 0; padding: 0;" href="logout.jsp" class="twoandthree three">로그아웃</a>
             
                 <a href="mypage.jsp" class="twoandthree three"  style ="color: #333; cursor: pointer;">
                     마이페이지
-=======
-                <a class="twoandthree" href="login.jsp">
-                    로그인/가입
-                </a>
-            
-                <a class="twoandthree three"  href="list.jsp"style ="color: #333; cursor: pointer;">
-                    변호사찾기
-                </a>
-                <a>
-                    <i class="material-icons" style="position: relative;
-                    top: 9px;">zoom_in</i>
->>>>>>> 30cad7775c87f4ea73c45b2ce812c31dbeb2e6f5
                 </a>
             </div>
         </div>
