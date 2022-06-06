@@ -32,7 +32,6 @@ public class LawyerOfficeNameOk implements Action{
 		String last = "";
 				
 		String first1 = officePhonNum.substring(0,2);
-		String first2 = officePhonNum.substring(0,3);
 		System.out.println(first1.equals("02"));
 		
 		if(officePhonNum.length() == 10 && first1.equals("02")) {
