@@ -11,7 +11,7 @@ import com.lawknow.domain.dao.UserDAO;
 import com.lawknow.domain.vo.UserVO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-
+//
 public class PwChangeOk implements Action {
 	//
 	@Override
