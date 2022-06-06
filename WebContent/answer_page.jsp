@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -211,7 +212,7 @@
 									
 									
 										<button type="button" class="answer-button" id="click" onclick="insert()">답변등록</button>
-								</form>								
+								</form>				
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
 							
@@ -241,7 +242,7 @@
 										2) 집행권원을 만들기 위해서는 남편을 상대로 소송을 제기하거나, 공증을 받는 방법이 있습니다.
 										3) 다만 남편이 공증절차에 협조하지 않는다면 변호사 선임을 통한 절차 진행을 적극 고려해보시기 바랍니다.
 										
-										이혼에는 협의이혼과 재판상 이혼(조정이혼, 이혼소송)이 있습니다.p
+										이혼에는 협의이혼과 재판상 이혼(조정이혼, 이혼소송)이 있습니다.
 										협의이혼의 경우, 미성년 자녀의 양육권과 친권, 양육비 및 면접교섭에 관한 사항을 정하게 됩니다.
 										만약 이에 대하여 배우자와 협의가 이루어지지 않는 경우에는 재판상 이혼으로 진행해야 합니다.
 										재판상 이혼의 경우, 양육에 관한 사항 외에 위자료와 재산분할에 대해서도 당사자간 분쟁을 정확하고 신속하게
@@ -259,14 +260,16 @@
 										</div>
 									</div>
 								</div>
+								 <form action="#" id="comments" class="comment" style="flex-direction:column; margin:0; display:contents;">
+                    			    </form>				
 								
     				
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
    <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
          <script>
          	let contextPath = "${pageContext.request.contextPath}";
-         	let userWriteNum = "${board.getuserWriteNum()}";  //<< 수정해야함
-         	let lawyerNum = "${lawyerNum}";
+         	let content= "${comment.getContent()}";  
+         	let lawyerName = "${lawyerName}";
          </script>
   
    <script src="${pageContext.request.contextPath}/assets/js/comment.js"></script>

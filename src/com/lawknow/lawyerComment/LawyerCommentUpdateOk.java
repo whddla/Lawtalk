@@ -15,26 +15,27 @@ public class LawyerCommentUpdateOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-		//
-		ActionInfo actionInfo = new ActionInfo();
+		
+//		ActionInfo actionInfo = new ActionInfo();
 		
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();
 		LawyerCommentDAO lawyerCommentDAO = new LawyerCommentDAO();
 		
-		lawyerCommentVO.setLawyerWriteNum(Integer.parseInt(req.getParameter("lawyerWriteNum")));
-		lawyerCommentVO.setTitle(req.getParameter("title"));
 		lawyerCommentVO.setContent(req.getParameter("content"));
-		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
+		System.out.println("업뎃 컨텐트");
+		System.out.println(req.getParameter("lawyerNum"));
+		lawyerCommentVO.setLawyerNum((int)(req.getSession().getAttribute("lawyerNum")));
 		
-		req.setAttribute("lawyerUpdateTitle",lawyerCommentVO.getTitle());
-		req.setAttribute("lawyerUpdatecontent",lawyerCommentVO.getContent());
+//		req.setAttribute("lawyerUpdateTitle",lawyerCommentVO.getTitle());
+//		req.setAttribute("lawyerUpdatecontent",lawyerCommentVO.getContent());
 		
 		lawyerCommentDAO.commentUpdate(lawyerCommentVO);
 		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/mycounsel2.jsp");
+//		actionInfo.setRedirect(false);
+//		actionInfo.setPath("/mycounsel2.jsp");
 		
-		return actionInfo;
+//		return actionInfo;
+		return null;
 	}
 
 }

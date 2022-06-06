@@ -4,7 +4,6 @@ public class LawyerCommentVO {
 		private int lawyerWriteNum;
 		private int requestNum;
 		private int lawyerNum;
-		private int userWriteNum;
 		private String title;
 		private String content;
 		private String writeDate;
@@ -15,15 +14,6 @@ public class LawyerCommentVO {
 		
 		public LawyerCommentVO() {;}
 		
-		
-		public int getUserWriteNum() {
-			return userWriteNum;
-		}
-
-		public void setUserWriteNum(int userWriteNum) {
-			this.userWriteNum = userWriteNum;
-		}
-
 
 		public String getLawyerName() {
 			return lawyerName;
