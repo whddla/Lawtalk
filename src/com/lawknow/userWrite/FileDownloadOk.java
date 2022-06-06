@@ -19,7 +19,7 @@ public class FileDownloadOk implements Action {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-		String uploadPath = "D:\\web_1900_kgw\\jsp\\workspace\\kovengerss\\WebContent\\upload";
+		String uploadPath = "E:\\web_1900_JW\\jsp\\workspace\\kovengerss\\WebContent\\upload";
 		String fileName = req.getParameter("fileName");
 		String fileNameOriginal = req.getParameter("fileNameOriginal");
 		InputStream inputStream = null;
