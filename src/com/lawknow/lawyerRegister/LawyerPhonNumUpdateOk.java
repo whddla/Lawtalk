@@ -24,13 +24,13 @@ public class LawyerPhonNumUpdateOk implements Action{
 		
 		int lawyerNum = (int)req.getSession().getAttribute("lawyerNum");
 		System.out.println(lawyerNum);
-		int newPhoneNumCheck = Integer.parseInt(req.getParameter("newPhoneNum"));
+		String newPhoneNumCheck = req.getParameter("newPhoneNum");
 		System.out.println(newPhoneNumCheck);
-		int lawyerPhoneNum = Integer.parseInt((String) session.getAttribute("lawyerPhoneNum"));
+		String lawyerPhoneNum = lawyerDAO.LawyerPhoneNum(lawyerNum);
 		System.out.println(lawyerPhoneNum);
-		System.out.println(lawyerPhoneNum == newPhoneNumCheck);
+		System.out.println(lawyerPhoneNum.equals(newPhoneNumCheck));
 		
-		if(lawyerPhoneNum != newPhoneNumCheck) {
+		if(!lawyerPhoneNum.equals(newPhoneNumCheck)) {
 			String newPhoneNum = req.getParameter("newPhoneNum");
 			lawyerVO.setLawyerNum(lawyerNum);
 			lawyerVO.setLawyerPhoneNum(newPhoneNum);

@@ -24,13 +24,17 @@ public class UserPhonNumUpdateOk implements Action{
 		
 		int userNum = (int)req.getSession().getAttribute("userNum");
 		System.out.println(userNum);
-		int newPhoneNumCheck = Integer.parseInt(req.getParameter("newPhoneNum"));
+
+		String newPhoneNumCheck = req.getParameter("newPhoneNum");
 		System.out.println(newPhoneNumCheck);
-		int userPhoneNum = Integer.parseInt((String) session.getAttribute("userPhoneNum"));
+		
+		String userPhoneNum = userDAO.UserPhonNum(userNum);
 		System.out.println(userPhoneNum);
 		System.out.println(userPhoneNum == newPhoneNumCheck);
+		System.out.println(userPhoneNum.equals(newPhoneNumCheck));
 		
-		if(userPhoneNum != newPhoneNumCheck) {
+		
+		if(!userPhoneNum.equals(newPhoneNumCheck)) {
 			String newPhoneNum = req.getParameter("newPhoneNum");
 			userVO.setUserNum(userNum);
 			userVO.setUserPhoneNum(newPhoneNum);
