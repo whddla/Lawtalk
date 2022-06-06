@@ -19,5 +19,4 @@
 		from tbl_file
 		where user_write_num = #{userWriteNum}
 	</select>
-	<!--  -->
 </mapper>
