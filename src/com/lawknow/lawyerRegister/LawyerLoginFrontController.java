@@ -55,7 +55,7 @@ import com.lawyer.action.ActionInfo;
 			} else if(command.equals("LawyerDeleteAccount.ll")) {
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(false);
-				actionInfo.setPath("/lawyerWithdrawal.jsp");
+				actionInfo.setPath("/lawyerwithdrawal.jsp");
 			} else if(command.equals("LawyerPwCheckOk.ll")) {
 				new LawyerPwCheckOk().execute(req, resp);
 			} else if(command.equals("LawyerEmailUpdateOk.ll")) {
