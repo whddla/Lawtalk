@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,16 +116,16 @@
  				<h2>마이페이지</h2>
  				<div class="mypage-menu-layout mypage-menu-layout2">
 					<a class="mypage-menu">
-						<strong>채택 갯수</strong>
-						<span>0</span>
+						<strong style="color : black;">이름</strong>
+						<span style="color : black; font-size: 22px;"><c:out value ="${lawyerName}"/></span>
 					</a>
 					<a  class="mypage-menu">
-					<strong>해결 사례</strong>
-						<span>0</span>
-					</a>
+					<strong  style="color : black;">소속 사무실명</strong>
+						<span style="color : black; font-size: 22px;"><c:out value ="${officeName}"/></span>
+					</a>	
 					<a class="mypage-menu">
-					<strong>상담 해결 갯수</strong>
-						<span>0</span>
+					<strong style="color : black;">사무실 전화번호</strong>
+						<span style="color : black; font-size: 20px;"><c:out value ="${officeNum}"/></span>
 					</a>
 				</div>
  			</div>
@@ -134,18 +135,9 @@
 					<div class="mypage-list-tag">
 						<div class="mypage-list-title">내 상담 내역</div>
 							<a class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;">
-								<div class= "mypage-list-font1" style="padding-top:20px;">1:1채팅 요청</div>
-								<div class= "mypage-list-font2" style="padding-top: 15px;">0</div>
+								<div class= "mypage-list-font1" style="padding-top:20px;">댓글 갯수</div>
+								<div class= "mypage-list-font2" style="padding-top: 15px;"><c:out value="${test}"/></div>
 							</a>
-							<a class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;"> <!-- 변호사 정보사이트로 이동  -->
-								<div class= "mypage-list-font1">글 작성 목록</div>
-								<div class= "mypage-list-font2">0</div>
-							</a>
-							<a class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;">
-								<div class= "mypage-list-font1">내 정보 조회</div>
-								<div class= "mypage-list-font2">0</div>
-							</a>	
-	
 					</div>
 				</div>
       	</div>

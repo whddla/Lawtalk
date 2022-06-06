@@ -18,6 +18,7 @@ function checkId() {
           alert("이미 존재하는 아이디 입니다.");
           idCheck.css("color","red");
           idCheck.text("이미 존재하는 아이디입니다.");
+          $("#account-id").val("");
           $("#account-id").focus();
         } else {
           idCheck.css("color","rgb(99 193 76)");
@@ -28,7 +29,38 @@ function checkId() {
     });
   }
 
- var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
+//휴대폰 번호 인증
+let code2 = "";
+	function pushCode(){
+	$.ajax({
+		url:"/kovengerss/UserCheckPhoneOk.ul",
+		type:"get",
+		data:{userPhoneNum: $("input[name='userPhoneNum']").val()},
+		contentType: "application/json; charset=utf-8",
+		dataType:"json",
+		success: function(result){
+			if(!result.error){
+				code2 = result.code;
+				alert("인증번호 발송 완료");
+			}
+		}
+	});
+}$("#checkButton").on("click",function(){
+	console.log(code2);
+	console.log($("input[name=codeNum]").val());
+	if($("input[name=codeNum]").val()==""){
+		alert("인증번호를 입력하세요.");
+	}else if($("input[name=codeNum]").val() == code2){
+		alert("인증성공");
+	}
+	else{
+		alert("인증실패");
+	}
+});
+
+ 	var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
+ 	var codeCheck = RegExp(/^[0-9]{4,4}$/);
+ 	var numCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
     var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
     var nameCheck = RegExp(/^[가-힣]{2,6}$/);
     var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
@@ -189,15 +221,15 @@ function checkId() {
              
             
     		//아이디 공백 확인
-    		if($("#account-Id").val() == ""){
+    		if($("#account-id").val() == ""){
     			alert("아이디 입력해주세요");
-    			$("#account-Id").focus();
+    			$("#account-id").focus();
     			return false;
     		}
 
-    		if(!userIdCheck.test($("#account-Id").val())){
+    		if(!userIdCheck.test($("#account-id").val())){
     			alert("아이디를 다시 확인해주세요.");
-    			$("#account-Id").focus();
+    			$("#account-id").focus();
     			return false;
     		}
     		
@@ -210,7 +242,7 @@ function checkId() {
         }
    
         //아이디랑 비밀번호랑 같은지
-        if ($("#account-Id").val()==($("#account-password").val())) {
+        if ($("#account-id").val()==($("#account-password").val())) {
         alert("비밀번호는 아이디와 다르게 입력해주세요.");
         $("#account-password").val("");
         $("#account-password").focus();
@@ -230,6 +262,13 @@ function checkId() {
         	alert("핸드폰 번호를 확인해주세요.");
         	$("#account-hp").val("");
         	$("#account-hp").focus();
+        	return false;
+        }
+
+        if(!codeCheck.test($("#codeNum").val())) {
+        	alert("인증번호를 다시 확인해주세요");
+        	$("#codeNum").val("");
+        	$("#codeNum").focus();
         	return false;
         }
    

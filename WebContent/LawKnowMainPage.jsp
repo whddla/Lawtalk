@@ -145,14 +145,14 @@ div.btns{
                             <label>
                             <i class="material-icons slideicon" style="font-size: 34px;" >person_add</i>
                             <br>
-                           <a href="assets/signup.jsp">회원가입</a>
+                           <a href="signup.jsp">회원가입</a>
                         </label>
                         </div>
                         <div class="slideLogin">
                             <label>
                             <i class="material-icons slideicon" style="left: 11px; font-size: 34px;" >contacts</i>
                             <br>
-                            <a href="assets/client_login.jsp">로그인</a>
+                            <a href="login.jsp">로그인</a>
                         </label>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ div.btns{
                 <strong>lawknow</strong>
             </div>
             <div id="small-menu">
-                <a class="twoandthree" href="assets/client_login.jsp">
+                <a class="twoandthree" href="login.jsp">
                     로그인/가입
                 </a>
             

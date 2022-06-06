@@ -148,8 +148,8 @@
             </h2>
             <div class="my-index-buttons-wrap">
                 <a class="my-index-button" href="mycounsel.jsp">
-                    나의 상담 내역<br>
-                    <span class="my-index-button-count zero">0</span>
+                    글작성 갯수<br>
+                    <span class="my-index-button-count zero"><c:out value="${userWriteCount}"/></span>
                 </a>
                 <a class="my-index-button" href="mycounsel.jsp">
                     사례 즐겨찾기<br>

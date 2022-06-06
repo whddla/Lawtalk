@@ -19,7 +19,9 @@ function checkId() {
           alert("이미 존재하는 아이디 입니다.");
           idCheck.css("color","red");
           idCheck.text("이미 존재하는 아이디입니다.");
+          $("#account-id").val("");
           $("#account-id").focus();
+          
         } else {
           idCheck.css("color","rgb(99 193 76)");
           idCheck.text("사용 가능한 아이디입니다.");
@@ -29,6 +31,36 @@ function checkId() {
     });
     console.log("중복체크 들어옴");
   }
+
+//휴대폰 번호 인증
+let code2 = "";
+	function pushCode(){
+	$.ajax({
+		url:"/kovengerss/LawyerCheckPhoneOk.ul",
+		type:"get",
+		data:{userPhoneNum: $("input[name='lawyerPhoneNum']").val()},
+		contentType: "application/json; charset=utf-8",
+		dataType:"json",
+		success: function(result){
+			if(!result.error){
+				code2 = result.code;
+				alert("인증번호 발송 완료");
+			}
+		}
+	});
+}$("#checkButton").on("click",function(){
+	console.log(code2);
+	console.log($("input[name=codeNum]").val());
+	if($("input[name=codeNum]").val()==""){
+		alert("인증번호를 입력하세요.");
+	}else if($("input[name=codeNum]").val() == code2){
+		alert("인증성공");
+	}
+	else{
+		alert("인증실패");
+	}
+});
+var codeCheck = RegExp(/^[0-9]{4,4}$/);
 var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
 var passwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
 var nameCheck = RegExp(/^[가-힣]{2,6}$/);
@@ -273,6 +305,13 @@ $(document).ready(function() {
         	return false;
         }
    
+        if(!codeCheck.test($("#codeNum").val())) {
+        	alert("인증번호를 다시 확인해주세요");
+        	$("#codeNum").val("");
+        	$("#codeNum").focus();
+        	return false;
+        }
+        
         if($("#lawyerGraduateTest").val() == ''){
         	alert("출신시험을 선택해주세요.");
         	$("#lawyerGraduateTest").focus();
