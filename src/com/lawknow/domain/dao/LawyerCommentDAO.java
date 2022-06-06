@@ -19,18 +19,17 @@ public class LawyerCommentDAO {
 	 
 	
 	//글 목록
-	public List<LawyerCommentDTO> getCommentList(int lawyer_write_num) {
-		return sqlSession.selectList("LawyerComment.commentList", lawyer_write_num);
+	public List<LawyerCommentVO> getCommentList(String lawyerName) {
+		return sqlSession.selectList("LawyerComment.commentList", lawyerName);
 	}
 	
 	//변호사 글 작성
 	public void commentWrite(LawyerCommentVO lawyerCommentVO) {
 		sqlSession.insert("LawyerComment.commentWrite", lawyerCommentVO); 
-		System.out.println("commentwritedao");
 	}
 	
 	//변호사 글 삭제
-	public void commentDelete(LawyerCommentVO lawyerWriteNum) {
+	public void commentDelete(int lawyerWriteNum) {
 		sqlSession.delete("Lawyer.commentDelete", lawyerWriteNum);
 	}
 	

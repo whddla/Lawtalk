@@ -4,10 +4,9 @@
 
 <mapper namespace="LawyerComment"> 
    	 <!--변호사 답글 목록 -->
-   <select id ="commentList" parameterType="_int" resultType="lawyercommentDTO">
-   		 select lawyer_write_num, content , lawyer_id, user_write_num, lawyer_num
-  		 from tbl_lawyer_comment r join tbl_lawyer_register m
-  		 on r.member_number = m.lawyer_num and user_write_num = #{userWriteNum}
+   <select id ="commentList" resultType="lawyercommentVO">
+   		 select lawyer_name, content, lawyer_num
+  		 from tbl_lawyer_comment
   		 order by 1 desc
    </select>
    
@@ -20,13 +19,14 @@
  
    <!--답 글 삭제  -->
    <delete id ="commentDelete" parameterType ="_int">
-		delete from tbl_lawyer_comment where lawyer_write_num = #{lawyerWriteNum}
+		delete from tbl_lawyer_comment 
+		where lawyer_name = #{lawyerName}
    </delete>   
    
    <!-- 변호사 글 수정  -->
    <update id ="commentUpdate" parameterType ="LawyerCommentVO">
          update tbl_lawyer_comment
-         set  content = #{content}
-         where lawyer_write_num = #{lawyerWriteNum}
+         set content = #{content}
+         where lawyer_num = #{lawyerNum}
    </update>
 </mapper>
