@@ -203,7 +203,7 @@
 							<div class="question-detail">
 									
 									
-								<form action="LawyerCommentOk.lcc" name="commentForm" method="post">	
+			<!-- 					<form action="LawyerCommentOk.lcc" name="commentForm" method="post">	
 								<div class="board">
 									<div class="board-header">
 										<h4>당신의 지식을 공유해주세요!</h4>
@@ -216,9 +216,9 @@
 									
 									
 										<button class="answer-button" id="click">답변등록</button>
-								</form>								
+								</form>			 -->					
 								
-							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
+							<h4 class="section-title">LawKnow 변호사님들의 답변</h4>
 							
 								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
 									<aside class="a-card-aside-card">
