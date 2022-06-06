@@ -166,11 +166,15 @@
 </script>
 <script>
 let emailCheck = "${emailCheck}";
-
+	
 if(emailCheck){
 	alert("변경완료");
 }
 
+let emailchk = "${emailchk}";
+if(emailchk){
+	alert("이메일이 같습니다. 다시입력해주세요");	
+}
 
 </script>
 <script>
