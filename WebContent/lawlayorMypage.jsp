@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,16 +116,16 @@
  				<h2>마이페이지</h2>
  				<div class="mypage-menu-layout mypage-menu-layout2">
 					<a class="mypage-menu">
-						<strong>채택 갯수</strong>
+						<strong style="">글목록 갯수</strong>
 						<span>0</span>
 					</a>
 					<a  class="mypage-menu">
-					<strong>해결 사례</strong>
+					<strong>후기 개수</strong>
 						<span>0</span>
 					</a>
 					<a class="mypage-menu">
-					<strong>상담 해결 갯수</strong>
-						<span>0</span>
+					<strong>소속 사무실명</strong>
+						<span style="color : black; font-size: 30px;"><c:out value ="${officeName}"/></span>
 					</a>
 				</div>
  			</div>
