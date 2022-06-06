@@ -75,7 +75,10 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new ActionInfo();
 				actionInfo.setRedirect(false);
 				actionInfo.setPath("/privacyPage2.jsp"); 
-			} 
+			} else if(command.equals("LawyerOfficeNameOk.ll")) {
+				actionInfo = new LawyerOfficeNameOk().execute(req, resp);
+			}
+ 
 			
 			
 			else {
