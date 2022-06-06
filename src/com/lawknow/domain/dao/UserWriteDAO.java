@@ -12,7 +12,7 @@ import com.lawknow.domain.vo.UserReviewVO;
 import com.lawknow.domain.vo.UserWriteDTO;
 import com.lawknow.domain.vo.UserWriteVO;
 import com.mybatis.config.MyBatisConfig;
-
+//
 public class UserWriteDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
 	SqlSession sqlSession;

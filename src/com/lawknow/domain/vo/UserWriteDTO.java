@@ -1,5 +1,5 @@
 package com.lawknow.domain.vo;
-
+//
 public class UserWriteDTO {
 
 	private int userWriteNum;

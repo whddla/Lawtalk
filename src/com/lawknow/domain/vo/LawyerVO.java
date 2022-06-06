@@ -1,5 +1,5 @@
 package com.lawknow.domain.vo;
-//
+////
 public class LawyerVO {
 
 	private int lawyerNum;

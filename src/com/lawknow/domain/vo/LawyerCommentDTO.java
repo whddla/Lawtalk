@@ -1,5 +1,5 @@
 package com.lawknow.domain.vo;
-//
+////
 public class LawyerCommentDTO {
 		private int lawyerWriteNum;
 		private int requestNum;

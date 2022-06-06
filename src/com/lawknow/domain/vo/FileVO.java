@@ -1,7 +1,7 @@
 package com.lawknow.domain.vo;
 
 public class FileVO { // 첨부파일VO
-	//
+	////
 	
 	 	private String fileName;
 	   private String fileNameOriginal;
