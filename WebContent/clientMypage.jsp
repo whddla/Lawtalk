@@ -117,15 +117,15 @@
  				<div class="mypage-menu-layout mypage-menu-layout2">
 					<a class="mypage-menu">
 						<strong style="color : black;">이름</strong>
-						<span style="color : black; font-size: 22px;"><c:out value ="${userName}"/></span>
+						<span style="color : black; font-size: 20px;"><c:out value ="${userName}"/></span>
 					</a>
 					<a class="mypage-menu">
 					<strong style="color : black;">아이디</strong>
-						<span style="color : black; font-size: 20px;"><c:out value ="${userId}"/></span>
+						<span style="color : black; font-size: 18px;"><c:out value ="${userId}"/></span>
 					</a>
 					<a  class="mypage-menu">
 					<strong  style="color : black;">전화 번호</strong>
-						<span style="color : black; font-size: 22px;"><c:out value ="${userPhoneNum}"/></span>
+						<span style="color : black; font-size: 19px;"><c:out value ="${userPhoneNum}"/></span>
 					</a>	
 				</div>
  			</div>
@@ -136,7 +136,7 @@
 						<div class="mypage-list-title">내 상담 내역</div>
 							<a class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;">
 								<div class= "mypage-list-font1" style="padding-top:20px;">글 작성 목록</div>
-								<div class= "mypage-list-font2" style="padding-top: 15px;"></div>
+								<div class= "mypage-list-font2" style="padding-top: 15px;"><c:out value ="${writeCount}"/></div>
 							</a>
 					</div>
 				</div>

@@ -19,10 +19,12 @@ public class UserMyPageOk implements Action{
 	
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
+		UserWriteDAO writeDAO = new  UserWriteDAO();
 		
 		int userNum = (int)req.getSession().getAttribute("userNum");
 		
 		String userName = userDAO.getUserName(userNum);
+		int writeCount = writeDAO.writeCount(userNum);
 		
 		String userPhoneNum1 = userDAO.UserPhonNum(userNum);
 		String first = userPhoneNum1.substring(0,3);
@@ -35,6 +37,7 @@ public class UserMyPageOk implements Action{
 		req.setAttribute("userId", userId);
 		req.setAttribute("userPhoneNum", userPhoneNum);
 		req.setAttribute("userName", userName);
+		req.setAttribute("writeCount", writeCount);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/clientMypage.jsp");

@@ -65,6 +65,11 @@
 		from tbl_user_write w join tbl_user_register r 
 		on u.user_num = r.user_num
 	</select>
+	
+	<select id ="writeCount" resultType = "_int">
+		select count(user_write_num) from tbl_user_write
+		where user_num = #{user_num}
+	</select>
    
    
    <select id="selectAll" parameterType="map" resultType="userWriteDTO">
