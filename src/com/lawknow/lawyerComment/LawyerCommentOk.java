@@ -16,7 +16,7 @@ public class LawyerCommentOk implements Action{
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		req.setCharacterEncoding("UTF-8");
-		
+	//	
 //		ActionInfo actionInfo = new ActionInfo();
 		
 		LawyerCommentVO lawyerCommentVO = new LawyerCommentVO();

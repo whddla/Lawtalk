@@ -14,7 +14,7 @@ import com.lawyer.action.ActionInfo;
 public class LawyerLoginOk {
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-		//
+		////
 		ActionInfo actionInfo = new ActionInfo();
 		HttpSession session = req.getSession();
 		HashMap<String, String> lawyerMap = new HashMap<>();

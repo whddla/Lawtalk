@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.lawknow.domain.dao.LawyerCommentDAO;
 import com.lawyer.action.Action;
 import com.lawyer.action.ActionInfo;
-
+//
 public class LawyerCommentDeleteOk implements Action {
 	
 	@Override
