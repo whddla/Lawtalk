@@ -552,7 +552,7 @@
 						</div>
 						
 						
-								<!-- 페이징 처리 -->
+								<!-- 페이징 처리 --><!--  -->
 									<%--  	<table style="font-size:1.3rem">
 											<tr align="center" valign="middle">
 												<td class="mobile-view">
