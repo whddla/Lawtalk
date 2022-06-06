@@ -20,9 +20,10 @@ public class UserWrite  implements Action{
 		UserDAO userDAO = new UserDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		//세션에서 받은 userNum을 변수에 저장해주었다.
-		String userId = userDAO.UserId((Integer)session.getAttribute("userNum"));
+		//세션에서 받은 userNum을 변수에 저장해주었다.String userId = userDAO.UserId((Integer)session.getAttribute("userNum"));
+		String userId = userDAO.UserId((Integer)req.getSession().getAttribute("userNum"));
 		
+		System.out.println("usernUM"+ (Integer)req.getSession().getAttribute("userNum"));
 		req.setAttribute("userId", userId);
 		req.setAttribute("page", req.getParameter("page"));
 		
