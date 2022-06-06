@@ -137,7 +137,7 @@ function update(index){
       type: 'post',
 ////      JSON으로 데이터 전달할 때에는 아래와 같이 전달하고,
 ////      contentType:text로 반드시 설정한다. 생략 가능!
-      data: {lawyerNum: commentList[index].lawyerNum, content: $("#content" + index).val()},
+      data: {lawyerName: commentList[index].lawyerName, content: $("#content" + index).val()},
       success: function(){
          getList();
          check = false;

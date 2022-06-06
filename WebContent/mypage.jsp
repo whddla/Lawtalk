@@ -148,12 +148,12 @@
             </h2>
             <div class="my-index-buttons-wrap">
                 <a class="my-index-button" href="mycounsel.jsp">
-                   의뢰인 이름<br>
-                    <span class="my-index-button-count zero"><c:out value="${userName}"/></span>
+                    글작성 갯수<br>
+                    <span class="my-index-button-count zero"><c:out value="${userWriteCount}"/></span>
                 </a>
                 <a class="my-index-button" href="mycounsel.jsp">
-                    전화 번호<br>
-                    <span class="my-index-button-count zero"><c:out value="${userPhoneNum}"/></span>
+                    사례 즐겨찾기<br>
+                    <span class="my-index-button-count zero">0</span>
                 </a>
                 <a class="my-index-button" href="list.jsp">
                     변호사 즐겨찾기<br>

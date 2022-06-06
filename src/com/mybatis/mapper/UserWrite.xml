@@ -3,9 +3,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="UserWrite"> 
     <insert id ="userWrite" parameterType="userWriteVO"> 
-      insert into tbl_user_write
-   		(field,title, content)
-  		 values(#{field},#{title}, #{content})
+       insert into tbl_user_write
+   		(user_num,field,title, content)
+  		 values(#{userNum},#{field},#{title}, #{content})
    </insert>
    
    
