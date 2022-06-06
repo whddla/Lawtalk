@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+.all-layout {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+*{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #f1f4f6;
+}
+
+a, body, button, dd, div, dl, dt, h1, h2, h3, h4, h5, h6, html, label, li, p, span, table, td, tr, ul{
+	font-family: Apple SD Gothic Neo,맑은 고딕,Malgun Gothic,돋움,dotum,굴림,gulim,applegothic,sans-serif;
+}
+
+
+
+div.container{
+	display: block;
+    width: 100%;
+}
+
+div.all-layout{
+	margin: 0 auto;
+    max-width: 480px;
+}
+
+.title-layout{
+	margin-left: 8px;
+    margin-right: 8px;
+	background-color: #222;
+    height: 112px;
+    margin-bottom: 8px;
+    padding-top: 18px;
+    position: relative;
+}
+
+h1{
+	font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 22px;
+    margin: 0;
+    padding : 0 16px;
+    font-weight: bolder;
+}
+
+
+h1 a{
+	color: #ff6d37;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 21px;
+}
+
+h2{
+	color: #aa999d;
+    font-size: 16px;
+    line-height: 15px;
+    padding : 0 16px;
+    margin-top: 21px;
+}
+
+.allform-layout{
+	padding: 0 8px;
+}
+
+.first-form{
+	background: none #fff;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.allform-layout div h3{
+	background-color: #f9f6f4;
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+}
+
+.form-title-text{
+	padding: 0 16px;
+}
+
+.list-tag-layout{
+	padding: 0 16px;
+	height: 332px;
+}
+
+.list-tag-layout2{
+	line-height: 60px;
+}
+
+.ol-tag-layout{
+	color: #333;
+    counter-reset: lawtalk-auth-ordered-list-count;
+    display: table;
+    font-size: 14px;
+    line-height: 23px;
+    list-style: none;
+    padding: 28px 0;
+}
+
+li{
+	counter-increment: count;
+    display: table-row;
+}
+
+li::before{
+	content: counter(count) ".";
+    text-align: left;
+    width: 16px;
+}
+
+p, li::before{
+	display: table-cell;
+}
+
+
+.ol-tag-layout li p{
+	color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding-bottom: 23px;
+    width: auto;
+}
+
+.button-footer-layout{
+	background-color: #f9f6f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.button-footer-text{
+	color: #545352;
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 20px;
+}
+
+button{
+	background-color: transparent;
+    border: none;
+    padding: 0;
+	color: #ff6d37;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-text-layout{
+	padding: 20px 24px;
+    text-align: center;
+}
+
+.row{
+	margin-left: -15px;
+    margin-right: -15px;
+}
+
+.footer-text-layout.row{
+	padding: 10px 0;
+}
+
+
