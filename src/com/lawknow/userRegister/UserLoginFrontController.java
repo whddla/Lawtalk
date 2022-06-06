@@ -71,6 +71,8 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/privacyPage.jsp"); 
+		} else if(command.equals("UserMyPageOk.ul")) {
+			actionInfo = new UserMyPageOk().execute(req, resp);
 		}
 
 		  else {

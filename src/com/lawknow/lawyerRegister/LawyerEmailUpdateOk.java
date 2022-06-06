@@ -33,11 +33,16 @@ public class LawyerEmailUpdateOk implements Action {
 		String randomId = lawyerId + random;
 		System.out.println(randomId);		
 		
-		
+		if(!lawyerEmail.equals(newEmail)) {
 		lawyerVO.setLawyerEmail(newEmail);
 		lawyerVO.setLawyerNum(lawyerNum);
 		boolean emailCheck = lawyerDAO.LawyerEmailUpdate(lawyerVO);
 		req.setAttribute("emailCheck", emailCheck);
+		}else {
+			req.setAttribute("emailchk", true);
+		}
+
+		
 		req.setAttribute("randomId", randomId);
 		
 		actionInfo.setRedirect(false);
