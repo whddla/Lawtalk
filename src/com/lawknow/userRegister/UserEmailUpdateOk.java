@@ -27,16 +27,21 @@ public class UserEmailUpdateOk implements Action{
 		
 		int userNum = (int)session.getAttribute("userNum");
 		String userId = userDAO.UserId(userNum);
-		String userEmail = userDAO.UserEmail(userNum);
+		String userEmail = (String)req.getSession().getAttribute("userEmail");
 		String newEmail = req.getParameter("email");
+		
 		String randomId = userId + random;
-		System.out.println(randomId);
-	
+		
+		if(!userEmail.equals(newEmail)) {
+			System.out.println("나 들어옴~1");
 			userVO.setUserEmail(newEmail);
 			userVO.setUserNum(userNum);
 			boolean emailCheck = userDAO.UserEmailUpdate(userVO);
 			req.setAttribute("emailCheck", emailCheck);
-		
+		}else {
+			System.out.println("나 들어옴~2");
+			req.setAttribute("emailchk", true);
+		}
 		
 		req.setAttribute("randomId", randomId);
 		
