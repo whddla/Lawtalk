@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lawknow.userRegister.UserDeleteAccountOk;
-import com.lawknow.userRegister.UserEmailUpdateOk;
-import com.lawknow.userRegister.UserPwCheckOk;
 import com.lawyer.action.ActionInfo;
 
 	public class LawyerLoginFrontController extends HttpServlet{
