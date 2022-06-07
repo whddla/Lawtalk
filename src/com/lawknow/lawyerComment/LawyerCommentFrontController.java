@@ -1,6 +1,8 @@
 package com.lawknow.lawyerComment;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 //
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,14 +40,24 @@ public class LawyerCommentFrontController extends HttpServlet {
 		new LawyerCommentOk().execute(req, resp);
 		break;
 	case "LawyerCommentUpdateOk.lcc":
-		System.out.println("update forntcontroller");
+		System.out.println("update frontcontroller");
 		new LawyerCommentUpdateOk().execute(req, resp);
 		break;
 	case "LawyerCommentDeleteOk.lcc":
-		System.out.println("delete forntcontroller");
+		System.out.println("delete frontcontroller");
 		new LawyerCommentDeleteOk().execute(req, resp);
 		break;
-   		}
+   	}
+    if(actionInfo != null) { //actionInfo에 어떠한 값이라도 담겨있다면 
+        if(actionInfo.isRedirect()) {
+           resp.sendRedirect(actionInfo.getPath());
+        }else {
+           RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
+           dispatcher.forward(req, resp);
+        }
+     }
+    
+    
     }
 }
        

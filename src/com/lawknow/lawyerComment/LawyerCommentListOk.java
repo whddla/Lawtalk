@@ -31,10 +31,11 @@ public class LawyerCommentListOk implements Action{
 		comments.forEach(comment -> {
 			JSONObject commentJSON = new JSONObject();
 			commentJSON.put("lawyerName", comment.getLawyerName());
-			System.out.println("list Json put name 테스트");
+			System.out.println("list Json put name " + comment.getLawyerName());
 			commentJSON.put("content", comment.getContent());
+			System.out.println("list lawyer Content" + comment.getContent());			
 			commentJSON.put("writeDate", comment.getWriteDate());
-			System.out.println("list Json put content 테스트" + comment.getWriteDate() );
+			System.out.println("list lawyer writeDate" + comment.getWriteDate());			
 			commentJSON.put("lawyerWriteNum", comment.getLawyerWriteNum());
 			System.out.println("list lawyer writeNum" + comment.getLawyerWriteNum());
 			commentJSON.put("lawyerNum", comment.getLawyerNum());

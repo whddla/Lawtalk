@@ -24,7 +24,6 @@
 
 <!-- // -->
 
-<form action="LawyerComment.lcc" method="get"></form>
 
 
 	<div class="top-header">
@@ -203,7 +202,7 @@
 							<div class="question-detail">
 									
 									
-								<form action="#" name="commentForm" method="post">	
+								<form action="LawyerCommentOk.lcc" name="commentForm" method="post">	
 								<div class="board">
 									<div class="board-header">
 										<h4>당신의 지식을 공유해주세요!</h4>
@@ -216,10 +215,12 @@
 									
 									
 										<button type="button" class="answer-button" id="click" onclick="insert()">답변등록</button>
+					 		<div id="comments" class="comment" style="flex-direction:column; margin:0; display:contents;"></div>			
 								</form>				
 								
 							<h4 class="section-title">총 1개의 답변이 있습니다.</h4>
 							
+								
 								<div class="a-card-question-list">  							<!-- 여기 부터 form;; -->
 									<aside class="a-card-aside-card">
 										<div class="a-wrapper">
@@ -264,8 +265,6 @@
 										</div>
 									</div>
 								</div>
-								 <form action="#" id="comments" class="comment" style="flex-direction:column; margin:0; display:contents;">
-                    			    </form>				
 								
     				
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -274,7 +273,7 @@
          	let contextPath = "${pageContext.request.contextPath}";
          	let content = "${comment.getContent()}";  
          	let lawyerName = "${lawyerName}";
-         	let writeDate = "${comment.writeDate()}";
+         	let writeDate = "${comment.getWriteDate()}";
          	let lawyerNum = "${lawyerNum}";
          </script>
   

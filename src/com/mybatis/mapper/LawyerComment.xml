@@ -5,9 +5,8 @@
 <mapper namespace="LawyerComment"> 
    	 <!--변호사 답글 목록 -->
    <select id ="commentList" resultType="lawyercommentVO">
-   		 select lawyer_name, content , lawyer_num, lawyer_write_num
+   		 select lawyer_name, content , lawyer_num, lawyer_write_num, write_date
   		 from tbl_lawyer_comment
-  		 order by 1 desc
    </select>
    
 	 <!--변호사 글 작성 -->

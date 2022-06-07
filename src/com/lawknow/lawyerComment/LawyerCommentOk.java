@@ -35,7 +35,7 @@ public class LawyerCommentOk implements Action{
 		lawyerCommentVO.setContent(req.getParameter("content"));
 		System.out.println("commentOk에서 content 받아옴");
 		
-		lawyerCommentVO.setLawyerNum((int)req.getSession().getAttribute("lawyerNum"));
+		lawyerCommentVO.setLawyerNum(lawyerNum);
 		System.out.println("commentOk에서 lawyerNum 받아옴");
 		System.out.println((int)req.getSession().getAttribute("lawyerNum"));
 		lawyerCommentVO.setLawyerName((String)req.getSession().getAttribute("lawyerName"));
@@ -44,15 +44,18 @@ public class LawyerCommentOk implements Action{
 		lawyerCommentVO.setWriteDate((String)req.getSession().getAttribute("writeDate"));
 		System.out.println("commentok에서 session으로 현재시간 받아오기1" + req.getSession().getAttribute("writeDate"));
 		
-		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
-		System.out.println("commentok에서 현재시간 받아오기2" + req.getParameter("writeDate"));
+		
+		lawyerCommentVO.setWriteDate(lawyerCommentDAO.commentDate(lawyerNum));
+		
+		System.out.println("commentok에서 현재시간 받아오기찐막막막 : " + req.getAttribute("writeDate"));
 		
 		lawyerCommentVO.getWriteDate();
 		System.out.println("commentok 에서 writedate 출력 : " + lawyerCommentVO.getWriteDate());
 		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 		System.out.println("1번 째 작성" + lawyerCommentVO.getLawyerWriteNum());
-
+		
+		
 		return null;
 	}
 }

@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<form action="LawyerComment.lcc" method="get" name="commentform">
-	
+		<form action="LawyerComment.lcc" method="post" name="commentform">
 		</form>
 		
 </body>

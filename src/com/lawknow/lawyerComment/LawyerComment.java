@@ -26,7 +26,7 @@ public class LawyerComment implements Action {
 		req.setAttribute("writeDate", writeDate);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/answer_page.jsp");
+		actionInfo.setPath("/LawyerCommentOK.lcc");
 		return actionInfo;
 	}
 
