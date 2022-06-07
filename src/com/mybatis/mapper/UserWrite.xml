@@ -117,7 +117,25 @@
 		select count(user_write_number) from tbl_user_write
 	</select> -->
 	
+	<!-- <select id="selectSeeCount" parameterType="_int" resultType="userWriteVO">
+		select user_write_num,title,content,user_num,field,read_count
+		from tbl_user_write where user_write_num= #{userWriteNum}
+		order by read_count desc
+	</select> -->
 	
+	<!-- 조회수순 -->
+	<select id="selectSeeCount"  resultType="userWriteVO">
+		select user_write_num,title,content,user_num,field,read_count,write_date
+		from tbl_user_write 
+		order by read_count desc
+	</select>
+	
+	<!-- 최신순 -->
+	<select id="selectChoi"  resultType="userWriteVO">
+		select user_write_num,title,content,user_num,field,read_count,write_date
+		from tbl_user_write 
+		order by write_date desc
+	</select>
 	
    
 </mapper>

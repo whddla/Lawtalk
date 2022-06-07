@@ -64,6 +64,10 @@ public class UserWriteFrontController extends HttpServlet{
 	    	   actionInfo = new CatagoryFiveOk().execute(req, resp);
 	       }else if(command.equals("CatagorySixOk.uw")) {
 	    	   actionInfo = new CatagorySixOk().execute(req, resp);
+	       }else if(command.equals("SelectSeeCountOk.uw")) {
+	    	   actionInfo = new SelectSeeCountOk().execute(req, resp);
+	       }else if(command.equals("SelectChoiOk.uw")) {
+	    	   actionInfo = new SelectChoiOk().execute(req, resp);
 	       }
 	       
 	       else {
