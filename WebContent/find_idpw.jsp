@@ -28,42 +28,50 @@
                     </span>
                 </div>
             </div>
-            <div class="find-idpw">
-                <h3 class="info">아이디 찾기</h3>
-                <div class="input-info">
-                    <div class="description">
-                        가입 시 등록하신 아이디와 이메일을 입력하세요.
-                        <br>
-                        이메일로 아이디를 알려드립니다.
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" id="account-email" type="email" placeholder="예) name@example.com">
-                        <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
-                    </div>
-                </div>
-                <div class="input-info-footer">
-                    <button type="submit" class="email-footer-button">[ 이메일 받기 ]</button>
-                </div>
-            </div>
+            <form action="UserFindIdOk.ul" method="post" name="findId">
+	            <div class="find-idpw">
+	                <h3 class="info">아이디 찾기</h3>
+	                <div class="input-info">
+	                    <div class="description">
+	                        가입 시 등록하신 핸드폰번호와 이메일을 입력하세요.
+	                        <br>
+	                        아이디를 알려드립니다.
+	                    </div>
+	                    <div class="form-group">
+	                        <input class="form-control" name="userEmail" id="account-email" type="email" placeholder="예) name@example.com">
+	                        <label class="account-email-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="tel-error" for="account-hp" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">핸드폰 번호</label>
+	                        <input class="form-control" name="userPhoneNum" id="account-hp" type="tel" placeholder="예) 01012345678">
+	                    </div>
+	                </div>
+	                <div class="input-info-footer">
+	                    <button id="findId-btn" type="submit" class="email-footer-button">[ 아이디 찾기 ]</button>
+	                </div>
+	            </div>
+            </form>
+            <form action="UserFindPwOk.ul" method="post" name="findPw">
                 <h3 class="info">비밀번호 찾기</h3>
                 <div class="input-info">
                     <div class="description">
                         가입 시 등록하신 아이디와 이메일을 입력하세요.
                         <br>
-                        비밀번호 재설정 이메일을 보내드립니다.
+                        비밀번호를 보내드립니다.
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-id" type="text" placeholder="아이디">
+                        <input class="form-control" name="userId" id="account-id" type="text" placeholder="아이디">
                         <label class="account-id-error" for="account-id" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;"></label>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="account-email-pw" type="email" placeholder="예) name@example.com">
+                        <input class="form-control"name="userEmail"  id="account-email-pw" type="email" placeholder="예) name@example.com">
                         <label class="account-email-pw-error" for="account-email" style="font-size: 14px; font-weight: 400; line-height: 20px; top: -20px; width: 100%; position: absolute; margin: 0; left:0;  color: #757575;">이메일</label>
                     </div>
                 </div>
                 <div class="input-info-footer">
-                    <button type="submit" class="email-footer-button">[ 이메일 받기 ]</button>
+                    <button id="findPw-btn" type="submit" class="email-footer-button">[ 비밀번호 찾기 ]</button>
                 </div>
+            </form>
             <div class="row-footer">
                 <div class="row">
                 <!--회사소개  -->
@@ -78,10 +86,59 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
+
+let form = document.findId;
+
+$("button#findId-btn").on("click", function(){
+		console.log(form.userEmail);
+	if(!form.userEmail.value){
+		alert("이메일을 입력해주세요.");
+		return;
+	}
+	if(!form.userPhoneNum.value){
+		alert("핸드폰 번호를 입력해주세요.");
+		return;
+	}
+	
+	form.submit();
+});
+
+let formPw = document.findPw;
+
+$("button#findPw-btn").on("click", function(){
+		console.log(formPw.userId);
+	if(!formPw.userId.value){
+		alert("아이디를 입력해주세요.");
+		return;
+	}
+	if(!formPw.userEmail.value){
+		alert("이메일을 입력해주세요.");
+		return;
+	}
+	
+	formPw.submit();
+});
+
 var userIdCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
 var nameCheck = RegExp(/^[가-힣]{2,6}$/);
 var emailCheck2 = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 var emailCheckP = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+var phoneNumCheck = RegExp(/^01[0179][0-9]{7,8}$/);
+
+/* 핸드폰 유효성 검사  */
+let $hp = $("#account-hp");
+let hpCheck = $(".tel-error");
+$hp.on("keyup",function(){
+	if(phoneNumCheck.test($hp.val())){
+		hpCheck.css("color","rgb(99 193 76)");
+		hpCheck.text("핸드폰 번호 입력완료.");
+	}else{
+		hpCheck.css("color","red");
+		hpCheck.text("핸드폰 번호를 입력해주세요.");
+		return false;
+	}
+});
+
 /* 이메일 유효성 검사 */    	
 let emailCheck = $(".account-email-error");
 let $email = $("#account-email");
