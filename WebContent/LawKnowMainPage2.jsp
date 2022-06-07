@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%  // 인증된 세션이 없는경우, 해당페이지를 볼 수 없게 함.
 	    if (session.getAttribute("lawyerId")== null) {
-	        response.sendRedirect("logout.jsp");
+	        response.sendRedirect("UserMain.ul");
 	    }
 	%>
 <!DOCTYPE html>
@@ -163,7 +163,7 @@ div.btns{
             </div>
             <div id="small-menu">
                 <h1    style="font-size: 15px; font-weight: 600; color: #333; margin-top: 9px;"><%= session.getAttribute("lawyerName") %>변호사님 <small>반갑습니다.</small></h1>
-        		<a style="margin: 0; padding: 0;" href="logout.jsp" class="twoandthree three" >로그아웃</a>
+        		<a style="margin: 0; padding: 0;" href="UserMain.ul" class="twoandthree three" id="logout">로그아웃</a>
                 <a href="LawyerOfficeNameOk.ll" class="twoandthree three"  style ="color: #333; cursor: pointer;">
                     마이페이지
                 </a>
@@ -590,6 +590,10 @@ div.btns{
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
+$('#logout').on("click", function(){
+	sessionStorage.removeItem("#logout"); // 삭제
+	alert("로그아웃 되었습니다.");
+});
 
 let checkDel = "${checkDel}";
 if(checkDel){

@@ -35,7 +35,7 @@
                     </div>
                     <button class="signup-button">
                     <!-- 의뢰인 가입 페이지 -->
-                        <a href="http://localhost:9000/kovengerss/client_signup.jsp">
+                        <a href="join.ul">
                             의뢰인으로 가입하기 >
                         </a>
                     </button>
@@ -53,7 +53,7 @@
                     </div>
                     <button class="signup-button">
                     <!-- 변호사 가입 페이지  -->
-                        <a href="http://localhost:9000/kovengerss/lawyer_signup.jsp">
+                        <a href="join.ll">
                             변호사로 가입하기 >
                         </a>
                     </button>

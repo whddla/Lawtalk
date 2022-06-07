@@ -247,7 +247,6 @@ function sendit() {
 			alert("패스워드를 입력해주세요.");
 			return;
 		}
-		
 		form.submit();
 	});
 

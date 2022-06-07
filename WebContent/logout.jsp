@@ -151,7 +151,7 @@ div.btns{
                             <label>
                             <i class="material-icons slideicon" style="left: 11px; font-size: 34px;" >contacts</i>
                             <br>
-                            <a href="login.jsp">로그인</a>
+                            <a href="UserLogin.ul">로그인</a>
                         </label>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ div.btns{
                 <strong>lawknow</strong>
             </div>
             <div id="small-menu">
-                <a class="twoandthree" href="login.jsp">
+                <a class="twoandthree" href="UserLogin.ul">
                     로그인
                 </a>
             	<a class="twoandthree" href="signup.jsp">
@@ -590,6 +590,9 @@ div.btns{
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+
+
 let checkDel = "${checkDel}";
 if(checkDel){
 	alert("탈퇴완료");
