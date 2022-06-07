@@ -106,5 +106,17 @@ public class UserDAO {
 		return sqlSession.update("User.UserPhoneChange", userVO) == 1;
 	}
 	
+	//이메일,핸드폰번호로 아이디 찾기
+	public String UserFindId(HashMap<String, String> userMap) {
+		System.out.println("아이디 찾기 다오 등장");
+		return sqlSession.selectOne("User.UserFindId", userMap);
+	}
+
+	//이메일,아이디로 비밀번호 찾기
+	public String UserFindPw(HashMap<String, String> userMap) {
+		System.out.println("비밀번호 찾기 다오 등장");
+		return sqlSession.selectOne("User.UserFindPw", userMap);
+	}
+	
 }
 

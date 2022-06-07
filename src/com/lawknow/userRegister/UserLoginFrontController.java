@@ -43,6 +43,10 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new UserLogin().execute(req, resp);
 		} else if(command.equals("UserCheckPhoneOk.ul")) {
 			new UserCheckPhoneOk().execute(req, resp);
+		} else if(command.equals("UserFindIdOk.ul")) {
+			actionInfo = new UserFindIdOk().execute(req, resp);
+		} else if(command.equals("UserFindPwOk.ul")) {
+			actionInfo = new UserFindPwOk().execute(req, resp);
 		} else if(command.equals("PwChange.ul")){
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(false);

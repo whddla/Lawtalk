@@ -565,7 +565,7 @@ div.btns{
 
       <button class="btn-action-question btn-action">
         <div class="buttoninbox">
-            <a class = "" href="write.jsp" style ="color:white;">
+            <a class = "" href="UserWrite.uw" style ="color:white;">
             <span class="fixspan" style="color:black;">
                 LAWKNOW 지식인
             </span>
