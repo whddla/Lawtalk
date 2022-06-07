@@ -297,6 +297,14 @@ position: relative;
     height: 400px;
     border-bottom: 1px solid #e6e6e6;
 }
+.bottombox{
+ background-color: white;
+    width: 1001px;
+    position: relative;
+    left: 246px;
+    height: 243px;
+    top: 0px;
+}
 
       </style>
    </head>
@@ -311,7 +319,7 @@ position: relative;
                 <img  class = "lefthwa"src = "${pageContext.request.contextPath}/assets/img/왼화살jpg.jpg">
             </a>
             <h3 class="title">
-                <a class = "maintitles">마이페이지</a>
+                <a class = "maintitles">지식인 상세보기</a>
             </h3>
         </nav>
       
@@ -352,7 +360,7 @@ position: relative;
                         <header class="major">
                         
                            <h2 style="text-align:left;">${userWrite.getTitle()}</h2>
-                           <p style="text-align:left; margin-bottom:1%">질문분야 : ${userWrite.getField()}</p>
+                           <p style="text-align:left; margin-bottom:1%;font-weight: bold;">질문분야 : ${userWrite.getField()}</p>
                            <%-- <p style="text-align:left; margin-bottom:1%"><c:out value="회원번호 : ${userNum}"></c:out> </p>    --%>
                         </header>
 						<hr style="margin-top:0;">
