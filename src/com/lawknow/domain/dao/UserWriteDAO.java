@@ -101,6 +101,13 @@ public class UserWriteDAO {
 		}
 	
 	
+		public List<UserWriteVO> selectSeeCount(){
+			return sqlSession.selectList("UserWrite.selectSeeCount");
+		}
+		
+		public List<UserWriteVO> selectChoi(){
+			return sqlSession.selectList("UserWrite.selectChoi");
+		}
 	
 	
 	

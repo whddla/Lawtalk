@@ -22,7 +22,7 @@ public class UserWriteUpdateOk implements Action {
 		// TODO Auto-generated method stub
 		System.out.println("난 업데이트 컨트롤러");
 		req.setCharacterEncoding("UTF-8");
-		
+		//
 		String uploadPath ="E:\\web_1900_JW\\jsp\\workspace\\kovengerss\\WebContent\\upload"; //여기다가 첨부된 파일을 업로드 하겠다
 		int fileSize =1024*1024*5; //5M
 		
