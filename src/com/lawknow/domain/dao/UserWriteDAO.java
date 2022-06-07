@@ -47,12 +47,13 @@ public class UserWriteDAO {
 	}
 	
 	//의뢰인 글 날짜
-	public Date userWriteDate(UserWriteVO user) {
+	public Date userWriteDate(UserWriteVO userWriteVO) {
 		return null;
 	}
-	public int selectField(UserWriteVO user) {
+	//카테고리 선택
+	public List<UserWriteVO>  selectField(String field) {
 		
-		return sqlSession.selectOne("UserWrite.selectField");
+		return sqlSession.selectList("UserWrite.selectField",field);
 	}
 	
 	//전체 정보가져오기
