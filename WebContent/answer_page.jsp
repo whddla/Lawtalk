@@ -24,6 +24,8 @@
 
 <!-- // -->
 
+<form action="LawyerComment.lcc" method="get"></form>
+
 
 	<div class="top-header">
 		<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="slidebutton">
@@ -270,8 +272,9 @@
    <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
          <script>
          	let contextPath = "${pageContext.request.contextPath}";
-         	let content= "${comment.getContent()}";  
+         	let content = "${comment.getContent()}";  
          	let lawyerName = "${lawyerName}";
+         	let writeDate = "${comment.writeDate()}";
          	let lawyerNum = "${lawyerNum}";
          </script>
   

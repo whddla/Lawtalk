@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lawyer.action.ActionInfo;
+
 public class LawyerCommentFrontController extends HttpServlet {
 
 	@Override
@@ -22,11 +24,15 @@ public class LawyerCommentFrontController extends HttpServlet {
     protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        String requestURL = req.getRequestURI();
        String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
-
+       ActionInfo actionInfo = null;
       
    	switch(command) {
 	case "LawyerCommentListOk.lcc":
 		new LawyerCommentListOk().execute(req, resp);
+		break;
+	case "LawyerComment.lcc":
+		actionInfo = new LawyerComment().execute(req, resp); 
+//		new LawyerComment().execute(req, resp);
 		break;
 	case "LawyerCommentOk.lcc":
 		new LawyerCommentOk().execute(req, resp);

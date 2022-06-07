@@ -38,7 +38,9 @@ public class LawyerCommentDAO {
 		sqlSession.update("LawyerComment.commentUpdate", lawyerCommentVO);
 	}
 	
-
-	
+	//변호사 답글 날짜 가져오기 commentDate
+	public String commentDate(int lawyerNum) {
+		return sqlSession.selectOne("LawyerComment.commentDate", lawyerNum);
+	}
 	
 }

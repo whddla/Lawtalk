@@ -30,6 +30,13 @@
          where lawyer_num = #{lawyerNum}
    </update>
    
+     	 <!--변호사 답글 날짜 -->
+   <select id ="commentDate" resultType="string">
+   		 select write_date
+  		 from tbl_lawyer_comment
+  		 where lawyer_num = #{lawyerNum}
+   </select>
+   
    
    
    
