@@ -830,25 +830,25 @@ div.all-layout{
     left: 948px;">
    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
   <input  value ="이혼" type="radio" class="btn-check" name="field" id="btnradio1" autocomplete="off" >
-  <label class="btn btn-outline-primary" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
+  <label class="btn btn-default" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
 
   <input value ="상속" type="radio" class="btn-check " name="field" id="btnradio2" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
+  <label class="btn btn-default" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
 
   <input value ="성범죄" type="radio" class="btn-check" name="field" id="btnradio3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
+  <label class="btn btn-default" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
   
   <input value ="건설/부동산"  type="radio" class="btn-check" name="field" id="btnradio4" autocomplete="off" >
-  <label class="btn btn-outline-primary" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
+  <label class="btn btn-default" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
 
   <input value ="재산범죄" type="radio" class="btn-check" name="field" id="btnradio5" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
+  <label class="btn btn-default" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
 
   <input value ="기업일반" type="radio" class="btn-check" name="field" id="btnradio6" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
+  <label class="btn btn-default" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
   
   <input value ="형사기타" type="radio" class="btn-check" name="field" id="btnradio7" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
+  <label class="btn btn-default"for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
 </div> 
 </div>
         <div id="text">

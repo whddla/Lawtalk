@@ -738,7 +738,7 @@ position: relative;
                 <img  class = "lefthwa"src = "assets/img/왼화살jpg.jpg">
             </a>
             <h3 class="title">
-                <a class = "maintitles">마이페이지</a>
+                <a class = "maintitles">MY LAWKNOW 지식인</a>
             </h3>
         </nav>
 	
@@ -765,7 +765,7 @@ position: relative;
 								<section class="main" style="margin-top: -31px;">
 									<a href="#" class="image main"><img src="${pageContext.request.contextPath}/images/boardMain.png" alt="" /></a>
 									<header class="major">
-									<a href="LawKnowMainPage.jsp" style="position: relative;top: -151px;left: -462px;font-weight: bold;">< LawKnow메인페이지</a>
+									<a href="UserMyPageOk.ul" style="position: relative;top: -151px;left: -462px;font-weight: bold;">< LawKnow 마이페이지</a>
 										<h1>MY LAWKNOW 지식인</h1>
 										<p></p>
 									</header>

@@ -75,6 +75,9 @@
    	 		top: 469px;
     		left: 851px;
          }
+  
+         
+         
     </style>
     <title>Document</title>
 </head>
@@ -99,25 +102,25 @@
    <div style="position: relative;top: 238px;left: 948px;">
    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
   <input  value ="이혼" type="radio" class="btn-check" name="field" id="btnradio1" autocomplete="off" >
-  <label class="btn btn-outline-primary" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
+  <label class="btn btn-default" for="btnradio1"  style ="border-color: #f50; color:#f50;">이혼</label>
 
   <input value ="상속" type="radio" class="btn-check " name="field" id="btnradio2" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
+  <label class="btn btn-default" for="btnradio2" style ="border-color: #f50; color:#f50;">상속</label>
 
   <input value ="성범죄" type="radio" class="btn-check" name="field" id="btnradio3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
+  <label class="btn btn-default" for="btnradio3" style ="border-color: #f50; color:#f50;">성범죄</label>
   
   <input value ="건설/부동산"  type="radio" class="btn-check" name="field" id="btnradio4" autocomplete="off" >
-  <label class="btn btn-outline-primary" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
+  <label class="btn btn-default" for="btnradio4"style ="border-color: #f50; color:#f50;">건설/부동산</label>
 
   <input value ="재산범죄" type="radio" class="btn-check" name="field" id="btnradio5" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
+  <label class="btn btn-default" for="btnradio5" style ="border-color: #f50; color:#f50;">재산범죄</label>
 
   <input value ="기업일반" type="radio" class="btn-check" name="field" id="btnradio6" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
+  <label class="btn btn-default" for="btnradio6" style ="border-color: #f50; color:#f50;">기업일반</label>
   
   <input value ="형사기타" type="radio" class="btn-check" name="field" id="btnradio7" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
+  <label class="btn btn-default" for="btnradio7" style ="border-color: #f50; color:#f50;">형사기타</label>
 </div> 
 </div>
         <div id="text">
@@ -152,6 +155,7 @@
            <li>동일/유사한 내용의 게시물을 지속적으로 반복 게재하는 경우</li>
            <li>의미없는 문자의 나열인 경우</li>
        </ul>
+     
     <button  id="wrtieButton"  type="button" onclick="join()">
         <div class="register" id ="blackBox">상담글 등록하기</div>     
     </button>
@@ -169,15 +173,16 @@
                                     </label>
                                  </div>
                                  <input id="board_file1" name="board_file1" type="file" style="display:none" >
-                                 <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제" style="width: 59px;font-size: 10px; position: relative;left: 52px; top: -29px;">
+                                 <input  type="button" onclick="cancelFile('board_file1')" value="첨부 파일" style="width: 59px;font-size: 10px; position: relative;left: 52px; top: -29px;    background: white;border-color: orange; outline :orange">
                               </div>
                            </div>
+                           
     </div>
     
     
    </form>
     </div>
-    <c:if test ="${ not empty userId}">
+    <c:if test ="${not empty userId}">
         <div>
         	 <c:out value="${userId}님 환영합니다."></c:out>
        	</div>
@@ -319,6 +324,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
