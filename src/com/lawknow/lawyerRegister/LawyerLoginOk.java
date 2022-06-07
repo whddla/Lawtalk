@@ -72,7 +72,7 @@ public class LawyerLoginOk {
 			
 			actionInfo.setPath("/LawKnowMainPage2.jsp");
 		}else {
-			actionInfo.setPath("/login.jsp");
+			actionInfo.setPath("/LawyerLogin.ll");
 		}
 		actionInfo.setRedirect(false);
 		
