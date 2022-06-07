@@ -247,7 +247,14 @@ function sendit() {
 			alert("패스워드를 입력해주세요.");
 			return;
 		}
-		
+		if(form.userId.value !=userLogin){
+			alert("아이디 비밀번호를 다시 확인해주세요.");
+			return;
+		}
+		if(form.userPw.value !=userLogin){
+			alert("아이디 비밀번호를 다시 확인해주세요.");
+			return;
+		}
 		form.submit();
 	});
 

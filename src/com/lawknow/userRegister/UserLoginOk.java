@@ -84,6 +84,7 @@ public class UserLoginOk {
 		}else {
 			actionInfo.setPath("/UserLogin.ul");
 		}
+		actionInfo.setPath("/UserLogin.ul");
 		actionInfo.setRedirect(false);
 		
 		return actionInfo;
