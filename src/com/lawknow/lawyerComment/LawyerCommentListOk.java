@@ -34,11 +34,12 @@ public class LawyerCommentListOk implements Action{
 			System.out.println("list Json put name 테스트");
 			commentJSON.put("content", comment.getContent());
 			commentJSON.put("writeDate", comment.getWriteDate());
-			System.out.println("list Json put content 테스트");
+			System.out.println("list Json put content 테스트" + comment.getWriteDate() );
 			commentJSON.put("lawyerWriteNum", comment.getLawyerWriteNum());
 			System.out.println("list lawyer writeNum" + comment.getLawyerWriteNum());
 			commentJSON.put("lawyerNum", comment.getLawyerNum());
 			System.out.println("list lawyerNum  " + comment.getLawyerNum());
+			
 			commentJSONs.add(commentJSON);
 		});
 		

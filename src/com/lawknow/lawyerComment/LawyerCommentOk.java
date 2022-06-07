@@ -28,11 +28,7 @@ public class LawyerCommentOk implements Action{
         String lawyerName = lawyerDAO.getLawyerName(lawyerNum);
         List<LawyerCommentVO> comments = lawyerCommentDAO.getCommentList(lawyerName);
         System.out.println("변호사 이름 : " + lawyerName);
-    	comments.forEach(comment -> {
-			comment.getLawyerWriteNum();
-			System.out.println("list lawyer writeNum" + comment.getLawyerWriteNum());
-		});
-        
+           
         
         
         
@@ -45,7 +41,15 @@ public class LawyerCommentOk implements Action{
 		lawyerCommentVO.setLawyerName((String)req.getSession().getAttribute("lawyerName"));
 		System.out.println("commentOk에서 lawyername 받아옴");
 		
-	
+		lawyerCommentVO.setWriteDate((String)req.getSession().getAttribute("writeDate"));
+		System.out.println("commentok에서 session으로 현재시간 받아오기1" + req.getSession().getAttribute("writeDate"));
+		
+		lawyerCommentVO.setWriteDate(req.getParameter("writeDate"));
+		System.out.println("commentok에서 현재시간 받아오기2" + req.getParameter("writeDate"));
+		
+		lawyerCommentVO.getWriteDate();
+		System.out.println("commentok 에서 writedate 출력 : " + lawyerCommentVO.getWriteDate());
+		
 		lawyerCommentDAO.commentWrite(lawyerCommentVO);
 		System.out.println("1번 째 작성" + lawyerCommentVO.getLawyerWriteNum());
 
