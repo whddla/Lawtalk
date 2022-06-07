@@ -134,7 +134,7 @@
 					<!-- 내 진행 목록 -->
 					<div class="mypage-list-tag">
 						<div class="mypage-list-title">내 상담 내역</div>
-							<a class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;">
+							<a href ="UserWriteListsOk.uw" class="mypage-list-row" style=" display: flex; justify-content: space-between; text-decoration: none;">
 								<div class= "mypage-list-font1" style="padding-top:20px;">댓글 갯수</div>
 								<div class= "mypage-list-font2" style="padding-top: 15px;"><c:out value="${test}"/></div>
 							</a>

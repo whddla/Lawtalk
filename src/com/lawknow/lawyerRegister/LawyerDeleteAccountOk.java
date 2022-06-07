@@ -29,7 +29,7 @@ public class LawyerDeleteAccountOk implements Action{
 		System.out.println("들어옴3");
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/LawKnowMainPage.jsp");
+		actionInfo.setPath("/UserMain.ul");
 		
 		return actionInfo;
 	}
