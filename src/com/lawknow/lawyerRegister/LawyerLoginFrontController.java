@@ -32,10 +32,7 @@ import com.lawyer.action.ActionInfo;
 				actionInfo = new LawyerJoinOk().execute(req, resp);
 				
 			} else if(command.equals("join.ll")) {
-				actionInfo = new ActionInfo();
-				actionInfo.setRedirect(true);
-				actionInfo.setPath(req.getContextPath() + "/lawyer_signup.jsp");
-				
+				actionInfo = new LawyerJoin().execute(req, resp);
 			} else if(command.equals("LawyerCheckIdOk.ll")) {
 				actionInfo = new LawyerCheckIdOk().execute(req, resp);
 			} else if(command.equals("LawyerLoginOk.ll")) {

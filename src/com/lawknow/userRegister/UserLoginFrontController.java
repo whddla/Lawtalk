@@ -32,9 +32,9 @@ public class UserLoginFrontController extends HttpServlet{
 			actionInfo = new UserJoinOk().execute(req, resp);
 			
 		} else if(command.equals("join.ul")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/client_signup.jsp");
+			actionInfo = new UserJoin().execute(req, resp);
+		} else if(command.equals("UserMain.ul")) {
+			actionInfo = new UserMain().execute(req, resp);
 		} else if(command.equals("UserCheckIdOk.ul")) {
 			new UserCheckIdOk().execute(req, resp);
 		} else if(command.equals("UserLoginOk.ul")) {
