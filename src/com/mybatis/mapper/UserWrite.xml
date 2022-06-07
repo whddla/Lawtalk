@@ -36,8 +36,8 @@
    </select> 
    
    <!--카테고리 가져오기  -->
-   <select id="selectField" parameterType ="userWriteVO" resultType="_int">
-        select field
+   <select id="selectField" parameterType ="userWriteVO" resultType="userWriteVO">
+        select user_write_num,user_num,field, title,content,write_date,read_count
         from tbl_user_write
         where field = #{field}
     </select>

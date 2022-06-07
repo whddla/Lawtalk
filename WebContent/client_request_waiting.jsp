@@ -152,25 +152,26 @@
 							<hr>
 							<li>
 								<!-- 상담목록 사이드리스트 -->
-								<a class="choice" href=""http://localhost:9000/kovengerss/client_request_waiting.jsp>이혼</a>
+								<a class="choice" href=""http://localhost:9000/kovengerss/client_request_waiting.jsp>LawKnow 모든 지식글</a>
 							</li>
 							<li>
-								<a href="http://localhost:9000/kovengerss/category2.jsp">상속</a>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagoryOneOk.uw">상속</a>
+							</li>
+							
+							<li>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagoryTwoOk.uw">성범죄</a>
 							</li>
 							<li>
-								<a href="http://localhost:9000/kovengerss/category3.jsp">성범죄</a>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagoryThreeOk.uw">건설/부동산</a>
 							</li>
 							<li>
-								<a href="http://localhost:9000/kovengerss/category4.jsp">건설/부동산</a>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagoryFourOk.uw">재산범죄</a>
 							</li>
 							<li>
-								<a href="http://localhost:9000/kovengerss/category5.jsp">재산범죄</a>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagoryFiveOk.uw">기업일반</a>
 							</li>
 							<li>
-								<a href="http://localhost:9000/kovengerss/category6.jsp">기업일반</a>
-							</li>
-							<li>
-								<a href="http://localhost:9000/kovengerss/category7.jsp">형사기타</a>
+								<a href="${pageContext.request.contextPath}/userWrite/CatagorySixOk.uw">형사기타</a>
 							</li>
 						</ul>
 					</div>
